@@ -49,6 +49,19 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --config .prettierrc --write ./src/**/*.js",
+      "eslint --config .eslintrc --fix ./src/**/*.js",
+      "stylelint --config .stylelintrc --fix ./src/**/*.js",
+      "git add ."
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
