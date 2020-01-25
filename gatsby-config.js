@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -15,6 +17,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        pages: path.join(__dirname, 'src/pages'),
+        components: path.join(__dirname, 'src/components'),
+        templates: path.join(__dirname, 'src/templates'),
+        assets: path.join(__dirname, 'src/assets'),
+        utils: path.join(__dirname, 'src/utils'),
+      },
+    },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
