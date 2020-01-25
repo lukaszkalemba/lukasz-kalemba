@@ -19,7 +19,22 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@danbruegge/gatsby-plugin-stylelint": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-react": "^7.18.0",
+    "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.2",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-webpack-plugin": "^1.2.1"
   },
   "keywords": [
     "gatsby"
