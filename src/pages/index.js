@@ -5,7 +5,7 @@ import SEO from 'components/commons/SEO/SEO';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Index page</h1>
+    <h1>zażółć gęślą jaźń</h1>
   </Layout>
 );
 
