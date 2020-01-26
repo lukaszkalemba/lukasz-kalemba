@@ -18,16 +18,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: true,
       },
     },
     {
-=======
->>>>>>> Configure gatsby-plugin-root-import
       resolve: 'gatsby-plugin-root-import',
       options: {
         src: path.join(__dirname, 'src'),
@@ -39,11 +35,6 @@ module.exports = {
       },
     },
     {
-<<<<<<< HEAD
-=======
->>>>>>> Change folder structure
-=======
->>>>>>> Configure gatsby-plugin-root-import
       resolve: 'gatsby-plugin-eslint',
       options: {
         test: /\.js$/,
