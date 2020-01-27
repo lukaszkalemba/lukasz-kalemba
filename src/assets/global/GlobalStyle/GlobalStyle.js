@@ -38,6 +38,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.font.family.montserrat}, sans-serif;
+      background: linear-gradient(
+      to right bottom,
+      ${({ theme }) => theme.color.background.light},
+      ${({ theme }) => theme.color.background.dark}
+    );
   }
   *,
   *::before,
