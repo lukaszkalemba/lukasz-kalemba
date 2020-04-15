@@ -10,7 +10,7 @@ import montserratRegularWoff from 'assets/fonts/montserrat-regular.woff';
 const fontFamily = 'Montserrat';
 
 const GlobalStyle = createGlobalStyle`
-  ${normalize()};
+  ${normalize()}
 
   @font-face {
     font-family: ${fontFamily};

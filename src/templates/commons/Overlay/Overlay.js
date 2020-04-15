@@ -1,15 +1,15 @@
 import React from 'react';
-import Icon from 'assets/global/Icon/Icon';
+import Icon from 'components/commons/Icon';
 import logo from 'assets/images/logo_codemon.svg';
-import Styled from './StyledOverlay';
+import S from './Overlay.styles';
 
 const Overlay = () => {
   return (
-    <Styled.Wrapper>
-      <Styled.Logo>
+    <S.Wrapper>
+      <S.Logo>
         <Icon src={logo} />
-      </Styled.Logo>
-    </Styled.Wrapper>
+      </S.Logo>
+    </S.Wrapper>
   );
 };
 

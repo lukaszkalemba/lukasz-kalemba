@@ -5,6 +5,11 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: calc(100vh);
+  background: linear-gradient(
+    to bottom right,
+    ${({ theme }) => theme.color.background.light},
+    ${({ theme }) => theme.color.background.dark}
+  );
 `;
 
 const Logo = styled.div`
