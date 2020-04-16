@@ -6,6 +6,7 @@ const Wrapper = styled.div`
     ${({ theme }) => theme.color.background.light},
     ${({ theme }) => theme.color.background.dark}
   );
+  color: ${({ theme }) => theme.color.white};
 `;
 
 export default { Wrapper };

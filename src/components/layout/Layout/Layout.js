@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
 import GlobalStyle from 'components/layout/GlobalStyle';
+import Nav from 'components/layout/Nav';
 import S from './Layout.styles';
 
 const Layout = ({ children }) => {
@@ -10,7 +11,10 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <S.Wrapper>{children}</S.Wrapper>
+        <S.Wrapper>
+          <Nav />
+          <main>{children}</main>
+        </S.Wrapper>
       </ThemeProvider>
     </>
   );

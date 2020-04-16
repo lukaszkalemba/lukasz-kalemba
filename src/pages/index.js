@@ -5,6 +5,7 @@ import SEO from 'components/commons/SEO';
 const IndexPage = () => (
   <Layout>
     <SEO title="home" />
+    <div style={{ height: '130vh' }} />
   </Layout>
 );
 
