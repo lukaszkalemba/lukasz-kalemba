@@ -1,11 +1,14 @@
 import React from 'react';
 import Logo from 'components/commons/Logo';
+import NavItems from 'components/layout/Nav/NavItems';
 
 const Nav = () => {
   return (
     <header>
       <Logo />
-      <nav>Nav</nav>
+      <nav>
+        <NavItems />
+      </nav>
     </header>
   );
 };
