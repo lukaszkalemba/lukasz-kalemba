@@ -1,14 +1,17 @@
 import React from 'react';
 import Logo from 'components/commons/Logo';
+import Container from 'components/commons/Container';
 import NavItems from 'components/layout/Nav/NavItems';
 
 const Nav = () => {
   return (
     <header>
-      <Logo />
-      <nav>
-        <NavItems />
-      </nav>
+      <Container axis="both">
+        <Logo />
+        <nav>
+          <NavItems />
+        </nav>
+      </Container>
     </header>
   );
 };
