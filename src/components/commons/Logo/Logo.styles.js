@@ -3,6 +3,8 @@ import { Link as GatsbyLink } from 'gatsby';
 
 const Wrapper = styled.div`
   width: 120px;
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.positive2};
 
   ${({ theme }) => theme.media.tablet`
     width: 150px;

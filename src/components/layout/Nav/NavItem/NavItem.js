@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import S from './NavItem.styles';
 
 const NavItem = ({ path, name }) => {
   return (
-    <li>
-      <Link to={path}>{name}</Link>
-    </li>
+    <S.ListItem>
+      <S.Link to={path}>{name}</S.Link>
+    </S.ListItem>
   );
 };
 
