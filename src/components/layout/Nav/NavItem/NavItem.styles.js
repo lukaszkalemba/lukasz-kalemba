@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
 
 const ListItem = styled.li`
-  margin: 1.5em 4em;
+  margin: 1.5em 0;
   align-items: flex-start;
   display: flex;
 `;
@@ -31,12 +31,12 @@ const Link = styled(GatsbyLink)`
   }
 
   :hover {
-    transform: translateX(10px);
+    transform: translateX(15px);
     opacity: 1;
 
     ::before {
       opacity: 0.5;
-      transform: translateX(-15px);
+      transform: translateX(-10px);
     }
   }
 `;
