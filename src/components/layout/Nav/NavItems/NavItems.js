@@ -1,10 +1,13 @@
 import React from 'react';
+import links from 'utils/links';
 import NavItem from 'components/layout/Nav/NavItem';
 
 const NavItems = () => {
   return (
     <ul>
-      <NavItem />
+      {links.map(({ id, path, name }) => (
+        <NavItem key={id} path={path} name={name} />
+      ))}
     </ul>
   );
 };
