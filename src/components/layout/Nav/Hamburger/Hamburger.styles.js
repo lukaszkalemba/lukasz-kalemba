@@ -48,6 +48,10 @@ const Wrapper = styled.button`
         translate(${({ isNavOpen }) => (isNavOpen ? '-5px, -2px' : 0)});
     }
   }
+
+  ${({ theme }) => theme.media.desktop`
+    display: none;
+  `}
 `;
 
 export default { Wrapper };

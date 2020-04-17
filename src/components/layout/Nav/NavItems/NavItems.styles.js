@@ -20,6 +20,14 @@ const List = styled.ul`
   transition: transform 250ms ease-in-out;
   transition-delay: 250ms;
 
+  ${({ theme }) => theme.media.desktop`
+    position: static;
+    background-color: transparent;
+    transform: translate(0);
+    flex-direction: row;
+    align-items: center;
+  `}
+
   ::before {
     content: '';
     position: absolute;
@@ -38,6 +46,10 @@ const List = styled.ul`
     ${({ theme }) => theme.media.tablet`
       height: 65%;
       width: 65%;
+    `}
+
+    ${({ theme }) => theme.media.desktop`
+      display: none;
     `}
   }
 `;

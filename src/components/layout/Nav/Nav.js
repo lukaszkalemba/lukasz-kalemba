@@ -13,13 +13,15 @@ const Nav = () => {
   return (
     <header>
       <Container axis="both">
-        <S.TopBar>
-          <Logo setIsNavOpen={setIsNavOpen} />
-          <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
-        </S.TopBar>
-        <nav>
-          <NavItems isNavOpen={isNavOpen} />
-        </nav>
+        <S.Wrapper>
+          <S.TopBar>
+            <Logo setIsNavOpen={setIsNavOpen} />
+            <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
+          </S.TopBar>
+          <nav>
+            <NavItems isNavOpen={isNavOpen} />
+          </nav>
+        </S.Wrapper>
       </Container>
     </header>
   );

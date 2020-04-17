@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  ${({ theme }) => theme.media.desktop`
+    display: flex;
+    justify-content: space-between;
+  `}
+`;
+
 const TopBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-export default { TopBar };
+export default { Wrapper, TopBar };

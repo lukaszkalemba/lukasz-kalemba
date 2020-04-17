@@ -8,7 +8,12 @@ const ListItem = styled.li`
 
   ${({ theme }) => theme.media.tablet`
     padding: 20px 55px;
-  `};
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    padding: 0;
+    margin-left: 130px;
+  `}
 `;
 
 const Link = styled(GatsbyLink)`
@@ -23,7 +28,14 @@ const Link = styled(GatsbyLink)`
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.xl};
   `}
-    ::before {
+
+  ${({ theme }) => theme.media.desktop`
+    font-size: ${theme.font.size.xxs};
+    font-weight: ${theme.font.weight.regular};
+    opacity: 0.75;
+  `}
+
+  ::before {
     counter-increment: nav;
     content: '0' counter(nav);
     display: block;
@@ -32,6 +44,10 @@ const Link = styled(GatsbyLink)`
     font-weight: ${({ theme }) => theme.font.weight.regular};
     font-size: ${({ theme }) => theme.font.size.xxs};
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+
+    ${({ theme }) => theme.media.desktop`
+      display: none;
+    `}
   }
 
   :hover {
@@ -42,6 +58,10 @@ const Link = styled(GatsbyLink)`
       opacity: 0.5;
       transform: translateX(-10px);
     }
+
+    ${({ theme }) => theme.media.desktop`
+      transform: none;
+    `}
   }
 `;
 
