@@ -18,6 +18,7 @@ const List = styled.ul`
   list-style: none;
   counter-reset: nav;
   transition: transform 250ms ease-in-out;
+  transition-delay: 250ms;
 
   ::before {
     content: '';
@@ -30,6 +31,9 @@ const List = styled.ul`
     background-size: 100%;
     height: 75%;
     width: 75%;
+    transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-130%')});
+    transition: transform 250ms ease-in-out;
+    transition-delay: ${({ isNavOpen }) => (isNavOpen ? '300ms' : '0')};
 
     ${({ theme }) => theme.media.tablet`
       height: 65%;
