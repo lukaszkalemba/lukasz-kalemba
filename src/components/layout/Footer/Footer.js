@@ -1,45 +1,22 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import links from 'utils/links';
+import CompanyInformations from 'components/layout/Footer/CompanyInformations';
+import FooterLogo from 'components/layout/Footer/FooterLogo';
+import SocialMediaIcons from 'components/commons/SocialMediaIcons';
+import FooterLinks from 'components/layout/Footer/FooterLinks';
+import Copyright from 'components/layout/Footer/Copyright';
 
-const Footer = () => {
-  return (
-    <footer>
-      <div>
-        <div>
-          <a href="tel:+48797709856">+48 797 709 856</a>
-          <a href="mailto:biuro@codemon.pl">biuro@codemon.pl</a>
-          <p>REGON: 000000000</p>
-          <p>KRS: 0000000000</p>
-        </div>
-        <div>logo</div>
-        <div>
-          <a href="https://facebook.com" target="__blank">
-            facebook
-          </a>
-          <a href="https://facebook.com" target="__blank">
-            facebook
-          </a>
-          <a href="https://facebook.com" target="__blank">
-            facebook
-          </a>
-          <a href="https://facebook.com" target="__blank">
-            facebook
-          </a>
-        </div>
-      </div>
-      <div>
-        <p>codemon&copy;2020. Wszelkie prawa zastrzeżone.</p>
-        <div>
-          {links.map(({ id, path, name }) => (
-            <Link key={id} to={path}>
-              {name}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer>
+    <div>
+      <CompanyInformations />
+      <FooterLogo />
+      <SocialMediaIcons />
+    </div>
+    <div>
+      <Copyright />
+      <FooterLinks />
+    </div>
+  </footer>
+);
 
 export default Footer;
