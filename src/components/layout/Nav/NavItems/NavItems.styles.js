@@ -27,8 +27,7 @@ const List = styled.ul`
     flex-direction: row;
     align-items: center;
   `}
-
-  ::before {
+    ::before {
     content: '';
     position: absolute;
     bottom: 0;

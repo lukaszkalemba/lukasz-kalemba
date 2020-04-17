@@ -3,7 +3,7 @@ import Layout from 'components/layout/Layout';
 import SEO from 'components/commons/SEO';
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout isFooter={false}>
     <SEO title="404" />
     <h1>404</h1>
   </Layout>
