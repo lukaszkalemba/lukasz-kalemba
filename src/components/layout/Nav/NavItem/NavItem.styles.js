@@ -2,9 +2,13 @@ import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
 
 const ListItem = styled.li`
-  margin: 1.5em 0;
   align-items: flex-start;
   display: flex;
+  padding: 15px;
+
+  ${({ theme }) => theme.media.tablet`
+    padding: 20px 55px;
+  `};
 `;
 
 const Link = styled(GatsbyLink)`
