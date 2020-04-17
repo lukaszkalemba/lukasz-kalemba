@@ -39,7 +39,7 @@ const Link = styled(GatsbyLink)`
         transform: translateX(-14%);
       }
     }
-  `};
+  `}
 `;
 
 export default { Wrapper, Link };

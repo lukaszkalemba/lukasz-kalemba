@@ -19,6 +19,8 @@ const Wrapper = styled.button`
     height: 1px;
     border-radius: 3px;
     background-color: ${({ theme }) => theme.color.white};
+    transform: rotate(${({ isNavOpen }) => (isNavOpen ? '45deg' : '0')});
+    transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
 
     ::before,
     ::after {
@@ -28,16 +30,20 @@ const Wrapper = styled.button`
       height: 1px;
       border-radius: 3px;
       background-color: ${({ theme }) => theme.color.white};
+      transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
     }
 
     ::before {
       left: 2px;
       bottom: 5px;
+      opacity: ${({ isNavOpen }) => (isNavOpen ? '0' : '1')};
     }
 
     ::after {
       top: 5px;
       left: -2px;
+      transform: rotate(${({ isNavOpen }) => (isNavOpen ? '90deg' : 0)})
+        translate(${({ isNavOpen }) => (isNavOpen ? '-5px, -2px' : 0)});
     }
   }
 `;

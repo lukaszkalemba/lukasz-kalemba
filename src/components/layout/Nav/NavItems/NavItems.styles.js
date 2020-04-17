@@ -9,13 +9,15 @@ const List = styled.ul`
   z-index: ${({ theme }) => theme.zindex.positive1};
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-100%')});
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style: none;
   counter-reset: nav;
+  transition: transform 250ms ease-in-out;
 
   ::before {
     content: '';
