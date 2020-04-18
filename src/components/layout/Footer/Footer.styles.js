@@ -9,7 +9,7 @@ const TopBar = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 30px 0;
-  `};
+  `}
 
   ${({ theme }) => theme.media.desktop`
     padding: 100px 0;

@@ -1,5 +1,8 @@
 import React from 'react';
+import S from './Copyright.styles';
 
-const Copyright = () => <p>codemon&copy;2020. Wszelkie prawa zastrzeżone.</p>;
+const Copyright = () => (
+  <S.Paragraph>codemon&copy;2020. Wszelkie prawa zastrzeżone.</S.Paragraph>
+);
 
 export default Copyright;
