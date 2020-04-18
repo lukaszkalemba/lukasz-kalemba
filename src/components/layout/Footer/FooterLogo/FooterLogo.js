@@ -1,5 +1,12 @@
 import React from 'react';
+import Icon from 'components/commons/Icon';
+import logo from 'assets/images/logo_codemon-white.svg';
+import S from './FooterLogo.styles';
 
-const FooterLogo = () => <div>footer logo</div>;
+const FooterLogo = () => (
+  <S.Wrapper>
+    <Icon src={logo} />
+  </S.Wrapper>
+);
 
 export default FooterLogo;
