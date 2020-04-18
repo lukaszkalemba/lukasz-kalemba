@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import links from 'utils/links';
+import S from './FooterLinks.styles';
 
 const FooterLinks = () => (
-  <div>
+  <S.Wrapper>
     {links.map(({ id, path, name }) => (
-      <Link key={id} to={path}>
+      <S.Link key={id} to={path}>
         {name}
-      </Link>
+      </S.Link>
     ))}
-  </div>
+  </S.Wrapper>
 );
 
 export default FooterLinks;
