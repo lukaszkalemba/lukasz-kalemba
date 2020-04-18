@@ -1,7 +1,7 @@
 export default {
   size: {
     xxs: '1.5rem',
-    xs: '1.8em',
+    xs: '1.8rem',
     s: '2.2rem',
     m: '3rem',
     l: '4rem',
