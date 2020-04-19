@@ -6,7 +6,7 @@ export default {
     m: '3rem',
     l: '4rem',
     xl: '5.4rem',
-    xxl: '10rem',
+    xxl: '8.5rem',
   },
 
   weight: {
