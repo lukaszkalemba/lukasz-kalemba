@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import S from './Button.styles';
 
 const Button = ({ priority, children }) => {
   return (
-    <button priority={priority} type="button">
-      {children}
-    </button>
+    <S.Button priority={priority} type="button">
+      <span>{children}</span>
+    </S.Button>
   );
 };
 
