@@ -26,4 +26,13 @@ const Wrapper = styled.div`
   }
 `;
 
-export default { Wrapper };
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  ${({ theme }) => theme.media.desktop`
+    flex-direction: row;
+  `}
+`;
+
+export default { Wrapper, Buttons };

@@ -11,8 +11,10 @@ const Hero = () => {
       <Container axis="both">
         <Paragraph>Zaistniej w świecie nieograniczonych możliwości</Paragraph>
         <Heading tag="h1">Zaistniej w sieci</Heading>
-        <Button priority="primary">Bezpłatna wycena</Button>
-        <Button priority="secondary">Zrealizowane projekty</Button>
+        <S.Buttons>
+          <Button priority="primary">Bezpłatna wycena</Button>
+          <Button priority="secondary">Zrealizowane projekty</Button>
+        </S.Buttons>
       </Container>
     </S.Wrapper>
   );
