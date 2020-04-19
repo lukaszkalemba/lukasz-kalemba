@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const baseStyles = css`
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.positive2};
   margin: 1em 0 1.5em 0.29em;
 
   ::after {
