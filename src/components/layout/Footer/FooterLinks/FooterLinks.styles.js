@@ -26,8 +26,7 @@ const Link = styled(GatsbyLink)`
     margin-left: 80px;
     font-size: ${theme.font.size.xxs};
   `}
-
-  :hover {
+    :hover {
     opacity: 1;
   }
 `;
