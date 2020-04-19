@@ -15,7 +15,9 @@ const Footer = () => (
         <FooterLogo />
         <SocialMediaIcons />
       </S.TopBar>
+    </Container>
 
+    <Container axis="x">
       <S.BottomBar>
         <Copyright />
         <FooterLinks />

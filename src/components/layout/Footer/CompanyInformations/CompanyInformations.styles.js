@@ -10,7 +10,7 @@ const A = styled.a`
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   transition: opacity 400ms ease-in-out;
-  padding: 11px 0;
+  padding: 12px 0;
   opacity: 0.75;
 
   :hover {

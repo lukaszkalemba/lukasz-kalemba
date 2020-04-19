@@ -5,7 +5,7 @@ const Footer = styled.footer`
   background-color: ${({ theme }) => theme.color.primary};
   position: relative;
 
-  ${({ theme }) => theme.media.tablet`
+  ${({ theme }) => theme.media.desktop`
     ::before {
       content: '';
       position: absolute;
@@ -20,20 +20,25 @@ const Footer = styled.footer`
     ${theme.media.desktop`
       height: 600px;
       right: 16%;
+    `};
+
+    ${theme.media.largeDesktop`
+      height: 800px;
+      width: 550px;
     `}
     }
 `}
 `;
 
 const TopBar = styled.div`
-  ${({ theme }) => theme.media.tablet`
+  ${({ theme }) => theme.media.desktop`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 30px 0;
+    padding: 110px 0 75px;
   `}
 
-  ${({ theme }) => theme.media.desktop`
-    padding: 100px 0;
+  ${({ theme }) => theme.media.largeDesktop`
+    padding: 150px 0 100px;
   `}
 `;
 
@@ -43,7 +48,16 @@ const BottomBar = styled.div`
   justify-content: space-between;
 
   ${({ theme }) => theme.media.tablet`
+    padding-bottom: 20px;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
     flex-direction: row;
+    padding-bottom: 30px;
+  `}
+
+  ${({ theme }) => theme.media.largeDesktop`
+    padding-bottom: 35px;
   `}
 `;
 
