@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     padding: 35px 55px;
   `}
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     position: static;
     transform: none;
     padding: 0;

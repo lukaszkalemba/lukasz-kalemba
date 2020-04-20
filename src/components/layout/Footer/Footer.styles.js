@@ -5,7 +5,7 @@ const Footer = styled.footer`
   background-color: ${({ theme }) => theme.color.primary};
   position: relative;
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     ::before {
       content: '';
       position: absolute;
@@ -17,7 +17,7 @@ const Footer = styled.footer`
       width: 450px;
       background-position-y: bottom;
 
-    ${theme.media.desktop`
+    ${theme.media.laptop`
       height: 600px;
       right: 16%;
     `};
@@ -31,7 +31,7 @@ const Footer = styled.footer`
 `;
 
 const TopBar = styled.div`
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 110px 0 75px;
@@ -51,7 +51,7 @@ const BottomBar = styled.div`
     padding-bottom: 20px;
   `}
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     padding-bottom: 30px;
   `}

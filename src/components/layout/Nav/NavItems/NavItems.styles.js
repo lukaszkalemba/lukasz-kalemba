@@ -4,9 +4,9 @@ import slashPattern from 'assets/images/pattern_slash.svg';
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: ${({ theme }) => theme.color.background.dark};
   position: fixed;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.positive3};
   top: 0;
   left: 0;
   transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-100%')});
@@ -20,7 +20,7 @@ const List = styled.ul`
   transition: transform 250ms ease-in-out;
   transition-delay: 250ms;
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     position: static;
     background-color: transparent;
     transform: translate(0);
@@ -47,7 +47,7 @@ const List = styled.ul`
       width: 65%;
     `}
 
-    ${({ theme }) => theme.media.desktop`
+    ${({ theme }) => theme.media.laptop`
       display: none;
     `}
   }

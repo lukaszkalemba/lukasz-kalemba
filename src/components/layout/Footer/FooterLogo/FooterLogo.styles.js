@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   position: relative;
   z-index: ${({ theme }) => theme.zindex.positive1};
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     display: flex;
     justify-content: center;
     align-items: center;

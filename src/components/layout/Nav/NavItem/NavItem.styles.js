@@ -10,7 +10,7 @@ const ListItem = styled.li`
     padding: 20px 55px;
   `}
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     padding: 0;
     margin-left: 130px;
   `}
@@ -29,7 +29,7 @@ const Link = styled(GatsbyLink)`
     font-size: ${theme.font.size.xl};
   `}
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     font-size: ${theme.font.size.xxs};
     font-weight: ${theme.font.weight.regular};
     opacity: 0.75;
@@ -45,7 +45,7 @@ const Link = styled(GatsbyLink)`
     font-size: ${({ theme }) => theme.font.size.xxs};
     transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 
-    ${({ theme }) => theme.media.desktop`
+    ${({ theme }) => theme.media.laptop`
       display: none;
     `}
   }
@@ -59,7 +59,7 @@ const Link = styled(GatsbyLink)`
       transform: translateX(-10px);
     }
 
-    ${({ theme }) => theme.media.desktop`
+    ${({ theme }) => theme.media.laptop`
       transform: none;
     `}
   }

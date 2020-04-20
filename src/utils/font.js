@@ -1,12 +1,14 @@
 export default {
   size: {
-    xxs: '1.5rem',
-    xs: '1.8rem',
+    xxxs: '1rem',
+    xxs: '1.3rem',
+    xs: '1.6rem',
     s: '2.2rem',
     m: '3rem',
     l: '4rem',
     xl: '5.4rem',
     xxl: '8.5rem',
+    xxxl: '10rem',
   },
 
   weight: {
