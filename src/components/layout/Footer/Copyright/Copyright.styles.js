@@ -5,7 +5,7 @@ const Paragraph = styled.div`
   opacity: 0.5;
   padding-top: 15px;
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     padding-top: 0;
   `}
 `;

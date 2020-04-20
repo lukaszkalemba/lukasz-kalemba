@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ const Link = styled(GatsbyLink)`
   opacity: 0.75;
   transition: opacity 250ms ease-in-out;
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     padding: 0;
     margin-left: 80px;
     font-size: ${theme.font.size.xxs};

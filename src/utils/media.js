@@ -3,8 +3,9 @@ import { css } from 'styled-components';
 export const sizes = {
   phone: 576,
   tablet: 768,
-  desktop: 1150,
-  largeDesktop: 1600,
+  laptop: 1150,
+  desktop: 1366,
+  largeDesktop: 1920,
 };
 
 export default Object.keys(sizes).reduce((acc, label) => {

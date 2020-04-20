@@ -9,8 +9,10 @@ const Hero = () => {
   return (
     <S.Wrapper>
       <Container axis="both">
-        <Paragraph>Zaistniej w świecie nieograniczonych możliwości</Paragraph>
-        <Heading tag="h1">Zaistniej w sieci</Heading>
+        <S.Content>
+          <Heading tag="h1">Zaistniej w sieci</Heading>
+          <Paragraph>Zaistniej w świecie nieograniczonych możliwości</Paragraph>
+        </S.Content>
         <S.Buttons>
           <Button priority="primary">Bezpłatna wycena</Button>
           <Button priority="secondary">Zrealizowane projekty</Button>

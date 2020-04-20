@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from 'gatsby';
 const Wrapper = styled.div`
   width: 120px;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive2};
+  z-index: ${({ theme }) => theme.zindex.positive4};
 
   ${({ theme }) => theme.media.tablet`
     width: 150px;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const Link = styled(GatsbyLink)`
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     #logo-path-circle {
       transition: transform 400ms ease-in-out;
     }

@@ -6,7 +6,7 @@ const Wrapper = styled.button`
   align-items: center;
   cursor: pointer;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive2};
+  z-index: ${({ theme }) => theme.zindex.positive4};
   border: none;
   width: 40px;
   height: 40px;
@@ -49,7 +49,7 @@ const Wrapper = styled.button`
     }
   }
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     display: none;
   `}
 `;

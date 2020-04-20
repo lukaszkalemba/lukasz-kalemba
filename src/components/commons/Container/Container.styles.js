@@ -23,8 +23,8 @@ const Wrapper = styled.div`
     padding: ${({ axis }) => handleAxis(axis, 'tablet')};
   `}
 
-  ${({ theme }) => theme.media.desktop`
-    padding: ${({ axis }) => handleAxis(axis, 'desktop')};
+  ${({ theme }) => theme.media.laptop`
+    padding: ${({ axis }) => handleAxis(axis, 'laptop')};
   `}
 `;
 

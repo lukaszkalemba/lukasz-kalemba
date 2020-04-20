@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     display: flex;
     justify-content: space-between;
   `}
