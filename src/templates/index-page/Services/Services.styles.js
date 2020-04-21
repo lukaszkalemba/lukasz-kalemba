@@ -13,7 +13,7 @@ const Header = styled.div`
   background-color: ${({ theme }) => theme.color.primary};
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-size: ${({ theme }) => theme.font.size.s};
   line-height: 1.75em;
   max-width: 70vw;
