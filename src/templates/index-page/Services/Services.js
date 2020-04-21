@@ -1,17 +1,19 @@
 import React from 'react';
 import Link from 'components/commons/Link';
+import S from './Services.styles';
 
 const Services = () => {
   return (
-    <section>
-      <div>
+    <S.Section>
+      <S.Header>
         <h3>
           Stwórz z nami niepowtarzalny projekt, lub przenieś już istniejący na
           kolejny poziom.
         </h3>
         <Link to="wycena">Bezpłatna wycena</Link>
-      </div>
-      <div>
+      </S.Header>
+
+      <S.Services>
         <article>
           <h3>Projektowanie interfejsów</h3>
         </article>
@@ -21,8 +23,8 @@ const Services = () => {
         <article>
           <h3>Sklepy internetowe</h3>
         </article>
-      </div>
-    </section>
+      </S.Services>
+    </S.Section>
   );
 };
 
