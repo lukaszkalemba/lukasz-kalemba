@@ -34,7 +34,7 @@ const cards = [
 
 const LastProjects = () => {
   return (
-    <section>
+    <S.Section>
       <Container axis="both">
         <Heading>Ostatnie projekty.</Heading>
         <Container axis="x">
@@ -46,7 +46,7 @@ const LastProjects = () => {
           <Link to="/projekty">Sprawdź inne</Link>
         </Container>
       </Container>
-    </section>
+    </S.Section>
   );
 };
 
