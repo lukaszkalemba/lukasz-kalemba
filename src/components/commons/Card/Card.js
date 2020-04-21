@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import S from './Card.styles';
 
 const Card = ({ title }) => {
   return (
-    <article>
-      <h3>{title}</h3>
-    </article>
+    <S.Article>
+      <S.Overlay />
+      <S.Title>{title}</S.Title>
+    </S.Article>
   );
 };
 
