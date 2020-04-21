@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'components/commons/Container';
 import Link from 'components/commons/Link';
+import Service from 'components/index-page/Service';
 import S from './Services.styles';
 
 const Services = () => {
@@ -17,15 +18,9 @@ const Services = () => {
       </S.Header>
 
       <S.Services>
-        <article>
-          <h3>Projektowanie interfejsów</h3>
-        </article>
-        <article>
-          <h3>Strony i aplikacje internetowe</h3>
-        </article>
-        <article>
-          <h3>Sklepy internetowe</h3>
-        </article>
+        <Service>Projektowanie interfejsów</Service>
+        <Service>Strony i aplikacje internetowe</Service>
+        <Service>Sklepy internetowe</Service>
       </S.Services>
     </S.Section>
   );
