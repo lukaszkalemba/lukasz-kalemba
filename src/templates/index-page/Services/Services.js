@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from 'components/commons/Container';
 import Link from 'components/commons/Link';
 import S from './Services.styles';
 
@@ -6,11 +7,13 @@ const Services = () => {
   return (
     <S.Section>
       <S.Header>
-        <h3>
-          Stwórz z nami niepowtarzalny projekt, lub przenieś już istniejący na
-          kolejny poziom.
-        </h3>
-        <Link to="wycena">Bezpłatna wycena</Link>
+        <Container axis="both">
+          <S.Title>
+            Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
+            istniejący na kolejny poziom.
+          </S.Title>
+          <Link to="wycena">Bezpłatna wycena</Link>
+        </Container>
       </S.Header>
 
       <S.Services>
