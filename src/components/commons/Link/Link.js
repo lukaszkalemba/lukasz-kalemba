@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
 import PropTypes from 'prop-types';
+import S from './Link.styles';
 
 const Link = ({ to, children }) => {
-  return <GatsbyLink to={to}>{children}</GatsbyLink>;
+  return <S.Link to={to}>{children}</S.Link>;
 };
 
 Link.propTypes = {

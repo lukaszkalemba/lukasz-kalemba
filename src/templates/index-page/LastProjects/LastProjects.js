@@ -43,7 +43,6 @@ const LastProjects = () => {
               <Card key={id} title={title} />
             ))}
           </S.Cards>
-
           <Link to="/projekty">Sprawdź inne</Link>
         </Container>
       </Container>
