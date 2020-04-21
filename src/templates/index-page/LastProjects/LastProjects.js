@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'components/commons/Container';
 import Heading from 'components/commons/Heading';
 import Card from 'components/commons/Card';
+import Link from 'components/commons/Link';
 import S from './LastProjects.styles';
 
 const cards = [
@@ -42,6 +43,8 @@ const LastProjects = () => {
               <Card key={id} title={title} />
             ))}
           </S.Cards>
+
+          <Link to="/projekty">Sprawdź inne</Link>
         </Container>
       </Container>
     </section>
