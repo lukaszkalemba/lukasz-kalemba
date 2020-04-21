@@ -1,10 +1,16 @@
 import React from 'react';
+import { useStaticQuery } from 'gatsby';
 import Container from 'components/commons/Container';
 import Link from 'components/commons/Link';
 import Service from 'components/index-page/Service';
+import { IMAGES_QUERY } from './Services.queries';
 import S from './Services.styles';
 
 const Services = () => {
+  const { images } = useStaticQuery(IMAGES_QUERY);
+
+  console.log(images);
+
   return (
     <S.Section>
       <S.Header>
