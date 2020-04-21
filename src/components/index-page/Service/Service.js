@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import S from './Service.styles';
 
 const Service = ({ children }) => {
   return (
-    <article>
-      <h3>{children}</h3>
-    </article>
+    <S.Article>
+      <S.Title>{children}</S.Title>
+    </S.Article>
   );
 };
 
