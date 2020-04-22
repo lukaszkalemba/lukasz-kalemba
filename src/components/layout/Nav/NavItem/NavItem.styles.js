@@ -1,5 +1,23 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+
+const linkHover = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(0px) rotate(30deg);
+
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+
+  100% {
+    opacity: 0;
+    transform: translateX(80px)  rotate(30deg);
+  }
+`;
 
 const ListItem = styled.li`
   align-items: flex-start;
@@ -24,6 +42,7 @@ const Link = styled(GatsbyLink)`
   font-weight: bold;
   opacity: 0.85;
   transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+  position: relative;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.xl};
@@ -33,6 +52,7 @@ const Link = styled(GatsbyLink)`
     font-size: ${theme.font.size.xxs};
     font-weight: ${theme.font.weight.regular};
     opacity: 0.75;
+    padding: 5px 0;
   `}
 
   ::before {
@@ -50,6 +70,23 @@ const Link = styled(GatsbyLink)`
     `}
   }
 
+  ::after {
+    content: '';
+    position: absolute;
+    display: none;
+    height: 20px;
+    width: 2px;
+    transform: rotate(30deg);
+    left: -15px;
+    top: 0;
+    background-color: ${({ theme }) => theme.color.primary};
+    opacity: 0;
+
+    ${({ theme }) => theme.media.laptop`
+      display: block;
+    `}
+  }
+
   :hover {
     transform: translateX(15px);
     opacity: 1;
@@ -59,8 +96,13 @@ const Link = styled(GatsbyLink)`
       transform: translateX(-10px);
     }
 
+    ::after {
+      animation: ${linkHover} 500ms;
+      animation-fill-mode: forwards;
+    }
+
     ${({ theme }) => theme.media.laptop`
-      transform: none;
+      transform: scale(1.05);
     `}
   }
 `;
