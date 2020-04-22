@@ -4,7 +4,7 @@ import SEO from 'components/commons/SEO';
 import NotFound from 'templates/404-page/NotFound';
 
 const NotFoundPage = () => (
-  <Layout isFooter={false}>
+  <Layout>
     <SEO title="404" />
     <NotFound />
   </Layout>
