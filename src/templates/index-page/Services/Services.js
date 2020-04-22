@@ -1,15 +1,40 @@
 import React from 'react';
-import { useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/commons/Container';
 import Link from 'components/commons/Link';
 import Service from 'components/index-page/Service';
-import { IMAGES_QUERY } from './Services.queries';
 import S from './Services.styles';
 
-const Services = () => {
-  const { images } = useStaticQuery(IMAGES_QUERY);
+const IMAGES_QUERY = graphql`
+  {
+    design: file(relativePath: { eq: "photo_service-design.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
 
-  console.log(images);
+    webapp: file(relativePath: { eq: "photo_service-webapp.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+
+    ecommerce: file(relativePath: { eq: "photo_service-ecommerce.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp_noBase64
+        }
+      }
+    }
+  }
+`;
+
+const Services = () => {
+  const { design, webapp, ecommerce } = useStaticQuery(IMAGES_QUERY);
 
   return (
     <S.Section>
@@ -24,9 +49,13 @@ const Services = () => {
       </S.Header>
 
       <S.Services>
-        <Service>Projektowanie interfejsów</Service>
-        <Service>Strony i aplikacje internetowe</Service>
-        <Service>Sklepy internetowe</Service>
+        <Service img={design.childImageSharp}>
+          Projektowanie interfejsów
+        </Service>
+        <Service img={webapp.childImageSharp}>
+          Strony i aplikacje internetowe
+        </Service>
+        <Service img={ecommerce.childImageSharp}>Sklepy internetowe</Service>
       </S.Services>
     </S.Section>
   );

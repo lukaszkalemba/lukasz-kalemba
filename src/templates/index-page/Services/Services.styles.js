@@ -10,7 +10,12 @@ const Section = styled.section`
 `;
 
 const Header = styled.div`
+  padding: 40px 0;
   background-color: ${({ theme }) => theme.color.primary};
+
+  ${({ theme }) => theme.media.laptop`
+    padding: 0;
+  `}
 `;
 
 const Title = styled.h2`
