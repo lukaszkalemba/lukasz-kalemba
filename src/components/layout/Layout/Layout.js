@@ -7,7 +7,7 @@ import Nav from 'components/layout/Nav';
 import Footer from 'components/layout/Footer';
 import S from './Layout.styles';
 
-const Layout = ({ isFooter, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -15,19 +15,14 @@ const Layout = ({ isFooter, children }) => {
         <S.Wrapper>
           <Nav />
           <main>{children}</main>
-          {isFooter && <Footer />}
+          <Footer />
         </S.Wrapper>
       </ThemeProvider>
     </>
   );
 };
 
-Layout.defaultProps = {
-  isFooter: true,
-};
-
 Layout.propTypes = {
-  isFooter: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
