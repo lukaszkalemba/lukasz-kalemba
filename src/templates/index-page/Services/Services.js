@@ -44,7 +44,7 @@ const Services = () => {
             Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
             istniejący na kolejny poziom.
           </S.Title>
-          <Link to="wycena">Bezpłatna wycena</Link>
+          <Link to="/wycena">Bezpłatna wycena</Link>
         </Container>
       </S.Header>
 
