@@ -41,7 +41,7 @@ const Button = styled.button`
       span {
         transform: translateX(-5px) skew(45deg);
       }
-    `};
+    `}
   }
 
   ${({ theme }) => theme.media.tablet`
