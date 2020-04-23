@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HeadingComponent from 'components/commons/Heading';
 
 const Wrapper = styled.div`
   height: 90vh;
@@ -50,6 +51,23 @@ const Content = styled.div`
   `}
 `;
 
+const Heading = styled(HeadingComponent)`
+  ${({ theme }) => theme.media.laptop`
+    margin: 0.20em 0;
+    margin-left: calc(3vw);
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    margin-left: calc(10.5vw);
+  `}
+
+  ${({ theme }) => theme.media.largeDesktop`
+    font-size: ${theme.font.size.xxxl};
+    margin: 0.15em 0;
+    margin-left: calc(13vw);
+  `}
+`;
+
 const Buttons = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,4 +95,4 @@ const Buttons = styled.div`
   `}
 `;
 
-export default { Wrapper, Content, Buttons };
+export default { Wrapper, Content, Heading, Buttons };
