@@ -11,7 +11,7 @@ const List = styled.ul`
   left: 0;
   transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-100%')});
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,6 +21,7 @@ const List = styled.ul`
   transition-delay: 250ms;
 
   ${({ theme }) => theme.media.laptop`
+    height: auto;
     position: static;
     background-color: transparent;
     transform: translate(0);
