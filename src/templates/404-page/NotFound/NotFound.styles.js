@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import HeadingComponent from 'components/commons/Heading';
 
 const Wrapper = styled.div`
-  height: 100vh;
   position: relative;
+  height: 85vh;
 
   ::before {
     content: '404';
@@ -27,18 +27,17 @@ const Wrapper = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 350px 350px;
+    border-width: 0 0 200px 200px;
     border-color: transparent;
     border-bottom-color: ${({ theme }) => theme.color.primary};
-    opacity: 0.3;
 
     ${({ theme }) => theme.media.tablet`
-      bottom: 150px;
+      bottom: -15px;
       border-width: 0 0 400px 400px;
-      opacity: 1;
     `}
 
     ${({ theme }) => theme.media.laptop`
+      bottom: 15px;
       border-width: 0 0 500px 500px;
     `}
   }
