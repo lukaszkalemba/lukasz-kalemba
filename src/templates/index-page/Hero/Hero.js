@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'components/commons/Container';
 import Paragraph from 'components/index-page/HeroParagraph';
-import Heading from 'components/commons/Heading';
 import Button from 'components/commons/Button';
 import S from './Hero.styles';
 
@@ -10,7 +9,7 @@ const Hero = () => {
     <S.Wrapper>
       <Container axis="both">
         <S.Content>
-          <Heading tag="h1">Zaistniej w sieci</Heading>
+          <S.Heading tag="h1">Zaistniej w sieci</S.Heading>
           <Paragraph>Zaistniej w świecie nieograniczonych możliwości</Paragraph>
         </S.Content>
         <S.Buttons>

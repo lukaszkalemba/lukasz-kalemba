@@ -33,16 +33,6 @@ const H1 = styled.h1`
     margin: 0.20em 0;
     margin-left: calc(3vw);
   `}
-
-  ${({ theme }) => theme.media.desktop`
-    margin-left: calc(10.5vw);
-  `}
-
-  ${({ theme }) => theme.media.largeDesktop`
-    font-size: ${theme.font.size.xxxl};
-    margin: 0.15em 0;
-    margin-left: calc(13vw);
-  `}
 `;
 
 const H2 = styled.h2`

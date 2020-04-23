@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HeadingComponent from 'components/commons/Heading';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -7,7 +8,7 @@ const Wrapper = styled.div`
   ::before {
     content: '404';
     display: none;
-    font-size: 25vw;
+    font-size: 30vw;
     position: absolute;
     left: 10%;
     font-weight: ${({ theme }) => theme.font.weight.bold};
@@ -44,7 +45,7 @@ const Wrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  width: 75%;
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -54,4 +55,17 @@ const ButtonWrapper = styled.div`
   `}
 `;
 
-export default { Wrapper, ButtonWrapper };
+const Heading = styled(HeadingComponent)`
+  margin: 1.5em 0 1em;
+
+  ${({ theme }) => theme.media.laptop`
+    font-size: ${theme.font.size.xl};
+    margin-bottom: 0.55em;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    font-size: ${theme.font.size.xxl};
+  `}
+`;
+
+export default { Wrapper, ButtonWrapper, Heading };
