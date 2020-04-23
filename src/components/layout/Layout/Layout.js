@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
 import GlobalStyle from 'components/layout/GlobalStyle';
+import Scrollbar from 'components/layout/Scrollbar';
 import Nav from 'components/layout/Nav';
 import Footer from 'components/layout/Footer';
-import S from './Layout.styles';
 
 const Layout = ({ isFooter, children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <S.Wrapper>
+        <Scrollbar>
           <Nav />
           <main>{children}</main>
           {isFooter && <Footer />}
-        </S.Wrapper>
+        </Scrollbar>
       </ThemeProvider>
     </>
   );

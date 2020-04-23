@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.font.family.montserrat}, sans-serif;
     min-height: 100vh;
+    color: ${({ theme }) => theme.color.white};
     background: linear-gradient(
       to right bottom,
       ${({ theme }) => theme.color.background.light},
