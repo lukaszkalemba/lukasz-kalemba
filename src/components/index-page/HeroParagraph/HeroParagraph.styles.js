@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Paragraph = styled.p`
+const Paragraph = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xs};
   z-index: ${({ theme }) => theme.zindex.positive1};
   opacity: 0.5;

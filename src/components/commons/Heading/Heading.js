@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import S from './Heading.styles';
 
-const Heading = ({ tag, className, children }) => {
+const Heading = ({ tag, className, children, ...rest }) => {
   let HeadingTag;
 
   if (tag === 'h1') {
@@ -11,7 +11,11 @@ const Heading = ({ tag, className, children }) => {
     HeadingTag = S.Heading.H2;
   }
 
-  return <HeadingTag className={className}>{children}</HeadingTag>;
+  return (
+    <HeadingTag className={className} {...rest}>
+      {children}
+    </HeadingTag>
+  );
 };
 
 Heading.defaultProps = {

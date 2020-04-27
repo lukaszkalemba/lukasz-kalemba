@@ -25,7 +25,20 @@ const Nav = () => {
   return (
     <header>
       <Container axis="both">
-        <S.Wrapper>
+        <S.Wrapper
+          initial={{
+            y: -100,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            transition: 0.5,
+            delay: 1.25,
+          }}
+        >
           <S.TopBar>
             <Logo setIsNavOpen={setIsNavOpen} />
             <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />

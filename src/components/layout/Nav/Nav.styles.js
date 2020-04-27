@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   ${({ theme }) => theme.media.laptop`
     display: flex;
     justify-content: space-between;
