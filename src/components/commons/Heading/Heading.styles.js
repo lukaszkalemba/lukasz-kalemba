@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const headingBase = css`
   position: relative;
@@ -20,7 +21,7 @@ const headingBase = css`
   }
 `;
 
-const H1 = styled.h1`
+const H1 = styled(motion.h1)`
   ${headingBase}
   font-size: ${({ theme }) => theme.font.size.m};
 
