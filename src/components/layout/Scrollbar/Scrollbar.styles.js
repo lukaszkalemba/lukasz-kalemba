@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Scroll from 'react-smooth-scrollbar';
 
-const Scrollbar = styled.div`
+const Scrollbar = styled(Scroll)`
   width: 100vw;
   height: 100vh;
   overflow: auto;
