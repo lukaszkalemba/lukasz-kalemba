@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import gsap from 'gsap';
 import Logo from 'components/commons/Logo';
 import Container from 'components/commons/Container';
 import NavItems from 'components/layout/Nav/NavItems';
@@ -8,22 +9,26 @@ import S from './Nav.styles';
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const toggleScrolling = () => {
-    if (isNavOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  };
-
   useEffect(() => {
-    toggleScrolling();
-  }, [isNavOpen]);
+    const nav = document.getElementById('gsap-nav-header');
+
+    gsap.fromTo(
+      nav,
+      { y: '-=200', autoAlpha: 0 },
+      {
+        duration: 0.75,
+        delay: 2,
+        y: '+=200',
+        autoAlpha: 1,
+        clearProps: 'all',
+      }
+    );
+  }, []);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <header>
+    <header id="gsap-nav-header">
       <Container axis="both">
         <S.Wrapper>
           <S.TopBar>

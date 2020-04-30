@@ -74,6 +74,7 @@ const Buttons = styled.div`
   justify-content: space-between;
   margin-top: 20px;
   padding: 0 30px;
+  position: relative;
 
   ${({ theme }) => theme.media.tablet`
     margin-top: 40px;
