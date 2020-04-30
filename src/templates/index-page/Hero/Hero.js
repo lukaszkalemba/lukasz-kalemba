@@ -9,39 +9,10 @@ const Hero = () => {
     <S.Wrapper>
       <Container axis="both">
         <S.Content>
-          <S.Heading
-            tag="h1"
-            initial={{
-              x: -150,
-              opacity: 0,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-            }}
-            transition={{
-              duration: 0.5,
-              delay: 0.2,
-            }}
-          >
-            Zaistniej w sieci
-          </S.Heading>
+          <S.Heading tag="h1">Zaistniej w sieci</S.Heading>
           <Paragraph>Zaistniej w świecie nieograniczonych możliwości</Paragraph>
         </S.Content>
-        <S.Buttons
-          initial={{
-            x: -150,
-            opacity: 0,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.5,
-            delay: 0.8,
-          }}
-        >
+        <S.Buttons>
           <Button priority="primary">Bezpłatna wycena</Button>
           <Button priority="secondary">Zrealizowane projekty</Button>
         </S.Buttons>
