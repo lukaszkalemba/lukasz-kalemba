@@ -39,8 +39,8 @@ const LastProjects = () => {
         <Heading>Ostatnie projekty.</Heading>
         <Container axis="x">
           <S.Cards>
-            {cards.map(({ id, title }) => (
-              <Card key={id} title={title} />
+            {cards.map(({ id, title }, index) => (
+              <Card key={id} index={index} title={title} />
             ))}
           </S.Cards>
           <Link to="/projekty">Sprawdź inne</Link>
