@@ -21,6 +21,7 @@ const Article = styled.article`
 
   ${({ theme }) => theme.media.tablet`
     height: 550px;
+    margin-top: ${({ isOffset }) => isOffset && '40px'};
   `}
 
   ${({ theme }) => theme.media.desktop`
