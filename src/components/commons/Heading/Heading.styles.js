@@ -38,7 +38,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   ${headingBase}
   font-size: ${({ theme }) => theme.font.size.x};
-  margin-left: 0.29em;
+  /* margin-left: 0.29em; */
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.l};

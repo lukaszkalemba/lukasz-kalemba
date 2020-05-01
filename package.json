@@ -26,6 +26,7 @@
     "react-inlinesvg": "^1.2.0",
     "react-scrollmagic": "^2.2.0",
     "react-smooth-scrollbar": "^8.0.6",
+    "react-use": "^14.2.0",
     "smooth-scrollbar": "^8.5.2",
     "styled-components": "^5.0.0"
   },

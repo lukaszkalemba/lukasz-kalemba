@@ -11,7 +11,9 @@ const Article = styled.article`
   align-items: flex-end;
   height: 450px;
   padding: 30px;
+  margin: 10px 0;
   cursor: pointer;
+  opacity: 0;
 
   :hover {
     div {
@@ -21,7 +23,6 @@ const Article = styled.article`
 
   ${({ theme }) => theme.media.tablet`
     height: 550px;
-    margin-top: ${({ isOffset }) => isOffset && '40px'};
   `}
 
   ${({ theme }) => theme.media.desktop`
