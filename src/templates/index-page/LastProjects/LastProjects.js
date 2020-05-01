@@ -37,6 +37,7 @@ const LastProjects = () => {
     <S.Section>
       <Container axis="both">
         <Heading>Ostatnie projekty.</Heading>
+
         <Container axis="x">
           <S.Cards>
             {cards.map(({ id, title }, index) => (
