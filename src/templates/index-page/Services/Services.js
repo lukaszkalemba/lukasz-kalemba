@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useIntersection } from 'react-use';
+import gsap from 'gsap';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/commons/Container';
 import Link from 'components/commons/Link';
@@ -34,17 +36,45 @@ const IMAGES_QUERY = graphql`
 `;
 
 const Services = () => {
+  const wrapper = useRef(null);
+
   const { design, webapp, ecommerce } = useStaticQuery(IMAGES_QUERY);
+
+  const tl = gsap.timeline();
+
+  const title = document.getElementById(`gsap-services-title`);
+  const link = document.getElementById(`gsap-services-link`);
+
+  const intersection = useIntersection(wrapper, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.9,
+  });
+
+  if (intersection && intersection.intersectionRatio > 0.9) {
+    tl.to(title, {
+      duration: 0.75,
+      opacity: 1,
+      x: -30,
+    }).to(link, { duration: 0.75, opacity: 1, x: 30 }, '-=0.75');
+  }
 
   return (
     <S.Section>
       <S.Header>
         <Container axis="both">
-          <S.Title>
-            Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
-            istniejący na kolejny poziom.
-          </S.Title>
-          <Link to="/wycena">Bezpłatna wycena</Link>
+          <div ref={wrapper}>
+            <S.Title id="gsap-services-title">
+              Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
+              istniejący na kolejny poziom.
+            </S.Title>
+            <div
+              style={{ opacity: 0, marginLeft: '-30px' }}
+              id="gsap-services-link"
+            >
+              <Link to="/wycena">Bezpłatna wycena</Link>
+            </div>
+          </div>
         </Container>
       </S.Header>
 
