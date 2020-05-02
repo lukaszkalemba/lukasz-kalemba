@@ -48,7 +48,7 @@ const Services = () => {
         </Container>
       </S.Header>
 
-      <S.Services>
+      <div>
         <Service img={design.childImageSharp}>
           Projektowanie interfejsów
         </Service>
@@ -56,7 +56,7 @@ const Services = () => {
           Strony i aplikacje internetowe
         </Service>
         <Service img={ecommerce.childImageSharp}>Sklepy internetowe</Service>
-      </S.Services>
+      </div>
     </S.Section>
   );
 };
