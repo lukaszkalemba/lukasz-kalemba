@@ -23,6 +23,8 @@ const Title = styled.h2`
   line-height: 1.75em;
   max-width: 70vw;
   margin-top: 0;
+  opacity: 0;
+  margin-left: 30px;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.m};
