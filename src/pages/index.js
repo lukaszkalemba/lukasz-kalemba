@@ -4,6 +4,7 @@ import SEO from 'components/commons/SEO';
 import Hero from 'templates/index-page/Hero';
 import LastProjects from 'templates/index-page/LastProjects';
 import Services from 'templates/index-page/Services';
+import Blog from 'templates/index-page/Blog';
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
     <Hero />
     <LastProjects />
     <Services />
+    <Blog />
   </Layout>
 );
 
