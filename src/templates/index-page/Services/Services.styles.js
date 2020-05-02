@@ -38,6 +38,4 @@ const Title = styled.h2`
   `}
 `;
 
-const Services = styled.div``;
-
-export default { Section, Header, Title, Services };
+export default { Section, Header, Title };

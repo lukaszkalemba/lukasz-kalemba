@@ -18,12 +18,16 @@ const Overlay = styled(GatsbyBackground)`
   position: absolute !important;
   height: 100%;
   width: 100%;
-  opacity: 0 !important;
+  opacity: 0.1 !important;
   transition: opacity 400ms ease-in-out;
 
-  :hover {
-    opacity: 0.1 !important;
-  }
+  ${({ theme }) => theme.media.laptop`
+    opacity: 0 !important;
+
+    :hover {
+      opacity: 0.1 !important;
+    }
+  `}
 `;
 
 const Title = styled.h3`
