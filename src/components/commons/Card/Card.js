@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import PropTypes from 'prop-types';
 import S from './Card.styles';
 
-const Card = ({ index, title }) => {
+const Card = ({ index, title, small }) => {
   const wrapper = useRef(null);
   const el = document.getElementById(`gsap-card-wrapper-${index}`);
   const mq = window.matchMedia('(min-width: 768px)');
@@ -26,7 +26,7 @@ const Card = ({ index, title }) => {
 
   return (
     <div ref={wrapper}>
-      <S.Article id={`gsap-card-wrapper-${index}`}>
+      <S.Article id={`gsap-card-wrapper-${index}`} small={small}>
         <S.Overlay />
         <S.Title>{title}</S.Title>
       </S.Article>
@@ -34,9 +34,14 @@ const Card = ({ index, title }) => {
   );
 };
 
+Card.defaultProps = {
+  small: false,
+};
+
 Card.propTypes = {
   index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  small: PropTypes.bool,
 };
 
 export default Card;

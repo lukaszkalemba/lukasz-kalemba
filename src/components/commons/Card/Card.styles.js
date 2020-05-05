@@ -9,11 +9,12 @@ const Article = styled.article`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 450px;
+  height: ${({ small }) => (small ? '300px' : '450px')};
   padding: 30px;
   margin: 10px 0;
   cursor: pointer;
-  /* opacity: 0; */
+  opacity: 0;
+  z-index: ${({ theme }) => theme.zindex.positive1};
 
   :hover {
     div {
@@ -22,11 +23,11 @@ const Article = styled.article`
   }
 
   ${({ theme }) => theme.media.tablet`
-    height: 550px;
+    height: ${({ small }) => (small ? '400px' : '550px')};
   `}
 
   ${({ theme }) => theme.media.desktop`
-    height: 750px;
+    height: ${({ small }) => (small ? '500px' : '750px')};
     padding: 40px 50px;
   `}
 `;
@@ -46,6 +47,7 @@ const Title = styled.h3`
   position: relative;
   z-index: ${({ theme }) => theme.zindex.positive1};
   margin: 0;
+  text-align: right;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.m};
