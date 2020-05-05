@@ -4,10 +4,10 @@ import gsap from 'gsap';
 import PropTypes from 'prop-types';
 import S from './Heading.styles';
 
-const Heading = ({ tag, id, className, children }) => {
+const Heading = ({ tag, section, id, className, children }) => {
   const heading = useRef(null);
 
-  const headingElement = document.querySelectorAll('.gsap-heading');
+  const headingElement = document.querySelector(`.gsap-heading-${section}`);
   const isH1 = tag === 'h1' && true;
   let HeadingTag;
 
@@ -34,7 +34,7 @@ const Heading = ({ tag, id, className, children }) => {
     <div ref={isH1 ? null : heading}>
       <HeadingTag
         id={isH1 ? id : null}
-        className={isH1 ? className : `${className} gsap-heading`}
+        className={isH1 ? className : `${className} gsap-heading-${section}`}
       >
         {children}
       </HeadingTag>
@@ -50,6 +50,7 @@ Heading.defaultProps = {
 
 Heading.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2']),
+  section: PropTypes.string.isRequired,
   id: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.oneOfType([

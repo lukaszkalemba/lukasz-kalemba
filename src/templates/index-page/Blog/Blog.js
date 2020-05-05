@@ -7,20 +7,20 @@ import S from './Blog.styles';
 
 const cards = [
   {
-    id: 0,
-    title: 'Google',
+    id: 8,
+    title: 'Znaczenie brandingu',
   },
   {
-    id: 1,
-    title: 'Facebook',
+    id: 9,
+    title: 'Znaczenie brandingu',
   },
   {
-    id: 2,
-    title: 'Amazon',
+    id: 10,
+    title: 'Znaczenie brandingu',
   },
   {
-    id: 3,
-    title: 'Apple',
+    id: 11,
+    title: 'Znaczenie brandingu',
   },
 ];
 
@@ -28,11 +28,11 @@ const Blog = () => {
   return (
     <S.Section>
       <Container axis="both">
-        <Heading>Najnowsze informacje.</Heading>
+        <Heading section="blog">Najnowsze informacje.</Heading>
         <Container axis="x">
           <S.Cards>
-            {cards.map(({ id, title }, index) => (
-              <Card key={id} index={index} title={title} />
+            {cards.map(({ id, title }) => (
+              <Card key={id} index={id} title={title} small />
             ))}
           </S.Cards>
           <Link to="/blog">Sprawdź inne</Link>

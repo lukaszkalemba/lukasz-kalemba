@@ -36,7 +36,7 @@ const LastProjects = () => {
   return (
     <S.Section>
       <Container axis="both">
-        <Heading>Ostatnie projekty.</Heading>
+        <Heading section="last-projects">Ostatnie projekty.</Heading>
 
         <Container axis="x">
           <S.Cards>
