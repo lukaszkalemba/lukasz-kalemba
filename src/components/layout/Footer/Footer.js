@@ -18,7 +18,8 @@ const Footer = () => {
   const socialMediaIcons = document.querySelectorAll('.gsap-footer-icons');
   const bottomBar = document.querySelector('.gsap-footer-bottom-bar');
 
-  const mq = window.matchMedia('(min-width: 1150px)');
+  const phone = window.matchMedia('(max-width: 1150px)');
+  const laptop = window.matchMedia('(min-width: 1150px)');
 
   const intersection = useIntersection(footer, {
     root: null,
@@ -27,7 +28,26 @@ const Footer = () => {
   });
 
   if (intersection && intersection.intersectionRatio > 0.9) {
-    if (mq.matches) {
+    if (phone.matches) {
+      tl.to(socialMediaIcons, {
+        opacity: 1,
+        duration: 0.3,
+      })
+        .to(
+          companyInformations,
+          {
+            opacity: 1,
+            duration: 0.3,
+          },
+          '-=0.3'
+        )
+        .to(bottomBar, {
+          opacity: 1,
+          duration: 0.3,
+        });
+    }
+
+    if (laptop.matches) {
       tl.to(socialMediaIcons, {
         opacity: 1,
         duration: 0.5,

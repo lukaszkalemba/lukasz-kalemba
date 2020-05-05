@@ -46,6 +46,7 @@ const BottomBar = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
+  opacity: 0;
 
   ${({ theme }) => theme.media.tablet`
     padding-bottom: 20px;
@@ -54,7 +55,6 @@ const BottomBar = styled.div`
   ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     padding-bottom: 30px;
-    opacity: 0;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
