@@ -13,7 +13,7 @@ const Article = styled.article`
   padding: 30px;
   margin: 10px 0;
   cursor: pointer;
-  opacity: 0;
+  /* opacity: 0; */
 
   :hover {
     div {
