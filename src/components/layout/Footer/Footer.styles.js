@@ -54,6 +54,7 @@ const BottomBar = styled.div`
   ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     padding-bottom: 30px;
+    opacity: 0;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`

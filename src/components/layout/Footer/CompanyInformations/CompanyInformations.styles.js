@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  opacity: 0;
 `;
 
 const A = styled.a`
