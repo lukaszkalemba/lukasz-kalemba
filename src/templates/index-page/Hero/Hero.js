@@ -11,6 +11,8 @@ const Hero = () => {
     const paragraph = document.getElementById('gsap-hero-paragraph');
     const buttons = document.getElementById('gsap-hero-buttons');
 
+    const mq = window.matchMedia('(min-width: 1150px)');
+
     const tl = gsap.timeline();
 
     tl.from(heading, {
@@ -28,7 +30,7 @@ const Hero = () => {
           autoAlpha: 1,
           x: 0,
         },
-        '-=0.75'
+        mq.matches ? '-=0.75' : null
       );
   }, []);
 

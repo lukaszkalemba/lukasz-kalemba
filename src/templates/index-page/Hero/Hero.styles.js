@@ -13,10 +13,10 @@ const Wrapper = styled.div`
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 450px 300px;
+    border-width: 0 0 400px 300px;
     border-color: transparent;
     border-bottom-color: ${({ theme }) => theme.color.primary};
-    opacity: 0.3;
+    opacity: 0.7;
 
     ${({ theme }) => theme.media.tablet`
       border-width: 0 0 700px 700px;
