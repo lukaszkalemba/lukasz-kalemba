@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   right: 0;
   top: 0;
   padding: 20px;
+  opacity: 0;
 
   ${({ theme }) => theme.media.tablet`
     padding: 35px 55px;

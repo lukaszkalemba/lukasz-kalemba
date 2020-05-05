@@ -19,6 +19,7 @@ const Card = ({ index, title, small }) => {
   if (intersection && intersection.intersectionRatio > 0.9) {
     gsap.to(el, {
       opacity: 1,
+      delay: 0.05,
       y: mq.matches ? isOffset && 45 : 0,
       duration: 0.75,
     });
