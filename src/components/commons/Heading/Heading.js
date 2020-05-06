@@ -44,13 +44,14 @@ const Heading = ({ tag, section, id, className, children }) => {
 
 Heading.defaultProps = {
   tag: 'h2',
+  section: '',
   id: '',
   className: '',
 };
 
 Heading.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2']),
-  section: PropTypes.string.isRequired,
+  section: PropTypes.string,
   id: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.oneOfType([
