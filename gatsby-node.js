@@ -34,3 +34,29 @@ exports.createPages = async ({ actions, graphql }) => {
     });
   });
 };
+
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  const { data } = await graphql(`
+    {
+      blog: allDatoCmsBlogPost {
+        nodes {
+          slug
+        }
+      }
+    }
+  `);
+
+  data.blog.nodes.forEach(({ slug }) => {
+    createPage({
+      path: `/blog/${slug}`,
+      component: path.resolve(
+        './src/templates/commons/BlogTemplate/BlogTemplate.js'
+      ),
+      context: {
+        slug,
+      },
+    });
+  });
+};
