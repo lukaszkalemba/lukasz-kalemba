@@ -75,23 +75,21 @@ const Buttons = styled.div`
   margin-top: 20px;
   padding: 0 30px;
   position: relative;
+  z-index: ${({ theme }) => theme.zindex.positive1};
 
-  ${({ theme }) => theme.media.tablet`
+    ${({ theme }) => theme.media.tablet`
     margin-top: 40px;
   `}
-
-  ${({ theme }) => theme.media.laptop`
+    ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     justify-content: flex-start;
     padding: 0;
     margin-left: 5vw;
   `}
-
-  ${({ theme }) => theme.media.desktop`
+    ${({ theme }) => theme.media.desktop`
     margin-left: 11vw;
   `}
-
-  ${({ theme }) => theme.media.largeDesktop`
+    ${({ theme }) => theme.media.largeDesktop`
     margin-left: 18vw;
   `}
 `;
