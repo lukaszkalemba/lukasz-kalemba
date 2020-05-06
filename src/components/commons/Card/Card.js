@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { useIntersection } from 'react-use';
 import gsap from 'gsap';
-import PropTypes from 'prop-types';
 import S from './Card.styles';
 
-const Card = ({ index, title, small }) => {
+const Card = ({ index, title, preSlug, slug, small }) => {
   const wrapper = useRef(null);
   const el = document.getElementById(`gsap-card-wrapper-${index}`);
   const mq = window.matchMedia('(min-width: 768px)');
@@ -27,10 +27,12 @@ const Card = ({ index, title, small }) => {
 
   return (
     <div ref={wrapper}>
-      <S.Article id={`gsap-card-wrapper-${index}`} small={small}>
-        <S.Overlay />
-        <S.Title>{title}</S.Title>
-      </S.Article>
+      <S.Link to={`/${preSlug}/${slug}`}>
+        <S.Article id={`gsap-card-wrapper-${index}`} small={small}>
+          <S.Overlay />
+          <S.Title>{title}</S.Title>
+        </S.Article>
+      </S.Link>
     </div>
   );
 };
@@ -42,6 +44,8 @@ Card.defaultProps = {
 Card.propTypes = {
   index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  preSlug: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   small: PropTypes.bool,
 };
 

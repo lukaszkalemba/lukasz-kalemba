@@ -13,6 +13,7 @@ const PROJECTS_QUERY = graphql`
         node {
           id
           title
+          slug
           image {
             path
           }
@@ -33,7 +34,13 @@ const LastProjects = () => {
         <Container axis="x">
           <S.Cards>
             {projects.edges.map(({ node }, index) => (
-              <Card key={node.id} index={index} title={node.title} />
+              <Card
+                key={node.id}
+                index={index}
+                title={node.title}
+                slug={node.slug}
+                preSlug="projekty"
+              />
             ))}
           </S.Cards>
           <Link to="/projekty">Sprawdź inne</Link>

@@ -15,6 +15,7 @@ const BLOG_POSTS_QUERY = graphql`
           title
           content
           publicationDate
+          slug
           image {
             path
           }
@@ -34,7 +35,14 @@ const Blog = () => {
         <Container axis="x">
           <S.Cards>
             {blogPosts.edges.map(({ node }, index) => (
-              <Card key={node.id} index={index + 10} title={node.title} small />
+              <Card
+                key={node.id}
+                index={index + 10}
+                title={node.title}
+                slug={node.slug}
+                preSlug="blog"
+                small
+              />
             ))}
           </S.Cards>
           <Link to="/blog">Sprawdź inne</Link>
