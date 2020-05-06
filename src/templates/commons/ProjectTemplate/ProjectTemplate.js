@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout/Layout';
@@ -10,20 +11,23 @@ export const PROJECT_QUERY = graphql`
       title
       content
       image {
-        path
+        fluid {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
       }
     }
   }
 `;
 
 const ProjectTemplate = ({ data }) => {
-  const { title, content } = data.project;
+  const { title, content, image } = data.project;
 
   return (
     <Layout>
       <Container axis="both">
         <h1>{title}</h1>
         <p>{content}</p>
+        <Image fluid={image.fluid} />
       </Container>
     </Layout>
   );
@@ -35,7 +39,7 @@ ProjectTemplate.propTypes = {
       title: PropTypes.string,
       content: PropTypes.string,
       image: PropTypes.shape({
-        path: PropTypes.string,
+        fluid: PropTypes.shape({}),
       }),
     }),
   }).isRequired,
