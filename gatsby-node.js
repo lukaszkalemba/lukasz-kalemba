@@ -12,7 +12,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const { data } = await graphql(`
+  const projects = await graphql(`
     {
       projects: allDatoCmsProject {
         nodes {
@@ -22,7 +22,17 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  data.projects.nodes.forEach(({ slug }) => {
+  const blogPosts = await graphql(`
+    {
+      blog: allDatoCmsBlogPost {
+        nodes {
+          slug
+        }
+      }
+    }
+  `);
+
+  projects.data.projects.nodes.forEach(({ slug }) => {
     createPage({
       path: `/projekty/${slug}`,
       component: path.resolve(
@@ -33,22 +43,8 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     });
   });
-};
 
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
-
-  const { data } = await graphql(`
-    {
-      blog: allDatoCmsBlogPost {
-        nodes {
-          slug
-        }
-      }
-    }
-  `);
-
-  data.blog.nodes.forEach(({ slug }) => {
+  blogPosts.data.blog.nodes.forEach(({ slug }) => {
     createPage({
       path: `/blog/${slug}`,
       component: path.resolve(
