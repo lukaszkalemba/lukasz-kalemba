@@ -48,7 +48,6 @@ const Title = styled.h3`
   z-index: ${({ theme }) => theme.zindex.positive1};
   margin: 0;
   text-align: right;
-  text-transform: capitalize;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.m};

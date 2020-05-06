@@ -52,7 +52,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: `/blog/${slug}`,
       component: path.resolve(
-        './src/templates/commons/BlogTemplate/BlogTemplate.js'
+        './src/templates/commons/BlogPostTemplate/BlogPostTemplate.js'
       ),
       context: {
         slug,

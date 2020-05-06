@@ -7,7 +7,7 @@ import Container from 'components/commons/Container';
 
 export const BLOG_POST_QUERY = graphql`
   query($slug: String!) {
-    blog_post: datoCmsBlogPost(slug: { eq: $slug }) {
+    blogPost: datoCmsBlogPost(slug: { eq: $slug }) {
       title
       content
       image {
@@ -20,7 +20,7 @@ export const BLOG_POST_QUERY = graphql`
 `;
 
 const BlogTemplate = ({ data }) => {
-  const { title, content, image } = data.blog_post;
+  const { title, content, image } = data.blogPost;
 
   return (
     <Layout>
@@ -36,7 +36,7 @@ const BlogTemplate = ({ data }) => {
 
 BlogTemplate.propTypes = {
   data: PropTypes.shape({
-    blog_post: PropTypes.shape({
+    blogPost: PropTypes.shape({
       title: PropTypes.string,
       content: PropTypes.string,
       image: PropTypes.shape({
