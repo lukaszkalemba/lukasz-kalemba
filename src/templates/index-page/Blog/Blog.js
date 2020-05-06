@@ -1,38 +1,40 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/commons/Container';
 import Heading from 'components/commons/Heading';
 import Card from 'components/commons/Card';
 import Link from 'components/commons/Link';
 import S from './Blog.styles';
 
-const cards = [
+const BLOG_POSTS_QUERY = graphql`
   {
-    id: 8,
-    title: 'Znaczenie brandingu',
-  },
-  {
-    id: 9,
-    title: 'Znaczenie brandingu',
-  },
-  {
-    id: 10,
-    title: 'Znaczenie brandingu',
-  },
-  {
-    id: 11,
-    title: 'Znaczenie brandingu',
-  },
-];
+    blogPosts: allDatoCmsBlogPost {
+      edges {
+        node {
+          id
+          title
+          content
+          publicationDate
+          image {
+            path
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Blog = () => {
+  const { blogPosts } = useStaticQuery(BLOG_POSTS_QUERY);
+
   return (
     <S.Section>
       <Container axis="both">
         <Heading section="blog">Najnowsze informacje.</Heading>
         <Container axis="x">
           <S.Cards>
-            {cards.map(({ id, title }) => (
-              <Card key={id} index={id} title={title} small />
+            {blogPosts.edges.map(({ node }, index) => (
+              <Card key={node.id} index={index + 10} title={node.title} small />
             ))}
           </S.Cards>
           <Link to="/blog">Sprawdź inne</Link>
