@@ -15,7 +15,9 @@ const PROJECTS_QUERY = graphql`
           title
           slug
           image {
-            path
+            fluid {
+              ...GatsbyDatoCmsFluid_noBase64
+            }
           }
         }
       }
@@ -39,6 +41,7 @@ const LastProjects = () => {
                 index={index}
                 title={node.title}
                 slug={node.slug}
+                image={node.image}
                 preSlug="projekty"
               />
             ))}

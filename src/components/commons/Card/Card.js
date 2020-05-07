@@ -4,7 +4,7 @@ import { useIntersection } from 'react-use';
 import gsap from 'gsap';
 import S from './Card.styles';
 
-const Card = ({ index, title, preSlug, slug, small }) => {
+const Card = ({ index, title, image, preSlug, slug, small }) => {
   const wrapper = useRef(null);
   const el = document.getElementById(`gsap-card-wrapper-${index}`);
   const mq = window.matchMedia('(min-width: 768px)');
@@ -30,6 +30,7 @@ const Card = ({ index, title, preSlug, slug, small }) => {
       <S.Link to={`/${preSlug}/${slug}`}>
         <S.Article id={`gsap-card-wrapper-${index}`} small={small}>
           <S.Overlay />
+          <S.Image fluid={image.fluid} />
           <S.Title>{title}</S.Title>
         </S.Article>
       </S.Link>
@@ -44,6 +45,9 @@ Card.defaultProps = {
 Card.propTypes = {
   index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    fluid: PropTypes.object,
+  }).isRequired,
   preSlug: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   small: PropTypes.bool,
