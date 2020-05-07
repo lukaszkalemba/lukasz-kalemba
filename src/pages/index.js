@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout/Layout';
-import SEO from 'components/commons/SEO';
+import SEO from 'components/common/SEO';
 import Hero from 'containers/index-page/Hero';
 import LastProjects from 'containers/index-page/LastProjects';
 import Services from 'containers/index-page/Services';

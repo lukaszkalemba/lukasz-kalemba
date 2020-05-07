@@ -3,8 +3,8 @@ import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout/Layout';
-import SEO from 'components/commons/SEO';
-import Container from 'components/commons/Container';
+import SEO from 'components/common/SEO';
+import Container from 'components/common/Container';
 
 export const PROJECT_QUERY = graphql`
   query($slug: String!) {

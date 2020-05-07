@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'components/commons/Icon';
+import Icon from 'components/common/Icon';
 import facebook from 'assets/svgs/icon_facebook.svg';
 import instagram from 'assets/svgs/icon_instagram.svg';
 import dribbble from 'assets/svgs/icon_dribbble.svg';

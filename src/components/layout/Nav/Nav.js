@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import gsap from 'gsap';
-import Logo from 'components/commons/Logo';
-import Container from 'components/commons/Container';
+import Logo from 'components/common/Logo';
+import Container from 'components/common/Container';
 import NavItems from 'components/layout/Nav/NavItems';
 import Hamburger from 'components/layout/Nav/Hamburger';
 import S from './Nav.styles';

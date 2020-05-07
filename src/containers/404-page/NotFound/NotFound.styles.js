@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HeadingComponent from 'components/commons/Heading';
+import HeadingComponent from 'components/common/Heading';
 
 const Wrapper = styled.div`
   position: relative;

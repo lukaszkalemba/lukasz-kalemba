@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import Container from 'components/commons/Container';
+import Container from 'components/common/Container';
 import Paragraph from 'components/index-page/HeroParagraph';
-import Button from 'components/commons/Button';
+import Button from 'components/common/Button';
 import S from './Hero.styles';
 
 const Hero = () => {

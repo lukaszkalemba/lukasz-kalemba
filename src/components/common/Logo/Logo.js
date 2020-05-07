@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'components/commons/Icon';
+import Icon from 'components/common/Icon';
 import logo from 'assets/svgs/logo_codemon.svg';
 import S from './Logo.styles';
 

@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { useIntersection } from 'react-use';
 import gsap from 'gsap';
-import Container from 'components/commons/Container';
+import Container from 'components/common/Container';
 import CompanyInformations from 'components/layout/Footer/CompanyInformations';
 import FooterLogo from 'components/layout/Footer/FooterLogo';
-import SocialMediaIcons from 'components/commons/SocialMediaIcons';
+import SocialMediaIcons from 'components/common/SocialMediaIcons';
 import FooterLinks from 'components/layout/Footer/FooterLinks';
 import Copyright from 'components/layout/Footer/Copyright';
 import S from './Footer.styles';

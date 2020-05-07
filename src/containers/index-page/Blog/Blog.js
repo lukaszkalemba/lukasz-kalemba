@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Container from 'components/commons/Container';
-import Heading from 'components/commons/Heading';
-import Card from 'components/commons/Card';
-import Link from 'components/commons/Link';
+import Container from 'components/common/Container';
+import Heading from 'components/common/Heading';
+import Card from 'components/common/Card';
+import Link from 'components/common/Link';
 import S from './Blog.styles';
 
 const BLOG_POSTS_QUERY = graphql`

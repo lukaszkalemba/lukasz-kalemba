@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'components/commons/Icon';
+import Icon from 'components/common/Icon';
 import arrow from 'assets/svgs/icon_arrow.svg';
 import S from './Link.styles';
 

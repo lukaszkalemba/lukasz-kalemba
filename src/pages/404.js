@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout/Layout';
-import SEO from 'components/commons/SEO';
+import SEO from 'components/common/SEO';
 import NotFound from 'containers/404-page/NotFound';
 
 const NotFoundPage = () => (

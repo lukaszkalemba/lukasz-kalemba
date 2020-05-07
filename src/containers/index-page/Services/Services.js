@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { useIntersection } from 'react-use';
 import gsap from 'gsap';
 import { graphql, useStaticQuery } from 'gatsby';
-import Container from 'components/commons/Container';
-import Link from 'components/commons/Link';
+import Container from 'components/common/Container';
+import Link from 'components/common/Link';
 import Service from 'components/index-page/Service';
 import S from './Services.styles';
 

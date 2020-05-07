@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from 'components/commons/Container';
-import Button from 'components/commons/Button';
+import Container from 'components/common/Container';
+import Button from 'components/common/Button';
 import S from './NotFound.styles';
 
 const NotFound = () => {
