@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'components/commons/Icon';
-import logo from 'assets/images/logo_codemon.svg';
+import logo from 'assets/svgs/logo_codemon.svg';
 import S from './Logo.styles';
 
 const Logo = ({ setIsNavOpen }) => (

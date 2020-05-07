@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import slashPattern from 'assets/images/pattern_slash.svg';
+import slashPattern from 'assets/svgs/pattern_slash.svg';
 
 const List = styled.ul`
   margin: 0;

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'components/commons/Icon';
-import facebook from 'assets/images/icon_facebook.svg';
-import instagram from 'assets/images/icon_instagram.svg';
-import dribbble from 'assets/images/icon_dribbble.svg';
-import linkedin from 'assets/images/icon_linkedin.svg';
+import facebook from 'assets/svgs/icon_facebook.svg';
+import instagram from 'assets/svgs/icon_instagram.svg';
+import dribbble from 'assets/svgs/icon_dribbble.svg';
+import linkedin from 'assets/svgs/icon_linkedin.svg';
 import S from './SocialMediaIcons.styles';
 
 const SocialMediaIcons = ({ className }) => (

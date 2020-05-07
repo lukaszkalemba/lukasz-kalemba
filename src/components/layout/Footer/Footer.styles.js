@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import slashPattern from 'assets/images/pattern_slash-dark.svg';
+import slashPattern from 'assets/svgs/pattern_slash-dark.svg';
 
 const Footer = styled.footer`
   background-color: ${({ theme }) => theme.color.primary};

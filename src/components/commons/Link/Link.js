@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from 'components/commons/Icon';
-import arrow from 'assets/images/icon_arrow.svg';
+import arrow from 'assets/svgs/icon_arrow.svg';
 import S from './Link.styles';
 
 const Link = ({ to, children }) => {
