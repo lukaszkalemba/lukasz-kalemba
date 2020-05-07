@@ -14,17 +14,19 @@ const Nav = () => {
 
     const mq = window.matchMedia('(min-width: 1150px)');
 
-    gsap.fromTo(
-      nav,
-      { y: '-=200', autoAlpha: 0 },
-      {
-        duration: 0.75,
-        delay: mq.matches ? 2 : 2.5,
-        y: '+=200',
-        autoAlpha: 1,
-        clearProps: 'all',
-      }
-    );
+    if (mq.matches) {
+      gsap.fromTo(
+        nav,
+        { y: '-=200', autoAlpha: 0 },
+        {
+          duration: 0.75,
+          delay: 1,
+          y: '+=200',
+          autoAlpha: 1,
+          clearProps: 'all',
+        }
+      );
+    }
   }, []);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
