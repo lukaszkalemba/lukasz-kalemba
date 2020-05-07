@@ -26,15 +26,16 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
   }
 
   return (
-    <div ref={wrapper}>
-      <S.Link to={`/${preSlug}/${slug}`}>
-        <S.Article id={`gsap-card-wrapper-${index}`} small={small}>
-          <S.Overlay />
-          <S.Image fluid={image.fluid} />
-          <S.Title>{title}</S.Title>
-        </S.Article>
-      </S.Link>
-    </div>
+    <S.Wrapper id={`gsap-card-wrapper-${index}`} ref={wrapper}>
+      <S.Background fluid={image.fluid}>
+        <S.Link to={`/${preSlug}/${slug}`}>
+          <S.Article small={small}>
+            <S.Overlay />
+            <S.Title>{title}</S.Title>
+          </S.Article>
+        </S.Link>
+      </S.Background>
+    </S.Wrapper>
   );
 };
 
