@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from 'components/layout/Layout';
 import SEO from 'components/commons/SEO';
-import Hero from 'templates/index-page/Hero';
-import LastProjects from 'templates/index-page/LastProjects';
-import Services from 'templates/index-page/Services';
-import Blog from 'templates/index-page/Blog';
+import Hero from 'containers/index-page/Hero';
+import LastProjects from 'containers/index-page/LastProjects';
+import Services from 'containers/index-page/Services';
+import Blog from 'containers/index-page/Blog';
 
 const IndexPage = () => (
   <Layout>

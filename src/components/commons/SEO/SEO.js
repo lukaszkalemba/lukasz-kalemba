@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import favicon from 'assets/images/favicon/favicon.ico';
-import favicon16x16 from 'assets/images/favicon/favicon-16x16.png';
-import favicon32x32 from 'assets/images/favicon/favicon-32x32.png';
+import favicon from 'assets/favicon/favicon.ico';
+import favicon16x16 from 'assets/favicon/favicon-16x16.png';
+import favicon32x32 from 'assets/favicon/favicon-32x32.png';
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(

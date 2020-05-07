@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from 'components/layout/Layout';
 import SEO from 'components/commons/SEO';
-import NotFound from 'templates/404-page/NotFound';
+import NotFound from 'containers/404-page/NotFound';
 
 const NotFoundPage = () => (
   <Layout isFooter={false}>

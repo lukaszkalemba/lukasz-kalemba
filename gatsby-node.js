@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: `/projekty/${slug}`,
       component: path.resolve(
-        './src/templates/commons/ProjectTemplate/ProjectTemplate.js'
+        './src/templates/ProjectPageTemplate/ProjectPageTemplate.js'
       ),
       context: {
         slug,
@@ -48,7 +48,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: `/blog/${slug}`,
       component: path.resolve(
-        './src/templates/commons/BlogPostTemplate/BlogPostTemplate.js'
+        './src/templates/BlogPageTemplate/BlogPageTemplate.js'
       ),
       context: {
         slug,

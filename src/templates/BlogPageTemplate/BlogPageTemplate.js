@@ -20,7 +20,7 @@ export const BLOG_POST_QUERY = graphql`
   }
 `;
 
-const BlogTemplate = ({ data }) => {
+const BlogPageTemplate = ({ data }) => {
   const { title, content, image } = data.blogPost;
 
   return (
@@ -36,7 +36,7 @@ const BlogTemplate = ({ data }) => {
   );
 };
 
-BlogTemplate.propTypes = {
+BlogPageTemplate.propTypes = {
   data: PropTypes.shape({
     blogPost: PropTypes.shape({
       title: PropTypes.string,
@@ -48,4 +48,4 @@ BlogTemplate.propTypes = {
   }).isRequired,
 };
 
-export default BlogTemplate;
+export default BlogPageTemplate;

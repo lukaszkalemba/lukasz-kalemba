@@ -20,7 +20,7 @@ export const PROJECT_QUERY = graphql`
   }
 `;
 
-const ProjectTemplate = ({ data }) => {
+const ProjectPageTemplate = ({ data }) => {
   const { title, content, image } = data.project;
 
   return (
@@ -35,7 +35,7 @@ const ProjectTemplate = ({ data }) => {
   );
 };
 
-ProjectTemplate.propTypes = {
+ProjectPageTemplate.propTypes = {
   data: PropTypes.shape({
     project: PropTypes.shape({
       title: PropTypes.string,
@@ -47,4 +47,4 @@ ProjectTemplate.propTypes = {
   }).isRequired,
 };
 
-export default ProjectTemplate;
+export default ProjectPageTemplate;
