@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import GatsbyImage from 'gatsby-image';
-import background from 'assets/images/photo_project-example.png';
+import BackgroundImage from 'gatsby-background-image';
 
 const Link = styled(GatsbyLink)`
   text-decoration: none;
   color: inherit;
 `;
 
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  height: 100%;
+const Wrapper = styled.div`
+  opacity: 0;
+`;
+
+const Background = styled(BackgroundImage)`
+  /* opacity: 0 !important; */
 `;
 
 const Article = styled.article`
-  background: url(${background}) no-repeat;
-  background-size: cover;
-  background-position: center / center;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -25,7 +24,6 @@ const Article = styled.article`
   padding: 30px;
   margin: 10px 0;
   cursor: pointer;
-  opacity: 0;
   z-index: ${({ theme }) => theme.zindex.positive1};
 
   :hover {
@@ -70,4 +68,4 @@ const Title = styled.h3`
   `}
 `;
 
-export default { Link, Image, Article, Overlay, Title };
+export default { Link, Wrapper, Background, Article, Overlay, Title };
