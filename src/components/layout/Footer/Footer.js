@@ -4,9 +4,9 @@ import gsap from 'gsap';
 import Container from 'components/common/Container';
 import CompanyInformations from 'components/layout/Footer/CompanyInformations';
 import FooterLogo from 'components/layout/Footer/FooterLogo';
-import SocialMediaIcons from 'components/common/SocialMediaIcons';
 import FooterLinks from 'components/layout/Footer/FooterLinks';
 import Copyright from 'components/layout/Footer/Copyright';
+import SocialMediaIcons from 'containers/common/SocialMediaIcons';
 import S from './Footer.styles';
 
 const Footer = () => {
