@@ -13,7 +13,7 @@ const Service = ({ img, children }) => {
 
 Service.propTypes = {
   img: PropTypes.shape({
-    fluid: PropTypes.shape({}).isRequired,
+    fluid: PropTypes.object,
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

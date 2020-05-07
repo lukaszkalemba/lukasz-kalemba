@@ -17,7 +17,9 @@ const BLOG_POSTS_QUERY = graphql`
           publicationDate
           slug
           image {
-            path
+            fluid {
+              ...GatsbyDatoCmsFluid_noBase64
+            }
           }
         }
       }
@@ -39,6 +41,7 @@ const Blog = () => {
                 key={node.id}
                 index={index + 10}
                 title={node.title}
+                image={node.image}
                 slug={node.slug}
                 preSlug="blog"
                 small

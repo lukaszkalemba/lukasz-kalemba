@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 import background from 'assets/images/photo_project-example.png';
 
 const Link = styled(GatsbyLink)`
   text-decoration: none;
   color: inherit;
+`;
+
+const Image = styled(GatsbyImage)`
+  width: 100%;
+  height: 100%;
 `;
 
 const Article = styled.article`
@@ -64,4 +70,4 @@ const Title = styled.h3`
   `}
 `;
 
-export default { Link, Article, Overlay, Title };
+export default { Link, Image, Article, Overlay, Title };
