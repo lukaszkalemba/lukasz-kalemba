@@ -3,6 +3,7 @@ import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout/Layout';
+import SEO from 'components/commons/SEO';
 import Container from 'components/commons/Container';
 
 export const PROJECT_QUERY = graphql`
@@ -24,6 +25,7 @@ const ProjectTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <Container axis="both">
         <h1>{title}</h1>
         <p>{content}</p>
