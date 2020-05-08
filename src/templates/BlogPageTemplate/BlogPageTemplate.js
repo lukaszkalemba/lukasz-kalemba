@@ -1,16 +1,16 @@
 import React from 'react';
-import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout/Layout';
 import SEO from 'components/common/SEO';
-import Container from 'components/common/Container';
+import BlogPost from 'containers/blog-post-page/BlogPost';
 
 export const BLOG_POST_QUERY = graphql`
   query($slug: String!) {
     blogPost: datoCmsBlogPost(slug: { eq: $slug }) {
       title
       content
+      publicationDate
       image {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
@@ -21,17 +21,17 @@ export const BLOG_POST_QUERY = graphql`
 `;
 
 const BlogPageTemplate = ({ data }) => {
-  const { title, content, image } = data.blogPost;
+  const { title, content, image, publicationDate } = data.blogPost;
 
   return (
     <Layout>
       <SEO title={title} />
-      <Container axis="both">
-        <h1>Blog template</h1>
-        <h1>{title}</h1>
-        <p>{content}</p>
-        <Image fluid={image.fluid} />
-      </Container>
+      <BlogPost
+        title={title}
+        content={content}
+        image={image}
+        publicationDate={publicationDate}
+      />
     </Layout>
   );
 };
@@ -41,6 +41,7 @@ BlogPageTemplate.propTypes = {
     blogPost: PropTypes.shape({
       title: PropTypes.string,
       content: PropTypes.string,
+      publicationDate: PropTypes.string,
       image: PropTypes.shape({
         fluid: PropTypes.object,
       }),
