@@ -24,6 +24,27 @@ const NotFound = () => {
       <S.Wrapper>
         <div>
           <Heading>Opowiedz nam o swoim pomyśle.</Heading>
+          <form>
+            <S.InputWrapper>
+              <S.Input id="name" type="text" required />
+              <S.Label htmlFor="name">Imię i nazwisko</S.Label>
+            </S.InputWrapper>
+
+            <S.InputWrapper>
+              <S.Input id="company" type="text" required />
+              <S.Label htmlFor="company">Firma</S.Label>
+            </S.InputWrapper>
+
+            <S.InputWrapper>
+              <S.Input id="email" type="text" required />
+              <S.Label htmlFor="email">Adres e-mail</S.Label>
+            </S.InputWrapper>
+
+            <S.InputWrapper>
+              <S.Input id="phone-number" type="text" required />
+              <S.Label htmlFor="phone-number">Numer telefonu</S.Label>
+            </S.InputWrapper>
+          </form>
         </div>
 
         <S.ImageWrapper>
