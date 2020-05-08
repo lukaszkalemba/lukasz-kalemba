@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
 import S from './BlogPost.styles';
 
 const BlogPost = ({ title, content, publicationDate, image }) => {
+  const date = moment(publicationDate).format('DD.MM.YYYYr.');
+
   return (
     <Container axis="both">
       <S.Wrapper>
         <div>
-          <h1>{title}</h1>
+          <Heading>{title}</Heading>
           <p>{content}</p>
-          <p>{publicationDate}</p>
+          <p>Data publikacji: {date}</p>
         </div>
 
         <S.ImageWrapper>
