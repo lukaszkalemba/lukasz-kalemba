@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { Link as GatsbyLink } from 'gatsby';
+
+const Link = styled(GatsbyLink)`
+  text-decoration: none;
+`;
 
 const Button = styled.button`
   font-size: ${({ theme }) => theme.font.size.xxxs};
@@ -58,4 +63,4 @@ const Button = styled.button`
   }
 `;
 
-export default { Button };
+export default { Link, Button };

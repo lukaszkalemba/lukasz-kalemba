@@ -23,8 +23,12 @@ const Hero = () => {
         </S.Content>
 
         <S.Buttons variants={animations.buttonsVariants}>
-          <Button priority="primary">Bezpłatna wycena</Button>
-          <Button priority="secondary">Zrealizowane projekty</Button>
+          <Button path="/wycena" priority="primary">
+            Bezpłatna wycena
+          </Button>
+          <Button path="/projekty" priority="secondary">
+            Zrealizowane projekty
+          </Button>
         </S.Buttons>
       </Container>
     </S.Wrapper>
