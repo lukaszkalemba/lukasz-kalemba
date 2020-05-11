@@ -5,6 +5,7 @@ import Heading from 'components/common/Heading';
 import Card from 'components/common/Card';
 import Link from 'components/common/Link';
 import S from './LastProjects.styles';
+import animations from './LastProjects.animations';
 
 const PROJECTS_QUERY = graphql`
   {
@@ -31,7 +32,9 @@ const LastProjects = () => {
   return (
     <S.Section>
       <Container axis="both">
-        <Heading section="last-projects">Ostatnie projekty.</Heading>
+        <Heading variants={animations.headingVariants}>
+          Ostatnie projekty.
+        </Heading>
 
         <Container axis="x">
           <S.Cards>

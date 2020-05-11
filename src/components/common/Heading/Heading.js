@@ -1,7 +1,7 @@
-import React from 'react';
-// import { useIntersection } from 'react-use';
-// import gsap from 'gsap';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 import S from './Heading.styles';
 
 const Heading = ({ tag, variants, className, children }) => {
@@ -14,31 +14,33 @@ const Heading = ({ tag, variants, className, children }) => {
     HeadingTag = S.Heading.H2;
   }
 
-  // const intersection = useIntersection(heading, {
-  //   root: null,
-  //   rootMargin: '0px',
-  //   threshold: 0.9,
-  // });
+  const animation = useAnimation();
+  const [headingRef, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.9,
+  });
 
-  // if (intersection && intersection.intersectionRatio > 0.9) {
-  //   gsap.to(headingElement, {
-  //     x: '3%',
-  //     duration: 0.75,
-  //   });
-  // }
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [animation, inView]);
 
   return (
-    <div>
-      <HeadingTag variants={variants} className={className}>
-        {children}
-      </HeadingTag>
-    </div>
+    <HeadingTag
+      ref={headingRef}
+      variants={variants}
+      animate={animation}
+      initial="initial"
+      className={className}
+    >
+      {children}
+    </HeadingTag>
   );
 };
 
 Heading.defaultProps = {
   tag: 'h2',
-  variants: null,
   className: '',
 };
 
@@ -47,7 +49,7 @@ Heading.propTypes = {
   variants: PropTypes.shape({
     animate: PropTypes.object,
     initial: PropTypes.object,
-  }),
+  }).isRequired,
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
