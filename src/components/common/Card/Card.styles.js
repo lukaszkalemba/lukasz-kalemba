@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+import { motion } from 'framer-motion';
 import BackgroundImage from 'gatsby-background-image';
 
 const Link = styled(GatsbyLink)`
@@ -7,7 +8,7 @@ const Link = styled(GatsbyLink)`
   color: inherit;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   opacity: 0;
 `;
 

@@ -1,32 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 import S from './Card.styles';
+import animations from './Card.animations';
 
 const Card = ({ index, title, image, preSlug, slug, small }) => {
-  const wrapper = useRef(null);
-  const el = document.getElementById(`gsap-card-wrapper-${index}`);
   const mq = window.matchMedia('(min-width: 768px)');
   const isOffset = index % 2 !== 0 && true;
 
-  const intersection = useIntersection(wrapper, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.9,
+  const animation = useAnimation();
+
+  const [wrapperRef, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
   });
 
-  if (intersection && intersection.intersectionRatio > 0.9) {
-    gsap.to(el, {
-      opacity: 1,
-      delay: 0.05,
-      y: mq.matches ? isOffset && 45 : 0,
-      duration: 0.75,
-    });
-  }
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [animation, inView]);
 
   return (
-    <S.Wrapper id={`gsap-card-wrapper-${index}`} ref={wrapper}>
+    <S.Wrapper
+      ref={wrapperRef}
+      variants={animations.getCardVariants(isOffset, mq)}
+      animate={animation}
+      initial="initial"
+    >
       <S.Background fluid={image.fluid}>
         <S.Link to={`/${preSlug}/${slug}`}>
           <S.Article small={small}>
