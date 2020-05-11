@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import slashPattern from 'assets/svgs/pattern_slash-dark.svg';
 
-const Footer = styled.footer`
+const Footer = styled(motion.footer)`
   background-color: ${({ theme }) => theme.color.primary};
   position: relative;
+
+  ${({ theme }) => theme.media.tablet`
+    padding-bottom: 40px;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     ::before {
@@ -25,6 +30,7 @@ const Footer = styled.footer`
     ${theme.media.largeDesktop`
       height: 800px;
       width: 550px;
+      padding-bottom: 35px;
     `}
     }
 `}
@@ -42,23 +48,13 @@ const TopBar = styled.div`
   `}
 `;
 
-const BottomBar = styled.div`
+const BottomBar = styled(motion.div)`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
-  opacity: 0;
-
-  ${({ theme }) => theme.media.tablet`
-    padding-bottom: 20px;
-  `}
 
   ${({ theme }) => theme.media.laptop`
     flex-direction: row;
-    padding-bottom: 30px;
-  `}
-
-  ${({ theme }) => theme.media.largeDesktop`
-    padding-bottom: 35px;
   `}
 `;
 

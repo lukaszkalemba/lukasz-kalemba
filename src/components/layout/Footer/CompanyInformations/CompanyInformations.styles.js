@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  opacity: 0;
 `;
 
 const A = styled.a`

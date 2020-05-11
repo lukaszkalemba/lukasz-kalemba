@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -8,7 +9,6 @@ const Wrapper = styled.div`
   right: 0;
   top: 0;
   padding: 20px;
-  opacity: 0;
 
   ${({ theme }) => theme.media.tablet`
     padding: 35px 55px;
