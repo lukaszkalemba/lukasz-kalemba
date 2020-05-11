@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
+import Background from 'gatsby-background-image';
 import S from './Card.styles';
 import animations from './Card.animations';
 
@@ -29,14 +30,14 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
       animate={animation}
       initial="initial"
     >
-      <S.Background fluid={image.fluid}>
+      <Background fluid={image.fluid}>
         <S.Link to={`/${preSlug}/${slug}`}>
           <S.Article small={small}>
             <S.Overlay />
             <S.Title>{title}</S.Title>
           </S.Article>
         </S.Link>
-      </S.Background>
+      </Background>
     </S.Wrapper>
   );
 };

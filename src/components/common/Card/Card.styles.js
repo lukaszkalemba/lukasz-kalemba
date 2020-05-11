@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
 import { motion } from 'framer-motion';
-import BackgroundImage from 'gatsby-background-image';
 
 const Link = styled(GatsbyLink)`
   text-decoration: none;
@@ -10,10 +9,6 @@ const Link = styled(GatsbyLink)`
 
 const Wrapper = styled(motion.div)`
   opacity: 0;
-`;
-
-const Background = styled(BackgroundImage)`
-  /* opacity: 0 !important; */
 `;
 
 const Article = styled.article`
@@ -69,4 +64,4 @@ const Title = styled.h3`
   `}
 `;
 
-export default { Link, Wrapper, Background, Article, Overlay, Title };
+export default { Link, Wrapper, Article, Overlay, Title };

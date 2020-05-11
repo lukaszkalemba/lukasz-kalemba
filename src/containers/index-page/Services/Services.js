@@ -39,11 +39,13 @@ const IMAGES_QUERY = graphql`
 const Services = () => {
   const { design, webapp, ecommerce } = useStaticQuery(IMAGES_QUERY);
 
+  const mq = window.matchMedia('(min-width: 1150px)');
+
   const animation = useAnimation();
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: mq.matches ? 0.6 : 0.3,
   });
 
   useEffect(() => {
