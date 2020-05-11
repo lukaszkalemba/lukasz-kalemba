@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import S from './Heading.styles';
+import animations from './Heading.animations';
 
 const Heading = ({ tag, variants, className, children }) => {
   const isH1 = tag === 'h1' && true;
@@ -29,7 +30,7 @@ const Heading = ({ tag, variants, className, children }) => {
   return (
     <HeadingTag
       ref={headingRef}
-      variants={variants}
+      variants={isH1 ? variants : animations.sectionHeadingVariants}
       animate={animation}
       initial="initial"
       className={className}
@@ -41,6 +42,7 @@ const Heading = ({ tag, variants, className, children }) => {
 
 Heading.defaultProps = {
   tag: 'h2',
+  variants: null,
   className: '',
 };
 
@@ -49,7 +51,7 @@ Heading.propTypes = {
   variants: PropTypes.shape({
     animate: PropTypes.object,
     initial: PropTypes.object,
-  }).isRequired,
+  }),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

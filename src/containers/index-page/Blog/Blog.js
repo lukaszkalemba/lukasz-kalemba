@@ -5,7 +5,6 @@ import Heading from 'components/common/Heading';
 import Card from 'components/common/Card';
 import Link from 'components/common/Link';
 import S from './Blog.styles';
-import animations from './Blog.animations';
 
 const BLOG_POSTS_QUERY = graphql`
   {
@@ -34,9 +33,7 @@ const Blog = () => {
   return (
     <S.Section>
       <Container axis="both">
-        <Heading variants={animations.headingVariants}>
-          Najnowsze informacje.
-        </Heading>
+        <Heading>Najnowsze informacje.</Heading>
         <Container axis="x">
           <S.Cards>
             {blogPosts.edges.map(({ node }, index) => (

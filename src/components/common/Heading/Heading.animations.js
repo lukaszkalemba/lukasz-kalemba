@@ -1,4 +1,4 @@
-const headingVariants = {
+const sectionHeadingVariants = {
   animate: {
     opacity: 1,
     x: 0,
@@ -7,4 +7,4 @@ const headingVariants = {
   initial: { opacity: 0, x: 40 },
 };
 
-export default { headingVariants };
+export default { sectionHeadingVariants };
