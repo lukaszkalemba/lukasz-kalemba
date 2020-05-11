@@ -7,14 +7,29 @@ import Scrollbar from 'components/layout/Scrollbar';
 import Nav from 'components/layout/Nav';
 import Footer from 'components/layout/Footer';
 
-const Layout = ({ path, isFooter, children }) => {
-  console.log(path);
+const Layout = ({ path, children }) => {
+  let isFooter = true;
+  let isHomePage = false;
+
+  switch (path) {
+    case '/':
+      isHomePage = true;
+      break;
+
+    case '/404':
+      isFooter = false;
+      break;
+
+    default:
+      break;
+  }
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Scrollbar>
-          <Nav />
+          <Nav isHomePage={isHomePage} />
           <main>{children}</main>
           {isFooter && <Footer />}
         </Scrollbar>
@@ -23,13 +38,8 @@ const Layout = ({ path, isFooter, children }) => {
   );
 };
 
-Layout.defaultProps = {
-  isFooter: true,
-};
-
 Layout.propTypes = {
   path: PropTypes.string.isRequired,
-  isFooter: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };
 
