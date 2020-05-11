@@ -7,7 +7,8 @@ import Scrollbar from 'components/layout/Scrollbar';
 import Nav from 'components/layout/Nav';
 import Footer from 'components/layout/Footer';
 
-const Layout = ({ isFooter, children }) => {
+const Layout = ({ path, isFooter, children }) => {
+  console.log(path);
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -27,6 +28,7 @@ Layout.defaultProps = {
 };
 
 Layout.propTypes = {
+  path: PropTypes.string.isRequired,
   isFooter: PropTypes.bool,
   children: PropTypes.node.isRequired,
 };

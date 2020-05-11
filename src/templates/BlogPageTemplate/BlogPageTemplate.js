@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from 'components/layout/Layout';
 import SEO from 'components/common/SEO';
 import BlogPost from 'containers/blog-post-page/BlogPost';
 
@@ -24,7 +23,7 @@ const BlogPageTemplate = ({ data }) => {
   const { title, content, image, publicationDate } = data.blogPost;
 
   return (
-    <Layout>
+    <>
       <SEO title={title} />
       <BlogPost
         title={title}
@@ -32,7 +31,7 @@ const BlogPageTemplate = ({ data }) => {
         image={image}
         publicationDate={publicationDate}
       />
-    </Layout>
+    </>
   );
 };
 
