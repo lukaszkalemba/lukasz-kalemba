@@ -46,7 +46,9 @@ const LastProjects = () => {
               />
             ))}
           </S.Cards>
-          <Link to="/projekty">Sprawdź inne</Link>
+          <Link to="/projekty" animate>
+            Sprawdź inne
+          </Link>
         </Container>
       </Container>
     </S.Section>

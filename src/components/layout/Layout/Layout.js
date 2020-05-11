@@ -16,7 +16,7 @@ const Layout = ({ path, children }) => {
       isHomePage = true;
       break;
 
-    case '/404':
+    case '/404/':
       isFooter = false;
       break;
 

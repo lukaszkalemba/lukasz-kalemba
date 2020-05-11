@@ -48,7 +48,9 @@ const Blog = () => {
               />
             ))}
           </S.Cards>
-          <Link to="/blog">Sprawdź inne</Link>
+          <Link to="/blog" animate>
+            Sprawdź inne
+          </Link>
         </Container>
       </Container>
     </S.Section>

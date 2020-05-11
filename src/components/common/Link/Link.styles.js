@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
+import { motion } from 'framer-motion';
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
 `;
