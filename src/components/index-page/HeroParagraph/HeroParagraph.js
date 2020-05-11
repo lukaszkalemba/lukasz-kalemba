@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import S from './HeroParagraph.styles';
 
-const HeroParagraph = ({ id, children }) => {
-  return <S.Paragraph id={id}>{children}</S.Paragraph>;
+const HeroParagraph = ({ variants, children }) => {
+  return <S.Paragraph variants={variants}>{children}</S.Paragraph>;
+};
+
+HeroParagraph.defaultProps = {
+  variants: null,
 };
 
 HeroParagraph.propTypes = {
-  id: PropTypes.string.isRequired,
+  variants: PropTypes.shape({
+    animate: PropTypes.object,
+    initial: PropTypes.object,
+  }),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

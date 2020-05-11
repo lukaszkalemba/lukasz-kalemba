@@ -1,13 +1,10 @@
-import React, { useRef } from 'react';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import React from 'react';
+// import { useIntersection } from 'react-use';
+// import gsap from 'gsap';
 import PropTypes from 'prop-types';
 import S from './Heading.styles';
 
-const Heading = ({ tag, section, id, className, children }) => {
-  const heading = useRef(null);
-
-  const headingElement = document.querySelector(`.gsap-heading-${section}`);
+const Heading = ({ tag, variants, className, children }) => {
   const isH1 = tag === 'h1' && true;
   let HeadingTag;
 
@@ -17,25 +14,22 @@ const Heading = ({ tag, section, id, className, children }) => {
     HeadingTag = S.Heading.H2;
   }
 
-  const intersection = useIntersection(heading, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.9,
-  });
+  // const intersection = useIntersection(heading, {
+  //   root: null,
+  //   rootMargin: '0px',
+  //   threshold: 0.9,
+  // });
 
-  if (intersection && intersection.intersectionRatio > 0.9) {
-    gsap.to(headingElement, {
-      x: '3%',
-      duration: 0.75,
-    });
-  }
+  // if (intersection && intersection.intersectionRatio > 0.9) {
+  //   gsap.to(headingElement, {
+  //     x: '3%',
+  //     duration: 0.75,
+  //   });
+  // }
 
   return (
-    <div ref={isH1 ? null : heading}>
-      <HeadingTag
-        id={isH1 ? id : null}
-        className={isH1 ? className : `${className} gsap-heading-${section}`}
-      >
+    <div>
+      <HeadingTag variants={variants} className={className}>
         {children}
       </HeadingTag>
     </div>
@@ -44,15 +38,16 @@ const Heading = ({ tag, section, id, className, children }) => {
 
 Heading.defaultProps = {
   tag: 'h2',
-  section: '',
-  id: '',
+  variants: null,
   className: '',
 };
 
 Heading.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2']),
-  section: PropTypes.string,
-  id: PropTypes.string,
+  variants: PropTypes.shape({
+    animate: PropTypes.object,
+    initial: PropTypes.object,
+  }),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

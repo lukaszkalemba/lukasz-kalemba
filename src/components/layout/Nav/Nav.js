@@ -1,38 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import gsap from 'gsap';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Logo from 'components/common/Logo';
 import Container from 'components/common/Container';
 import NavItems from 'components/layout/Nav/NavItems';
 import Hamburger from 'components/layout/Nav/Hamburger';
+import animations from './Nav.animations';
 import S from './Nav.styles';
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  useEffect(() => {
-    const nav = document.getElementById('gsap-nav-header');
+  const mq = window.matchMedia('(min-width: 1150px)');
+  let navHeaderVariants;
 
-    const mq = window.matchMedia('(min-width: 1150px)');
-
-    if (mq.matches) {
-      gsap.fromTo(
-        nav,
-        { y: '-=200', autoAlpha: 0 },
-        {
-          duration: 0.75,
-          delay: 1,
-          y: '+=200',
-          autoAlpha: 1,
-          clearProps: 'all',
-        }
-      );
-    }
-  }, []);
+  if (mq.matches) {
+    navHeaderVariants = animations.navHeaderVariants;
+  }
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <header id="gsap-nav-header">
+    <motion.header
+      variants={navHeaderVariants}
+      initial="initial"
+      animate="animate"
+    >
       <Container axis="both">
         <S.Wrapper>
           <S.TopBar>
@@ -44,7 +36,7 @@ const Nav = () => {
           </nav>
         </S.Wrapper>
       </Container>
-    </header>
+    </motion.header>
   );
 };
 

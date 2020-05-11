@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 const headingBase = css`
   position: relative;
@@ -20,7 +21,7 @@ const headingBase = css`
   }
 `;
 
-const H1 = styled.h1`
+const H1 = styled(motion.h1)`
   ${headingBase}
   font-size: ${({ theme }) => theme.font.size.m};
 
@@ -35,10 +36,9 @@ const H1 = styled.h1`
   `}
 `;
 
-const H2 = styled.h2`
+const H2 = styled(motion.h2)`
   ${headingBase}
   font-size: ${({ theme }) => theme.font.size.x};
-  /* margin-left: 0.29em; */
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.l};

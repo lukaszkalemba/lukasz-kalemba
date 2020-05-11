@@ -1,52 +1,28 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
 import Container from 'components/common/Container';
 import Paragraph from 'components/index-page/HeroParagraph';
 import Button from 'components/common/Button';
+import animations from './Hero.animations';
 import S from './Hero.styles';
 
 const Hero = () => {
-  useEffect(() => {
-    const heading = document.getElementById('gsap-hero-heading');
-    const paragraph = document.getElementById('gsap-hero-paragraph');
-    const buttons = document.getElementById('gsap-hero-buttons');
-
-    const mq = window.matchMedia('(min-width: 1150px)');
-
-    const tl = gsap.timeline();
-
-    tl.from(heading, {
-      duration: 0.75,
-      delay: 0.5,
-      opacity: 0,
-      x: -80,
-    })
-      .from(paragraph, { duration: 0.75, opacity: 0, x: -80 })
-      .fromTo(
-        buttons,
-        { autoAlpha: 0, x: -80 },
-        {
-          duration: 0.75,
-          autoAlpha: 1,
-          x: 0,
-        },
-        mq.matches ? '-=0.75' : null
-      );
-  }, []);
-
   return (
-    <S.Wrapper>
+    <S.Wrapper
+      variants={animations.wrapperVariants}
+      initial="initial"
+      animate="animate"
+    >
       <Container axis="both">
         <S.Content>
-          <S.Heading id="gsap-hero-heading" tag="h1">
+          <S.Heading tag="h1" variants={animations.headingVariants}>
             Zaistniej w sieci
           </S.Heading>
-          <Paragraph id="gsap-hero-paragraph">
+          <Paragraph variants={animations.paragraphVariants}>
             Zaistniej w świecie nieograniczonych możliwości
           </Paragraph>
         </S.Content>
 
-        <S.Buttons id="gsap-hero-buttons">
+        <S.Buttons variants={animations.buttonsVariants}>
           <Button priority="primary">Bezpłatna wycena</Button>
           <Button priority="secondary">Zrealizowane projekty</Button>
         </S.Buttons>

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import HeadingComponent from 'components/common/Heading';
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   height: 90vh;
   position: relative;
 
@@ -68,7 +69,7 @@ const Heading = styled(HeadingComponent)`
   `}
 `;
 
-const Buttons = styled.div`
+const Buttons = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

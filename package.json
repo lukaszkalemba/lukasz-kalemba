@@ -27,6 +27,7 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-inlinesvg": "^1.2.0",
+    "react-intersection-observer": "^8.26.2",
     "react-scrollmagic": "^2.2.0",
     "react-smooth-scrollbar": "^8.0.6",
     "react-use": "^14.2.0",
