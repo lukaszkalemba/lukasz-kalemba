@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
   display: grid;
@@ -18,13 +19,11 @@ const Header = styled.div`
   `}
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
   font-size: ${({ theme }) => theme.font.size.s};
   line-height: 1.75em;
   max-width: 70vw;
   margin-top: 0;
-  opacity: 0;
-  margin-left: 30px;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.m};

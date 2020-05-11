@@ -1,11 +1,12 @@
-import React, { useRef } from 'react';
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'framer-motion';
 import Container from 'components/common/Container';
 import Link from 'components/common/Link';
 import Service from 'components/index-page/Service';
 import S from './Services.styles';
+import animations from './Services.animations';
 
 const IMAGES_QUERY = graphql`
   {
@@ -36,45 +37,39 @@ const IMAGES_QUERY = graphql`
 `;
 
 const Services = () => {
-  const wrapper = useRef(null);
-
   const { design, webapp, ecommerce } = useStaticQuery(IMAGES_QUERY);
 
-  const tl = gsap.timeline();
+  const animation = useAnimation();
 
-  const title = document.getElementById(`gsap-services-title`);
-  const link = document.getElementById(`gsap-services-link`);
-
-  const intersection = useIntersection(wrapper, {
-    root: null,
-    rootMargin: '0px',
+  const [wrapperRef, inView] = useInView({
+    triggerOnce: true,
     threshold: 0.9,
   });
 
-  if (intersection && intersection.intersectionRatio > 0.9) {
-    tl.to(title, {
-      duration: 0.75,
-      opacity: 1,
-      x: -30,
-    }).to(link, { duration: 0.75, opacity: 1, x: 30 }, '-=0.75');
-  }
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [animation, inView]);
 
   return (
     <S.Section>
       <S.Header>
         <Container axis="both">
-          <div ref={wrapper}>
-            <S.Title id="gsap-services-title">
+          <motion.div
+            ref={wrapperRef}
+            animate={animation}
+            initial="initial"
+            variants={animations.wrapperVariants}
+          >
+            <S.Title variants={animations.childrenVariants}>
               Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
               istniejący na kolejny poziom.
             </S.Title>
-            <div
-              style={{ opacity: 0, marginLeft: '-30px' }}
-              id="gsap-services-link"
-            >
+            <motion.div variants={animations.childrenVariants}>
               <Link to="/wycena">Bezpłatna wycena</Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </Container>
       </S.Header>
 

@@ -2,11 +2,9 @@ const mq = window.matchMedia('(min-width: 1150px)');
 
 const wrapperVariants = {
   animate: {
-    opacity: 1,
     transition: {
       staggerChildren: 0.75,
       delayChildren: 0.5,
-      when: 'afterChildren',
     },
   },
 };
