@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import S from './Service.styles';
 
-const Service = ({ img, children }) => {
+const Service = ({ img, variants, children }) => {
   return (
     <S.Article>
       <S.Overlay fluid={img.fluid} />
-      <S.Title>{children}</S.Title>
+      <S.Title variants={variants}>{children}</S.Title>
     </S.Article>
   );
 };
@@ -14,6 +14,10 @@ const Service = ({ img, children }) => {
 Service.propTypes = {
   img: PropTypes.shape({
     fluid: PropTypes.object,
+  }).isRequired,
+  variants: PropTypes.shape({
+    initial: PropTypes.object,
+    animate: PropTypes.object,
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

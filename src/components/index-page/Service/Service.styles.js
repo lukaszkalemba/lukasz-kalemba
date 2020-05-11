@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import GatsbyBackground from 'gatsby-background-image';
 
 const Article = styled.article`
@@ -30,7 +31,7 @@ const Overlay = styled(GatsbyBackground)`
   `}
 `;
 
-const Title = styled.h3`
+const Title = styled(motion.h3)`
   font-size: ${({ theme }) => theme.font.size.m};
   margin: 0;
   padding: 50px;

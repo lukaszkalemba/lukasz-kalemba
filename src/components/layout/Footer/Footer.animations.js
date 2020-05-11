@@ -1,7 +1,7 @@
 const footerVariants = {
   animate: {
     transition: {
-      staggerChildren: 0.4,
+      staggerChildren: 0.25,
     },
   },
 };

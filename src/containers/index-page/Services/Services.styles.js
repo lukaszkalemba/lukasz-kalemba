@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const Section = styled.section`
+const Section = styled(motion.section)`
   display: grid;
 
   ${({ theme }) => theme.media.laptop`

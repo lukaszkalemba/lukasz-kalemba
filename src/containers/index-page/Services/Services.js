@@ -43,7 +43,7 @@ const Services = () => {
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.9,
+    threshold: 0.6,
   });
 
   useEffect(() => {
@@ -53,11 +53,10 @@ const Services = () => {
   }, [animation, inView]);
 
   return (
-    <S.Section>
+    <S.Section ref={wrapperRef}>
       <S.Header>
         <Container axis="both">
           <motion.div
-            ref={wrapperRef}
             animate={animation}
             initial="initial"
             variants={animations.wrapperVariants}
@@ -73,15 +72,30 @@ const Services = () => {
         </Container>
       </S.Header>
 
-      <div>
-        <Service img={design.childImageSharp}>
+      <motion.div
+        animate={animation}
+        initial="initial"
+        variants={animations.wrapperVariants}
+      >
+        <Service
+          img={design.childImageSharp}
+          variants={animations.servicesVariants}
+        >
           Projektowanie interfejsów
         </Service>
-        <Service img={webapp.childImageSharp}>
+        <Service
+          img={webapp.childImageSharp}
+          variants={animations.servicesVariants}
+        >
           Strony i aplikacje internetowe
         </Service>
-        <Service img={ecommerce.childImageSharp}>Sklepy internetowe</Service>
-      </div>
+        <Service
+          img={ecommerce.childImageSharp}
+          variants={animations.servicesVariants}
+        >
+          Sklepy internetowe
+        </Service>
+      </motion.div>
     </S.Section>
   );
 };
