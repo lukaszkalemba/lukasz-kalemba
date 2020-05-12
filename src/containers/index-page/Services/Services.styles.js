@@ -6,7 +6,7 @@ const Section = styled(motion.section)`
 
   ${({ theme }) => theme.media.laptop`
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    min-height: 100vh;
   `}
 `;
 

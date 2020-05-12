@@ -8,7 +8,7 @@ import Hamburger from 'components/layout/Nav/Hamburger';
 import animations from './Nav.animations';
 import S from './Nav.styles';
 
-const Nav = ({ isHomePage }) => {
+const Nav = ({ path, isHomePage }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
@@ -29,7 +29,7 @@ const Nav = ({ isHomePage }) => {
       <Container axis="both">
         <S.Wrapper>
           <S.TopBar>
-            <Logo setIsNavOpen={setIsNavOpen} />
+            <Logo path={path} setIsNavOpen={setIsNavOpen} />
             <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
           </S.TopBar>
           <nav>
@@ -42,6 +42,7 @@ const Nav = ({ isHomePage }) => {
 };
 
 Nav.propTypes = {
+  path: PropTypes.string.isRequired,
   isHomePage: PropTypes.bool.isRequired,
 };
 

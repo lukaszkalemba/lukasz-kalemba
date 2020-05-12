@@ -7,16 +7,16 @@ import Scrollbar from 'components/layout/Scrollbar';
 import Nav from 'components/layout/Nav';
 import Footer from 'components/layout/Footer';
 
-const Layout = ({ path, children }) => {
+const Layout = ({ location, children }) => {
   let isFooter = true;
   let isHomePage = false;
 
-  switch (path) {
+  switch (location.pathname) {
     case '/':
       isHomePage = true;
       break;
 
-    case '/404/':
+    case '/404':
       isFooter = false;
       break;
 
@@ -29,7 +29,7 @@ const Layout = ({ path, children }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Scrollbar>
-          <Nav isHomePage={isHomePage} />
+          <Nav path={location.pathname} isHomePage={isHomePage} />
           <main>{children}</main>
           {isFooter && <Footer />}
         </Scrollbar>
@@ -39,7 +39,9 @@ const Layout = ({ path, children }) => {
 };
 
 Layout.propTypes = {
-  path: PropTypes.string.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
   children: PropTypes.node.isRequired,
 };
 

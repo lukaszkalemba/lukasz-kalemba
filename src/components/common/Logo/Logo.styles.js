@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   width: 120px;
   position: relative;
   z-index: ${({ theme }) => theme.zindex.positive4};
+  pointer-events: ${({ path }) => path === '/' && 'none'};
 
   ${({ theme }) => theme.media.tablet`
     width: 150px;
