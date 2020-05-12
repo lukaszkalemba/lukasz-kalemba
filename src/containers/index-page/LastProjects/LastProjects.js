@@ -8,7 +8,7 @@ import S from './LastProjects.styles';
 
 const PROJECTS_QUERY = graphql`
   {
-    projects: allDatoCmsProject {
+    projects: allDatoCmsProject(filter: { featured: { eq: true } }) {
       edges {
         node {
           id

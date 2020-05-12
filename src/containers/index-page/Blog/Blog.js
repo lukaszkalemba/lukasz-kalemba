@@ -8,7 +8,7 @@ import S from './Blog.styles';
 
 const BLOG_POSTS_QUERY = graphql`
   {
-    blogPosts: allDatoCmsBlogPost {
+    blogPosts: allDatoCmsBlogPost(filter: { featured: { eq: true } }) {
       edges {
         node {
           id
@@ -39,7 +39,7 @@ const Blog = () => {
             {blogPosts.edges.map(({ node }, index) => (
               <Card
                 key={node.id}
-                index={index + 10}
+                index={index + 100}
                 title={node.title}
                 image={node.image}
                 slug={node.slug}
