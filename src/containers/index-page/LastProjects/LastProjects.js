@@ -6,7 +6,7 @@ import Card from 'components/common/Card';
 import Link from 'components/common/Link';
 import S from './LastProjects.styles';
 
-const PROJECTS_QUERY = graphql`
+const FEATURED_PROJECTS_QUERY = graphql`
   {
     projects: allDatoCmsProject(filter: { featured: { eq: true } }) {
       edges {
@@ -26,7 +26,7 @@ const PROJECTS_QUERY = graphql`
 `;
 
 const LastProjects = () => {
-  const { projects } = useStaticQuery(PROJECTS_QUERY);
+  const { projects } = useStaticQuery(FEATURED_PROJECTS_QUERY);
 
   return (
     <S.Section>
