@@ -1,22 +1,35 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import GatsbyImage from 'gatsby-image';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 150px;
+  margin-bottom: 125px;
+
+  ${({ theme }) => theme.media.laptop`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 150px;
+  `}
 `;
 
 const InputWrapper = styled.div`
   position: relative;
-  margin: 45px;
+  margin: 45px 0;
+
+  ${({ theme }) => theme.media.laptop`
+    margin-right: 100px;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    margin-right: 150px;
+  `}
 `;
 
 const Input = styled.input`
   font-size: 18px;
   padding: 10px 0 10px 0;
   display: block;
-  width: 400px;
+  width: 100%;
   border: none;
   background-color: transparent;
   color: white;
@@ -43,8 +56,8 @@ const Input = styled.input`
 `;
 
 const Label = styled.label`
+  font-size: ${({ theme }) => theme.font.size.xs};
   color: rgba(255, 255, 255, 0.5);
-  font-size: 18px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
@@ -53,7 +66,8 @@ const Label = styled.label`
   transition: 0.2s ease all;
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(motion.div)`
+  display: none;
   position: relative;
 
   ::before {
@@ -66,6 +80,10 @@ const ImageWrapper = styled.div`
     margin: 40px 0 0 40px;
     background-color: ${({ theme }) => theme.color.dark};
   }
+
+  ${({ theme }) => theme.media.laptop`
+    display: block;
+  `}
 `;
 
 const Image = styled(GatsbyImage)`
