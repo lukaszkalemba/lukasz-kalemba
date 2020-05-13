@@ -6,6 +6,7 @@ const Paragraph = styled(motion.p)`
   z-index: ${({ theme }) => theme.zindex.positive1};
   opacity: 0.5;
   margin: 5px 0;
+  line-height: 21px;
 
   ${({ theme }) => theme.media.phone`
     font-size: ${theme.font.size.xs};
@@ -17,16 +18,16 @@ const Paragraph = styled(motion.p)`
   `}
 
   ${({ theme }) => theme.media.laptop`
-    margin-left: calc(26vw);
+    margin-left: 26vw;
     width: auto;
   `}
 
   ${({ theme }) => theme.media.desktop`
-    margin-left: calc(30vw);
+    margin-left: 33vw;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
-    margin-left: calc(38vw);
+    margin-left: 38vw;
   `}
 `;
 

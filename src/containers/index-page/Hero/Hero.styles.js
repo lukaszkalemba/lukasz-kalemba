@@ -9,32 +9,35 @@ const Wrapper = styled(motion.div)`
   ::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0 400px 300px;
+    border-width: 0 0 200px 200px;
     border-color: transparent;
     border-bottom-color: ${({ theme }) => theme.color.primary};
     opacity: 0.7;
 
     ${({ theme }) => theme.media.tablet`
-      border-width: 0 0 700px 700px;
+      border-width: 0 0 500px 500px;
+      bottom: 50px;
+      right: 50px;
       opacity: 1;
     `}
 
     ${({ theme }) => theme.media.laptop`
-      border-width: 0 0 700px 850px;
+      bottom: 0;
+      right: 0;
+      border-width: 0 0 600px 600px;
     `}
 
     ${({ theme }) => theme.media.desktop`
       border-width: 0 0 850px 1000px;
     `}
 
-
     ${({ theme }) => theme.media.largeDesktop`
-      border-width: 0 0 880px 1100px;
+      border-width: 0 0 900px 1150px;
     `}
   }
 `;
@@ -42,12 +45,16 @@ const Wrapper = styled(motion.div)`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 13vh;
+  margin-top: 8vh;
   padding: 0 30px;
 
   ${({ theme }) => theme.media.laptop`
     flex-direction: column-reverse;
     padding: 0;
+    margin-top: 100px;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
     margin-top: 150px;
   `}
 `;
@@ -59,7 +66,7 @@ const Heading = styled(HeadingComponent)`
   `}
 
   ${({ theme }) => theme.media.desktop`
-    margin-left: calc(10.5vw);
+    margin-left: calc(15vw);
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
@@ -88,7 +95,7 @@ const Buttons = styled(motion.div)`
     margin-left: 5vw;
   `}
     ${({ theme }) => theme.media.desktop`
-    margin-left: 11vw;
+    margin-left: 15vw;
   `}
     ${({ theme }) => theme.media.largeDesktop`
     margin-left: 18vw;
