@@ -1,5 +1,3 @@
-const mq = window.matchMedia('(min-width: 1150px)');
-
 const wrapperVariants = {
   animate: {
     transition: {
@@ -19,21 +17,21 @@ const paragraphVariants = {
   animate: { opacity: 0.5, x: 0, transition: { duration: 0.75 } },
 };
 
-const buttonsVariants = {
+const getButtonsVariants = size => ({
   initial: { opacity: 0, x: -80 },
   animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.75,
-      delay: mq.matches ? 1 : 2,
+      delay: size.width > 1150 ? 1 : 2,
     },
   },
-};
+});
 
 export default {
   wrapperVariants,
   headingVariants,
   paragraphVariants,
-  buttonsVariants,
+  getButtonsVariants,
 };

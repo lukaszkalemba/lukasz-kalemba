@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from 'framer-motion';
+import useWindowSize from 'hooks/useWindowSize';
 import Container from 'components/common/Container';
 import Link from 'components/common/Link';
 import Service from 'components/index-page/Service';
@@ -38,14 +39,12 @@ const IMAGES_QUERY = graphql`
 
 const Services = () => {
   const { design, webapp, ecommerce } = useStaticQuery(IMAGES_QUERY);
-
-  const mq = window.matchMedia('(min-width: 1150px)');
-
   const animation = useAnimation();
+  const size = useWindowSize();
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
-    threshold: mq.matches ? 0.6 : 0.3,
+    threshold: size.width > 1150 ? 0.6 : 0.3,
   });
 
   useEffect(() => {

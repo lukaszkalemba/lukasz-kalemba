@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import Background from 'gatsby-background-image';
+import useWindowSize from 'hooks/useWindowSize';
 import S from './Card.styles';
 import animations from './Card.animations';
 
 const Card = ({ index, title, image, preSlug, slug, small }) => {
-  const mq = window.matchMedia('(min-width: 768px)');
-  const isOffset = index % 2 !== 0 && true;
-
+  const size = useWindowSize();
   const animation = useAnimation();
+
+  const isOffset = index % 2 !== 0 && true;
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
@@ -26,7 +27,7 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
   return (
     <S.Wrapper
       ref={wrapperRef}
-      variants={animations.getCardVariants(isOffset, mq)}
+      variants={animations.getCardVariants(isOffset, size)}
       animate={animation}
       initial="initial"
     >

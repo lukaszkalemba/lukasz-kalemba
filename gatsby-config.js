@@ -33,6 +33,7 @@ module.exports = {
         pages: path.join(__dirname, 'src/pages'),
         components: path.join(__dirname, 'src/components'),
         containers: path.join(__dirname, 'src/containers'),
+        hooks: path.join(__dirname, 'src/hooks'),
         templates: path.join(__dirname, 'src/templates'),
         assets: path.join(__dirname, 'src/assets'),
         utils: path.join(__dirname, 'src/utils'),

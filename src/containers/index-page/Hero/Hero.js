@@ -1,4 +1,5 @@
 import React from 'react';
+import useWindowSize from 'hooks/useWindowSize';
 import Container from 'components/common/Container';
 import Paragraph from 'components/index-page/HeroParagraph';
 import Button from 'components/common/Button';
@@ -6,6 +7,8 @@ import animations from './Hero.animations';
 import S from './Hero.styles';
 
 const Hero = () => {
+  const size = useWindowSize();
+
   return (
     <S.Wrapper
       variants={animations.wrapperVariants}
@@ -22,7 +25,7 @@ const Hero = () => {
           </Paragraph>
         </S.Content>
 
-        <S.Buttons variants={animations.buttonsVariants}>
+        <S.Buttons variants={animations.getButtonsVariants(size)}>
           <Button path="/wycena" priority="primary">
             Bezpłatna wycena
           </Button>

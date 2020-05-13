@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import useWindowSize from 'hooks/useWindowSize';
 import Logo from 'components/common/Logo';
 import Container from 'components/common/Container';
 import NavItems from 'components/layout/Nav/NavItems';
@@ -10,15 +11,15 @@ import S from './Nav.styles';
 
 const Nav = ({ path, isHomePage }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const size = useWindowSize();
 
-  const toggleNav = () => setIsNavOpen(!isNavOpen);
-
-  const mq = window.matchMedia('(min-width: 1150px)');
   let headerVariants;
 
-  if (mq.matches) {
+  if (size.width > 1150) {
     headerVariants = animations.getHeaderVariants(isHomePage);
   }
+
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
     <motion.header
