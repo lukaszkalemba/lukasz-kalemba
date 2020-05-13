@@ -18,8 +18,8 @@ const Link = styled(GatsbyLink)`
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   padding: 8px 0;
-  opacity: 0.75;
-  transition: opacity 250ms ease-in-out;
+  opacity: 0.8;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
 
   ${({ theme }) => theme.media.laptop`
     padding: 0;
@@ -28,6 +28,7 @@ const Link = styled(GatsbyLink)`
   `}
     :hover {
     opacity: 1;
+    transform: scale(1.05);
   }
 `;
 

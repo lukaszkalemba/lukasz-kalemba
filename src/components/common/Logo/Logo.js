@@ -6,7 +6,7 @@ import S from './Logo.styles';
 
 const Logo = ({ path, setIsNavOpen }) => (
   <S.Wrapper path={path} onClick={() => setIsNavOpen(false)}>
-    <S.Link to="/">
+    <S.Link to="/" aria-label="codemon">
       <Icon src={logo} />
     </S.Link>
   </S.Wrapper>

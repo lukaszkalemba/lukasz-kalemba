@@ -22,12 +22,13 @@ const Wrapper = styled(motion.div)`
 `;
 
 const A = styled.a`
-  opacity: 0.5;
-  transition: opacity 400ms ease-in-out;
+  opacity: 0.7;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   padding: 8px 0;
 
   :hover {
     opacity: 1;
+    transform: scale(1.05);
   }
 `;
 

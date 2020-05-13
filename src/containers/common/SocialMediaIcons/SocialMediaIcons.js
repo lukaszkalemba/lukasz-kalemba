@@ -9,16 +9,16 @@ import S from './SocialMediaIcons.styles';
 
 const SocialMediaIcons = ({ variants }) => (
   <S.Wrapper variants={variants}>
-    <S.A href="https://facebook.com" target="__blank">
+    <S.A href="https://facebook.com" aria-label="facebook" target="__blank">
       <Icon src={facebook} />
     </S.A>
-    <S.A href="https://instagram.com" target="__blank">
+    <S.A href="https://instagram.com" aria-label="instagram" target="__blank">
       <Icon src={instagram} />
     </S.A>
-    <S.A href="https://dribbble.com" target="__blank">
+    <S.A href="https://dribbble.com" aria-label="dribbble" target="__blank">
       <Icon src={dribbble} />
     </S.A>
-    <S.A href="https://linkedin.com" target="__blank">
+    <S.A href="https://linkedin.com" aria-label="linkedin" target="__blank">
       <Icon src={linkedin} />
     </S.A>
   </S.Wrapper>

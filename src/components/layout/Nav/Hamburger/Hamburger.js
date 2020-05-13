@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import S from './Hamburger.styles';
 
 const Hamburger = ({ isNavOpen, toggleNav }) => (
-  <S.Wrapper isNavOpen={isNavOpen} onClick={toggleNav}>
+  <S.Button aria-label="menu" isNavOpen={isNavOpen} onClick={toggleNav}>
     <div />
-  </S.Wrapper>
+  </S.Button>
 );
 
 Hamburger.propTypes = {

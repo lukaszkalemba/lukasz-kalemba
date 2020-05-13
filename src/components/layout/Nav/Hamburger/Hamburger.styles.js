@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.button`
+const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,4 +54,4 @@ const Wrapper = styled.button`
   `}
 `;
 
-export default { Wrapper };
+export default { Button };

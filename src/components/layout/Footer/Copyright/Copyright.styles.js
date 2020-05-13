@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Paragraph = styled.div`
   font-size: ${({ theme }) => theme.font.size.xxs};
-  opacity: 0.5;
+  opacity: 0.8;
   padding-top: 15px;
 
   ${({ theme }) => theme.media.laptop`
