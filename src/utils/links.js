@@ -11,8 +11,8 @@ const links = [
   },
   {
     id: 2,
-    path: '/o-nas',
-    name: 'o nas',
+    path: '/blog',
+    name: 'blog',
   },
 ];
 
