@@ -4,7 +4,7 @@ const wrapperVariants = {
   animate: {
     transition: {
       staggerChildren: 0.75,
-      delayChildren: 0.5,
+      delayChildren: 0.25,
     },
   },
 };
@@ -26,7 +26,7 @@ const buttonsVariants = {
     x: 0,
     transition: {
       duration: 0.75,
-      delay: mq.matches ? 1.25 : 2,
+      delay: mq.matches ? 1 : 2,
     },
   },
 };

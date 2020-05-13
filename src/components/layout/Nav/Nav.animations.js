@@ -3,7 +3,7 @@ const getHeaderVariants = isHomePage => ({
   animate: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.75, delay: isHomePage ? 1.25 : 0.25 },
+    transition: { duration: 0.75, delay: isHomePage ? 1 : 0.25 },
   },
 });
 
