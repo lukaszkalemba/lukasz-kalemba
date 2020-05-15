@@ -35,7 +35,7 @@ const Overlay = styled.div`
   `}
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xxs};
   line-height: 25px;
   max-width: 450px;

@@ -12,7 +12,13 @@ const BlogPostHero = ({ title, description, image }) => {
       <S.Overlay>
         <Container axis="both">
           <Heading>{title}</Heading>
-          <S.Paragraph>{description}</S.Paragraph>
+          <S.Paragraph
+            variants={animations.paragraphVariants}
+            initial="initial"
+            animate="animate"
+          >
+            {description}
+          </S.Paragraph>
         </Container>
 
         <S.ScrollWrapper
