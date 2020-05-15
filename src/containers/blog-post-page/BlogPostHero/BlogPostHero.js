@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
+import ScrollArrow from 'components/blog-post-page/ScrollArrow';
 import S from './BlogPostHero.styles';
 
 const BlogPostHero = ({ title, description, image }) => {
@@ -12,6 +13,10 @@ const BlogPostHero = ({ title, description, image }) => {
           <Heading>{title}</Heading>
           <S.Paragraph>{description}</S.Paragraph>
         </Container>
+
+        <S.ScrollWrapper>
+          <ScrollArrow />
+        </S.ScrollWrapper>
       </S.Overlay>
     </S.Background>
   );
