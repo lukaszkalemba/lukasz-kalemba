@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import BackgroundImage from 'gatsby-background-image';
 
 const Background = styled(BackgroundImage)`
@@ -49,7 +50,7 @@ const Paragraph = styled.p`
   `}
 `;
 
-const ScrollWrapper = styled.div`
+const ScrollWrapper = styled(motion.div)`
   position: absolute;
   right: 20px;
   bottom: 40px;

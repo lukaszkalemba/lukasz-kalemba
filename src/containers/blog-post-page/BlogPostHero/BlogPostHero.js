@@ -4,6 +4,7 @@ import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
 import ScrollArrow from 'components/blog-post-page/ScrollArrow';
 import S from './BlogPostHero.styles';
+import animations from './BlogPostHero.animations';
 
 const BlogPostHero = ({ title, description, image }) => {
   return (
@@ -14,7 +15,11 @@ const BlogPostHero = ({ title, description, image }) => {
           <S.Paragraph>{description}</S.Paragraph>
         </Container>
 
-        <S.ScrollWrapper>
+        <S.ScrollWrapper
+          variants={animations.scrollWrapperVariants}
+          initial="initial"
+          animate="animate"
+        >
           <ScrollArrow />
         </S.ScrollWrapper>
       </S.Overlay>
