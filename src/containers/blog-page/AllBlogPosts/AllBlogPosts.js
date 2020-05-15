@@ -13,7 +13,6 @@ const BLOG_POSTS_QUERY = graphql`
           id
           title
           content
-          publicationDate
           slug
           image {
             fluid {
