@@ -19,6 +19,7 @@
     "gatsby-source-datocms": "^2.2.1",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-sharp": "^2.5.1",
+    "html-react-parser": "^0.10.3",
     "polished": "^3.6.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
