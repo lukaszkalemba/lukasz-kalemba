@@ -1,15 +1,15 @@
 import React from 'react';
-import Image from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import SEO from 'components/common/SEO';
-import Container from 'components/common/Container';
+import ProjectHero from 'containers/project-page/ProjectHero';
+import ProjectContent from 'containers/project-page/ProjectContent';
 
 export const PROJECT_QUERY = graphql`
   query($slug: String!) {
     project: datoCmsProject(slug: { eq: $slug }) {
       title
-      content
+      description
       image {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
@@ -20,16 +20,17 @@ export const PROJECT_QUERY = graphql`
 `;
 
 const ProjectPageTemplate = ({ data }) => {
-  const { title, content, image } = data.project;
+  const { title, description, image } = data.project;
 
   return (
     <>
       <SEO title={title} />
-      <Container axis="both">
-        <h1>{title}</h1>
-        <p>{content}</p>
-        <Image fluid={image.fluid} />
-      </Container>
+      <ProjectHero
+        title={title}
+        description={description}
+        image={image.fluid}
+      />
+      <ProjectContent />
     </>
   );
 };
@@ -38,7 +39,7 @@ ProjectPageTemplate.propTypes = {
   data: PropTypes.shape({
     project: PropTypes.shape({
       title: PropTypes.string,
-      content: PropTypes.string,
+      description: PropTypes.string,
       image: PropTypes.shape({
         fluid: PropTypes.object,
       }),
