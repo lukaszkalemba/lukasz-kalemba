@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const Wrapper = styled.div`
   margin-bottom: 100px;
@@ -32,20 +33,20 @@ const Content = styled.div`
     `}
   }
 
-  p:nth-child(4n) {
+  div:nth-child(4n) {
     text-align: right;
     align-self: flex-end;
   }
 
-  h2:nth-child(4n - 1) {
+  div:nth-child(4n - 1) {
     text-align: right;
   }
 
-  h2:first-child {
+  div:first-child {
     margin-top: -50px;
   }
 
-  p:last-child {
+  div:last-child {
     margin-bottom: -20px;
 
     ${({ theme }) => theme.media.desktop`
@@ -54,4 +55,6 @@ const Content = styled.div`
   }
 `;
 
-export default { Wrapper, Content };
+const ContentItemWrapper = styled(motion.div)``;
+
+export default { Wrapper, Content, ContentItemWrapper };
