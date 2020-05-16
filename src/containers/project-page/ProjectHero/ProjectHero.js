@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import Image from 'gatsby-image';
 import Container from 'components/common/Container';
 import Heading from 'components/common/Heading';
+import S from './ProjectHero.styles';
 
 const ProjectHero = ({ title, description, image }) => {
   return (
-    <Container axis="both">
-      <Heading>{title}</Heading>
-      <p>{description}</p>
-      <Image fluid={image} />
-    </Container>
+    <S.Wrapper>
+      <Container axis="both">
+        <Heading>{title}</Heading>
+        <S.Description>{description}</S.Description>
+      </Container>
+      <S.ImageWrapper>
+        <Image fluid={image} />
+        <S.Overlay />
+      </S.ImageWrapper>
+    </S.Wrapper>
   );
 };
 
