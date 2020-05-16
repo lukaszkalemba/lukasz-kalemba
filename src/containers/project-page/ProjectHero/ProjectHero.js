@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'gatsby-image';
-import Container from 'components/common/Container';
 import Heading from 'components/common/Heading';
+import Container from 'components/common/Container';
 import S from './ProjectHero.styles';
 
 const ProjectHero = ({ title, description, image }) => {
   return (
     <S.Wrapper>
-      <Container axis="both">
-        <Heading>{title}</Heading>
-        <S.Description>{description}</S.Description>
-      </Container>
-      <S.ImageWrapper>
-        <Image fluid={image} />
+      <S.HeadingWrapper>
+        <Container axis="both">
+          <Container axis="x">
+            <Heading>{title}</Heading>
+            <S.Description>{description}</S.Description>
+          </Container>
+        </Container>
+      </S.HeadingWrapper>
+      <S.BackgroundImage fluid={image}>
         <S.Overlay />
-      </S.ImageWrapper>
+      </S.BackgroundImage>
     </S.Wrapper>
   );
 };
