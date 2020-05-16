@@ -15,12 +15,34 @@ export const PROJECT_QUERY = graphql`
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
+      firstViewImage {
+        fluid {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
+      }
+      secondViewImage {
+        fluid {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
+      }
+      thirdViewImage {
+        fluid {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
+      }
     }
   }
 `;
 
 const ProjectPageTemplate = ({ data }) => {
-  const { title, description, image } = data.project;
+  const {
+    title,
+    description,
+    image,
+    firstViewImage,
+    secondViewImage,
+    thirdViewImage,
+  } = data.project;
 
   return (
     <>
@@ -30,7 +52,11 @@ const ProjectPageTemplate = ({ data }) => {
         description={description}
         image={image.fluid}
       />
-      <ProjectContent />
+      <ProjectContent
+        firstViewImage={firstViewImage.fluid}
+        secondViewImage={secondViewImage.fluid}
+        thirdViewImage={thirdViewImage.fluid}
+      />
     </>
   );
 };
@@ -41,6 +67,15 @@ ProjectPageTemplate.propTypes = {
       title: PropTypes.string,
       description: PropTypes.string,
       image: PropTypes.shape({
+        fluid: PropTypes.object,
+      }),
+      firstViewImage: PropTypes.shape({
+        fluid: PropTypes.object,
+      }),
+      secondViewImage: PropTypes.shape({
+        fluid: PropTypes.object,
+      }),
+      thirdViewImage: PropTypes.shape({
         fluid: PropTypes.object,
       }),
     }),
