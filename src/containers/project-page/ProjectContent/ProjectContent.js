@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'gatsby-image';
 import Container from 'components/common/Container';
+import S from './ProjectContent.styles';
 
 const ProjectContent = ({
   firstViewImage,
@@ -10,9 +10,14 @@ const ProjectContent = ({
 }) => {
   return (
     <Container axis="both">
-      <Image fluid={firstViewImage} />
-      <Image fluid={secondViewImage} />
-      <Image fluid={thirdViewImage} />
+      <S.FirstPageWrapper>
+        <S.Image fluid={firstViewImage} />
+      </S.FirstPageWrapper>
+
+      <S.ImagesGrid>
+        <S.Image fluid={secondViewImage} />
+        <S.Image fluid={thirdViewImage} />
+      </S.ImagesGrid>
     </Container>
   );
 };
