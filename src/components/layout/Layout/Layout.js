@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
@@ -23,6 +23,11 @@ const Layout = ({ location, children }) => {
     default:
       break;
   }
+
+  useEffect(() => {
+    window.smoothScroll.scrollTop = 0;
+    window.smoothScroll.setMomentum(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
