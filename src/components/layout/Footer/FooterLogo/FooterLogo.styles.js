@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    max-width: 330px;
 
     svg {
       width: 100%;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
-import ScrollArrow from 'components/blog-post-page/ScrollArrow';
+import ScrollArrow from 'components/common/ScrollArrow';
 import S from './BlogPostHero.styles';
 import animations from './BlogPostHero.animations';
 

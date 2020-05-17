@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import GatsbyImage from 'gatsby-image';
+import H2 from 'components/common/Heading';
 
 const Wrapper = styled.div`
   margin-bottom: 125px;
@@ -10,6 +11,10 @@ const Wrapper = styled.div`
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 150px;
   `}
+`;
+
+const Heading = styled(H2)`
+  max-width: 500px;
 `;
 
 const InputWrapper = styled.div`
@@ -35,6 +40,11 @@ const Input = styled.input`
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 0.2s ease-in-out;
+  max-width: 400px;
+
+  ${({ theme }) => theme.media.laptop`
+    max-width: 600px;
+  `}
 
   :focus {
     outline: none;
@@ -90,4 +100,12 @@ const Image = styled(GatsbyImage)`
   margin: 0 40px 40px 0;
 `;
 
-export default { Wrapper, InputWrapper, Input, Label, ImageWrapper, Image };
+export default {
+  Wrapper,
+  Heading,
+  InputWrapper,
+  Input,
+  Label,
+  ImageWrapper,
+  Image,
+};

@@ -3,7 +3,7 @@ import useWindowSize from 'hooks/useWindowSize';
 import Container from 'components/common/Container';
 import Paragraph from 'components/index-page/HeroParagraph';
 import Button from 'components/common/Button';
-import ScrollArrow from 'components/blog-post-page/ScrollArrow';
+import ScrollArrow from 'components/common/ScrollArrow';
 import animations from './Hero.animations';
 import S from './Hero.styles';
 

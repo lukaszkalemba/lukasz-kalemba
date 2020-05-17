@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
 import S from './PricingForm.styles';
 import animations from './PricingForm.animations';
@@ -25,7 +24,7 @@ const NotFound = () => {
       <Container axis="x">
         <S.Wrapper>
           <div>
-            <Heading>Opowiedz nam o swoim pomyśle.</Heading>
+            <S.Heading>Opowiedz nam o swoim pomyśle.</S.Heading>
             <form>
               <S.InputWrapper>
                 <S.Input id="name" type="text" required />

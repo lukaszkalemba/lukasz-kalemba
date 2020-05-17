@@ -6,13 +6,13 @@ const links = [
   },
   {
     id: 1,
-    path: '/usługi',
-    name: 'usługi',
+    path: '/blog',
+    name: 'blog',
   },
   {
     id: 2,
-    path: '/blog',
-    name: 'blog',
+    path: '/wycena',
+    name: 'wycena',
   },
 ];
 

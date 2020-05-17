@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Header = styled(motion.header)`
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.positive3};
 `;
 
 const Wrapper = styled.div`
