@@ -1,53 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
 import parse from 'html-react-parser';
 import Container from 'components/common/Container';
+import ContentItem from 'components/blog-post-page/ContentItem';
 import S from './BlogPostContent.styles';
 
-const variants = {
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8 },
-  },
-  initial: { opacity: 0.3, y: 100 },
-};
-
 const BlogPostContent = ({ content }) => {
-  const animation = useAnimation();
-
-  const [wrapperRef, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start('animate');
-    }
-  }, [animation, inView]);
-
-  const parsedContent = parse(content).map(item => {
-    return (
-      <S.ContentItemWrapper
-        key={item.key}
-        ref={wrapperRef}
-        variants={variants}
-        animate={animation}
-        initial="initial"
-      >
-        {item}
-      </S.ContentItemWrapper>
-    );
-  });
+  const parsedContent = parse(content);
 
   return (
     <S.Wrapper>
       <Container axis="both">
         <Container axis="x">
-          <S.Content>{parsedContent}</S.Content>
+          <S.Content>
+            {parsedContent.map(item => (
+              <ContentItem key={item.key} content={item} />
+            ))}
+          </S.Content>
         </Container>
       </Container>
     </S.Wrapper>
