@@ -7,7 +7,7 @@ const Background = styled(BackgroundImage)`
   top: -100px;
   width: 100vw;
   height: 102.5vh;
-  z-index: -1;
+  z-index: 0;
 
   ${({ theme }) => theme.media.tablet`
     top: -120px;
@@ -54,8 +54,6 @@ const ScrollWrapper = styled(motion.div)`
   position: absolute;
   right: 20px;
   bottom: 40px;
-  cursor: pointer;
-  z-index: ${({ theme }) => theme.zindex.positive4};
 
   ${({ theme }) => theme.media.tablet`
     right: 60px;

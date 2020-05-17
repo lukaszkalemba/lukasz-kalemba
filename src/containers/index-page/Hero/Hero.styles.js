@@ -85,21 +85,46 @@ const Buttons = styled(motion.div)`
   position: relative;
   z-index: ${({ theme }) => theme.zindex.positive1};
 
-    ${({ theme }) => theme.media.tablet`
+  ${({ theme }) => theme.media.tablet`
     margin-top: 40px;
   `}
-    ${({ theme }) => theme.media.laptop`
+
+  ${({ theme }) => theme.media.laptop`
     flex-direction: row;
     justify-content: flex-start;
     padding: 0;
     margin-left: 5vw;
   `}
-    ${({ theme }) => theme.media.desktop`
+
+  ${({ theme }) => theme.media.desktop`
     margin-left: 15vw;
   `}
-    ${({ theme }) => theme.media.largeDesktop`
+
+  ${({ theme }) => theme.media.largeDesktop`
     margin-left: 18vw;
   `}
 `;
 
-export default { Wrapper, Content, Heading, Buttons };
+const ScrollWrapper = styled(motion.div)`
+  position: absolute;
+  z-index: ${({ theme }) => theme.zindex.positive1};
+  right: 25px;
+  bottom: 45px;
+
+  ${({ theme }) => theme.media.tablet`
+    bottom: 90px;
+    right: 60px;
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    bottom: 100px;
+    right: 50px;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    bottom: 120px;
+    right: 70px;
+  `}
+`;
+
+export default { Wrapper, Content, Heading, Buttons, ScrollWrapper };

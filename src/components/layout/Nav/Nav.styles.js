@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+const Header = styled(motion.header)`
+  position: relative;
+  z-index: ${({ theme }) => theme.zindex.positive1};
+`;
 
 const Wrapper = styled.div`
   ${({ theme }) => theme.media.laptop`
@@ -13,4 +19,4 @@ const TopBar = styled.div`
   align-items: center;
 `;
 
-export default { Wrapper, TopBar };
+export default { Header, Wrapper, TopBar };

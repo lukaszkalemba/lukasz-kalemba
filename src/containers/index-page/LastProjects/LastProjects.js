@@ -32,7 +32,6 @@ const LastProjects = () => {
     <S.Section>
       <Container axis="both">
         <Heading>Ostatnie projekty.</Heading>
-
         <Container axis="x">
           <S.Cards>
             {projects.edges.map(({ node }, index) => (

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
 import useWindowSize from 'hooks/useWindowSize';
 import Logo from 'components/common/Logo';
 import Container from 'components/common/Container';
@@ -22,11 +21,7 @@ const Nav = ({ path, isHomePage }) => {
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <motion.header
-      variants={headerVariants}
-      initial="initial"
-      animate="animate"
-    >
+    <S.Header variants={headerVariants} initial="initial" animate="animate">
       <Container axis="both">
         <S.Wrapper>
           <S.TopBar>
@@ -38,7 +33,7 @@ const Nav = ({ path, isHomePage }) => {
           </nav>
         </S.Wrapper>
       </Container>
-    </motion.header>
+    </S.Header>
   );
 };
 
