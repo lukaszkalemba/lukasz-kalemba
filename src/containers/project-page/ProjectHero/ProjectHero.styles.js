@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Background from 'gatsby-background-image';
+import { motion } from 'framer-motion';
+import BackgroundImage from 'gatsby-background-image';
 
 const Wrapper = styled.div`
   display: grid;
@@ -22,7 +23,7 @@ const HeadingWrapper = styled.div`
   `}
 `;
 
-const Description = styled.p`
+const Description = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xxs};
   opacity: 0.8;
   line-height: 1.75em;
@@ -32,7 +33,14 @@ const Description = styled.p`
   `}
 `;
 
-const BackgroundImage = styled(Background)`
+const BackgroundWrapper = styled(motion.div)`
+  position: relative;
+  grid-column: 3 / 6;
+  grid-row: 1 / 2;
+  height: 700px;
+`;
+
+const Background = styled(BackgroundImage)`
   position: relative;
   grid-column: 3 / 6;
   grid-row: 1 / 2;
@@ -53,6 +61,7 @@ export default {
   Wrapper,
   HeadingWrapper,
   Description,
-  BackgroundImage,
+  BackgroundWrapper,
+  Background,
   Overlay,
 };

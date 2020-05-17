@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Heading from 'components/common/Heading';
 import Container from 'components/common/Container';
 import S from './ProjectHero.styles';
+import animations from './ProjectHero.animations';
 
 const ProjectHero = ({ title, description, image }) => {
   return (
@@ -11,13 +12,25 @@ const ProjectHero = ({ title, description, image }) => {
         <Container axis="both">
           <Container axis="x">
             <Heading>{title}</Heading>
-            <S.Description>{description}</S.Description>
+            <S.Description
+              variants={animations.descriptionVariants}
+              animate="animate"
+              initial="initial"
+            >
+              {description}
+            </S.Description>
           </Container>
         </Container>
       </S.HeadingWrapper>
-      <S.BackgroundImage fluid={image}>
-        <S.Overlay />
-      </S.BackgroundImage>
+      <S.BackgroundWrapper
+        variants={animations.backgroundVariants}
+        animate="animate"
+        initial="initial"
+      >
+        <S.Background fluid={image}>
+          <S.Overlay />
+        </S.Background>
+      </S.BackgroundWrapper>
     </S.Wrapper>
   );
 };
