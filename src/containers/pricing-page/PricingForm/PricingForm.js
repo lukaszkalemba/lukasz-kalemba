@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from 'components/common/Container';
+import Button from 'components/common/Button';
 import PricingImage from 'components/pricing-page/PricingImage';
 import S from './PricingForm.styles';
 
@@ -30,6 +31,10 @@ const NotFound = () => {
                 <S.Input id="phone-number" type="text" required />
                 <S.Label htmlFor="phone-number">Numer telefonu</S.Label>
               </S.InputWrapper>
+
+              <Button type="submit" priority="primary">
+                Wyślij zapytanie
+              </Button>
             </form>
           </div>
 

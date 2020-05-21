@@ -1,19 +1,37 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import S from './Button.styles';
 
-const Button = ({ path, priority, children }) => {
+const Button = ({ type, path, priority, children }) => {
+  let ButtonWrapper;
+  let buttonWrapperProps = null;
+
+  if (type === 'button') {
+    ButtonWrapper = S.Link;
+    buttonWrapperProps = {
+      to: path,
+    };
+  } else {
+    ButtonWrapper = Fragment;
+  }
+
   return (
-    <S.Link to={path}>
-      <S.Button priority={priority} type="button">
+    <ButtonWrapper {...buttonWrapperProps}>
+      <S.Button priority={priority} type={type}>
         <span>{children}</span>
       </S.Button>
-    </S.Link>
+    </ButtonWrapper>
   );
 };
 
+Button.defaultProps = {
+  type: 'button',
+  path: '',
+};
+
 Button.propTypes = {
-  path: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['button', 'submit']),
+  path: PropTypes.string,
   priority: PropTypes.oneOf(['primary', 'secondary']).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
