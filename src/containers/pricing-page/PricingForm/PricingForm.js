@@ -1,24 +1,9 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/common/Container';
+import PricingImage from 'components/pricing-page/PricingImage';
 import S from './PricingForm.styles';
-import animations from './PricingForm.animations';
-
-const IMAGE_QUERY = graphql`
-  {
-    officeImage: file(relativePath: { eq: "photo_office.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`;
 
 const NotFound = () => {
-  const { officeImage } = useStaticQuery(IMAGE_QUERY);
-
   return (
     <Container axis="both">
       <Container axis="x">
@@ -48,13 +33,7 @@ const NotFound = () => {
             </form>
           </div>
 
-          <S.ImageWrapper
-            variants={animations.imageWrapperVariants}
-            initial="initial"
-            animate="animate"
-          >
-            <S.Image fluid={officeImage.childImageSharp.fluid} />
-          </S.ImageWrapper>
+          <PricingImage />
         </S.Wrapper>
       </Container>
     </Container>

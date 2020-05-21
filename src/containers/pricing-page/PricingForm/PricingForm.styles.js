@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import GatsbyImage from 'gatsby-image';
 import H2 from 'components/common/Heading';
 
 const Wrapper = styled.div`
@@ -45,8 +43,7 @@ const Input = styled.input`
   ${({ theme }) => theme.media.laptop`
     max-width: 600px;
   `}
-
-  :focus {
+    :focus {
     outline: none;
     border-bottom-color: ${({ theme }) => theme.color.primary};
   }
@@ -76,36 +73,10 @@ const Label = styled.label`
   transition: 0.2s ease all;
 `;
 
-const ImageWrapper = styled(motion.div)`
-  display: none;
-  position: relative;
-
-  ::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    margin: 40px 0 0 40px;
-    background-color: ${({ theme }) => theme.color.dark};
-  }
-
-  ${({ theme }) => theme.media.laptop`
-    display: block;
-  `}
-`;
-
-const Image = styled(GatsbyImage)`
-  margin: 0 40px 40px 0;
-`;
-
 export default {
   Wrapper,
   Heading,
   InputWrapper,
   Input,
   Label,
-  ImageWrapper,
-  Image,
 };
