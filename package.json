@@ -8,6 +8,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "directory-named-webpack-plugin": "^4.0.1",
     "dotenv": "^8.2.0",
+    "formik": "^2.1.4",
     "framer-motion": "^1.10.3",
     "gatsby": "^2.21.15",
     "gatsby-background-image": "^1.1.1",
@@ -28,7 +29,8 @@
     "react-inlinesvg": "^1.2.0",
     "react-intersection-observer": "^8.26.2",
     "smooth-scrollbar": "^8.5.2",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "yup": "^0.29.0"
   },
   "devDependencies": {
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
