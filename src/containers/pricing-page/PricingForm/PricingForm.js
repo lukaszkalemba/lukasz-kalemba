@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Container from 'components/common/Container';
 import Button from 'components/common/Button';
 import TextInput from 'components/pricing-page/TextInput';
+import TextareaInput from 'components/pricing-page/TextareaInput';
 import PricingImage from 'components/pricing-page/PricingImage';
 import S from './PricingForm.styles';
 
@@ -12,6 +13,7 @@ const initialValues = {
   company: '',
   email: '',
   phoneNumber: '',
+  projectDescription: '',
 };
 
 const validationSchema = Yup.object({
@@ -20,15 +22,15 @@ const validationSchema = Yup.object({
     .required('To pole jest wymagane'),
   company: Yup.string()
     .min(3, 'To pole musi składać się z conajmniej 3 znaków')
-    .max(15, 'Must be 15 characters or less')
     .required('To pole jest wymagane'),
   email: Yup.string()
     .email('To pole musi zawierać poprawny adres e-mail')
     .required('To pole jest wymagane'),
-  phoneNumber: Yup.string()
-    .min(3, 'Must be at least 3 characters')
-    .max(15, 'Must be 15 characters or less')
-    .required('To pole jest wymagane'),
+  phoneNumber: Yup.string().required('To pole jest wymagane'),
+  projectDescription: Yup.string().min(
+    10,
+    'To pole musi składać się z conajmniej 10 znaków'
+  ),
 });
 
 const handleSubmit = (values, { resetForm }) => {
@@ -61,10 +63,16 @@ const PricingForm = () => {
                     name="phoneNumber"
                     type="text"
                   />
-
-                  <Button type="submit" priority="primary">
-                    Wyślij zapytanie
-                  </Button>
+                  <TextareaInput
+                    label="Opis projektu"
+                    name="projectDescription"
+                    rows="8"
+                  />
+                  <S.ButtonWrapper>
+                    <Button type="submit" priority="primary">
+                      Wyślij zapytanie
+                    </Button>
+                  </S.ButtonWrapper>
                 </Form>
               )}
             </Formik>
