@@ -8,6 +8,12 @@ import TextareaInput from 'components/pricing-page/TextareaInput';
 import PricingImage from 'components/pricing-page/PricingImage';
 import S from './PricingForm.styles';
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+};
+
 const initialValues = {
   name: '',
   company: '',
@@ -33,13 +39,6 @@ const validationSchema = Yup.object({
   ),
 });
 
-const handleSubmit = (values, { resetForm }) => {
-  /* eslint-disable no-alert */
-  window.alert(JSON.stringify(values, null, 2));
-
-  resetForm();
-};
-
 const PricingForm = () => {
   return (
     <Container axis="both">
@@ -51,10 +50,33 @@ const PricingForm = () => {
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
-              onSubmit={handleSubmit}
+              onSubmit={async (values, actions) => {
+                try {
+                  await fetch('/', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: encode({ 'form-name': 'wycena', ...values }),
+                  });
+
+                  alert('form successfully submitted');
+                  actions.resetForm();
+                  actions.setSubmitting(false);
+                } catch (err) {
+                  alert('error');
+                }
+              }}
             >
               {() => (
-                <Form>
+                <Form
+                  name="wycena"
+                  method="post"
+                  netlify-honeypot="bot-field"
+                  data-netlify="true"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+
                   <TextInput label="Imię i nazwisko" name="name" type="text" />
                   <TextInput label="Firma" name="company" type="text" />
                   <TextInput label="Adres e-mail" name="email" type="email" />
