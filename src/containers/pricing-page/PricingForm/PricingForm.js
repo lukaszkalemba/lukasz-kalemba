@@ -6,6 +6,7 @@ import Button from 'components/common/Button';
 import TextInput from 'components/pricing-page/TextInput';
 import TextareaInput from 'components/pricing-page/TextareaInput';
 import PricingImage from 'components/pricing-page/PricingImage';
+import Notification from 'components/pricing-page/Notification';
 import S from './PricingForm.styles';
 
 const encode = data => {
@@ -47,6 +48,8 @@ const PricingForm = () => {
           <div>
             <S.Heading>Opowiedz nam o swoim pomyśle.</S.Heading>
 
+            <Notification />
+
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
@@ -60,11 +63,11 @@ const PricingForm = () => {
                     body: encode({ 'form-name': 'wycena', ...values }),
                   });
 
-                  alert('form successfully submitted');
+                  // alert('form successfully submitted');
                   actions.resetForm();
                   actions.setSubmitting(false);
                 } catch (err) {
-                  alert('error');
+                  // alert('error');
                 }
               }}
             >
