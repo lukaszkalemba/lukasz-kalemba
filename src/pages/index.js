@@ -1,15 +1,15 @@
 import React from 'react';
-import SEO from 'components/common/SEO';
-import Hero from 'containers/index-page/Hero';
-import LastProjects from 'containers/index-page/LastProjects';
-import Services from 'containers/index-page/Services';
-import Blog from 'containers/index-page/Blog';
+import SEO from 'components/particles/SEO';
+import Hero from 'components/organisms/Hero';
+import FeaturedProjects from 'components/organisms/FeaturedProjects';
+import Services from 'components/organisms/Services';
+import Blog from 'components/organisms/Blog';
 
 const IndexPage = () => (
   <>
     <SEO title="home" />
     <Hero />
-    <LastProjects />
+    <FeaturedProjects />
     <Services />
     <Blog />
   </>

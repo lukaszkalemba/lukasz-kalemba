@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from 'components/common/SEO';
-import AllProjects from 'containers/projects-page/AllProjects';
+import SEO from 'components/particles/SEO';
+import AllProjects from 'components/organisms/AllProjects';
 
 const ProjectsPage = () => {
   return (

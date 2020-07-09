@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "codemon",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@lukaszkalemba",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "directory-named-webpack-plugin": "^4.0.1",
@@ -75,12 +74,5 @@
       "stylelint --config .stylelintrc --fix ./src/**/*.js",
       "git add ."
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

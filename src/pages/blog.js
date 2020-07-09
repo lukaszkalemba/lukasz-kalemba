@@ -1,6 +1,6 @@
 import React from 'react';
-import SEO from 'components/common/SEO';
-import AllBlogPosts from 'containers/blog-page/AllBlogPosts';
+import SEO from 'components/particles/SEO';
+import AllBlogPosts from 'components/organisms/AllBlogPosts';
 
 const BlogPage = () => {
   return (
