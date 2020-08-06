@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import Button from 'components/atoms/Button';
@@ -37,28 +38,30 @@ const validationSchema = Yup.object({
   ),
 });
 
-const PricingForm = () => {
+const PricingForm = ({ setSubmissionStatus }) => {
+  const handleSubmission = async (values, actions) => {
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encode({ 'form-name': 'wycena', ...values }),
+      });
+
+      actions.resetForm();
+      actions.setSubmitting(false);
+      setSubmissionStatus('success');
+    } catch (err) {
+      setSubmissionStatus('error');
+    }
+  };
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={async (values, actions) => {
-        try {
-          await fetch('/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: encode({ 'form-name': 'wycena', ...values }),
-          });
-
-          // alert('form successfully submitted');
-          actions.resetForm();
-          actions.setSubmitting(false);
-        } catch (err) {
-          // alert('error');
-        }
-      }}
+      onSubmit={handleSubmission}
     >
       {() => (
         <Form
@@ -87,6 +90,10 @@ const PricingForm = () => {
       )}
     </Formik>
   );
+};
+
+PricingForm.propTypes = {
+  setSubmissionStatus: PropTypes.func.isRequired,
 };
 
 export default PricingForm;
