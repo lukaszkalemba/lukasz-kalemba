@@ -32,7 +32,15 @@
     "yup": "^0.29.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
     "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-knobs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@storybook/theming": "^5.3.19",
+    "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -42,8 +50,10 @@
     "gatsby-plugin-eslint": "^2.0.8",
     "gatsby-plugin-root-import": "^2.0.5",
     "husky": "^4.2.5",
+    "install": "^0.13.0",
     "lint-staged": "^10.2.2",
     "prettier": "^1.19.1",
+    "storybook-addon-designs": "^5.4.1",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -60,7 +70,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
