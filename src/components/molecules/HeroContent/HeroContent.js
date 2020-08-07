@@ -1,7 +1,6 @@
 import React from 'react';
 import useWindowSize from 'hooks/useWindowSize';
 import Container from 'components/particles/Container';
-import Paragraph from 'components/atoms/HeroParagraph';
 import Button from 'components/atoms/Button';
 import animations from './HeroContent.animations';
 import S from './HeroContent.styles';
@@ -15,9 +14,9 @@ const HeroContent = () => {
         <S.Heading tag="h1" variants={animations.headingVariants}>
           Zaistniej w sieci
         </S.Heading>
-        <Paragraph variants={animations.paragraphVariants}>
+        <S.Paragraph variants={animations.paragraphVariants}>
           Zaistniej w świecie nieograniczonych możliwości
-        </Paragraph>
+        </S.Paragraph>
       </S.Content>
 
       <S.Buttons variants={animations.getButtonsVariants(size)}>
