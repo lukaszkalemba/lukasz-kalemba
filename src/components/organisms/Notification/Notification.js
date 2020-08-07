@@ -1,49 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'components/atoms/Button';
-import Heading from 'components/atoms/Heading';
+import NotificationContent from 'components/molecules/NotificationContent';
+import Container from 'components/particles/Container';
 import S from './Notification.styles';
 
 const Notification = ({ submissionStatus, setSubmissionStatus }) => {
-  let textContent = {};
-
-  switch (submissionStatus) {
-    case 'success':
-      textContent = {
-        heading: 'Poszło!',
-        paragraph: 'Odezwiemy się do Ciebie w ciągu 24h.',
-      };
-      break;
-
-    case 'error':
-      textContent = {
-        heading: 'Coś poszło nie tak...',
-        paragraph: 'Spróbuj ponownie później',
-      };
-      break;
-
-    default:
-      textContent = {
-        heading: '',
-        paragraph: '',
-      };
-      break;
-  }
-
   const closeNotification = () => setSubmissionStatus(null);
 
   return (
-    <S.Wrapper>
-      <Heading>{textContent.heading}</Heading>
-      <p>{textContent.paragraph}</p>
-      <Button priority="secondary" path="/">
-        Powrót do strony głównej
-      </Button>
-
-      <button onClick={closeNotification} type="button">
-        x
-      </button>
-    </S.Wrapper>
+    <S.Backdrop>
+      <S.Wrapper>
+        <Container axis="both">
+          <NotificationContent submissionStatus={submissionStatus} />
+          <S.CloseButton onClick={closeNotification} type="button" />
+        </Container>
+      </S.Wrapper>
+    </S.Backdrop>
   );
 };
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import HeadingComponent from 'components/atoms/Heading';
+import ParagraphComponent from 'components/atoms/Paragraph';
 
 const Content = styled.div`
   display: flex;
@@ -36,6 +37,21 @@ const Heading = styled(HeadingComponent)`
   `}
 `;
 
+const Paragraph = styled(ParagraphComponent)`
+  ${({ theme }) => theme.media.laptop`
+    margin-left: 26vw;
+    width: auto;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    margin-left: 33vw;
+  `}
+
+  ${({ theme }) => theme.media.largeDesktop`
+    margin-left: 38vw;
+  `}
+`;
+
 const Buttons = styled(motion.div)`
   display: flex;
   flex-direction: column;
@@ -65,4 +81,4 @@ const Buttons = styled(motion.div)`
   `}
 `;
 
-export default { Content, Heading, Buttons };
+export default { Content, Heading, Paragraph, Buttons };

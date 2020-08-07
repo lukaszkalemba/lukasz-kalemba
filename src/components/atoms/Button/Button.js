@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import S from './Button.styles';
 
-const Button = ({ type, path, priority, children }) => {
+const Button = ({ type, path, priority, className, children }) => {
   let ButtonWrapper;
   let buttonWrapperProps = null;
 
@@ -17,7 +17,7 @@ const Button = ({ type, path, priority, children }) => {
 
   return (
     <ButtonWrapper {...buttonWrapperProps}>
-      <S.Button priority={priority} type={type}>
+      <S.Button priority={priority} type={type} className={className}>
         <span>{children}</span>
       </S.Button>
     </ButtonWrapper>
@@ -27,12 +27,14 @@ const Button = ({ type, path, priority, children }) => {
 Button.defaultProps = {
   type: 'button',
   path: '',
+  className: '',
 };
 
 Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit']),
   path: PropTypes.string,
   priority: PropTypes.oneOf(['primary', 'secondary']).isRequired,
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
