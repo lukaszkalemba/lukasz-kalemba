@@ -1,3 +1,6 @@
+const path = require('path');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+
 module.exports = {
   stories: ['../src/components/**/*.stories.js'],
   addons: [
@@ -21,7 +24,14 @@ module.exports = {
       require.resolve('babel-plugin-remove-graphql-queries'),
     ];
 
+    config.resolve.modules = [
+      path.resolve(__dirname, '..', 'src'),
+      'node_modules',
+    ];
+
     config.resolve.mainFields = ['browser', 'module', 'main'];
+
+    config.resolve.plugins = [new DirectoryNamedWebpackPlugin()];
 
     return config;
   },
