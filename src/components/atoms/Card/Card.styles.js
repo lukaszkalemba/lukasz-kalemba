@@ -9,6 +9,13 @@ const Link = styled(GatsbyLink)`
 
 const Wrapper = styled(motion.div)`
   opacity: 0;
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+
+  ${({ theme }) => theme.media.laptop`
+    max-width: 580px;
+  `}
 `;
 
 const Article = styled.article`
@@ -33,7 +40,7 @@ const Article = styled.article`
   `}
 
   ${({ theme }) => theme.media.desktop`
-    height: ${({ small }) => (small ? '500px' : '750px')};
+    height: ${({ small }) => (small ? '500px' : '680px')};
     padding: 40px 50px;
   `}
 `;
