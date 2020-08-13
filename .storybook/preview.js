@@ -12,7 +12,7 @@ configure(require.context('../src/components', true, /\.stories\.js$/), module);
 const GlobalWrapper = storyFn => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    {storyFn()}
+    <div style={{ margin: '3rem' }}>{storyFn()}</div>
   </ThemeProvider>
 );
 
