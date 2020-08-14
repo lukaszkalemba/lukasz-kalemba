@@ -5,7 +5,6 @@ import { useAnimation } from 'framer-motion';
 import useWindowSize from 'hooks/useWindowSize';
 import ServicesCTASection from 'components/molecules/ServicesCTASection';
 import ServicesWrapper from 'components/molecules/ServicesWrapper';
-
 import S from './Services.styles';
 
 const IMAGES_QUERY = graphql`

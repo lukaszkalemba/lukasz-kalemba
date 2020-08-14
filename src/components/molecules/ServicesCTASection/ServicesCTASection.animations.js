@@ -1,4 +1,4 @@
-const wrapperVariants = {
+export const wrapperVariants = {
   animate: {
     transition: {
       staggerChildren: 0.2,
@@ -6,16 +6,11 @@ const wrapperVariants = {
   },
 };
 
-const childrenVariants = {
+export const childrenVariants = {
   animate: {
     opacity: 1,
     y: 0,
     transition: { duration: 0.8 },
   },
   initial: { opacity: 0, y: 50 },
-};
-
-export default {
-  wrapperVariants,
-  childrenVariants,
 };

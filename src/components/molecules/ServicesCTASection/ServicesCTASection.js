@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Container from 'components/particles/Container';
 import Link from 'components/atoms/Link';
-import Heading from 'components/atoms/ServicesCTAHeading';
-import animations from './ServicesCTASection.animations';
+import S from './ServicesCTASection.styles';
+import {
+  wrapperVariants,
+  childrenVariants,
+} from './ServicesCTASection.animations';
 
 const ServicesCTASection = ({ animation }) => {
   return (
@@ -12,13 +15,13 @@ const ServicesCTASection = ({ animation }) => {
       <motion.div
         animate={animation}
         initial="initial"
-        variants={animations.wrapperVariants}
+        variants={wrapperVariants}
       >
-        <Heading animations={animations}>
+        <S.Heading variants={childrenVariants}>
           Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
           istniejący na kolejny poziom.
-        </Heading>
-        <motion.div variants={animations.childrenVariants}>
+        </S.Heading>
+        <motion.div variants={childrenVariants}>
           <Link to="/wycena">Bezpłatna wycena</Link>
         </motion.div>
       </motion.div>
