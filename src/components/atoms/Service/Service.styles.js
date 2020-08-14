@@ -9,6 +9,7 @@ const Article = styled.article`
   align-items: flex-end;
   min-height: 300px;
   position: relative;
+  max-width: 1000px;
 
   ${({ theme }) => theme.media.laptop`
     justify-content: flex-end;
