@@ -48,6 +48,16 @@ const TopBar = styled.div`
   `}
 `;
 
+const Copyright = styled.p`
+  font-size: ${({ theme }) => theme.font.size.xxs};
+  opacity: 0.8;
+  padding-top: 15px;
+
+  ${({ theme }) => theme.media.laptop`
+    padding-top: 0;
+  `}
+`;
+
 const BottomBar = styled(motion.div)`
   display: flex;
   flex-direction: column-reverse;
@@ -58,4 +68,4 @@ const BottomBar = styled(motion.div)`
   `}
 `;
 
-export default { Footer, TopBar, BottomBar };
+export default { Footer, TopBar, Copyright, BottomBar };
