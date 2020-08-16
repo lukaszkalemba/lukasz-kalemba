@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
+import S from './BlogPostContentItem.styles';
 import animations from './BlogPostContentItem.animations';
 
 const BlogPostContentItem = ({ content }) => {
@@ -18,14 +19,14 @@ const BlogPostContentItem = ({ content }) => {
   }, [animation, inView]);
 
   return (
-    <motion.div
+    <S.Wrapper
       ref={wrapperRef}
       variants={animations.contentItemVariants}
       animate={animation}
       initial="initial"
     >
       {content}
-    </motion.div>
+    </S.Wrapper>
   );
 };
 
