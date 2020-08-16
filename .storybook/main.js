@@ -12,6 +12,10 @@ module.exports = {
     '@storybook/addon-docs',
   ],
 
+  babel: {
+    plugins: ['babel-plugin-remove-graphql-queries'],
+  },
+
   webpackFinal: async config => {
     config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/];
     config.module.rules[0].use[0].loader = require.resolve('babel-loader');
@@ -34,6 +38,10 @@ module.exports = {
     config.resolve.mainFields = ['browser', 'module', 'main'];
 
     config.resolve.plugins = [new DirectoryNamedWebpackPlugin()];
+
+    config.module.rules[0].use[0].options.plugins = [
+      require.resolve('babel-plugin-remove-graphql-queries'),
+    ];
 
     return config;
   },
