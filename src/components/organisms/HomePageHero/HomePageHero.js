@@ -1,10 +1,10 @@
 import React from 'react';
 import HeroContent from 'components/molecules/HeroContent';
 import ScrollArrow from 'components/atoms/ScrollArrow';
-import animations from './Hero.animations';
-import S from './Hero.styles';
+import animations from './HomePageHero.animations';
+import S from './HomePageHero.styles';
 
-const Hero = () => {
+const HomePageHero = () => {
   return (
     <S.Wrapper
       variants={animations.wrapperVariants}
@@ -24,4 +24,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomePageHero;

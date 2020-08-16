@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from 'components/particles/SEO';
-import Hero from 'components/organisms/Hero';
+import Hero from 'components/organisms/HomePageHero';
 import FeaturedProjects from 'components/organisms/FeaturedProjects';
 import Services from 'components/organisms/Services';
 import Blog from 'components/organisms/Blog';
