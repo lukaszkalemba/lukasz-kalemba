@@ -8,6 +8,9 @@ const Button = styled(ButtonComponent)`
 `;
 
 const Paragraph = styled(ParagraphComponent)`
+  font-size: ${({ theme }) => theme.font.size.xs};
+  line-height: 20px;
+
   ${({ theme }) => theme.media.tablet`
     margin-top: -5px;
     margin-left: 20px;
