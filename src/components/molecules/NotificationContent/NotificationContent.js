@@ -8,6 +8,7 @@ const NotificationContent = ({ submissionStatus }) => {
 
   switch (submissionStatus) {
     case 'success':
+    default:
       textContent = {
         heading: 'Poszło!',
         paragraph: 'Odezwiemy się do Ciebie w ciągu 24h.',
@@ -18,13 +19,6 @@ const NotificationContent = ({ submissionStatus }) => {
       textContent = {
         heading: 'Wystąpił błąd...',
         paragraph: 'Spróbuj ponownie później.',
-      };
-      break;
-
-    default:
-      textContent = {
-        heading: '',
-        paragraph: '',
       };
       break;
   }

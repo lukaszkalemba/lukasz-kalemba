@@ -8,10 +8,6 @@ const Paragraph = styled(motion.p)`
   margin: 5px 0;
   line-height: 22px;
 
-  ${({ theme }) => theme.media.phone`
-    font-size: ${theme.font.size.xs};
-  `}
-
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.s};
     max-width: 90%;
