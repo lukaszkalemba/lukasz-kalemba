@@ -4,7 +4,7 @@ import Container from 'components/particles/Container';
 import Cards from 'components/molecules/CardsWrapper';
 import Heading from 'components/atoms/Heading';
 import Link from 'components/atoms/Link';
-import S from './Blog.styles';
+import S from './FeaturedBlogPosts.styles';
 
 const BLOG_POSTS_QUERY = graphql`
   {
@@ -26,7 +26,7 @@ const BLOG_POSTS_QUERY = graphql`
   }
 `;
 
-const Blog = () => {
+const FeaturedBlogPosts = () => {
   const { blogPosts } = useStaticQuery(BLOG_POSTS_QUERY);
 
   return (
@@ -45,4 +45,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default FeaturedBlogPosts;
