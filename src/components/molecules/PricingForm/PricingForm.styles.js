@@ -5,6 +5,7 @@ const ButtonWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 70%;
+  max-width: 550px;
 
   ${({ theme }) => theme.media.laptop`
     justify-content: center;
