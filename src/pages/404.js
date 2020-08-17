@@ -1,11 +1,11 @@
 import React from 'react';
 import SEO from 'components/particles/SEO';
-import NotFound from 'components/organisms/NotFound';
+import NotFoundSection from 'components/organisms/NotFoundSection';
 
 const NotFoundPage = () => (
   <>
     <SEO title="404" />
-    <NotFound />
+    <NotFoundSection />
   </>
 );
 
