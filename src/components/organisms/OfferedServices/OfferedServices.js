@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 import useWindowSize from 'hooks/useWindowSize';
 import ServicesCTASection from 'components/molecules/ServicesCTASection';
 import ServicesWrapper from 'components/molecules/ServicesWrapper';
-import S from './Services.styles';
+import S from './OfferedServices.styles';
 
 const IMAGES_QUERY = graphql`
   {
@@ -35,7 +35,7 @@ const IMAGES_QUERY = graphql`
   }
 `;
 
-const Services = () => {
+const OfferedServices = () => {
   const images = useStaticQuery(IMAGES_QUERY);
   const animation = useAnimation();
   const size = useWindowSize();
@@ -61,4 +61,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default OfferedServices;
