@@ -24,13 +24,13 @@ const NotificationContent = ({ submissionStatus }) => {
   }
 
   return (
-    <>
+    <S.Wrapper>
       <Heading>{textContent.heading}</Heading>
       <S.Paragraph>{textContent.paragraph}</S.Paragraph>
       <S.Button priority="primary" path="/">
         Strona główna
       </S.Button>
-    </>
+    </S.Wrapper>
   );
 };
 

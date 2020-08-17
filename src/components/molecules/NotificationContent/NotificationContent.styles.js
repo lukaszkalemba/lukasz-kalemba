@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import ButtonComponent from 'components/atoms/Button';
 import ParagraphComponent from 'components/atoms/Paragraph';
 
+const Wrapper = styled.div`
+  max-width: 450px;
+`;
+
 const Button = styled(ButtonComponent)`
   margin: 0 auto;
   margin-top: 50px;
@@ -21,4 +25,4 @@ const Paragraph = styled(ParagraphComponent)`
   `}
 `;
 
-export default { Button, Paragraph };
+export default { Wrapper, Button, Paragraph };
