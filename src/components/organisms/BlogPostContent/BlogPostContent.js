@@ -8,8 +8,6 @@ import S from './BlogPostContent.styles';
 const BlogPostContent = ({ content }) => {
   const parsedContent = parse(content);
 
-  console.log(parsedContent[0]);
-
   return (
     <S.Wrapper>
       <Container axis="both" doubling="x">
