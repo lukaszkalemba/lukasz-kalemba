@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from 'components/atoms/Button';
 import Container from 'components/particles/Container';
-import S from './NotFoundContent.styles';
+import S from './NotFoundSectionContent.styles';
 
-const NotFoundContent = () => {
+const NotFoundSectionContent = () => {
   return (
     <main>
       <Container axis="both">
@@ -16,4 +16,4 @@ const NotFoundContent = () => {
   );
 };
 
-export default NotFoundContent;
+export default NotFoundSectionContent;
