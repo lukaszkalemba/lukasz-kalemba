@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlogPostContentItem from 'components/atoms/BlogPostContentItem';
-import S from './BlogPostContentContent.styles';
+import S from './BlogPostContentBody.styles';
 
-const BlogPostContentContent = ({ content }) => {
+const BlogPostContentBody = ({ content }) => {
   return (
     <S.Content>
       {content.map(item => (
@@ -13,9 +13,9 @@ const BlogPostContentContent = ({ content }) => {
   );
 };
 
-BlogPostContentContent.propTypes = {
+BlogPostContentBody.propTypes = {
   content: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.shape({})]))
     .isRequired,
 };
 
-export default BlogPostContentContent;
+export default BlogPostContentBody;
