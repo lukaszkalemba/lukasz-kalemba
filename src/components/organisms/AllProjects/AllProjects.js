@@ -26,8 +26,6 @@ const PROJECTS_QUERY = graphql`
 const AllProjects = () => {
   const { projects } = useStaticQuery(PROJECTS_QUERY);
 
-  console.log(projects);
-
   return (
     <>
       <Container axis="both" doubling="x">
