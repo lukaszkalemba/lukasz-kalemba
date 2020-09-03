@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
-const InputWrapper = styled.div`
+const InputWrapper = styled(motion.div)`
   position: relative;
   margin: 45px 0;
 

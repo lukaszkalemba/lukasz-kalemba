@@ -4,7 +4,6 @@ const imageVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      delay: 0.25,
       duration: 0.75,
     },
   },

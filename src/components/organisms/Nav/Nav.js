@@ -18,7 +18,7 @@ const Nav = ({ path, isHomePage }) => {
     headerVariants = animations.getHeaderVariants(isHomePage);
   }
 
-  const toggleNav = () => setIsNavOpen(!isNavOpen);
+  const toggleNav = () => setIsNavOpen(state => !state);
 
   return (
     <S.Header variants={headerVariants} initial="initial" animate="animate">

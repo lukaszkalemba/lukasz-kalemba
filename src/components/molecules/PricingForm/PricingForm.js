@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
+import { motion } from 'framer-motion';
 import Button from 'components/atoms/Button';
 import TextInput from 'components/atoms/TextInput';
 import TextareaInput from 'components/atoms/TextareaInput';
 import S from './PricingForm.styles';
+import animations from './PricingForm.animations';
 
 const encode = data => {
   return Object.keys(data)
@@ -72,20 +74,47 @@ const PricingForm = ({ setSubmissionStatus }) => {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <TextInput label="Imię i nazwisko" name="name" type="text" />
-          <TextInput label="Firma" name="company" type="text" />
-          <TextInput label="Adres e-mail" name="email" type="email" />
-          <TextInput label="Numer telefonu" name="phoneNumber" type="text" />
-          <TextareaInput
-            label="Opis projektu"
-            name="projectDescription"
-            rows="8"
-          />
-          <S.ButtonWrapper>
-            <Button type="submit" priority="primary">
-              Wyślij zapytanie
-            </Button>
-          </S.ButtonWrapper>
+          <motion.div
+            variants={animations.inputsWrapperVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <TextInput
+              label="Imię i nazwisko"
+              name="name"
+              type="text"
+              variants={animations.inputVariants}
+            />
+            <TextInput
+              label="Firma"
+              name="company"
+              type="text"
+              variants={animations.inputVariants}
+            />
+            <TextInput
+              label="Adres e-mail"
+              name="email"
+              type="email"
+              variants={animations.inputVariants}
+            />
+            <TextInput
+              label="Numer telefonu"
+              name="phoneNumber"
+              type="text"
+              variants={animations.inputVariants}
+            />
+            <TextareaInput
+              label="Opis projektu"
+              name="projectDescription"
+              rows="8"
+              variants={animations.inputVariants}
+            />
+            <S.ButtonWrapper variants={animations.inputVariants}>
+              <Button type="submit" priority="primary">
+                Wyślij zapytanie
+              </Button>
+            </S.ButtonWrapper>
+          </motion.div>
         </Form>
       )}
     </Formik>

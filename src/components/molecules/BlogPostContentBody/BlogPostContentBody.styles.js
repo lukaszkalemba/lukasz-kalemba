@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: -55px;
 
   div:nth-child(4n) {
     text-align: right;

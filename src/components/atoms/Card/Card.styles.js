@@ -66,7 +66,7 @@ const Title = styled.h3`
     font-size: ${theme.font.size.m};
   `}
 
-  ${({ theme }) => theme.media.desktop`
+  ${({ theme }) => theme.media.laptop`
     font-size: ${theme.font.size.l};
   `}
 `;

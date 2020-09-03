@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
