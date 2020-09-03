@@ -13,10 +13,12 @@ const Content = styled.div`
     flex-direction: column-reverse;
     padding: 0;
     margin-top: 100px;
+    margin-left: 100px;
   `}
 
   ${({ theme }) => theme.media.desktop`
     margin-top: 150px;
+    margin-left: 0;
   `}
 `;
 
@@ -69,7 +71,7 @@ const Buttons = styled(motion.div)`
     flex-direction: row;
     justify-content: flex-start;
     padding: 0;
-    margin-left: 5vw;
+    margin-left: 150px;
   `}
 
   ${({ theme }) => theme.media.desktop`

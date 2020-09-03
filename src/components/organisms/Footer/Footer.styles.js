@@ -11,21 +11,18 @@ const Footer = styled(motion.footer)`
   `}
 
   ${({ theme }) => theme.media.laptop`
+    padding-bottom: 20px;
+
     ::before {
       content: '';
       position: absolute;
       background: url(${slashPattern}) no-repeat;
-      right: 8%;
-      bottom: 0;
-      background-size: 100%;
-      height: 400px;
-      width: 450px;
-      background-position-y: bottom;
-
-    ${theme.media.laptop`
       height: 600px;
       right: 16%;
-    `};
+      bottom: 0;
+      background-size: 100%;
+      width: 450px;
+      background-position-y: bottom;
 
     ${theme.media.largeDesktop`
       height: 800px;

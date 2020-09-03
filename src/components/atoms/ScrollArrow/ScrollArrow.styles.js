@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.button`
-  display: block;
+  display: none;
   border: none;
   background-color: inherit;
   width: 50px;
@@ -23,11 +23,22 @@ const Wrapper = styled.button`
   ${({ theme }) => theme.media.laptop`
     width: 75px;
     height: 150px;
+    display: block;
   `}
+
   svg {
     width: 100%;
     height: 100%;
   }
 `;
 
-export default { Wrapper };
+const Info = styled.p`
+  position: absolute;
+  width: 120px;
+  transform: rotate(90deg);
+  color: ${({ theme }) => theme.color.white};
+  right: -17px;
+  top: -25px;
+`;
+
+export default { Wrapper, Info };
