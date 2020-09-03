@@ -1,5 +1,5 @@
-const imageWrapperVariants = {
-  initial: { opacity: 0, x: 30 },
+const imageVariants = {
+  initial: { opacity: 0 },
   animate: {
     x: 0,
     opacity: 1,
@@ -10,4 +10,16 @@ const imageWrapperVariants = {
   },
 };
 
-export default { imageWrapperVariants };
+const imageShadowVariants = {
+  initial: { opacity: 0, x: -40, y: -40 },
+  animate: {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+export default { imageVariants, imageShadowVariants };

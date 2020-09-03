@@ -20,11 +20,16 @@ const PricingImage = () => {
 
   return (
     <S.ImageWrapper
-      variants={animations.imageWrapperVariants}
+      variants={animations.imageVariants}
       initial="initial"
       animate="animate"
     >
       <S.Image fluid={officeImage.childImageSharp.fluid} />
+      <S.ImageShadow
+        variants={animations.imageShadowVariants}
+        initial="initial"
+        animate="animate"
+      />
     </S.ImageWrapper>
   );
 };

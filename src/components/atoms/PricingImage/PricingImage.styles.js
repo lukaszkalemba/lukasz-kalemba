@@ -8,13 +8,6 @@ const ImageWrapper = styled(motion.div)`
 
   ::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
-    margin: 40px 0 0 40px;
-    background-color: ${({ theme }) => theme.color.dark};
   }
 
   ${({ theme }) => theme.media.laptop`
@@ -24,9 +17,21 @@ const ImageWrapper = styled(motion.div)`
 
 const Image = styled(GatsbyImage)`
   margin: 0 40px 40px 0;
+  z-index: ${({ theme }) => theme.zindex.positive1};
+`;
+
+const ImageShadow = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: 40px 0 0 40px;
+  background-color: ${({ theme }) => theme.color.dark};
 `;
 
 export default {
   ImageWrapper,
   Image,
+  ImageShadow,
 };
