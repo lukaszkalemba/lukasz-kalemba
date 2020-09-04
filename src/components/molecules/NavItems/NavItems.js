@@ -4,11 +4,11 @@ import links from 'utils/links';
 import NavItem from 'components/atoms/NavItem';
 import S from './NavItems.styles';
 
-const NavItems = ({ isNavOpen }) => {
+const NavItems = ({ isNavOpen, closeNav }) => {
   return (
     <S.List isNavOpen={isNavOpen}>
       {links.map(({ id, path, name }) => (
-        <NavItem key={id} path={path} name={name} />
+        <NavItem key={id} path={path} name={name} closeNav={closeNav} />
       ))}
     </S.List>
   );
@@ -16,6 +16,7 @@ const NavItems = ({ isNavOpen }) => {
 
 NavItems.propTypes = {
   isNavOpen: PropTypes.bool.isRequired,
+  closeNav: PropTypes.func.isRequired,
 };
 
 export default NavItems;

@@ -39,9 +39,12 @@ const H1 = styled(motion.h1)`
 const H2 = styled(motion.h2)`
   ${headingBase}
   font-size: ${({ theme }) => theme.font.size.x};
+  max-width: 85%;
+  margin-left: 15px;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.l};
+    margin-left: 0;
   `}
 
   ${({ theme }) => theme.media.laptop`

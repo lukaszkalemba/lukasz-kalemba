@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import { motion } from 'framer-motion';
 import Button from 'components/atoms/Button';
 import TextInput from 'components/atoms/TextInput';
 import TextareaInput from 'components/atoms/TextareaInput';
@@ -40,9 +39,11 @@ const validationSchema = Yup.object({
   ),
 });
 
-const PricingForm = ({ setSubmissionStatus }) => {
+const PricingForm = ({ setSubmissionStatus, setOffset }) => {
   const handleSubmission = async (values, actions) => {
     try {
+      setOffset(window.smoothScroll.offset);
+
       await fetch('/', {
         method: 'POST',
         headers: {
@@ -53,6 +54,9 @@ const PricingForm = ({ setSubmissionStatus }) => {
 
       actions.resetForm();
       actions.setSubmitting(false);
+
+      window.smoothScroll.updatePluginOptions('stopScrollbar', { open: false });
+
       setSubmissionStatus('success');
     } catch (err) {
       setSubmissionStatus('error');
@@ -74,7 +78,7 @@ const PricingForm = ({ setSubmissionStatus }) => {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <motion.div
+          <S.Wrapper
             variants={animations.inputsWrapperVariants}
             initial="initial"
             animate="animate"
@@ -114,7 +118,7 @@ const PricingForm = ({ setSubmissionStatus }) => {
                 Wyślij zapytanie
               </Button>
             </S.ButtonWrapper>
-          </motion.div>
+          </S.Wrapper>
         </Form>
       )}
     </Formik>
@@ -123,6 +127,7 @@ const PricingForm = ({ setSubmissionStatus }) => {
 
 PricingForm.propTypes = {
   setSubmissionStatus: PropTypes.func.isRequired,
+  setOffset: PropTypes.func.isRequired,
 };
 
 export default PricingForm;

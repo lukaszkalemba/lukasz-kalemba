@@ -7,6 +7,7 @@ import S from './PricingContent.styles';
 
 const PricingContent = () => {
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [offset, setOffset] = useState(null);
 
   return (
     <Container axis="both" doubling="x">
@@ -17,9 +18,13 @@ const PricingContent = () => {
             <Notification
               submissionStatus={submissionStatus}
               setSubmissionStatus={setSubmissionStatus}
+              offset={offset}
             />
           )}
-          <PricingForm setSubmissionStatus={setSubmissionStatus} />
+          <PricingForm
+            setSubmissionStatus={setSubmissionStatus}
+            setOffset={setOffset}
+          />
         </div>
         <PricingImage />
       </S.Wrapper>

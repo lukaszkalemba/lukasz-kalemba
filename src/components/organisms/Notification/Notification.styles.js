@@ -5,18 +5,18 @@ const Backdrop = styled.div`
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: ${({ theme }) => theme.zindex.positive3};
 `;
 
 const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
+  left: 50%;
+  top: calc(${({ verticalOffset }) => `calc(${verticalOffset}px + 45vh)`} );
+  transform: translate(-50%, -50%);
   width: 75vw;
   height: 50vh;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   z-index: ${({ theme }) => theme.zindex.positive3};

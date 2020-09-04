@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import H2 from 'components/atoms/Heading';
 
 const Wrapper = styled.div`
-  margin-bottom: 125px;
+  margin-bottom: 100px;
 
   ${({ theme }) => theme.media.laptop`
     display: grid;

@@ -18,7 +18,21 @@ const Nav = ({ path, isHomePage }) => {
     headerVariants = animations.getHeaderVariants(isHomePage);
   }
 
-  const toggleNav = () => setIsNavOpen(state => !state);
+  const toggleScrolling = isOpen => {
+    window.smoothScroll.updatePluginOptions('stopScrollbar', {
+      open: isOpen,
+    });
+  };
+
+  const toggleNav = () => {
+    setIsNavOpen(state => !state);
+    toggleScrolling(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+    toggleScrolling(false);
+  };
 
   return (
     <S.Header variants={headerVariants} initial="initial" animate="animate">
@@ -29,7 +43,7 @@ const Nav = ({ path, isHomePage }) => {
             <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
           </S.TopBar>
           <nav>
-            <NavItems isNavOpen={isNavOpen} />
+            <NavItems isNavOpen={isNavOpen} closeNav={closeNav} />
           </nav>
         </S.Wrapper>
       </Container>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading';
 import S from './NotificationContent.styles';
 
-const NotificationContent = ({ submissionStatus }) => {
+const NotificationContent = ({ submissionStatus, enableScrolling }) => {
   let textContent = {};
 
   switch (submissionStatus) {
@@ -27,7 +27,7 @@ const NotificationContent = ({ submissionStatus }) => {
     <S.Wrapper>
       <Heading>{textContent.heading}</Heading>
       <S.Paragraph>{textContent.paragraph}</S.Paragraph>
-      <S.Button priority="primary" path="/">
+      <S.Button priority="primary" path="/" onClick={enableScrolling}>
         Strona główna
       </S.Button>
     </S.Wrapper>
@@ -36,6 +36,7 @@ const NotificationContent = ({ submissionStatus }) => {
 
 NotificationContent.propTypes = {
   submissionStatus: PropTypes.oneOf(['success', 'error', null]).isRequired,
+  enableScrolling: PropTypes.func.isRequired,
 };
 
 export default NotificationContent;
