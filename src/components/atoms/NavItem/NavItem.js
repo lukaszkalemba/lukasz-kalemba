@@ -5,7 +5,7 @@ import S from './NavItem.styles';
 const NavItem = ({ path, name, closeNav }) => {
   return (
     <S.ListItem>
-      <S.Link onClick={closeNav} to={path}>
+      <S.Link data-testid="nav-item-link" onClick={closeNav} to={path}>
         {name}
       </S.Link>
     </S.ListItem>
