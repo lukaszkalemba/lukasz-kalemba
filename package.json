@@ -73,7 +73,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest --modulePaths=src --watch"
+    "test": "jest --modulePaths=src"
   },
   "husky": {
     "hooks": {
@@ -85,7 +85,7 @@
       "prettier --config .prettierrc --write ./src/**/*.js",
       "eslint --config .eslintrc --fix ./src/**/*.js",
       "stylelint --config .stylelintrc --fix ./src/**/*.js",
-      "npm test --watch=false",
+      "npm test",
       "git add ."
     ]
   }

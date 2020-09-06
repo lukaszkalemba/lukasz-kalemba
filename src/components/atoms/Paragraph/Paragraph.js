@@ -4,7 +4,11 @@ import S from './Paragraph.styles';
 
 const Paragraph = ({ variants, className, children }) => {
   return (
-    <S.Paragraph variants={variants} className={className}>
+    <S.Paragraph
+      variants={variants}
+      className={className}
+      data-testid="paragraph"
+    >
       {children}
     </S.Paragraph>
   );
