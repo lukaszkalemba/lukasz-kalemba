@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BlogPostContentItem /> renders correctly 1`] = `
+exports[`<BlogPostContentItem /> renders correctly and matches snapshot 1`] = `
 <div
   class="sc-AxjAm epiZDW"
   style="opacity: 0; transform: translateY(100px) translateZ(0);"

@@ -4,7 +4,7 @@ import '__mocks__/intersectionObserver';
 import BlogPostContentItem from './BlogPostContentItem';
 
 describe('<BlogPostContentItem />', () => {
-  it('renders correctly', () => {
+  it('renders correctly and matches snapshot', () => {
     const { container } = render(
       <BlogPostContentItem content={<p>Lorem ipsum dolor sit amet.</p>} />
     );
