@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
 import 'jest-styled-components';
-import Card from './Card';
 import '__mocks__/intersectionObserver';
+import Card from './Card';
 
-const props = {
+const fakeProps = {
   index: 1,
   title: 'Card title',
   image: {
@@ -21,19 +21,21 @@ const props = {
 
 describe('<Card />', () => {
   it('renders correctly default variant', () => {
-    const { getByTestId } = render(<Card {...props} />);
+    const { getByTestId } = render(<Card {...fakeProps} />);
 
     const cardTitle = getByTestId('card-title');
     const cardLink = getByTestId('card-link');
     const cardArticle = getByTestId('card-article');
 
-    expect(cardTitle.textContent).toBe('Card title');
-    expect(cardLink.getAttribute('href')).toBe('/pre-slug/slug');
+    expect(cardTitle.textContent).toBe(fakeProps.title);
+    expect(cardLink.getAttribute('href')).toBe(
+      `/${fakeProps.preSlug}/${fakeProps.slug}`
+    );
 
     expect(cardArticle).toHaveStyleRule('height', '450px');
   });
   it('renders correctly small variant', () => {
-    const { getByTestId } = render(<Card {...props} small />);
+    const { getByTestId } = render(<Card {...fakeProps} small />);
 
     const cardArticle = getByTestId('card-article');
 

@@ -14,7 +14,7 @@ const Button = styled.button`
   color: ${({ priority, theme }) =>
     priority === 'primary' ? theme.color.dark : theme.color.white};
   background-color: ${({ priority, theme }) =>
-    priority === 'primary' ? theme.color.white : 'transparent'};
+    priority === 'primary' ? theme.color.white : theme.color.transparent};
   font-weight: ${({ theme }) => theme.font.weight.bold};
   padding: 1em 2em;
   border: ${({ theme }) => `2px solid ${theme.color.white}`};

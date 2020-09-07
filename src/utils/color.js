@@ -7,4 +7,5 @@ export default {
   dark: '#73076E',
   white: '#FFFFFF',
   black: '#000000',
+  transparent: 'transparent',
 };
