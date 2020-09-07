@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BlogPostContentItem /> renders correctly 1`] = `
+<div
+  class="sc-AxjAm epiZDW"
+  style="opacity: 0; transform: translateY(100px) translateZ(0);"
+>
+  <p>
+    Lorem ipsum dolor sit amet.
+  </p>
+</div>
+`;
