@@ -53,6 +53,7 @@
     "identity-obj-proxy": "^3.0.0",
     "install": "^0.13.0",
     "jest": "^26.4.2",
+    "jest-styled-components": "^7.0.3",
     "lint-staged": "^10.2.2",
     "prettier": "^1.19.1",
     "storybook-addon-designs": "^5.4.1",

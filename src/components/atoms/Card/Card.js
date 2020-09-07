@@ -32,10 +32,10 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
       initial="initial"
     >
       <Background fluid={image.fluid}>
-        <S.Article small={small}>
-          <S.Link to={`/${preSlug}/${slug}`}>
+        <S.Article small={small} data-testid="card-article">
+          <S.Link data-testid="card-link" to={`/${preSlug}/${slug}`}>
             <S.Overlay />
-            <S.Title>{title}</S.Title>
+            <S.Title data-testid="card-title">{title}</S.Title>
           </S.Link>
         </S.Article>
       </Background>
