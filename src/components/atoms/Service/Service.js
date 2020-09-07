@@ -6,7 +6,9 @@ const Service = ({ img, variants, children }) => {
   return (
     <S.Article>
       <S.Overlay fluid={img.fluid} />
-      <S.Title variants={variants}>{children}</S.Title>
+      <S.Title variants={variants} data-testid="service-title">
+        {children}
+      </S.Title>
     </S.Article>
   );
 };
