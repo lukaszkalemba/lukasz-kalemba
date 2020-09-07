@@ -10,8 +10,13 @@ const TextInput = ({ label, variants, ...props }) => {
 
   return (
     <S.InputWrapper variants={variants}>
-      <S.Input isError={isError} {...field} {...props} />
-      <S.Label isError={isError} htmlFor={name}>
+      <S.Input
+        isError={isError}
+        {...field}
+        {...props}
+        data-testid="text-input"
+      />
+      <S.Label isError={isError} htmlFor={name} data-testid="text-input-label">
         {label}
       </S.Label>
       {isError && <S.Error>{meta.error}</S.Error>}
@@ -19,12 +24,16 @@ const TextInput = ({ label, variants, ...props }) => {
   );
 };
 
+TextInput.defaultProps = {
+  variants: {},
+};
+
 TextInput.propTypes = {
   label: PropTypes.string.isRequired,
   variants: PropTypes.shape({
     animate: PropTypes.object,
     initial: PropTypes.object,
-  }).isRequired,
+  }),
   name: PropTypes.string.isRequired,
 };
 

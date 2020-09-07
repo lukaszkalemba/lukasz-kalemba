@@ -4,8 +4,9 @@ import Paragraph from './Paragraph';
 
 describe('<Paragraph />', () => {
   it('renders correctly', () => {
-    const { getByTestId } = render(<Paragraph>Paragraph test</Paragraph>);
+    const fakeContent = 'Paragraph test';
+    const { getByTestId } = render(<Paragraph>{fakeContent}</Paragraph>);
 
-    expect(getByTestId('paragraph').textContent).toBe('Paragraph test');
+    expect(getByTestId('paragraph').textContent).toBe(fakeContent);
   });
 });
