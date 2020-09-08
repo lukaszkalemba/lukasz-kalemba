@@ -38,7 +38,7 @@ const H1 = styled(motion.h1)`
 
 const H2 = styled(motion.h2)`
   ${headingBase}
-  font-size: ${({ theme }) => theme.font.size.x};
+  font-size: ${({ theme }) => theme.font.size.s};
   max-width: 85%;
   margin-left: 15px;
 

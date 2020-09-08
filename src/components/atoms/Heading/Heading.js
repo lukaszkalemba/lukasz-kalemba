@@ -34,6 +34,7 @@ const Heading = ({ tag, variants, className, children }) => {
       animate={animation}
       initial="initial"
       className={className}
+      data-testid="heading"
     >
       {children}
     </HeadingTag>
