@@ -11,7 +11,7 @@ const TextareaInput = ({ label, variants, ...props }) => {
   return (
     <S.TextareaWrapper variants={variants}>
       <S.Textarea isError={isError} {...field} {...props} />
-      <S.Label isError={isError} htmlFor={name}>
+      <S.Label isError={isError} htmlFor={name} data-testid="textarea-label">
         {label}
       </S.Label>
       {isError && <S.Error>{meta.error}</S.Error>}
@@ -19,12 +19,16 @@ const TextareaInput = ({ label, variants, ...props }) => {
   );
 };
 
+TextareaInput.defaultProps = {
+  variants: {},
+};
+
 TextareaInput.propTypes = {
   label: PropTypes.string.isRequired,
   variants: PropTypes.shape({
     animate: PropTypes.object,
     initial: PropTypes.object,
-  }).isRequired,
+  }),
   name: PropTypes.string.isRequired,
 };
 
