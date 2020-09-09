@@ -4,9 +4,12 @@
     "airbnb",
     "eslint:recommended",
     "plugin:react/recommended",
+    "plugin:testing-library/recommended",
+    "plugin:jest-dom/recommended",
     "prettier",
     "prettier/react"
   ],
+  "plugins": ["testing-library"],
   "globals": {
     "window": true,
     "document": true,

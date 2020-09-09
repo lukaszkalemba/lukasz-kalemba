@@ -27,8 +27,9 @@ describe('<Card />', () => {
     const cardLink = getByTestId('card-link');
     const cardArticle = getByTestId('card-article');
 
-    expect(cardTitle.textContent).toBe(fakeProps.title);
-    expect(cardLink.getAttribute('href')).toBe(
+    expect(cardTitle).toHaveTextContent(fakeProps.title);
+    expect(cardLink).toHaveAttribute(
+      'href',
       `/${fakeProps.preSlug}/${fakeProps.slug}`
     );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
-import { render } from 'utils/test-utils';
+import { render, waitFor } from 'utils/test-utils';
 import user from '@testing-library/user-event';
 import TextareaInput from './TextareaInput';
 
@@ -26,11 +26,11 @@ describe('<TextareaInput />', () => {
     const textareaInput = getByRole('textbox');
     const textareaInputLabel = getByTestId('textarea-label');
 
-    expect(textareaInputLabel.textContent).toBe(fakeLabelText);
+    expect(textareaInputLabel).toHaveTextContent(fakeLabelText);
     expect(textareaInput).toHaveValue('');
 
-    await user.type(textareaInput, fakeInputValue);
+    user.type(textareaInput, fakeInputValue);
 
-    expect(textareaInput).toHaveValue(fakeInputValue);
+    await waitFor(() => expect(textareaInput).toHaveValue(fakeInputValue));
   });
 });

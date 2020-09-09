@@ -24,6 +24,6 @@ describe('<Service />', () => {
 
     const serviceTitle = getByText(fakeContent);
 
-    expect(serviceTitle.textContent).toBe(fakeContent);
+    expect(serviceTitle).toHaveTextContent(fakeContent);
   });
 });

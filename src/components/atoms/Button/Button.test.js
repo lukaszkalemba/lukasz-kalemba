@@ -21,14 +21,14 @@ describe('<Button />', () => {
     const button = getByRole('button');
     const buttonLink = getByTestId('button-link');
 
-    expect(button.textContent).toBe(fakeContent);
+    expect(button).toHaveTextContent(fakeContent);
 
     user.click(button);
 
     expect(fakeProps.onClick).toHaveBeenCalledTimes(1);
     expect(button).toHaveStyleRule('color', theme.color.dark);
     expect(button).toHaveStyleRule('background-color', theme.color.white);
-    expect(buttonLink.getAttribute('href')).toBe(fakeProps.path);
+    expect(buttonLink).toHaveAttribute('href', fakeProps.path);
   });
 
   it('renders correctly secondary submit button', () => {

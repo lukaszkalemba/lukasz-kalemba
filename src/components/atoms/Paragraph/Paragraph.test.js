@@ -7,6 +7,6 @@ describe('<Paragraph />', () => {
     const fakeContent = 'Paragraph test';
     const { getByTestId } = render(<Paragraph>{fakeContent}</Paragraph>);
 
-    expect(getByTestId('paragraph').textContent).toBe(fakeContent);
+    expect(getByTestId('paragraph')).toHaveTextContent(fakeContent);
   });
 });

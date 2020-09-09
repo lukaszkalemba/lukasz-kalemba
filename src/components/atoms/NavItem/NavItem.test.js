@@ -18,7 +18,7 @@ describe('<NavItem />', () => {
     user.click(navItemLink);
 
     expect(closeNav).toHaveBeenCalledTimes(1);
-    expect(navItemLink.textContent).toBe(fakeName);
-    expect(navItemLink.getAttribute('href')).toBe(fakePath);
+    expect(navItemLink).toHaveTextContent(fakeName);
+    expect(navItemLink).toHaveAttribute('href', fakePath);
   });
 });

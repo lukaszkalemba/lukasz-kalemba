@@ -13,7 +13,7 @@ describe('<Heading />', () => {
     const heading = getByTestId('heading');
 
     expect(heading.tagName).toBe('H1');
-    expect(heading.textContent).toBe(fakeContent);
+    expect(heading).toHaveTextContent(fakeContent);
     expect(heading).toHaveStyleRule('font-size', theme.font.size.m);
   });
 
