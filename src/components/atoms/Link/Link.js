@@ -28,7 +28,7 @@ const Link = ({ to, animate, children }) => {
       animate={animation}
       initial="initial"
     >
-      <S.Link to={to}>
+      <S.Link to={to} data-testid="link">
         {children}
         <S.Arrow>
           <Icon src={arrow} />
