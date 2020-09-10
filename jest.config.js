@@ -8,6 +8,10 @@ module.exports = {
     'components/atoms/Icon': '<rootDir>/src/components/atoms/Icon/Icon',
     'components/atoms/BlogPostContentItem':
       '<rootDir>/src/components/atoms/BlogPostContentItem/BlogPostContentItem',
+    'components/particles/Container':
+      '<rootDir>/src/components/particles/Container/Container',
+    'components/atoms/Heading':
+      '<rootDir>/src/components/atoms/Heading/Heading',
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
   transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],

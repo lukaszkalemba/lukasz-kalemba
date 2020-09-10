@@ -8,23 +8,28 @@ const BlogPostHeroContent = ({ title, description, animations }) => {
   return (
     <Container axis="both">
       <Heading>{title}</Heading>
-      <S.Paragraph
-        variants={animations.paragraphVariants}
+      <S.Description
+        variants={animations.descriptionVariants}
         initial="initial"
         animate="animate"
+        data-testid="blog-post-hero-description"
       >
         {description}
-      </S.Paragraph>
+      </S.Description>
     </Container>
   );
+};
+
+BlogPostHeroContent.defaultProps = {
+  animations: {},
 };
 
 BlogPostHeroContent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   animations: PropTypes.shape({
-    paragraphVariants: PropTypes.shape({}),
-  }).isRequired,
+    descriptionVariants: PropTypes.shape({}),
+  }),
 };
 
 export default BlogPostHeroContent;

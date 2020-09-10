@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const Paragraph = styled(motion.p)`
+const Description = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xxs};
   line-height: 25px;
   max-width: 450px;
@@ -16,4 +16,4 @@ const Paragraph = styled(motion.p)`
   `}
 `;
 
-export default { Paragraph };
+export default { Description };
