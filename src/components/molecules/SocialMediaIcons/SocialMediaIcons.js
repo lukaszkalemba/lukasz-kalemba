@@ -24,11 +24,15 @@ const SocialMediaIcons = ({ variants }) => (
   </S.Wrapper>
 );
 
+SocialMediaIcons.defaultProps = {
+  variants: {},
+};
+
 SocialMediaIcons.propTypes = {
   variants: PropTypes.shape({
     initial: PropTypes.object,
     animate: PropTypes.object,
-  }).isRequired,
+  }),
 };
 
 export default SocialMediaIcons;
