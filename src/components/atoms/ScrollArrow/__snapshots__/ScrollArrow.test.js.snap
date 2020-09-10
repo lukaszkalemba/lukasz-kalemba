@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScrollArrow /> renders correctly 1`] = `
+<button
+  class="sc-AxirZ jXmZzW"
+>
+  <p
+    class="sc-AxiKw etcUeH"
+  >
+    Przesuń w dół
+  </p>
+  <div
+    class="sc-AxjAm cQfdzG"
+  >
+    <svg
+      fill="none"
+      height="16"
+      viewBox="0 0 65 16"
+      width="65"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 1H61L42.5 14.5"
+        stroke="white"
+        stroke-width="2"
+      />
+    </svg>
+  </div>
+</button>
+`;
