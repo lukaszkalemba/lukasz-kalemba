@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ScrollArrow /> renders correctly 1`] = `
+exports[`<ScrollArrow /> renders correctly and matches snapshot 1`] = `
 <button
   class="sc-AxirZ jXmZzW"
 >
