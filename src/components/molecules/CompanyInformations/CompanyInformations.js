@@ -11,11 +11,15 @@ const CompanyInformations = ({ variants }) => (
   </S.Wrapper>
 );
 
+CompanyInformations.defaultProps = {
+  variants: {},
+};
+
 CompanyInformations.propTypes = {
   variants: PropTypes.shape({
     initial: PropTypes.object,
     animate: PropTypes.object,
-  }).isRequired,
+  }),
 };
 
 export default CompanyInformations;

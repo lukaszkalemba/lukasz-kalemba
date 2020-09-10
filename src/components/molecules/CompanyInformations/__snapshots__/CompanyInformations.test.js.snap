@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CompanyInformations /> renders correctly and matches snapshot 1`] = `
+<div
+  class="sc-AxjAm jsGdgg"
+>
+  <a
+    class="sc-AxirZ ioCZsz"
+    href="tel:+48797709856"
+  >
+    +48 797 709 856
+  </a>
+  <a
+    class="sc-AxirZ ioCZsz"
+    href="mailto:biuro@codemon.pl"
+  >
+    biuro@codemon.pl
+  </a>
+  <p
+    class="sc-AxiKw eiEefl"
+  >
+    REGON: 000000000
+  </p>
+  <p
+    class="sc-AxiKw eiEefl"
+  >
+    KRS: 0000000000
+  </p>
+</div>
+`;
