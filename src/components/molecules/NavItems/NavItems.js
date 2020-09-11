@@ -6,7 +6,7 @@ import S from './NavItems.styles';
 
 const NavItems = ({ isNavOpen, closeNav }) => {
   return (
-    <S.List isNavOpen={isNavOpen}>
+    <S.List isNavOpen={isNavOpen} data-testid="nav-items-list">
       {links.map(({ id, path, name }) => (
         <NavItem key={id} path={path} name={name} closeNav={closeNav} />
       ))}

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServicesCTASection /> renders correctly and matches snapshot 1`] = `
+<div
+  class="sc-AxjAm gYmeLx"
+>
+  <div>
+    <h2
+      class="sc-AxgMl gmTzLq"
+      style="opacity: 0; transform: translateY(50px) translateZ(0);"
+    >
+      Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już istniejący na kolejny poziom.
+    </h2>
+    <div
+      style="opacity: 0; transform: translateY(50px) translateZ(0);"
+    >
+      <div
+        class="sc-AxiKw dundXp"
+      >
+        <a
+          class="sc-AxhCb covriP"
+          data-testid="link"
+          href="/wycena"
+        >
+          Bezpłatna wycena
+          <div
+            class="sc-AxhUy kfRhbQ"
+          >
+            <div
+              class="sc-AxirZ iShCbp"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 65 16"
+                width="65"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 1H61L42.5 14.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

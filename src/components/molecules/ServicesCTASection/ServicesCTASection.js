@@ -29,8 +29,12 @@ const ServicesCTASection = ({ animation }) => {
   );
 };
 
+ServicesCTASection.defaultProps = {
+  animation: {},
+};
+
 ServicesCTASection.propTypes = {
-  animation: PropTypes.shape({}).isRequired,
+  animation: PropTypes.shape({}),
 };
 
 export default ServicesCTASection;
