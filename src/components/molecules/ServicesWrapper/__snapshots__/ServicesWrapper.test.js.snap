@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServicesWrapper /> renders correctly 1`] = `
+<div>
+  <article
+    class="sc-AxjAm cZKMjM"
+  >
+    <h3
+      class="sc-AxiKw iAZhDh"
+      data-testid="service-title"
+      style="opacity: 0; transform: translateY(20px) translateZ(0);"
+    >
+      Projektowanie interfejsów
+    </h3>
+  </article>
+  <article
+    class="sc-AxjAm cZKMjM"
+  >
+    <h3
+      class="sc-AxiKw iAZhDh"
+      data-testid="service-title"
+      style="opacity: 0; transform: translateY(20px) translateZ(0);"
+    >
+      Strony i aplikacje internetowe
+    </h3>
+  </article>
+  <article
+    class="sc-AxjAm cZKMjM"
+  >
+    <h3
+      class="sc-AxiKw iAZhDh"
+      data-testid="service-title"
+      style="opacity: 0; transform: translateY(20px) translateZ(0);"
+    >
+      Sklepy internetowe
+    </h3>
+  </article>
+</div>
+`;

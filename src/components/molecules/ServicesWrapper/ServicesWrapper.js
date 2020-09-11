@@ -33,6 +33,10 @@ const ServicesWrapper = ({ images, animation }) => {
   );
 };
 
+ServicesWrapper.defaultProps = {
+  animation: {},
+};
+
 ServicesWrapper.propTypes = {
   images: PropTypes.shape({
     design: PropTypes.shape({
@@ -45,7 +49,7 @@ ServicesWrapper.propTypes = {
       childImageSharp: PropTypes.shape({}),
     }),
   }).isRequired,
-  animation: PropTypes.shape({}).isRequired,
+  animation: PropTypes.shape({}),
 };
 
 export default ServicesWrapper;
