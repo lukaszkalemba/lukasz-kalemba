@@ -11,6 +11,7 @@ const ProjectHeroContent = ({ title, description, animations }) => {
         variants={animations.descriptionVariants}
         animate="animate"
         initial="initial"
+        data-testid="description"
       >
         {description}
       </S.Description>
@@ -18,12 +19,16 @@ const ProjectHeroContent = ({ title, description, animations }) => {
   );
 };
 
+ProjectHeroContent.defaultProps = {
+  animations: {},
+};
+
 ProjectHeroContent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   animations: PropTypes.shape({
     descriptionVariants: PropTypes.shape({}),
-  }).isRequired,
+  }),
 };
 
 export default ProjectHeroContent;
