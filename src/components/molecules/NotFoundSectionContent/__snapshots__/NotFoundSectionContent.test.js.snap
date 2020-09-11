@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] = `
+<main>
+  <div
+    class="sc-AxiKw knHbTu"
+  >
+    <h1
+      class="sc-AxhCb jcEHSw sc-AxheI biJvfv"
+      data-testid="heading"
+    >
+      Coś poszło nie tak...
+    </h1>
+    <div
+      class="sc-AxgMl fOVlnj"
+    >
+      <a
+        class="sc-AxjAm bgfZmU"
+        data-testid="button-link"
+        href=""
+      >
+        <button
+          class="sc-AxirZ cvvsKc"
+          type="button"
+        >
+          <span>
+            Strona główna
+          </span>
+        </button>
+      </a>
+    </div>
+  </div>
+</main>
+`;
