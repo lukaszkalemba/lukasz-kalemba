@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import S from './Paragraph.styles';
 
-const Paragraph = ({ variants, className, children }) => {
+const Paragraph = ({ variants, className, children, ...props }) => {
   return (
     <S.Paragraph
       variants={variants}
       className={className}
       data-testid="paragraph"
+      {...props}
     >
       {children}
     </S.Paragraph>

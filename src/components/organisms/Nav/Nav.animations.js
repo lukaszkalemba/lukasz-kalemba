@@ -4,7 +4,7 @@ const getHeaderVariants = (isHomePage, isMobile) => {
 
   if (isHomePage) {
     delay = isMobile ? 2 : 1;
-    x = isMobile ? 50 : -30;
+    x = isMobile ? 50 : -80;
   } else {
     delay = isMobile ? 0.2 : 0.25;
     x = isMobile ? -30 : -80;

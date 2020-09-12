@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Container from 'components/particles/Container';
 import PricingImage from 'components/atoms/PricingImage';
 import PricingForm from 'components/molecules/PricingForm';
@@ -14,13 +15,19 @@ const PricingContent = () => {
       <S.Wrapper>
         <div>
           <S.Heading>Opowiedz nam o swoim pomyśle.</S.Heading>
-          {submissionStatus && (
-            <Notification
-              submissionStatus={submissionStatus}
-              setSubmissionStatus={setSubmissionStatus}
-              offset={offset}
-            />
-          )}
+          <AnimatePresence
+            exitBeforeEnter
+            onExitComplete={() => setSubmissionStatus(null)}
+          >
+            {submissionStatus && (
+              <Notification
+                submissionStatus={submissionStatus}
+                setSubmissionStatus={setSubmissionStatus}
+                offset={offset}
+              />
+            )}
+          </AnimatePresence>
+
           <PricingForm
             setSubmissionStatus={setSubmissionStatus}
             setOffset={setOffset}

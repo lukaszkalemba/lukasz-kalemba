@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-const Backdrop = styled.div`
+const Backdrop = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   left: 0;
@@ -10,7 +11,7 @@ const Backdrop = styled.div`
   z-index: ${({ theme }) => theme.zindex.positive3};
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   position: fixed;
   left: 50%;
   top: calc(${({ verticalOffset }) => `calc(${verticalOffset}px + 45vh)`} );

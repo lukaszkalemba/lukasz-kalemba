@@ -55,7 +55,7 @@ const PricingForm = ({ setSubmissionStatus, setOffset }) => {
       actions.resetForm();
       actions.setSubmitting(false);
 
-      window.smoothScroll.updatePluginOptions('stopScrollbar', { open: false });
+      window.smoothScroll.updatePluginOptions('stopScrollbar', { open: true });
 
       setSubmissionStatus('success');
     } catch (err) {

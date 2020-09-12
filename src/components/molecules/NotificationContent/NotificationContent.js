@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import Heading from 'components/atoms/Heading';
 import S from './NotificationContent.styles';
+import animations from './NotificationContent.animations';
 
 const NotificationContent = ({ submissionStatus, enableScrolling }) => {
   let textContent = {};
@@ -26,10 +28,22 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
   return (
     <S.Wrapper>
       <Heading>{textContent.heading}</Heading>
-      <S.Paragraph>{textContent.paragraph}</S.Paragraph>
-      <S.Button priority="primary" path="/" onClick={enableScrolling}>
-        Strona główna
-      </S.Button>
+      <S.Paragraph
+        variants={animations.paragraphVariants}
+        animate="animate"
+        initial="initial"
+      >
+        {textContent.paragraph}
+      </S.Paragraph>
+      <motion.div
+        variants={animations.buttonWrapperVariants}
+        animate="animate"
+        initial="initial"
+      >
+        <S.Button priority="primary" path="/" onClick={enableScrolling}>
+          Strona główna
+        </S.Button>
+      </motion.div>
     </S.Wrapper>
   );
 };

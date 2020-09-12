@@ -11,6 +11,7 @@ const TextInput = ({ label, variants, ...props }) => {
   return (
     <S.InputWrapper variants={variants}>
       <S.Input
+        id={name}
         isError={isError}
         {...field}
         {...props}
@@ -19,7 +20,7 @@ const TextInput = ({ label, variants, ...props }) => {
       <S.Label isError={isError} htmlFor={name} data-testid="text-input-label">
         {label}
       </S.Label>
-      {isError && <S.Error>{meta.error}</S.Error>}
+      <S.Error>{isError && meta.error}</S.Error>
     </S.InputWrapper>
   );
 };

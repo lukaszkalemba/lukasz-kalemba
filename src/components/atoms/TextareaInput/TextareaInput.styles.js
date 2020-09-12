@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const TextareaWrapper = styled(motion.div)`
   position: relative;
-  margin: 45px 0;
+  margin: 35px 0 50px;
 
   ${({ theme }) => theme.media.laptop`
     margin-right: 100px;

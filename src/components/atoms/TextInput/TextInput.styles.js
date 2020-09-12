@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const InputWrapper = styled(motion.div)`
   position: relative;
-  margin: 45px 0;
+  margin: 37px 0;
 
   ${({ theme }) => theme.media.laptop`
     margin-right: 100px;
@@ -71,6 +71,7 @@ const Error = styled.div`
   margin-top: 7px;
   margin-left: 1px;
   color: orange;
+  height: 14px;
 `;
 
 export default {
