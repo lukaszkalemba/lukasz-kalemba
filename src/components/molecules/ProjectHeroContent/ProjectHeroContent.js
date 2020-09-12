@@ -11,7 +11,7 @@ const ProjectHeroContent = ({ title, description, animations }) => {
         variants={animations.descriptionVariants}
         animate="animate"
         initial="initial"
-        data-testid="description"
+        data-testid="project-hero-description"
       >
         {description}
       </S.Description>

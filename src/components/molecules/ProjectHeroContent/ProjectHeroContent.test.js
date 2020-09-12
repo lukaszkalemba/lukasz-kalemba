@@ -15,7 +15,7 @@ describe('<ProjectHeroContent />', () => {
     );
 
     const heading = getByRole('heading');
-    const description = getByTestId('description');
+    const description = getByTestId('project-hero-description');
 
     expect(heading).toHaveTextContent(fakeProps.title);
     expect(description).toHaveTextContent(fakeProps.description);
