@@ -12,7 +12,7 @@ exports[`<BlogPostHeroContent /> renders correctly and matches snapshot 1`] = `
     fake blog post hero title
   </h2>
   <p
-    class="sc-AxhCb gNMAAZ"
+    class="sc-AxhCb rhJVw"
     data-testid="blog-post-hero-description"
   >
     Lorem ipsum dolor sit amet consectetur adipisicing elit.

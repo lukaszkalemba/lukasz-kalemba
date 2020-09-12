@@ -9,7 +9,7 @@ const List = styled.ul`
   z-index: ${({ theme }) => theme.zindex.positive3};
   top: 0;
   left: 0;
-  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-100%')});
+  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
   width: 100%;
   height: 100vh;
   display: flex;
@@ -39,7 +39,7 @@ const List = styled.ul`
     background-size: 100%;
     height: 75%;
     width: 75%;
-    transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-130%')});
+    transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
     transition: transform 250ms ease-in-out;
     transition-delay: ${({ isNavOpen }) => (isNavOpen ? '300ms' : '0')};
 

@@ -12,11 +12,8 @@ const Nav = ({ path, isHomePage }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const size = useWindowSize();
 
-  let headerVariants;
-
-  if (size.width > 1150) {
-    headerVariants = animations.getHeaderVariants(isHomePage);
-  }
+  const isMobile = size.width < 1150;
+  const headerVariants = animations.getHeaderVariants(isHomePage, isMobile);
 
   const toggleScrolling = isOpen => {
     window.smoothScroll.updatePluginOptions('stopScrollbar', {

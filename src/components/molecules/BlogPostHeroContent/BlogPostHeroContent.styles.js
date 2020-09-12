@@ -5,6 +5,7 @@ const Description = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xxs};
   line-height: 25px;
   max-width: 450px;
+  margin-left: 20px;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.xs};

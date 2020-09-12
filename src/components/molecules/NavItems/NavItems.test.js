@@ -11,7 +11,7 @@ describe('<NavItems />', () => {
 
     const navItemsList = getByTestId('nav-items-list');
 
-    expect(navItemsList).toHaveStyleRule('transform', 'translateX(-100%)');
+    expect(navItemsList).toHaveStyleRule('transform', 'translateX(-150%)');
   });
 
   it('renders correctly with opened nav', () => {
