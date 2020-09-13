@@ -24,6 +24,7 @@ const BlogPostContentItem = ({ content }) => {
       variants={animations.contentItemVariants}
       animate={animation}
       initial="initial"
+      data-testid="blog-post-content-item"
     >
       {content}
     </S.Wrapper>
