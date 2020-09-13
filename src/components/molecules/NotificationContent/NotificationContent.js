@@ -13,7 +13,7 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
     default:
       textContent = {
         heading: 'Poszło!',
-        paragraph: 'Odezwiemy się do Ciebie w ciągu 24h.',
+        paragraph: 'W ciągu 24h otrzymasz odpowiedź.',
       };
       break;
 

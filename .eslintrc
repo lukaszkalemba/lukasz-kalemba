@@ -9,7 +9,6 @@
     "prettier",
     "prettier/react"
   ],
-  "plugins": ["testing-library"],
   "globals": {
     "window": true,
     "document": true,

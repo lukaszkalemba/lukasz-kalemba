@@ -9,7 +9,7 @@ exports[`<ServicesCTASection /> renders correctly and matches snapshot 1`] = `
       class="sc-AxgMl gmTzLq"
       style="opacity: 0; transform: translateY(50px) translateZ(0);"
     >
-      Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już istniejący na kolejny poziom.
+      Stwórzmy od zera niepowtarzalny projekt, lub przenieśmy już istniejący na kolejny poziom.
     </h2>
     <div
       style="opacity: 0; transform: translateY(50px) translateZ(0);"

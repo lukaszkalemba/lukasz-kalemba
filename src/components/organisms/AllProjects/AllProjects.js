@@ -29,7 +29,7 @@ const AllProjects = () => {
   return (
     <>
       <Container axis="both" doubling="x">
-        <Heading>Oni nam zaufali.</Heading>
+        <Heading>Projekty.</Heading>
 
         <Container axis="x">
           <Cards items={projects} pageSlug="projekty" />

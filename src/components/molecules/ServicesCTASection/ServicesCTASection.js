@@ -18,8 +18,8 @@ const ServicesCTASection = ({ animation }) => {
         variants={wrapperVariants}
       >
         <S.Heading variants={childrenVariants}>
-          Stwórz z nami od zera niepowtarzalny projekt, lub przenieś już
-          istniejący na kolejny poziom.
+          Stwórzmy od zera niepowtarzalny projekt, lub przenieśmy już istniejący
+          na kolejny poziom.
         </S.Heading>
         <motion.div variants={childrenVariants}>
           <Link to="/wycena">Bezpłatna wycena</Link>

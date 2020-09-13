@@ -5,8 +5,8 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Codemon`,
-    description: `Pozwól nam zaprojektować i wdrożyć sklep, stronę lub aplikację internetową spersonalizowaną pod Twój biznes.`,
+    title: `lukaszkalemba`,
+    description: `Zaprojektujmy i wdróżmy sklep, stronę lub aplikację internetową spersonalizowaną pod Twój biznes.`,
     author: `@lukaszkalemba`,
   },
   plugins: [

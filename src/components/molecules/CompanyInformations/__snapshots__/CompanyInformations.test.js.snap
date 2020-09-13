@@ -12,9 +12,9 @@ exports[`<CompanyInformations /> renders correctly and matches snapshot 1`] = `
   </a>
   <a
     class="sc-AxirZ ioCZsz"
-    href="mailto:biuro@codemon.pl"
+    href="mailto:kontakt@lukaszkalemba.pl"
   >
-    biuro@codemon.pl
+    kontakt@lukaszkalemba.pl
   </a>
   <p
     class="sc-AxiKw eiEefl"

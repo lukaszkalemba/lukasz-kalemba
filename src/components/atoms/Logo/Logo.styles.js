@@ -28,7 +28,7 @@ const Link = styled(GatsbyLink)`
 
     :hover {
       #logo-path-circle {
-        transform: translate(90%, 25%) scale(0.8);
+        transform: translate(91%, 30%) scale(0.8);
       }
 
       #logo-path-slash {
@@ -37,7 +37,7 @@ const Link = styled(GatsbyLink)`
       }
 
       #logo-path-text {
-        transform: translateX(-14%);
+        transform: translateX(-12%);
       }
     }
   `}
