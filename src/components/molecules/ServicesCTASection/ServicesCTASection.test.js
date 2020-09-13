@@ -5,7 +5,12 @@ import ServicesCTASection from './ServicesCTASection';
 
 describe('<ServicesCTASection />', () => {
   it('renders correctly and matches snapshot', () => {
-    const { container } = render(<ServicesCTASection />);
+    const { container, getByRole } = render(<ServicesCTASection />);
+
+    const heading = getByRole('heading');
+    const link = getByRole('link');
+    expect(heading).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   });

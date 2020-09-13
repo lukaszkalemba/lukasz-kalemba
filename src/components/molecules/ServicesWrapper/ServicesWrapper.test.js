@@ -3,7 +3,7 @@ import { render } from 'utils/test-utils';
 import ServicesWrapper from './ServicesWrapper';
 
 describe('<ServicesWrapper />', () => {
-  it('renders correctly', () => {
+  it('renders correctly and matches snapshot', () => {
     const fakeImages = {
       design: {
         childImageSharp: {},

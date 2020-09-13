@@ -4,12 +4,12 @@ import '__mocks__/intersectionObserver';
 import BlogPostHeroContent from './BlogPostHeroContent';
 
 describe('<BlogPostHeroContent />', () => {
-  it('renders correctly and matches snapshot', () => {
+  it('renders correctly with given props', () => {
     const fakeTitle = 'fake blog post hero title';
     const fakeDescription =
       'Lorem ipsum dolor sit amet consectetur adipisicing elit.';
 
-    const { container, getByRole, getByTestId } = render(
+    const { getByRole, getByTestId } = render(
       <BlogPostHeroContent title={fakeTitle} description={fakeDescription} />
     );
 
@@ -18,7 +18,5 @@ describe('<BlogPostHeroContent />', () => {
 
     expect(title).toHaveTextContent(fakeTitle);
     expect(description).toHaveTextContent(fakeDescription);
-
-    expect(container.firstChild).toMatchSnapshot();
   });
 });

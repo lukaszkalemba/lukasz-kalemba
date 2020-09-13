@@ -10,6 +10,8 @@ describe('<ProjectContent />', () => {
       thirdViewImage: { aspectRatio: 0, sizes: '', src: '', srcSet: '' },
     };
 
-    render(<ProjectContent {...fakeProps} />);
+    const { container } = render(<ProjectContent {...fakeProps} />);
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

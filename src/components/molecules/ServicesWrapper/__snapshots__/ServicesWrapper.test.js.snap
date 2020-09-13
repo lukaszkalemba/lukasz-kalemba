@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ServicesWrapper /> renders correctly 1`] = `
+exports[`<ServicesWrapper /> renders correctly and matches snapshot 1`] = `
 <div>
   <article
     class="sc-AxjAm cZKMjM"
