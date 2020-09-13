@@ -2,20 +2,20 @@ import React from 'react';
 import { render } from 'utils/test-utils';
 import Service from './Service';
 
-const fakeProps = {
-  img: {
-    fluid: {
-      aspectRatio: 0,
-      sizes: '',
-      src: '',
-      srcSet: '',
-    },
-  },
-  variants: {},
-};
-
 describe('<Service />', () => {
-  it('has proper title', () => {
+  it('renders correctly with proper title', () => {
+    const fakeProps = {
+      img: {
+        fluid: {
+          aspectRatio: 0,
+          sizes: '',
+          src: '',
+          srcSet: '',
+        },
+      },
+      animation: {},
+    };
+
     const fakeContent = 'Service test content';
 
     const { getByText } = render(
@@ -24,6 +24,6 @@ describe('<Service />', () => {
 
     const serviceTitle = getByText(fakeContent);
 
-    expect(serviceTitle).toHaveTextContent(fakeContent);
+    expect(serviceTitle).toBeInTheDocument();
   });
 });

@@ -5,11 +5,15 @@ import user from '@testing-library/user-event';
 import TextInput from './TextInput';
 
 describe('<TextInput />', () => {
-  it('renders correctly', async () => {
-    const fakeLabelText = 'text input label';
+  it('renders correctly with given props', async () => {
     const fakeInputValue = 'input value';
+    const fakeProps = {
+      label: 'label',
+      name: 'name',
+      type: 'text',
+    };
 
-    const { getByTestId, getByRole } = render(
+    const { getByText, getByRole } = render(
       <Formik
         initialValues={{
           name: '',
@@ -17,16 +21,16 @@ describe('<TextInput />', () => {
       >
         {() => (
           <Form>
-            <TextInput label={fakeLabelText} name="name" type="text" />
+            <TextInput {...fakeProps} />
           </Form>
         )}
       </Formik>
     );
 
     const textInput = getByRole('textbox');
-    const textInputLabel = getByTestId('text-input-label');
+    const textInputLabel = getByText(fakeProps.label);
 
-    expect(textInputLabel).toHaveTextContent(fakeLabelText);
+    expect(textInputLabel).toBeInTheDocument();
     expect(textInput).toHaveValue('');
 
     user.type(textInput, fakeInputValue);

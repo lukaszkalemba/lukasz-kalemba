@@ -9,14 +9,12 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
   >
     <h1
       class="sc-AxhCb jcEHSw sc-Axmtr hxvseQ"
-      data-testid="heading"
       style="opacity: 0; transform: translateX(-80px) translateZ(0);"
     >
       Zaistniej w sieci
     </h1>
     <p
       class="sc-AxgMl kuRKCx sc-AxmLO gOCTPI"
-      data-testid="paragraph"
     >
       Zaistniej w świecie nieograniczonych możliwości
     </p>
@@ -26,7 +24,6 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
   >
     <a
       class="sc-AxirZ fIUteP"
-      data-testid="button-link"
       href="/wycena"
     >
       <button
@@ -40,7 +37,6 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
     </a>
     <a
       class="sc-AxirZ fIUteP"
-      data-testid="button-link"
       href="/projekty"
     >
       <button

@@ -16,7 +16,17 @@ describe('<ServicesWrapper />', () => {
       },
     };
 
-    const { container } = render(<ServicesWrapper images={fakeImages} />);
+    const { container, getByText } = render(
+      <ServicesWrapper images={fakeImages} />
+    );
+
+    const designService = getByText(/projektowanie/i);
+    const websitesService = getByText(/strony/i);
+    const ecommerceService = getByText(/sklepy/i);
+
+    expect(designService).toBeInTheDocument();
+    expect(websitesService).toBeInTheDocument();
+    expect(ecommerceService).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   });

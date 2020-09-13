@@ -3,21 +3,16 @@ import PropTypes from 'prop-types';
 import { useField } from 'formik';
 import S from './TextInput.styles';
 
-const TextInput = ({ label, variants, ...props }) => {
+const TextInput = ({ label, animation, ...props }) => {
   const [field, meta] = useField(props);
   const { name } = props;
-  const isError = !!(meta.touched && meta.error);
+
+  const isError = meta.touched && meta.error;
 
   return (
-    <S.InputWrapper variants={variants}>
-      <S.Input
-        id={name}
-        isError={isError}
-        {...field}
-        {...props}
-        data-testid="text-input"
-      />
-      <S.Label isError={isError} htmlFor={name} data-testid="text-input-label">
+    <S.InputWrapper {...animation}>
+      <S.Input id={name} isError={isError} {...field} {...props} />
+      <S.Label isError={isError} htmlFor={name}>
         {label}
       </S.Label>
       <S.Error>{isError && meta.error}</S.Error>
@@ -26,14 +21,16 @@ const TextInput = ({ label, variants, ...props }) => {
 };
 
 TextInput.defaultProps = {
-  variants: {},
+  animation: {},
 };
 
 TextInput.propTypes = {
   label: PropTypes.string.isRequired,
-  variants: PropTypes.shape({
-    animate: PropTypes.object,
-    initial: PropTypes.object,
+  animation: PropTypes.shape({
+    variants: PropTypes.shape({
+      animate: PropTypes.shape({}),
+      initial: PropTypes.shape({}),
+    }),
   }),
   name: PropTypes.string.isRequired,
 };

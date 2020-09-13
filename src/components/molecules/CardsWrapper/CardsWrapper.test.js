@@ -59,9 +59,9 @@ const fakeProps = {
 
 describe('<CardsWrapper />', () => {
   it('renders correctly with proper href attributes', () => {
-    const { getAllByTestId } = render(<CardsWrapper {...fakeProps} />);
+    const { getAllByRole } = render(<CardsWrapper {...fakeProps} />);
 
-    const cardsLinks = getAllByTestId('card-link');
+    const cardsLinks = getAllByRole('link');
 
     for (let i = 0; i < fakeProps.items.edges.length; i += 1) {
       expect(cardsLinks[i]).toHaveAttribute(

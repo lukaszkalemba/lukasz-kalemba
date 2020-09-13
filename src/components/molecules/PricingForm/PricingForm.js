@@ -78,42 +78,38 @@ const PricingForm = ({ setSubmissionStatus, setOffset }) => {
         >
           <input type="hidden" name="form-name" value="contact" />
 
-          <S.Wrapper
-            variants={animations.inputsWrapperVariants}
-            initial="initial"
-            animate="animate"
-          >
+          <S.Wrapper {...animations.inputsWrapper}>
             <TextInput
               label="Imię i nazwisko"
               name="name"
               type="text"
-              variants={animations.inputVariants}
+              animation={animations.input}
             />
             <TextInput
               label="Firma"
               name="company"
               type="text"
-              variants={animations.inputVariants}
+              animation={animations.input}
             />
             <TextInput
               label="Adres e-mail"
               name="email"
               type="email"
-              variants={animations.inputVariants}
+              animation={animations.input}
             />
             <TextInput
               label="Numer telefonu"
               name="phoneNumber"
               type="text"
-              variants={animations.inputVariants}
+              animation={animations.input}
             />
             <TextareaInput
               label="Opis projektu"
               name="projectDescription"
               rows="8"
-              variants={animations.inputVariants}
+              animation={animations.input}
             />
-            <S.ButtonWrapper variants={animations.inputVariants}>
+            <S.ButtonWrapper {...animations.input}>
               <Button type="submit" priority="primary">
                 Wyślij zapytanie
               </Button>

@@ -12,14 +12,10 @@ const BlogPostHero = ({ title, description, image }) => {
         <BlogPostHeroContent
           title={title}
           description={description}
-          animations={animations}
+          animation={animations.description}
         />
 
-        <S.ScrollWrapper
-          variants={animations.scrollWrapperVariants}
-          initial="initial"
-          animate="animate"
-        >
+        <S.ScrollWrapper {...animations.scrollWrapper}>
           <ScrollArrow />
         </S.ScrollWrapper>
       </S.Overlay>
@@ -31,7 +27,7 @@ BlogPostHero.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
 };
 

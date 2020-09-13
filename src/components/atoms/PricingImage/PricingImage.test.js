@@ -21,7 +21,7 @@ beforeEach(() => {
 });
 
 describe('<PricingImage />', () => {
-  it('matches snapshot', () => {
+  it('renders correctly matches snapshot', () => {
     const { container } = render(<PricingImage />);
 
     expect(container.firstChild).toMatchSnapshot();

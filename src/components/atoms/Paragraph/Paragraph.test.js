@@ -3,10 +3,12 @@ import { render } from 'utils/test-utils';
 import Paragraph from './Paragraph';
 
 describe('<Paragraph />', () => {
-  it('renders correctly', () => {
+  it('renders correctly with given content', () => {
     const fakeContent = 'Paragraph test';
-    const { getByTestId } = render(<Paragraph>{fakeContent}</Paragraph>);
+    const { getByText } = render(<Paragraph>{fakeContent}</Paragraph>);
 
-    expect(getByTestId('paragraph')).toHaveTextContent(fakeContent);
+    const paragraph = getByText(fakeContent);
+
+    expect(paragraph).toBeInTheDocument();
   });
 });

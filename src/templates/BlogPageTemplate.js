@@ -39,7 +39,7 @@ BlogPageTemplate.propTypes = {
       description: PropTypes.string,
       content: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.object,
+        fluid: PropTypes.shape({}),
       }),
     }),
   }).isRequired,

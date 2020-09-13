@@ -24,13 +24,13 @@ const ProjectContent = ({
 
 ProjectContent.propTypes = {
   firstViewImage: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
   secondViewImage: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
   thirdViewImage: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
 };
 

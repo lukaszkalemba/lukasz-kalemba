@@ -16,12 +16,12 @@ const fakeProps = {
 
 describe('<ProjectHero />', () => {
   it('renders correctly with proper content values', () => {
-    const { getByRole, getByTestId } = render(<ProjectHero {...fakeProps} />);
+    const { getByRole, getByText } = render(<ProjectHero {...fakeProps} />);
 
     const contentHeading = getByRole('heading');
-    const contentDescription = getByTestId('project-hero-description');
+    const contentDescription = getByText(fakeProps.description);
 
     expect(contentHeading).toHaveTextContent(fakeProps.title);
-    expect(contentDescription).toHaveTextContent(fakeProps.description);
+    expect(contentDescription).toBeInTheDocument();
   });
 });

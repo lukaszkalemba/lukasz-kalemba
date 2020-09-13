@@ -8,18 +8,19 @@ import S from './HeroContent.styles';
 const HeroContent = () => {
   const size = useWindowSize();
 
+  const buttonsAnimation = animations.getButtons(size);
   return (
     <Container axis="both">
       <S.Content>
-        <S.Heading tag="h1" variants={animations.headingVariants}>
+        <S.Heading tag="h1" animation={animations.heading}>
           Zaistniej w sieci
         </S.Heading>
-        <S.Paragraph variants={animations.paragraphVariants}>
+        <S.Paragraph animation={animations.paragraph}>
           Zaistniej w świecie nieograniczonych możliwości
         </S.Paragraph>
       </S.Content>
 
-      <S.Buttons variants={animations.getButtonsVariants(size)}>
+      <S.Buttons {...buttonsAnimation}>
         <Button path="/wycena" priority="primary">
           Bezpłatna wycena
         </Button>

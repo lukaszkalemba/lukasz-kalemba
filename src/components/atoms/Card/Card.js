@@ -24,18 +24,15 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
     }
   }, [animation, inView]);
 
+  const wrapperAnimations = animations.getCard(isOffset, size, animation);
+
   return (
-    <S.Wrapper
-      ref={wrapperRef}
-      variants={animations.getCardVariants(isOffset, size)}
-      animate={animation}
-      initial="initial"
-    >
+    <S.Wrapper ref={wrapperRef} {...wrapperAnimations}>
       <Background fluid={image.fluid}>
         <S.Article small={small} data-testid="card-article">
-          <S.Link data-testid="card-link" to={`/${preSlug}/${slug}`}>
+          <S.Link to={`/${preSlug}/${slug}`}>
             <S.Overlay />
-            <S.Title data-testid="card-title">{title}</S.Title>
+            <S.Title>{title}</S.Title>
           </S.Link>
         </S.Article>
       </Background>
@@ -51,7 +48,7 @@ Card.propTypes = {
   index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
   preSlug: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,

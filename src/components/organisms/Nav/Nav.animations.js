@@ -1,4 +1,4 @@
-const getHeaderVariants = (isHomePage, isMobile) => {
+const getHeader = (isHomePage, isMobile) => {
   let delay = null;
   let x = null;
 
@@ -11,19 +11,23 @@ const getHeaderVariants = (isHomePage, isMobile) => {
   }
 
   return {
-    initial: {
-      opacity: 0,
-      x,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.75,
-        delay,
+    variants: {
+      initial: {
+        opacity: 0,
+        x,
+      },
+      animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 0.75,
+          delay,
+        },
       },
     },
+    initial: 'initial',
+    animate: 'animate',
   };
 };
 
-export default { getHeaderVariants };
+export default { getHeader };

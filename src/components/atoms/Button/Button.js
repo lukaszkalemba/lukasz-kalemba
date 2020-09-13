@@ -10,7 +10,6 @@ const Button = ({ type, path, priority, className, children, onClick }) => {
     ButtonWrapper = S.Link;
     buttonWrapperProps = {
       to: path,
-      'data-testid': 'button-link',
     };
   } else {
     ButtonWrapper = Fragment;

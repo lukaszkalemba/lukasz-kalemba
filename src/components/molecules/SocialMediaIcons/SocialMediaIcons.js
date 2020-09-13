@@ -7,8 +7,8 @@ import dribbble from 'assets/svgs/icon_dribbble.svg';
 import linkedin from 'assets/svgs/icon_linkedin.svg';
 import S from './SocialMediaIcons.styles';
 
-const SocialMediaIcons = ({ variants }) => (
-  <S.Wrapper variants={variants}>
+const SocialMediaIcons = ({ animation }) => (
+  <S.Wrapper {...animation}>
     <S.A href="https://facebook.com" aria-label="facebook" target="__blank">
       <Icon src={facebook} />
     </S.A>
@@ -25,13 +25,15 @@ const SocialMediaIcons = ({ variants }) => (
 );
 
 SocialMediaIcons.defaultProps = {
-  variants: {},
+  animation: {},
 };
 
 SocialMediaIcons.propTypes = {
-  variants: PropTypes.shape({
-    initial: PropTypes.object,
-    animate: PropTypes.object,
+  animation: PropTypes.shape({
+    variants: PropTypes.shape({
+      initial: PropTypes.shape({}),
+      animate: PropTypes.shape({}),
+    }),
   }),
 };
 

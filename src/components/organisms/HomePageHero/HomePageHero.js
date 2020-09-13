@@ -6,18 +6,10 @@ import S from './HomePageHero.styles';
 
 const HomePageHero = () => {
   return (
-    <S.Wrapper
-      variants={animations.wrapperVariants}
-      initial="initial"
-      animate="animate"
-    >
+    <S.Wrapper {...animations.wrapper}>
       <HeroContent />
 
-      <S.ScrollWrapper
-        variants={animations.scrollWrapperVariants}
-        initial="initial"
-        animate="animate"
-      >
+      <S.ScrollWrapper {...animations.scrollWrapper}>
         <ScrollArrow />
       </S.ScrollWrapper>
     </S.Wrapper>

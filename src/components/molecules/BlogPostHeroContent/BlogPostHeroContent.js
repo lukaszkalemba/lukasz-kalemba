@@ -4,31 +4,27 @@ import Container from 'components/particles/Container';
 import Heading from 'components/atoms/Heading';
 import S from './BlogPostHeroContent.styles';
 
-const BlogPostHeroContent = ({ title, description, animations }) => {
+const BlogPostHeroContent = ({ title, description, animation }) => {
   return (
     <Container axis="both">
       <Heading>{title}</Heading>
-      <S.Description
-        variants={animations.descriptionVariants}
-        initial="initial"
-        animate="animate"
-        data-testid="blog-post-hero-description"
-      >
-        {description}
-      </S.Description>
+      <S.Description {...animation}>{description}</S.Description>
     </Container>
   );
 };
 
 BlogPostHeroContent.defaultProps = {
-  animations: {},
+  animation: {},
 };
 
 BlogPostHeroContent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  animations: PropTypes.shape({
-    descriptionVariants: PropTypes.shape({}),
+  animation: PropTypes.shape({
+    variants: PropTypes.shape({
+      initial: PropTypes.shape({}),
+      animate: PropTypes.shape({}),
+    }),
   }),
 };
 

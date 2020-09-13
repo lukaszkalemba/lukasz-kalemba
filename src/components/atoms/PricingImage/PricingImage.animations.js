@@ -1,24 +1,32 @@
-const imageVariants = {
-  initial: { opacity: 0 },
-  animate: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.75,
+const image = {
+  variants: {
+    initial: { opacity: 0 },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+      },
     },
   },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-const imageShadowVariants = {
-  initial: { opacity: 0, x: -40, y: -40 },
-  animate: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: {
-      duration: 1,
+const imageShadow = {
+  variants: {
+    initial: { opacity: 0, x: -40, y: -40 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: 1,
+      },
     },
   },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-export default { imageVariants, imageShadowVariants };
+export default { image, imageShadow };

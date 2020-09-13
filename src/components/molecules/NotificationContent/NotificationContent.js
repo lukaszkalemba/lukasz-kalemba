@@ -28,18 +28,10 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
   return (
     <S.Wrapper>
       <Heading>{textContent.heading}</Heading>
-      <S.Paragraph
-        variants={animations.paragraphVariants}
-        animate="animate"
-        initial="initial"
-      >
+      <S.Paragraph animation={animations.paragraph}>
         {textContent.paragraph}
       </S.Paragraph>
-      <motion.div
-        variants={animations.buttonWrapperVariants}
-        animate="animate"
-        initial="initial"
-      >
+      <motion.div {...animations.buttonWrapper}>
         <S.Button priority="primary" path="/" onClick={enableScrolling}>
           Strona główna
         </S.Button>

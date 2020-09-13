@@ -3,31 +3,27 @@ import PropTypes from 'prop-types';
 import Heading from 'components/atoms/Heading';
 import S from './ProjectHeroContent.styles';
 
-const ProjectHeroContent = ({ title, description, animations }) => {
+const ProjectHeroContent = ({ title, description, animation }) => {
   return (
     <>
       <Heading>{title}</Heading>
-      <S.Description
-        variants={animations.descriptionVariants}
-        animate="animate"
-        initial="initial"
-        data-testid="project-hero-description"
-      >
-        {description}
-      </S.Description>
+      <S.Description {...animation}>{description}</S.Description>
     </>
   );
 };
 
 ProjectHeroContent.defaultProps = {
-  animations: {},
+  animation: {},
 };
 
 ProjectHeroContent.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  animations: PropTypes.shape({
-    descriptionVariants: PropTypes.shape({}),
+  animation: PropTypes.shape({
+    variants: PropTypes.shape({
+      animate: PropTypes.shape({}),
+      initial: PropTypes.shape({}),
+    }),
   }),
 };
 

@@ -13,15 +13,11 @@ const ProjectHero = ({ title, description, image }) => {
           <ProjectHeroContent
             title={title}
             description={description}
-            animations={animations}
+            animation={animations.description}
           />
         </Container>
       </S.HeadingWrapper>
-      <S.BackgroundWrapper
-        variants={animations.backgroundVariants}
-        animate="animate"
-        initial="initial"
-      >
+      <S.BackgroundWrapper {...animations.background}>
         <S.Background fluid={image}>
           <S.Overlay />
         </S.Background>
@@ -34,7 +30,7 @@ ProjectHero.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.shape({
-    fluid: PropTypes.object,
+    fluid: PropTypes.shape({}),
   }).isRequired,
 };
 

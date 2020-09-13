@@ -19,7 +19,6 @@ exports[`<ServicesCTASection /> renders correctly and matches snapshot 1`] = `
       >
         <a
           class="sc-AxhCb covriP"
-          data-testid="link"
           href="/wycena"
         >
           Bezpłatna wycena

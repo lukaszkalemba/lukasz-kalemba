@@ -67,16 +67,16 @@ ProjectPageTemplate.propTypes = {
       title: PropTypes.string,
       description: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.object,
+        fluid: PropTypes.shape({}),
       }),
       firstViewImage: PropTypes.shape({
-        fluid: PropTypes.object,
+        fluid: PropTypes.shape({}),
       }),
       secondViewImage: PropTypes.shape({
-        fluid: PropTypes.object,
+        fluid: PropTypes.shape({}),
       }),
       thirdViewImage: PropTypes.shape({
-        fluid: PropTypes.object,
+        fluid: PropTypes.shape({}),
       }),
     }),
   }).isRequired,

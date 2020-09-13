@@ -9,6 +9,7 @@ describe('<ServicesCTASection />', () => {
 
     const heading = getByRole('heading');
     const link = getByRole('link');
+
     expect(heading).toBeInTheDocument();
     expect(link).toBeInTheDocument();
 

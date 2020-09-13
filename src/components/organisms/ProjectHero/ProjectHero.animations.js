@@ -1,19 +1,27 @@
-const descriptionVariants = {
-  animate: {
-    opacity: 0.8,
-    x: 0,
-    transition: { duration: 0.8, delay: 0.25 },
+const description = {
+  variants: {
+    animate: {
+      opacity: 0.8,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.25 },
+    },
+    initial: { opacity: 0, x: -30 },
   },
-  initial: { opacity: 0, x: -30 },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-const backgroundVariants = {
-  animate: {
-    opacity: 0.8,
-    x: 0,
-    transition: { duration: 0.8, delay: 0.25 },
+const background = {
+  variants: {
+    animate: {
+      opacity: 0.8,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.25 },
+    },
+    initial: { opacity: 0, x: 100 },
   },
-  initial: { opacity: 0, x: 100 },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-export default { descriptionVariants, backgroundVariants };
+export default { description, background };

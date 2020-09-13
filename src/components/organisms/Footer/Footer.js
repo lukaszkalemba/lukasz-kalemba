@@ -23,23 +23,20 @@ const Footer = () => {
     }
   }, [animation, inView]);
 
+  const footerAnimations = animations.getFooter(animation);
+
   return (
-    <S.Footer
-      ref={footerRef}
-      animate={animation}
-      initial="initial"
-      variants={animations.footerVariants}
-    >
+    <S.Footer ref={footerRef} {...footerAnimations}>
       <Container axis="both">
         <S.TopBar>
-          <CompanyInformations variants={animations.childrenVariants} />
+          <CompanyInformations animation={animations.children} />
           <FooterLogo />
-          <SocialMediaIcons variants={animations.socialMediaIconsVariants} />
+          <SocialMediaIcons animation={animations.socialMediaIcons} />
         </S.TopBar>
       </Container>
 
       <Container axis="x">
-        <S.BottomBar variants={animations.childrenVariants}>
+        <S.BottomBar {...animations.children}>
           <S.Copyright>
             lukaszkalemba&copy;2020. Wszelkie prawa zastrzeżone.
           </S.Copyright>

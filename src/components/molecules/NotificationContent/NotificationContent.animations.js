@@ -1,19 +1,27 @@
-const paragraphVariants = {
-  animate: {
-    opacity: 0.5,
-    x: 0,
-    transition: { duration: 0.8, delay: 0.6 },
+const paragraph = {
+  variants: {
+    animate: {
+      opacity: 0.5,
+      x: 0,
+      transition: { duration: 0.8, delay: 0.6 },
+    },
+    initial: { opacity: 0, x: 40 },
   },
-  initial: { opacity: 0, x: 40 },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-const buttonWrapperVariants = {
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8, delay: 1.1 },
+const buttonWrapper = {
+  variants: {
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, delay: 1.1 },
+    },
+    initial: { opacity: 0, x: 40 },
   },
-  initial: { opacity: 0, x: 40 },
+  initial: 'initial',
+  animate: 'animate',
 };
 
-export default { paragraphVariants, buttonWrapperVariants };
+export default { paragraph, buttonWrapper };

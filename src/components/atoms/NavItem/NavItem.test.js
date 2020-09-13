@@ -4,21 +4,21 @@ import user from '@testing-library/user-event';
 import NavItem from './NavItem';
 
 describe('<NavItem />', () => {
-  it('renders correctly', () => {
-    const fakePath = '/test';
-    const fakeName = 'test name';
-    const closeNav = jest.fn();
+  it('renders correctly with given props', () => {
+    const fakeProps = {
+      path: '/test',
+      name: 'test name',
+      closeNav: jest.fn(),
+    };
 
-    const { getByTestId } = render(
-      <NavItem path={fakePath} name={fakeName} closeNav={closeNav} />
-    );
+    const { getByRole } = render(<NavItem {...fakeProps} />);
 
-    const navItemLink = getByTestId('nav-item-link');
+    const navItemLink = getByRole('link');
 
     user.click(navItemLink);
 
-    expect(closeNav).toHaveBeenCalledTimes(1);
-    expect(navItemLink).toHaveTextContent(fakeName);
-    expect(navItemLink).toHaveAttribute('href', fakePath);
+    expect(fakeProps.closeNav).toHaveBeenCalledTimes(1);
+    expect(navItemLink).toHaveTextContent(fakeProps.name);
+    expect(navItemLink).toHaveAttribute('href', fakeProps.path);
   });
 });

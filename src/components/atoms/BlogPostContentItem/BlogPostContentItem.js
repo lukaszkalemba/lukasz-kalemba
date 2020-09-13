@@ -18,12 +18,12 @@ const BlogPostContentItem = ({ content }) => {
     }
   }, [animation, inView]);
 
+  const wrapperAnimations = animations.getContentItem(animation);
+
   return (
     <S.Wrapper
       ref={wrapperRef}
-      variants={animations.contentItemVariants}
-      animate={animation}
-      initial="initial"
+      {...wrapperAnimations}
       data-testid="blog-post-content-item"
     >
       {content}

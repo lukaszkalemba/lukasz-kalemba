@@ -5,27 +5,25 @@ import Service from 'components/atoms/Service';
 import animations from './ServicesWrapper.animations';
 
 const ServicesWrapper = ({ images, animation }) => {
+  const wrapperAnimation = animations.getWrapper(animation);
+
   return (
-    <motion.div
-      animate={animation}
-      initial="initial"
-      variants={animations.wrapperVariants}
-    >
+    <motion.div {...wrapperAnimation}>
       <Service
         img={images.design.childImageSharp}
-        variants={animations.servicesVariants}
+        animation={animations.service}
       >
         Projektowanie interfejsów
       </Service>
       <Service
         img={images.webapp.childImageSharp}
-        variants={animations.servicesVariants}
+        animation={animations.service}
       >
         Strony i aplikacje internetowe
       </Service>
       <Service
         img={images.ecommerce.childImageSharp}
-        variants={animations.servicesVariants}
+        animation={animations.service}
       >
         Sklepy internetowe
       </Service>

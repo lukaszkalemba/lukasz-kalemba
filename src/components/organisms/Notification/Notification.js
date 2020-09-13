@@ -16,12 +16,7 @@ const Notification = ({ submissionStatus, setSubmissionStatus, offset }) => {
   };
 
   return (
-    <S.Backdrop
-      variants={animations.backdropVariants}
-      animate="animate"
-      initial="initial"
-      exit="initial"
-    >
+    <S.Backdrop {...animations.backdrop}>
       <S.Wrapper verticalOffset={offset.y}>
         <Container axis="both">
           <NotificationContent

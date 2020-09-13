@@ -14,12 +14,10 @@ describe('<Button />', () => {
       onClick: jest.fn(),
     };
 
-    const { getByRole, getByTestId } = render(
-      <Button {...fakeProps}>{fakeContent}</Button>
-    );
+    const { getByRole } = render(<Button {...fakeProps}>{fakeContent}</Button>);
 
     const button = getByRole('button');
-    const buttonLink = getByTestId('button-link');
+    const buttonLink = getByRole('link');
 
     expect(button).toHaveTextContent(fakeContent);
 
@@ -37,12 +35,12 @@ describe('<Button />', () => {
       priority: 'secondary',
     };
 
-    const { getByRole, queryByTestId } = render(
+    const { getByRole, queryByRole } = render(
       <Button {...fakeProps}>button content</Button>
     );
 
     const button = getByRole('button');
-    const buttonLink = queryByTestId('button-link');
+    const buttonLink = queryByRole('link');
 
     expect(button).toHaveStyleRule('color', theme.color.white);
     expect(button).toHaveStyleRule('background-color', theme.color.transparent);

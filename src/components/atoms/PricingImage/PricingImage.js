@@ -19,17 +19,9 @@ const PricingImage = () => {
   const { officeImage } = useStaticQuery(IMAGE_QUERY);
 
   return (
-    <S.ImageWrapper
-      variants={animations.imageVariants}
-      initial="initial"
-      animate="animate"
-    >
+    <S.ImageWrapper {...animations.image}>
       <S.Image fluid={officeImage.childImageSharp.fluid} />
-      <S.ImageShadow
-        variants={animations.imageShadowVariants}
-        initial="initial"
-        animate="animate"
-      />
+      <S.ImageShadow {...animations.imageShadow} />
     </S.ImageWrapper>
   );
 };

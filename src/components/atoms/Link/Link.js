@@ -21,14 +21,11 @@ const Link = ({ to, animate, children }) => {
     }
   }, [animation, inView]);
 
+  const linkAnimations = animate && animations.getLink(animation);
+
   return (
-    <S.Wrapper
-      ref={wrapperRef}
-      variants={animate ? animations.linkVariants : null}
-      animate={animation}
-      initial="initial"
-    >
-      <S.Link to={to} data-testid="link">
+    <S.Wrapper ref={wrapperRef} {...linkAnimations}>
+      <S.Link to={to}>
         {children}
         <S.Arrow>
           <Icon src={arrow} />
