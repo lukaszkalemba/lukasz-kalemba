@@ -23,7 +23,11 @@ const Notification = ({ submissionStatus, setSubmissionStatus, offset }) => {
             submissionStatus={submissionStatus}
             enableScrolling={enableScrolling}
           />
-          <S.CloseButton onClick={closeNotification} type="button" />
+          <S.CloseButton
+            onClick={closeNotification}
+            type="button"
+            data-testid="close-notification-button"
+          />
         </Container>
       </S.Wrapper>
     </S.Backdrop>
@@ -31,7 +35,7 @@ const Notification = ({ submissionStatus, setSubmissionStatus, offset }) => {
 };
 
 Notification.propTypes = {
-  submissionStatus: PropTypes.oneOf(['success', 'error', null]).isRequired,
+  submissionStatus: PropTypes.oneOf(['success', 'error']).isRequired,
   setSubmissionStatus: PropTypes.func.isRequired,
   offset: PropTypes.shape({
     x: PropTypes.number,

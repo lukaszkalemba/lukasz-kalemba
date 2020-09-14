@@ -16,7 +16,7 @@ exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] =
     >
       <a
         class="sc-AxjAm bgfZmU"
-        href=""
+        href="/"
       >
         <button
           class="sc-AxirZ cvvsKc"
