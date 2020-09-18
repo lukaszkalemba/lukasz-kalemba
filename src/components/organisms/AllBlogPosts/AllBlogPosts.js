@@ -29,7 +29,7 @@ const AllBlogPosts = () => {
 
   return (
     <Container axis="both" doubling="x">
-      <Heading>Blog.</Heading>
+      <Heading tag="h1">Blog.</Heading>
 
       <Container axis="x">
         <Cards items={blogPosts} pageSlug="blog" smallCards />

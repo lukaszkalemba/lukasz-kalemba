@@ -7,7 +7,7 @@ import S from './BlogPostHeroContent.styles';
 const BlogPostHeroContent = ({ title, description, animation }) => {
   return (
     <Container axis="both">
-      <Heading>{title}</Heading>
+      <Heading tag="h1">{title}</Heading>
       <S.Description {...animation}>{description}</S.Description>
     </Container>
   );

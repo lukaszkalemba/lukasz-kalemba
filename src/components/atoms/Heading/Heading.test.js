@@ -6,9 +6,13 @@ import '__mocks__/intersectionObserver';
 import Heading from './Heading';
 
 describe('<Heading />', () => {
-  it('renders correctly as h1 element', () => {
+  it('renders correctly as h1 home page element', () => {
     const fakeContent = 'heading content';
-    const { getByRole } = render(<Heading tag="h1">{fakeContent}</Heading>);
+    const { getByRole } = render(
+      <Heading tag="h1" homePage>
+        {fakeContent}
+      </Heading>
+    );
 
     const heading = getByRole('heading');
 

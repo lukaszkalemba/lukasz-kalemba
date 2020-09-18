@@ -10,7 +10,7 @@ const Header = styled(motion.header)`
   `}
 `;
 
-const Wrapper = styled.div`
+const Nav = styled.nav`
   ${({ theme }) => theme.media.laptop`
     display: flex;
     justify-content: space-between;
@@ -23,4 +23,4 @@ const TopBar = styled.div`
   align-items: center;
 `;
 
-export default { Header, Wrapper, TopBar };
+export default { Header, Nav, TopBar };

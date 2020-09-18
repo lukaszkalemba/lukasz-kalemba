@@ -6,7 +6,7 @@ exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] =
     class="sc-AxiKw knHbTu"
   >
     <h1
-      class="sc-AxhCb jcEHSw sc-AxheI biJvfv"
+      class="sc-AxhCb jdNHOn sc-AxheI biJvfv"
       style="opacity: 0; transform: translateX(40px) translateZ(0);"
     >
       Coś poszło nie tak...

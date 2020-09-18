@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 import S from './Heading.styles';
 import animations from './Heading.animations';
 
-const Heading = ({ tag, animation, className, children }) => {
+const Heading = ({ tag, homePage, animation, className, children }) => {
   const isH1 = tag === 'h1' && true;
   let HeadingTag;
 
@@ -30,7 +30,12 @@ const Heading = ({ tag, animation, className, children }) => {
   const headingAnimations = animations.getHeading(animation, animate);
 
   return (
-    <HeadingTag ref={headingRef} className={className} {...headingAnimations}>
+    <HeadingTag
+      ref={headingRef}
+      homePage={homePage}
+      className={className}
+      {...headingAnimations}
+    >
       {children}
     </HeadingTag>
   );
@@ -38,12 +43,14 @@ const Heading = ({ tag, animation, className, children }) => {
 
 Heading.defaultProps = {
   tag: 'h2',
+  homePage: false,
   animation: null,
   className: '',
 };
 
 Heading.propTypes = {
   tag: PropTypes.oneOf(['h1', 'h2']),
+  homePage: PropTypes.bool,
   animation: PropTypes.shape({
     variants: PropTypes.shape({
       animate: PropTypes.shape({}),

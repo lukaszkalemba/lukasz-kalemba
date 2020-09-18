@@ -2,8 +2,20 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const headingBase = css`
-  position: relative;
+  font-size: ${({ theme }) => theme.font.size.s};
   z-index: ${({ theme }) => theme.zindex.positive2};
+  position: relative;
+  max-width: 85%;
+  margin-left: 15px;
+
+  ${({ theme }) => theme.media.tablet`
+    font-size: ${theme.font.size.l};
+    margin-left: 0;
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    font-size: ${theme.font.size.xl};
+  `}
 
   ::after {
     content: '';
@@ -21,12 +33,13 @@ const headingBase = css`
   }
 `;
 
-const H1 = styled(motion.h1)`
-  ${headingBase}
+const homePageHeading = css`
   font-size: ${({ theme }) => theme.font.size.m};
+  margin-left: -5px;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.xl};
+    margin-left: 0;
   `}
 
   ${({ theme }) => theme.media.laptop`
@@ -36,20 +49,13 @@ const H1 = styled(motion.h1)`
   `}
 `;
 
+const H1 = styled(motion.h1)`
+  ${headingBase}
+  ${({ homePage }) => homePage && homePageHeading}
+`;
+
 const H2 = styled(motion.h2)`
   ${headingBase}
-  font-size: ${({ theme }) => theme.font.size.s};
-  max-width: 85%;
-  margin-left: 15px;
-
-  ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.l};
-    margin-left: 0;
-  `}
-
-  ${({ theme }) => theme.media.laptop`
-    font-size: ${theme.font.size.xl};
-  `}
 `;
 
 const Heading = {

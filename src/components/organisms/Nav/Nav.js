@@ -35,15 +35,13 @@ const Nav = ({ path, isHomePage }) => {
   return (
     <S.Header {...headerAnimations}>
       <Container axis="both">
-        <S.Wrapper>
+        <S.Nav>
           <S.TopBar>
             <Logo path={path} setIsNavOpen={setIsNavOpen} />
             <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
           </S.TopBar>
-          <nav>
-            <NavItems isNavOpen={isNavOpen} closeNav={closeNav} />
-          </nav>
-        </S.Wrapper>
+          <NavItems isNavOpen={isNavOpen} closeNav={closeNav} />
+        </S.Nav>
       </Container>
     </S.Header>
   );
