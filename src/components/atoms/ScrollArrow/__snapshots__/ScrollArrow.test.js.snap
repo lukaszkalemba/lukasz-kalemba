@@ -2,10 +2,10 @@
 
 exports[`<ScrollArrow /> renders correctly and matches snapshot 1`] = `
 <button
-  class="sc-AxirZ jXmZzW"
+  class="sc-AxirZ bPTMKP"
 >
   <p
-    class="sc-AxiKw etcUeH"
+    class="sc-AxiKw fmBTKk"
   >
     Przesuń w dół
   </p>

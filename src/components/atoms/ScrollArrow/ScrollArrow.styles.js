@@ -1,23 +1,25 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.button`
+const Button = styled.button`
   display: none;
   border: none;
   background-color: inherit;
   width: 50px;
-  height: 100px;
   margin-left: auto;
   margin-top: auto;
   cursor: pointer;
   position: relative;
   z-index: ${({ theme }) => theme.zindex.positive1};
-  transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
-  opacity: 0.75;
+  transition: transform 250ms ease-in-out;
   outline: none;
 
-  :hover {
+  :hover,
+  :focus {
     transform: translateY(10px);
-    opacity: 1;
+    outline: 1px solid black;
+    svg {
+      opacity: 1;
+    }
   }
 
   ${({ theme }) => theme.media.laptop`
@@ -29,6 +31,8 @@ const Wrapper = styled.button`
   svg {
     width: 100%;
     height: 100%;
+    opacity: 0.6;
+    transition: opacity 250ms ease-in-out;
   }
 `;
 
@@ -39,6 +43,7 @@ const Info = styled.p`
   color: ${({ theme }) => theme.color.white};
   right: -17px;
   top: -25px;
+  opacity: 0.7;
 `;
 
-export default { Wrapper, Info };
+export default { Button, Info };

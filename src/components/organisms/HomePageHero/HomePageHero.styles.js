@@ -32,7 +32,7 @@ const Wrapper = styled(motion.div)`
     animation: ${rotate} 0.7s ease-out forwards;
 
     ${({ theme }) => theme.media.tablet`
-      border-width: 0 0 500px 500px;
+      border-width: 0 0 400px 400px;
       bottom: 50px;
       right: 50px;
       opacity: 0;

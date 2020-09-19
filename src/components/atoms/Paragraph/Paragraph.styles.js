@@ -9,9 +9,13 @@ const Paragraph = styled(motion.p)`
   line-height: 22px;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.s};
+    font-size:  calc(${theme.font.size.s} - 2px);
     max-width: 90%;
     line-height: 30px;
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    font-size: ${theme.font.size.s};
   `}
 `;
 

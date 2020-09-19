@@ -5,6 +5,13 @@ import { motion } from 'framer-motion';
 const Link = styled(GatsbyLink)`
   text-decoration: none;
   color: inherit;
+
+  :hover,
+  :focus {
+    div {
+      opacity: 0.9;
+    }
+  }
 `;
 
 const Wrapper = styled(motion.div)`
@@ -28,12 +35,6 @@ const Article = styled.article`
   margin: 10px 0;
   cursor: pointer;
   z-index: ${({ theme }) => theme.zindex.positive1};
-
-  :hover {
-    div {
-      opacity: 0.9;
-    }
-  }
 
   ${({ theme }) => theme.media.tablet`
     height: ${({ small }) => (small ? '400px' : '550px')};

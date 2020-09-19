@@ -14,7 +14,7 @@ const Footer = () => {
 
   const [footerRef, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.7,
+    threshold: 0.5,
   });
 
   useEffect(() => {

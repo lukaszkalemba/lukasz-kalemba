@@ -12,10 +12,10 @@ const ScrollArrow = () => {
   };
 
   return (
-    <S.Wrapper onClick={handleClick}>
+    <S.Button onClick={handleClick}>
       <S.Info>Przesuń w dół</S.Info>
       <Icon src={arrow} />
-    </S.Wrapper>
+    </S.Button>
   );
 };
 

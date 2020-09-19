@@ -14,7 +14,7 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
       Zaistniej w sieci
     </h1>
     <p
-      class="sc-AxgMl kuRKCx sc-AxmLO gOCTPI"
+      class="sc-AxgMl emnsMq sc-AxmLO gOCTPI"
     >
       Zaistniej w świecie nieograniczonych możliwości
     </p>
