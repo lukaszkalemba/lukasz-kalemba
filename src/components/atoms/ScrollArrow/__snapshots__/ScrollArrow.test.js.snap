@@ -2,7 +2,7 @@
 
 exports[`<ScrollArrow /> renders correctly and matches snapshot 1`] = `
 <button
-  class="sc-AxirZ bPTMKP"
+  class="sc-AxirZ cCmbzx"
 >
   <p
     class="sc-AxiKw fmBTKk"

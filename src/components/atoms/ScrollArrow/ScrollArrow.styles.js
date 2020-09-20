@@ -16,7 +16,6 @@ const Button = styled.button`
   :hover,
   :focus {
     transform: translateY(10px);
-    outline: 1px solid black;
     svg {
       opacity: 1;
     }
@@ -27,7 +26,6 @@ const Button = styled.button`
     height: 150px;
     display: block;
   `}
-
   svg {
     width: 100%;
     height: 100%;
