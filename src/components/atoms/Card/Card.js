@@ -29,7 +29,7 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
   return (
     <S.Wrapper ref={wrapperRef} {...wrapperAnimations}>
       <Background fluid={image.fluid}>
-        <S.Article small={small} data-testid="card-article">
+        <S.Article small={small}>
           <S.Link to={`/${preSlug}/${slug}`}>
             <S.Overlay />
             <S.Title>{title}</S.Title>

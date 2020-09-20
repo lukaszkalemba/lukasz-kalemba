@@ -21,11 +21,11 @@ const fakeProps = {
 
 describe('<Card />', () => {
   it('renders correctly default variant', () => {
-    const { getByRole, getByTestId } = render(<Card {...fakeProps} />);
+    const { getByRole } = render(<Card {...fakeProps} />);
 
     const cardTitle = getByRole('heading');
     const cardLink = getByRole('link');
-    const cardArticle = getByTestId('card-article');
+    const cardArticle = getByRole('article');
 
     expect(cardTitle).toHaveTextContent(fakeProps.title);
     expect(cardLink).toHaveAttribute(
@@ -37,9 +37,9 @@ describe('<Card />', () => {
   });
 
   it('renders correctly small variant', () => {
-    const { getByTestId } = render(<Card {...fakeProps} small />);
+    const { getByRole } = render(<Card {...fakeProps} small />);
 
-    const cardArticle = getByTestId('card-article');
+    const cardArticle = getByRole('article');
 
     expect(cardArticle).toHaveStyleRule('height', '300px');
   });
