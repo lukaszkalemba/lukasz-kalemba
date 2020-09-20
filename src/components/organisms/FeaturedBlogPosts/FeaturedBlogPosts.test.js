@@ -2,18 +2,19 @@ import React from 'react';
 import { render } from 'utils/test-utils';
 import * as Gatsby from 'gatsby';
 import '__mocks__/intersectionObserver';
-import FeaturedProjects from './FeaturedProjects';
+import FeaturedBlogPosts from './FeaturedBlogPosts';
 
 beforeEach(() => {
   const useStaticQuery = jest.spyOn(Gatsby, 'useStaticQuery');
 
   useStaticQuery.mockImplementation(() => ({
-    projects: {
+    blogPosts: {
       edges: [
         {
           node: {
             id: 0,
             title: 'fake blog post 0',
+            content: 'Lorem ipsum dolor sit amet.',
             slug: 'fake-slug-0',
             image: {
               fluid: {
@@ -29,6 +30,7 @@ beforeEach(() => {
           node: {
             id: 1,
             title: 'fake blog post 1',
+            content: 'Lorem ipsum dolor sit amet.',
             slug: 'fake-slug-1',
             image: {
               fluid: {
@@ -45,16 +47,18 @@ beforeEach(() => {
   }));
 });
 
-describe('<FeaturedProjects />', () => {
+describe('<FeaturedBlogPosts />', () => {
   it('renders correctly with all children components', () => {
-    const { getByRole, getAllByRole, getByText } = render(<FeaturedProjects />);
+    const { getByRole, getAllByRole, getByText } = render(
+      <FeaturedBlogPosts />
+    );
 
     const sectionHeading = getByRole('heading', { level: 2 });
     const cards = getAllByRole('article');
-    const allProjectsLink = getByText(/sprawdź inne/i);
+    const allBlogPostsLinks = getByText(/sprawdź inne/i);
 
     expect(sectionHeading).toBeInTheDocument();
     expect(cards).toHaveLength(2);
-    expect(allProjectsLink).toHaveAttribute('href', '/projekty');
+    expect(allBlogPostsLinks).toHaveAttribute('href', '/blog');
   });
 });
