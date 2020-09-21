@@ -3,6 +3,7 @@
 exports[`<FooterLogo /> renders correctly and matches snapshot 1`] = `
 <div
   class="sc-AxirZ cpWdjb"
+  data-testid="footer-logo"
 >
   <div
     class="sc-AxjAm cQfdzG"

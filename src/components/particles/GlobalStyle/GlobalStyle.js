@@ -47,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => theme.color.background.light},
       ${({ theme }) => theme.color.background.dark}
     );
+    overflow-x: hidden;
   }
   *,
   *::before,
