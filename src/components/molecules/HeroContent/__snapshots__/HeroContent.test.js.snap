@@ -8,7 +8,7 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
     class="sc-AxheI gRrBTV"
   >
     <h1
-      class="sc-AxhCb eHWxlg sc-Axmtr hxvseQ"
+      class="sc-AxhCb fLbFCP sc-Axmtr hxvseQ"
       style="opacity: 0; transform: translateX(-80px) translateZ(0);"
     >
       Zaistniej w sieci

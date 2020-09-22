@@ -45,7 +45,7 @@ const homePageHeading = css`
   ${({ theme }) => theme.media.laptop`
     font-size: ${theme.font.size.xxl};
     margin: 0.20em 0;
-    margin-left: calc(3vw);
+    margin-left: 3vw;
   `}
 `;
 

@@ -35,12 +35,9 @@ const Overlay = styled(GatsbyBackground)`
 const Title = styled(motion.h3)`
   font-size: ${({ theme }) => theme.font.size.m};
   margin: 0;
-  padding: 50px;
+  padding: 40px;
   z-index: ${({ theme }) => theme.zindex.positive1};
-
-  ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.m};
-  `}
+  line-height: 38px;
 `;
 
 export default { Article, Overlay, Title };

@@ -4,7 +4,7 @@ const Cards = styled.div`
   display: grid;
   max-width: 1300px;
   margin: 0 auto;
-  grid-gap: 30px;
+  grid-gap: 10px;
   margin-bottom: 35px;
 
   ${({ theme }) => theme.media.tablet`

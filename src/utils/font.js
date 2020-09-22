@@ -4,7 +4,7 @@ export default {
     xxs: '1.3rem',
     xs: '1.6rem',
     s: '2.2rem',
-    m: '3rem',
+    m: '2.8rem',
     l: '4rem',
     xl: '5.4rem',
     xxl: '8.5rem',

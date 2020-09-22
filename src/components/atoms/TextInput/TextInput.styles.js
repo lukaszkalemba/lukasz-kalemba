@@ -2,8 +2,16 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const InputWrapper = styled(motion.div)`
+  :first-child {
+    margin-top: 40px;
+  }
+
   position: relative;
-  margin: 37px 0;
+  margin: 30px 0;
+
+  ${({ theme }) => theme.media.tablet`
+    margin: 37px 0;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     margin-right: 100px;
