@@ -1,47 +1,43 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import S from './Button.styles';
 
-const Button = ({ type, path, priority, className, children, onClick }) => {
-  let ButtonWrapper;
-  let buttonWrapperProps = null;
+const Button = ({ type, path, priority, onClick, className, children }) => {
+  const linkProps = {
+    as: S.Link,
+    to: path,
+  };
 
-  if (type === 'button') {
-    ButtonWrapper = S.Link;
-    buttonWrapperProps = {
-      to: path,
-    };
-  } else {
-    ButtonWrapper = Fragment;
-  }
+  const submitProps = {
+    type: 'submit',
+  };
+
+  const props = type === 'link' ? linkProps : submitProps;
 
   return (
-    <ButtonWrapper {...buttonWrapperProps}>
-      <S.Button
-        priority={priority}
-        type={type}
-        className={className}
-        onClick={onClick}
-      >
-        <span>{children}</span>
-      </S.Button>
-    </ButtonWrapper>
+    <S.Button
+      priority={priority}
+      onClick={onClick}
+      className={className}
+      {...props}
+    >
+      <span>{children}</span>
+    </S.Button>
   );
 };
 
 Button.defaultProps = {
-  type: 'button',
   path: '',
-  className: '',
   onClick: () => {},
+  className: '',
 };
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['button', 'submit']),
+  type: PropTypes.oneOf(['link', 'submit']).isRequired,
   path: PropTypes.string,
   priority: PropTypes.oneOf(['primary', 'secondary']).isRequired,
-  className: PropTypes.string,
   onClick: PropTypes.func,
+  className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

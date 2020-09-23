@@ -21,10 +21,10 @@ const HeroContent = () => {
       </S.Content>
 
       <S.Buttons {...buttonsAnimation}>
-        <Button path="/wycena" priority="primary">
+        <Button type="link" path="/wycena" priority="primary">
           Bezpłatna wycena
         </Button>
-        <Button path="/projekty" priority="secondary">
+        <Button type="link" path="/projekty" priority="secondary">
           Zrealizowane projekty
         </Button>
       </S.Buttons>

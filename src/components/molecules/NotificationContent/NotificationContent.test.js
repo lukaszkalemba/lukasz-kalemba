@@ -13,12 +13,12 @@ describe('<NotificationContent />', () => {
 
     const { getByRole } = render(<NotificationContent {...fakeProps} />);
 
-    const button = getByRole('button');
+    const link = getByRole('link');
     const heading = getByRole('heading');
 
     expect(heading).toHaveTextContent('Poszło!');
 
-    user.click(button);
+    user.click(link);
     expect(fakeProps.enableScrolling).toHaveBeenCalledTimes(1);
   });
 

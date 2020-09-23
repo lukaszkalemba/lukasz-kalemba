@@ -3,6 +3,7 @@ import { Link as GatsbyLink } from 'gatsby';
 
 const Link = styled(GatsbyLink)`
   text-decoration: none;
+  text-align: center;
 `;
 
 const Button = styled.button`

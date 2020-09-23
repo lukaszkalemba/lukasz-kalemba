@@ -8,10 +8,10 @@ describe('<NotFoundSectionContent />', () => {
     const { container, getByRole } = render(<NotFoundSectionContent />);
 
     const heading = getByRole('heading');
-    const button = getByRole('button');
+    const link = getByRole('link');
 
     expect(heading).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   });

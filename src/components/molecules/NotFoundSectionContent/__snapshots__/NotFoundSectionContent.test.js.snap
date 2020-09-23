@@ -15,17 +15,13 @@ exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] =
       class="sc-AxgMl fOVlnj"
     >
       <a
-        class="sc-AxjAm bgfZmU"
+        class="sc-AxjAm dEnCIl sc-AxirZ cvvsKc"
         href="/"
+        priority="secondary"
       >
-        <button
-          class="sc-AxirZ cvvsKc"
-          type="button"
-        >
-          <span>
-            Strona główna
-          </span>
-        </button>
+        <span>
+          Strona główna
+        </span>
       </a>
     </div>
   </div>

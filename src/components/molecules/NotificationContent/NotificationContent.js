@@ -32,7 +32,12 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
         {textContent.paragraph}
       </S.Paragraph>
       <motion.div {...animations.buttonWrapper}>
-        <S.Button priority="primary" path="/" onClick={enableScrolling}>
+        <S.Button
+          type="link"
+          path="/"
+          priority="primary"
+          onClick={enableScrolling}
+        >
           Strona główna
         </S.Button>
       </motion.div>

@@ -23,30 +23,22 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
     class="sc-fzozJi bjvZHp"
   >
     <a
-      class="sc-AxirZ fIUteP"
+      class="sc-AxirZ dhZGqu sc-AxiKw GbYkR"
       href="/wycena"
+      priority="primary"
     >
-      <button
-        class="sc-AxiKw GbYkR"
-        type="button"
-      >
-        <span>
-          Bezpłatna wycena
-        </span>
-      </button>
+      <span>
+        Bezpłatna wycena
+      </span>
     </a>
     <a
-      class="sc-AxirZ fIUteP"
+      class="sc-AxirZ dhZGqu sc-AxiKw iuBmcE"
       href="/projekty"
+      priority="secondary"
     >
-      <button
-        class="sc-AxiKw iuBmcE"
-        type="button"
-      >
-        <span>
-          Zrealizowane projekty
-        </span>
-      </button>
+      <span>
+        Zrealizowane projekty
+      </span>
     </a>
   </div>
 </div>

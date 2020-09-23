@@ -4,13 +4,13 @@ import '__mocks__/intersectionObserver';
 import NotFoundSection from './NotFoundSection';
 
 describe('<NotFoundSection />', () => {
-  it('renders correctly with heading and button', () => {
+  it('renders correctly with heading and link', () => {
     const { getByRole } = render(<NotFoundSection />);
 
     const heading = getByRole('heading');
-    const button = getByRole('button');
+    const link = getByRole('link');
 
     expect(heading).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
   });
 });
