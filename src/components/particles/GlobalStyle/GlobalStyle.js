@@ -36,8 +36,18 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
-    overflow-x: hidden;
+    background: linear-gradient(
+      to right bottom,
+      ${({ theme }) => theme.color.background.light},
+      ${({ theme }) => theme.color.background.dark}
+    ) no-repeat center center fixed;
+  ${'' /* background-size: cover; */}
+  background-size: auto 100vh;
+  will-change: transform;
+  height: 100vh;
+  overflow-x: hidden;
   }
+
   body {
     font-size: 1.6rem;
     font-family: ${({ theme }) => theme.font.family.montserrat}, sans-serif;
@@ -47,9 +57,11 @@ const GlobalStyle = createGlobalStyle`
       to right bottom,
       ${({ theme }) => theme.color.background.light},
       ${({ theme }) => theme.color.background.dark}
-    );
+    ) no-repeat center center fixed;
+    background-size: cover;
     overflow-x: hidden;
   }
+
   *,
   *::before,
   *::after {

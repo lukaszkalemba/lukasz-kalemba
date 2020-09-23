@@ -2,11 +2,11 @@
 
 exports[`<PricingImage /> renders correctly matches snapshot 1`] = `
 <div
-  class="sc-AxjAm rIIiZ"
+  class="sc-bdnylx eaZsiE"
   style="opacity: 0;"
 >
   <div
-    class="sc-AxirZ jXEvzR gatsby-image-wrapper"
+    class="sc-gtssRu grktDa gatsby-image-wrapper"
     style="position: relative; overflow: hidden;"
   >
     <div
@@ -14,10 +14,7 @@ exports[`<PricingImage /> renders correctly matches snapshot 1`] = `
       style="width: 100%;"
     />
     <picture>
-      <source
-        sizes=""
-        srcset=""
-      />
+      
       <img
         alt=""
         loading="lazy"
@@ -32,7 +29,7 @@ exports[`<PricingImage /> renders correctly matches snapshot 1`] = `
     </noscript>
   </div>
   <div
-    class="sc-AxiKw jIxHFw"
+    class="sc-dlnjPT ddpznT"
     style="opacity: 0; transform: translateX(-40px) translateY(-40px) translateZ(0);"
   />
 </div>

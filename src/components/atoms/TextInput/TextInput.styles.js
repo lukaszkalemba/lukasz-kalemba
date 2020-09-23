@@ -23,6 +23,7 @@ const InputWrapper = styled(motion.div)`
 `;
 
 const Input = styled.input`
+  font-size: ${({ theme }) => theme.font.size.xxs};
   font-size: 18px;
   padding: 10px 0 10px 0;
   display: block;
@@ -35,6 +36,10 @@ const Input = styled.input`
   max-width: 400px;
   border-bottom-color: ${({ isError }) =>
     isError ? 'orange' : 'rgba(255, 255, 255, 0.5)'};
+
+  ${({ theme }) => theme.media.tablet`
+    font-size: 18px;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     max-width: 600px;

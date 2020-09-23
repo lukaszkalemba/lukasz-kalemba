@@ -9,7 +9,6 @@ const Article = styled.article`
   align-items: flex-end;
   min-height: 300px;
   position: relative;
-  max-width: 1000px;
 
   ${({ theme }) => theme.media.laptop`
     justify-content: flex-end;
@@ -33,11 +32,15 @@ const Overlay = styled(GatsbyBackground)`
 `;
 
 const Title = styled(motion.h3)`
-  font-size: ${({ theme }) => theme.font.size.m};
+  font-size: ${({ theme }) => theme.font.size.s};
   margin: 0;
   padding: 40px;
   z-index: ${({ theme }) => theme.zindex.positive1};
-  line-height: 38px;
+  line-height: 30px;
+
+  ${({ theme }) => theme.media.tablet`
+    font-size: ${theme.font.size.m};
+  `}
 `;
 
 export default { Article, Overlay, Title };

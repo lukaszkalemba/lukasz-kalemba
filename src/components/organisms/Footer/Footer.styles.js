@@ -7,12 +7,10 @@ const Footer = styled(motion.footer)`
   position: relative;
 
   ${({ theme }) => theme.media.tablet`
-    padding-bottom: 40px;
+    padding-bottom: 23px;
   `}
 
   ${({ theme }) => theme.media.laptop`
-    padding-bottom: 20px;
-
     ::before {
       content: '';
       position: absolute;
@@ -48,7 +46,17 @@ const TopBar = styled.div`
 const Copyright = styled.p`
   font-size: ${({ theme }) => theme.font.size.xxs};
   opacity: 0.8;
-  padding-top: 15px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  span {
+    margin: 2px 0;
+  }
+
+  ${({ theme }) => theme.media.phone`
+    flex-direction: row;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     padding-top: 0;

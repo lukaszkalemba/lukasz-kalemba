@@ -2,11 +2,11 @@
 
 exports[`<FooterLogo /> renders correctly and matches snapshot 1`] = `
 <div
-  class="sc-AxirZ cpWdjb"
+  class="sc-gtssRu iKsAlc"
   data-testid="footer-logo"
 >
   <div
-    class="sc-AxjAm cQfdzG"
+    class="sc-bdnylx levWdn"
   >
     <svg
       fill="none"

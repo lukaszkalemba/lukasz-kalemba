@@ -3,19 +3,19 @@
 exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] = `
 <main>
   <div
-    class="sc-AxiKw knHbTu"
+    class="sc-dlnjPT eEtTnh"
   >
     <h1
-      class="sc-AxhCb jdNHOn sc-AxheI biJvfv"
+      class="sc-hKFyIo jQjyqG sc-gKAblj byTclU"
       style="opacity: 0; transform: translateX(40px) translateZ(0);"
     >
       Coś poszło nie tak...
     </h1>
     <div
-      class="sc-AxgMl fOVlnj"
+      class="sc-jSFkmK ggQbXJ"
     >
       <a
-        class="sc-AxjAm dEnCIl sc-AxirZ cvvsKc"
+        class="sc-bdnylx gzzKVY sc-gtssRu kKYjrL"
         href="/"
         priority="secondary"
       >

@@ -2,11 +2,11 @@
 
 exports[`<ServicesCTASection /> renders correctly and matches snapshot 1`] = `
 <div
-  class="sc-AxjAm gYmeLx"
+  class="sc-bdnylx ggAaCM"
 >
   <div>
     <h2
-      class="sc-AxgMl kLPKyZ"
+      class="sc-jSFkmK bwAAPZ"
       style="opacity: 0; transform: translateY(50px) translateZ(0);"
     >
       Stwórzmy od zera niepowtarzalny projekt, lub przenieśmy już istniejący na kolejny poziom.
@@ -15,18 +15,18 @@ exports[`<ServicesCTASection /> renders correctly and matches snapshot 1`] = `
       style="opacity: 0; transform: translateY(50px) translateZ(0);"
     >
       <div
-        class="sc-AxiKw dundXp"
+        class="sc-dlnjPT ka-Dptu"
       >
         <a
-          class="sc-AxhCb covriP"
+          class="sc-hKFyIo fGlMDG"
           href="/wycena"
         >
           Bezpłatna wycena
           <div
-            class="sc-AxhUy kfRhbQ"
+            class="sc-eCApGN drKECk"
           >
             <div
-              class="sc-AxirZ iShCbp"
+              class="sc-gtssRu fiyWPK"
             >
               <svg
                 fill="none"

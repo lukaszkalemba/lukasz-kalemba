@@ -5,7 +5,7 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   background-color: ${({ theme }) => theme.color.background.dark};
-  position: fixed;
+  position: absolute;
   z-index: ${({ theme }) => theme.zindex.positive3};
   top: 0;
   left: 0;
@@ -16,7 +16,6 @@ const List = styled.ul`
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  counter-reset: nav;
   transition: transform 250ms ease-in-out;
   transition-delay: 250ms;
 

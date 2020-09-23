@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  margin-top: 12px;
+  margin-top: 25px;
 `;
 
 const HeadingWrapper = styled.div`

@@ -10,14 +10,11 @@ const ProjectContent = ({
 }) => {
   return (
     <Container axis="both">
-      <S.FirstPageWrapper>
+      <S.ImagesWrapper>
         <S.Image fluid={firstViewImage} />
-      </S.FirstPageWrapper>
-
-      <S.ImagesGrid>
         <S.Image fluid={secondViewImage} />
         <S.Image fluid={thirdViewImage} />
-      </S.ImagesGrid>
+      </S.ImagesWrapper>
     </Container>
   );
 };

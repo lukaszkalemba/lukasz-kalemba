@@ -1,18 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import useWindowSize from 'hooks/useWindowSize';
 import NotificationContent from 'components/molecules/NotificationContent';
 import Container from 'components/particles/Container';
 import S from './Notification.styles';
 import animations from './Notification.animations';
 
 const Notification = ({ submissionStatus, setSubmissionStatus, offset }) => {
+  const size = useWindowSize();
+
   const enableScrolling = () => {
     window.smoothScroll.updatePluginOptions('stopScrollbar', { open: false });
   };
 
   const closeNotification = () => {
     setSubmissionStatus(null);
-    enableScrolling();
+
+    if (size.width >= 1150) {
+      enableScrolling();
+    }
   };
 
   return (

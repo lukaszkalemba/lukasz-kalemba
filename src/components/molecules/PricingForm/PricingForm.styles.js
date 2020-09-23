@@ -11,6 +11,7 @@ const ButtonWrapper = styled(motion.div)`
   align-items: center;
   width: 70%;
   max-width: 550px;
+  margin-top: 60px;
 
   ${({ theme }) => theme.media.laptop`
     justify-content: center;

@@ -40,7 +40,19 @@ const Heading = styled(HeadingComponent)`
 `;
 
 const Paragraph = styled(ParagraphComponent)`
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin: 1px 0;
+  }
+
+  ${({ theme }) => theme.media.tablet`
+    font-size:  calc(${theme.font.size.s} - 1px);
+  `}
+
   ${({ theme }) => theme.media.laptop`
+    flex-direction: row;
     margin-left: 26vw;
     width: auto;
   `}

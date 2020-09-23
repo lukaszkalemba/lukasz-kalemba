@@ -2,28 +2,33 @@
 
 exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
 <div
-  class="sc-AxjAm gYmeLx"
+  class="sc-bdnylx ggAaCM"
 >
   <div
-    class="sc-AxheI gRrBTV"
+    class="sc-gKAblj ixJViW"
   >
     <h1
-      class="sc-AxhCb fLbFCP sc-Axmtr hxvseQ"
+      class="sc-hKFyIo LDwAY sc-iCoHVE jCGsBf"
       style="opacity: 0; transform: translateX(-80px) translateZ(0);"
     >
       Zaistniej w sieci
     </h1>
     <p
-      class="sc-AxgMl emnsMq sc-AxmLO gOCTPI"
+      class="sc-jSFkmK hYnFXU sc-fujyUd kUoHkZ"
     >
-      Zaistniej w świecie nieograniczonych możliwości
+      <span>
+        Zaistniej w świecie 
+      </span>
+      <span>
+        nieograniczonych możliwości
+      </span>
     </p>
   </div>
   <div
-    class="sc-fzozJi bjvZHp"
+    class="sc-pNWxx cPvtmN"
   >
     <a
-      class="sc-AxirZ dhZGqu sc-AxiKw GbYkR"
+      class="sc-gtssRu jvhPFt sc-dlnjPT fblnUy"
       href="/wycena"
       priority="primary"
     >
@@ -32,7 +37,7 @@ exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
       </span>
     </a>
     <a
-      class="sc-AxirZ dhZGqu sc-AxiKw iuBmcE"
+      class="sc-gtssRu jvhPFt sc-dlnjPT bxdVPr"
       href="/projekty"
       priority="secondary"
     >

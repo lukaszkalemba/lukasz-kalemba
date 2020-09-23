@@ -2,12 +2,15 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
+import useWindowSize from 'hooks/useWindowSize';
 import GlobalStyle from 'components/particles/GlobalStyle';
 import Scrollbar from 'components/particles/Scrollbar';
 import Nav from 'components/organisms/Nav';
 import Footer from 'components/organisms/Footer';
 
 const MainPageTemplate = ({ location, children }) => {
+  const size = useWindowSize();
+
   let isFooter = true;
   let isHomePage = false;
 
@@ -25,8 +28,10 @@ const MainPageTemplate = ({ location, children }) => {
   }
 
   useEffect(() => {
-    window.smoothScroll.scrollTop = 0;
-    window.smoothScroll.setMomentum(0, 0);
+    if (size.width >= 1150) {
+      window.smoothScroll.scrollTop = 0;
+      window.smoothScroll.setMomentum(0, 0);
+    }
   }, [location.pathname]);
 
   return (

@@ -4,10 +4,10 @@ import { Link as GatsbyLink } from 'gatsby';
 const ListItem = styled.li`
   align-items: flex-start;
   display: flex;
-  padding: 15px;
+  padding: 15px 35px;
 
   ${({ theme }) => theme.media.tablet`
-    padding: 20px 55px;
+    padding: 20px 70px;
   `}
 
   ${({ theme }) => theme.media.laptop`
@@ -22,7 +22,7 @@ const Link = styled(GatsbyLink)`
   display: flex;
   text-decoration: none;
   font-weight: bold;
-  opacity: 0.85;
+  opacity: 0.8;
   transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
   position: relative;
 
@@ -38,8 +38,6 @@ const Link = styled(GatsbyLink)`
   `}
 
   ::before {
-    counter-increment: nav;
-    content: '0' counter(nav);
     display: block;
     height: 100%;
     opacity: 0;
@@ -53,7 +51,6 @@ const Link = styled(GatsbyLink)`
   }
 
   :hover {
-    transform: translateX(15px);
     opacity: 1;
 
     ::before {

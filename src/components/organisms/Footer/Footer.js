@@ -38,7 +38,8 @@ const Footer = () => {
       <Container axis="x">
         <S.BottomBar {...animations.children}>
           <S.Copyright>
-            lukaszkalemba&copy;2020. Wszelkie prawa zastrzeżone.
+            <span>lukaszkalemba&copy;2020. </span>
+            <span>Wszelkie prawa zastrzeżone.</span>
           </S.Copyright>
 
           <FooterLinks />

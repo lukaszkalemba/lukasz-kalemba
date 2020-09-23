@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const Wrapper = styled.div`
+  ${({ theme }) => theme.media.tablet`
+    padding: 40px 50px;
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    padding: 30px 40px;
+  `}
+`;
+
 const Description = styled(motion.p)`
   font-size: ${({ theme }) => theme.font.size.xxs};
   line-height: 25px;
@@ -17,4 +27,4 @@ const Description = styled(motion.p)`
   `}
 `;
 
-export default { Description };
+export default { Wrapper, Description };

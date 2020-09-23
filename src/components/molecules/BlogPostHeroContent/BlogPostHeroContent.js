@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Container from 'components/particles/Container';
 import Heading from 'components/atoms/Heading';
 import S from './BlogPostHeroContent.styles';
 
 const BlogPostHeroContent = ({ title, description, animation }) => {
   return (
-    <Container axis="both">
+    <S.Wrapper>
       <Heading tag="h1">{title}</Heading>
       <S.Description {...animation}>{description}</S.Description>
-    </Container>
+    </S.Wrapper>
   );
 };
 

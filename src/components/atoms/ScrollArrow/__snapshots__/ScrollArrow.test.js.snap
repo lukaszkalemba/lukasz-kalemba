@@ -2,15 +2,15 @@
 
 exports[`<ScrollArrow /> renders correctly and matches snapshot 1`] = `
 <button
-  class="sc-AxirZ cCmbzx"
+  class="sc-gtssRu lprqcy"
 >
   <p
-    class="sc-AxiKw fmBTKk"
+    class="sc-dlnjPT jOiDQH"
   >
     Przesuń w dół
   </p>
   <div
-    class="sc-AxjAm cQfdzG"
+    class="sc-bdnylx levWdn"
   >
     <svg
       fill="none"

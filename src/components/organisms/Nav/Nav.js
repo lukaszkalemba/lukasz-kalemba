@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useWindowSize from 'hooks/useWindowSize';
 import Logo from 'components/atoms/Logo';
@@ -14,20 +14,20 @@ const Nav = ({ path, isHomePage }) => {
 
   const isMobile = size.width < 1150;
 
-  const toggleScrolling = isOpen => {
-    window.smoothScroll.updatePluginOptions('stopScrollbar', {
-      open: isOpen,
-    });
-  };
+  useEffect(() => {
+    if (isMobile && isNavOpen) {
+      document.body.style.position = 'fixed';
+    } else {
+      document.body.style.position = 'static';
+    }
+  }, [isMobile, isNavOpen]);
 
   const toggleNav = () => {
     setIsNavOpen(state => !state);
-    toggleScrolling(!isNavOpen);
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
-    toggleScrolling(false);
   };
 
   const headerAnimations = animations.getHeader(isHomePage, isMobile);

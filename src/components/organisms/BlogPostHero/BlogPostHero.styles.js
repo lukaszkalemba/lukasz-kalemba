@@ -6,7 +6,7 @@ const Background = styled(BackgroundImage)`
   position: absolute;
   top: -100px;
   width: 100vw;
-  height: 102.5vh;
+  height: calc(100vh + 50px);
   z-index: 0;
 
   ${({ theme }) => theme.media.tablet`

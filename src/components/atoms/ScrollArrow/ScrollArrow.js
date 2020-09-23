@@ -8,7 +8,7 @@ const ScrollArrow = () => {
   const size = useWindowSize();
 
   const handleClick = () => {
-    window.smoothScroll.scrollTo(0, size.height + 100, 1000);
+    window.smoothScroll.scrollTo(0, size.height + 80, 1000);
   };
 
   return (

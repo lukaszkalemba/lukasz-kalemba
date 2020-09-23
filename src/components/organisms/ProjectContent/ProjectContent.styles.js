@@ -13,7 +13,7 @@ const Image = styled(GatsbyImage)`
   `}
 `;
 
-const FirstPageWrapper = styled.div`
+const ImagesWrapper = styled.div`
   padding: 0 20px;
 
   ${({ theme }) => theme.media.tablet`
@@ -29,12 +29,4 @@ const FirstPageWrapper = styled.div`
   `}
 `;
 
-const ImagesGrid = styled.div`
-  ${({ theme }) => theme.media.laptop`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 75px;
-  `}
-`;
-
-export default { Image, FirstPageWrapper, ImagesGrid };
+export default { Image, ImagesWrapper };

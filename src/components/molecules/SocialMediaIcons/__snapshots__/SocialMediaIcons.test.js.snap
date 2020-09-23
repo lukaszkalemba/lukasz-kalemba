@@ -2,16 +2,16 @@
 
 exports[`<SocialMediaIcons /> renders correctly and matches snapshot 1`] = `
 <div
-  class="sc-AxirZ cMiWir"
+  class="sc-gtssRu QUdIY"
 >
   <a
     aria-label="facebook"
-    class="sc-AxiKw dpnFYn"
+    class="sc-dlnjPT caLAjc"
     href="https://facebook.com"
     target="__blank"
   >
     <div
-      class="sc-AxjAm cQfdzG"
+      class="sc-bdnylx levWdn"
     >
       <svg
         fill="none"
@@ -30,12 +30,12 @@ exports[`<SocialMediaIcons /> renders correctly and matches snapshot 1`] = `
   </a>
   <a
     aria-label="instagram"
-    class="sc-AxiKw dpnFYn"
+    class="sc-dlnjPT caLAjc"
     href="https://instagram.com"
     target="__blank"
   >
     <div
-      class="sc-AxjAm cQfdzG"
+      class="sc-bdnylx levWdn"
     >
       <svg
         fill="none"
@@ -54,12 +54,12 @@ exports[`<SocialMediaIcons /> renders correctly and matches snapshot 1`] = `
   </a>
   <a
     aria-label="dribbble"
-    class="sc-AxiKw dpnFYn"
+    class="sc-dlnjPT caLAjc"
     href="https://dribbble.com"
     target="__blank"
   >
     <div
-      class="sc-AxjAm cQfdzG"
+      class="sc-bdnylx levWdn"
     >
       <svg
         fill="none"
@@ -78,12 +78,12 @@ exports[`<SocialMediaIcons /> renders correctly and matches snapshot 1`] = `
   </a>
   <a
     aria-label="linkedin"
-    class="sc-AxiKw dpnFYn"
+    class="sc-dlnjPT caLAjc"
     href="https://linkedin.com"
     target="__blank"
   >
     <div
-      class="sc-AxjAm cQfdzG"
+      class="sc-bdnylx levWdn"
     >
       <svg
         fill="none"
