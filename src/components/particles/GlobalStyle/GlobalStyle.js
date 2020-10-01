@@ -41,7 +41,6 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => theme.color.background.light},
       ${({ theme }) => theme.color.background.dark}
     ) no-repeat center center fixed;
-  ${'' /* background-size: cover; */}
   background-size: auto 100vh;
   will-change: transform;
   height: 100vh;
