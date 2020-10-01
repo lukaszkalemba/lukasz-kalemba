@@ -2,28 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Heading from 'components/atoms/Heading';
+import { getNotificationContent } from 'helpers/getNotificationContent';
 import S from './NotificationContent.styles';
 import animations from './NotificationContent.animations';
 
 const NotificationContent = ({ submissionStatus }) => {
-  let textContent = {};
-
-  switch (submissionStatus) {
-    case 'success':
-    default:
-      textContent = {
-        heading: 'Poszło!',
-        paragraph: 'W ciągu 24h otrzymasz odpowiedź.',
-      };
-      break;
-
-    case 'error':
-      textContent = {
-        heading: 'Wystąpił błąd...',
-        paragraph: 'Spróbuj ponownie później.',
-      };
-      break;
-  }
+  const textContent = getNotificationContent(submissionStatus);
 
   return (
     <S.Wrapper>
