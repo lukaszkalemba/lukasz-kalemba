@@ -4,7 +4,7 @@ import '__mocks__/intersectionObserver';
 import BlogPostContentItem from './BlogPostContentItem';
 
 describe('<BlogPostContentItem />', () => {
-  it('renders correctly with given HTML content', () => {
+  it('renders properly with given HTML content', () => {
     const fakeContent = <p>Lorem ipsum dolor sit amet.</p>;
 
     const { getByTestId } = render(
