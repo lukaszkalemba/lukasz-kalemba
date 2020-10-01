@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import theme from 'utils/theme';
+import theme from 'theme';
 import GlobalStyle from 'components/particles/GlobalStyle';
 import Nav from 'components/organisms/Nav';
 import Footer from 'components/organisms/Footer';

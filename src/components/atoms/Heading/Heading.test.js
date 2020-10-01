@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
-import theme from 'utils/theme';
+import theme from 'theme';
 import 'jest-styled-components';
 import '__mocks__/intersectionObserver';
 import Heading from './Heading';

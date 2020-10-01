@@ -1,4 +1,4 @@
-const links = [
+export default [
   {
     id: 0,
     path: '/projekty',
@@ -15,5 +15,3 @@ const links = [
     name: 'wycena',
   },
 ];
-
-export default links;
