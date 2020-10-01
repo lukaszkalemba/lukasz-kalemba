@@ -16,7 +16,7 @@ const HeroContent = () => {
           Zaistniej w sieci
         </S.Heading>
         <S.Paragraph animation={animations.paragraph}>
-          <span>Zaistniej w świecie </span>
+          <span>Zaistniej w świecie&nbsp;</span>
           <span>nieograniczonych możliwości</span>
         </S.Paragraph>
       </S.Content>
