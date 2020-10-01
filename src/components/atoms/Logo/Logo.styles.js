@@ -4,7 +4,7 @@ import { Link as GatsbyLink } from 'gatsby';
 const Wrapper = styled.div`
   width: 120px;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive4};
+  z-index: ${({ theme }) => theme.zindex.level4};
   pointer-events: ${({ path }) => path === '/' && 'none'};
 
   ${({ theme }) => theme.media.tablet`

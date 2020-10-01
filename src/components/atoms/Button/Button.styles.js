@@ -19,7 +19,7 @@ const Button = styled.button`
   font-weight: ${({ theme }) => theme.font.weight.bold};
   padding: 1em 2em;
   border: ${({ theme }) => `2px solid ${theme.color.white}`};
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
   margin-bottom: 8px;
   transition: color 250ms ease-in-out;
   transition-delay: 50ms;

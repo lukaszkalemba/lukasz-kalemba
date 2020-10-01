@@ -6,7 +6,7 @@ const List = styled.ul`
   padding: 0;
   background-color: ${({ theme }) => theme.color.background.dark};
   position: absolute;
-  z-index: ${({ theme }) => theme.zindex.positive3};
+  z-index: ${({ theme }) => theme.zindex.level3};
   top: 0;
   left: 0;
   transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});

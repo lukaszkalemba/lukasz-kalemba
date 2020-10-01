@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: none;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
 
   ${({ theme }) => theme.media.laptop`
     display: flex;

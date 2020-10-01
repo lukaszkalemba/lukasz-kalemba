@@ -17,7 +17,7 @@ const ImageWrapper = styled(motion.div)`
 
 const Image = styled(GatsbyImage)`
   margin: 0 40px 40px 0;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
 `;
 
 const ImageShadow = styled(motion.div)`

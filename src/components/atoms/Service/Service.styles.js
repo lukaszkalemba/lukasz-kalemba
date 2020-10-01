@@ -35,7 +35,7 @@ const Title = styled(motion.h3)`
   font-size: ${({ theme }) => theme.font.size.s};
   margin: 0;
   padding: 40px;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
   line-height: 30px;
 
   ${({ theme }) => theme.media.tablet`
