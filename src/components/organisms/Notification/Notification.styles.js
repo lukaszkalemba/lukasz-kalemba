@@ -13,6 +13,7 @@ const Backdrop = styled(motion.div)`
 
 const Wrapper = styled(motion.div)`
   position: fixed;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
