@@ -5,14 +5,9 @@ import * as Yup from 'yup';
 import Button from 'components/atoms/Button';
 import TextInput from 'components/atoms/TextInput';
 import TextareaInput from 'components/atoms/TextareaInput';
+import { encodeFormValues } from 'helpers/encodeFormValues';
 import S from './PricingForm.styles';
 import animations from './PricingForm.animations';
-
-const encode = data => {
-  return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-    .join('&');
-};
 
 const initialValues = {
   name: '',
@@ -47,7 +42,7 @@ const PricingForm = ({ setSubmissionStatus }) => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: encode({ 'form-name': 'wycena', ...values }),
+        body: encodeFormValues({ 'form-name': 'wycena', ...values }),
       });
 
       actions.resetForm();
