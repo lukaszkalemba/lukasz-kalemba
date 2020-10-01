@@ -13,7 +13,7 @@ const HeadingWrapper = styled.div`
   grid-column: 1 / 6;
   grid-row: 1 / 2;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
 
   ${({ theme }) => theme.media.laptop`
     grid-column: 1 / 5;

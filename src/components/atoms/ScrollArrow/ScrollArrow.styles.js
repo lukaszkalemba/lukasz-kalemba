@@ -9,7 +9,7 @@ const Button = styled.button`
   margin-top: auto;
   cursor: pointer;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
   transition: transform 250ms ease-in-out;
   outline: none;
 

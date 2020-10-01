@@ -34,7 +34,7 @@ const Article = styled.article`
   padding: 30px;
   margin: 10px 0;
   cursor: pointer;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
 
   ${({ theme }) => theme.media.tablet`
     height: ${({ small }) => (small ? '400px' : '550px')};
@@ -59,7 +59,7 @@ const Overlay = styled.div`
 const Title = styled.h3`
   font-size: ${({ theme }) => theme.font.size.s};
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
   margin: 0;
   text-align: right;
 

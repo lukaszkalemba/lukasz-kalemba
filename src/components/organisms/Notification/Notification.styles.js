@@ -8,7 +8,7 @@ const Backdrop = styled(motion.div)`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: ${({ theme }) => theme.zindex.positive3};
+  z-index: ${({ theme }) => theme.zindex.level3};
 `;
 
 const Wrapper = styled(motion.div)`
@@ -19,7 +19,7 @@ const Wrapper = styled(motion.div)`
   height: 50vh;
   display: flex;
   flex-direction: column;
-  z-index: ${({ theme }) => theme.zindex.positive3};
+  z-index: ${({ theme }) => theme.zindex.level3};
   background-color: ${({ theme }) => theme.color.background.light};
   padding: 30px 15px;
 

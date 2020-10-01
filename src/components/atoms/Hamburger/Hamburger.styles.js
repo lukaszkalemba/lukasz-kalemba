@@ -6,7 +6,7 @@ const Button = styled.button`
   align-items: center;
   cursor: pointer;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive4};
+  z-index: ${({ theme }) => theme.zindex.level4};
   border: none;
   width: 40px;
   height: 40px;

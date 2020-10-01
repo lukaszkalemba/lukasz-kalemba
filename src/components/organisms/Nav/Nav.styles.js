@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Header = styled(motion.header)`
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive3};
+  z-index: ${({ theme }) => theme.zindex.level3};
   height: 10vh;
 
   ${({ theme }) => theme.media.laptop`

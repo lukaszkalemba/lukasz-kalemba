@@ -73,7 +73,7 @@ const Buttons = styled(motion.div)`
   margin-top: 20px;
   padding: 0 30px;
   position: relative;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
 
   ${({ theme }) => theme.media.tablet`
     margin-top: 40px;

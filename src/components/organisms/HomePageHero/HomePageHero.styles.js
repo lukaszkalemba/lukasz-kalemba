@@ -56,7 +56,7 @@ const Wrapper = styled(motion.div)`
 
 const ScrollWrapper = styled(motion.div)`
   position: absolute;
-  z-index: ${({ theme }) => theme.zindex.positive1};
+  z-index: ${({ theme }) => theme.zindex.level1};
   right: 25px;
   bottom: 45px;
 
