@@ -14,7 +14,6 @@ const Backdrop = styled(motion.div)`
 const Wrapper = styled(motion.div)`
   position: fixed;
   left: 50%;
-  top: calc(${({ verticalOffset }) => `calc(${verticalOffset}px + 45vh)`} );
   transform: translate(-50%, -50%);
   width: 75vw;
   height: 50vh;

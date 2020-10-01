@@ -39,11 +39,9 @@ const validationSchema = Yup.object({
   ),
 });
 
-const PricingForm = ({ setSubmissionStatus, setOffset }) => {
+const PricingForm = ({ setSubmissionStatus }) => {
   const handleSubmission = async (values, actions) => {
     try {
-      setOffset(window.smoothScroll.offset);
-
       await fetch('/', {
         method: 'POST',
         headers: {
@@ -54,8 +52,6 @@ const PricingForm = ({ setSubmissionStatus, setOffset }) => {
 
       actions.resetForm();
       actions.setSubmitting(false);
-
-      window.smoothScroll.updatePluginOptions('stopScrollbar', { open: true });
 
       setSubmissionStatus('success');
     } catch (err) {
@@ -123,7 +119,6 @@ const PricingForm = ({ setSubmissionStatus, setOffset }) => {
 
 PricingForm.propTypes = {
   setSubmissionStatus: PropTypes.func.isRequired,
-  setOffset: PropTypes.func.isRequired,
 };
 
 export default PricingForm;
