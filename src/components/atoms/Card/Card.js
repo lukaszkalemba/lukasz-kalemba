@@ -11,8 +11,6 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
   const size = useWindowSize();
   const animation = useAnimation();
 
-  const isOffset = index % 2 !== 0 && true;
-
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
     threshold: 0.6,
@@ -23,6 +21,8 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
       animation.start('animate');
     }
   }, [animation, inView]);
+
+  const isOffset = index % 2 !== 0 && true;
 
   const wrapperAnimations = animations.getCard(isOffset, size, animation);
 

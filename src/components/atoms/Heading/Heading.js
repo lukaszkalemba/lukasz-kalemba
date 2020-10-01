@@ -6,16 +6,8 @@ import S from './Heading.styles';
 import animations from './Heading.animations';
 
 const Heading = ({ tag, homePage, animation, className, children }) => {
-  const isH1 = tag === 'h1' && true;
-  let HeadingTag;
-
-  if (isH1) {
-    HeadingTag = S.Heading.H1;
-  } else {
-    HeadingTag = S.Heading.H2;
-  }
-
   const animate = useAnimation();
+
   const [headingRef, inView] = useInView({
     triggerOnce: true,
     threshold: 0.9,
@@ -28,6 +20,15 @@ const Heading = ({ tag, homePage, animation, className, children }) => {
   }, [animate, inView]);
 
   const headingAnimations = animations.getHeading(animation, animate);
+
+  const isH1 = tag === 'h1' && true;
+  let HeadingTag;
+
+  if (isH1) {
+    HeadingTag = S.Heading.H1;
+  } else {
+    HeadingTag = S.Heading.H2;
+  }
 
   return (
     <HeadingTag
