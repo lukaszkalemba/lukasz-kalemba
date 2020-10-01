@@ -5,7 +5,7 @@ import Heading from 'components/atoms/Heading';
 import S from './NotificationContent.styles';
 import animations from './NotificationContent.animations';
 
-const NotificationContent = ({ submissionStatus, enableScrolling }) => {
+const NotificationContent = ({ submissionStatus }) => {
   let textContent = {};
 
   switch (submissionStatus) {
@@ -32,12 +32,7 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
         {textContent.paragraph}
       </S.Paragraph>
       <motion.div {...animations.buttonWrapper}>
-        <S.Button
-          type="link"
-          path="/"
-          priority="primary"
-          onClick={enableScrolling}
-        >
+        <S.Button type="link" path="/" priority="primary">
           Strona główna
         </S.Button>
       </motion.div>
@@ -47,7 +42,6 @@ const NotificationContent = ({ submissionStatus, enableScrolling }) => {
 
 NotificationContent.propTypes = {
   submissionStatus: PropTypes.oneOf(['success', 'error', null]).isRequired,
-  enableScrolling: PropTypes.func.isRequired,
 };
 
 export default NotificationContent;
