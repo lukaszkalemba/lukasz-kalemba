@@ -4,15 +4,17 @@ import '__mocks__/intersectionObserver';
 import Link from './Link';
 
 describe('<Link />', () => {
-  it('renders correctly with given path and content', () => {
-    const fakeContent = 'content';
-    const fakePath = '/fake-path';
+  it('renders with proper path and content', () => {
+    const linkProps = {
+      to: '/projects',
+      children: 'projects',
+    };
 
-    const { getByRole } = render(<Link to={fakePath}>{fakeContent}</Link>);
+    const { getByRole } = render(<Link {...linkProps} />);
 
     const link = getByRole('link');
 
-    expect(link).toHaveTextContent(fakeContent);
-    expect(link).toHaveAttribute('href', fakePath);
+    expect(link).toHaveTextContent(linkProps.children);
+    expect(link).toHaveAttribute('href', linkProps.to);
   });
 });
