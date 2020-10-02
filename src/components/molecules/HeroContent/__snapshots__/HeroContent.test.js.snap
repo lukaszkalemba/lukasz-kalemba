@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HeroContent /> renders correctly and matches snapshot 1`] = `
+exports[`<HeroContent /> matches snapshot 1`] = `
 <div
   class="sc-bdnylx ggAaCM"
 >

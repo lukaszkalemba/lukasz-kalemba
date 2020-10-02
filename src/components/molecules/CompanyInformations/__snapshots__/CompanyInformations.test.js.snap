@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CompanyInformations /> renders correctly and matches snapshot 1`] = `
+exports[`<CompanyInformations /> matches snapshot 1`] = `
 <div
   class="sc-bdnylx bVpGCt"
 >

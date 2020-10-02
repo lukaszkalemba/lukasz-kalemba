@@ -3,15 +3,22 @@ import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
 import ServicesCTASection from './ServicesCTASection';
 
+const renderNotFoundSectionContent = props => {
+  const utils = render(<ServicesCTASection {...props} />);
+
+  return { ...utils };
+};
+
 describe('<ServicesCTASection />', () => {
-  it('renders correctly and matches snapshot', () => {
-    const { container, getByRole } = render(<ServicesCTASection />);
+  it('renders with proper elements inside', () => {
+    const { getByRole } = renderNotFoundSectionContent();
 
-    const heading = getByRole('heading');
-    const link = getByRole('link');
+    expect(getByRole('heading')).toBeInTheDocument();
+    expect(getByRole('link')).toBeInTheDocument();
+  });
 
-    expect(heading).toBeInTheDocument();
-    expect(link).toBeInTheDocument();
+  it('matches snapshot', () => {
+    const { container } = renderNotFoundSectionContent();
 
     expect(container.firstChild).toMatchSnapshot();
   });

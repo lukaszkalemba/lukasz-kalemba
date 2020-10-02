@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ServicesWrapper /> renders correctly and matches snapshot 1`] = `
+exports[`<SocialMediaIcons /> matches snapshot 1`] = `
 <div>
   <article
     class="sc-bdnylx euVKRo"

@@ -2,31 +2,38 @@ import React from 'react';
 import { render } from 'utils/test-utils';
 import ServicesWrapper from './ServicesWrapper';
 
-describe('<ServicesWrapper />', () => {
-  it('renders correctly and matches snapshot', () => {
-    const fakeImages = {
-      design: {
-        childImageSharp: {},
-      },
-      webapp: {
-        childImageSharp: {},
-      },
-      ecommerce: {
-        childImageSharp: {},
-      },
-    };
+const renderServicesWrapper = props => {
+  const utils = render(
+    <ServicesWrapper
+      images={{
+        design: {
+          childImageSharp: {},
+        },
+        webapp: {
+          childImageSharp: {},
+        },
+        ecommerce: {
+          childImageSharp: {},
+        },
+      }}
+      {...props}
+    />
+  );
 
-    const { container, getByText } = render(
-      <ServicesWrapper images={fakeImages} />
-    );
+  return { ...utils };
+};
 
-    const designService = getByText(/projektowanie/i);
-    const websitesService = getByText(/strony/i);
-    const ecommerceService = getByText(/sklepy/i);
+describe('<SocialMediaIcons />', () => {
+  it('renders with all required headings', () => {
+    const { getByText } = renderServicesWrapper();
 
-    expect(designService).toBeInTheDocument();
-    expect(websitesService).toBeInTheDocument();
-    expect(ecommerceService).toBeInTheDocument();
+    expect(getByText(/projektowanie/i)).toBeInTheDocument();
+    expect(getByText(/strony/i)).toBeInTheDocument();
+    expect(getByText(/sklepy/i)).toBeInTheDocument();
+  });
+
+  it('matches snapshot', () => {
+    const { container } = renderServicesWrapper();
 
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -3,29 +3,26 @@ import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
 import NotificationContent from './NotificationContent';
 
+const renderNotificationContent = props => {
+  const utils = render(<NotificationContent {...props} />);
+
+  return { ...utils };
+};
+
 describe('<NotificationContent />', () => {
-  it('renders correctly with success status', () => {
-    const fakeProps = {
+  it('has proper h1 content if status is success', () => {
+    const { getByRole } = renderNotificationContent({
       submissionStatus: 'success',
-    };
+    });
 
-    const { getByRole } = render(<NotificationContent {...fakeProps} />);
-
-    const heading = getByRole('heading');
-
-    expect(heading).toHaveTextContent('Poszło!');
+    expect(getByRole('heading')).toHaveTextContent('Poszło!');
   });
 
-  it('renders correctly with error status', () => {
-    const fakeProps = {
+  it('has proper h1 content if status is error', () => {
+    const { getByRole } = renderNotificationContent({
       submissionStatus: 'error',
-      enableScrolling: jest.fn(),
-    };
+    });
 
-    const { getByRole } = render(<NotificationContent {...fakeProps} />);
-
-    const heading = getByRole('heading');
-
-    expect(heading).toHaveTextContent('Wystąpił błąd...');
+    expect(getByRole('heading')).toHaveTextContent('Wystąpił błąd...');
   });
 });

@@ -2,13 +2,21 @@ import React from 'react';
 import { render } from 'utils/test-utils';
 import SocialMediaIcons from './SocialMediaIcons';
 
+const renderSocialMediaIcons = props => {
+  const utils = render(<SocialMediaIcons {...props} />);
+
+  return { ...utils };
+};
+
 describe('<SocialMediaIcons />', () => {
-  it('renders correctly and matches snapshot', () => {
-    const { container, getAllByRole } = render(<SocialMediaIcons />);
+  it('has proper link elements length', () => {
+    const { getAllByRole } = renderSocialMediaIcons();
 
-    const links = getAllByRole('link');
+    expect(getAllByRole('link')).toHaveLength(4);
+  });
 
-    expect(links).toHaveLength(4);
+  it('matches snapshot', () => {
+    const { container } = renderSocialMediaIcons();
 
     expect(container.firstChild).toMatchSnapshot();
   });

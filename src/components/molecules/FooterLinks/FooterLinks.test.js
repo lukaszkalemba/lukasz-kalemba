@@ -4,7 +4,7 @@ import links from 'utils/links';
 import FooterLinks from './FooterLinks';
 
 describe('<FooterLinks />', () => {
-  it('renders correctly with proper links', () => {
+  it('has proper href attributes', () => {
     const { getAllByRole } = render(<FooterLinks />);
 
     const footerLinks = getAllByRole('link');

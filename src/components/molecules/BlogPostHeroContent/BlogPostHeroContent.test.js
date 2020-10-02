@@ -4,18 +4,17 @@ import '__mocks__/intersectionObserver';
 import BlogPostHeroContent from './BlogPostHeroContent';
 
 describe('<BlogPostHeroContent />', () => {
-  it('renders correctly with given props', () => {
-    const fakeProps = {
-      title: 'fake blog post hero title',
+  it('renders properly with given props', () => {
+    const blogPostHeroContentProps = {
+      title: 'Lorem ipsum.',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     };
 
-    const { getByText } = render(<BlogPostHeroContent {...fakeProps} />);
+    const { getByText } = render(
+      <BlogPostHeroContent {...blogPostHeroContentProps} />
+    );
 
-    const title = getByText(fakeProps.title);
-    const description = getByText(fakeProps.description);
-
-    expect(title).toBeInTheDocument();
-    expect(description).toBeInTheDocument();
+    expect(getByText(blogPostHeroContentProps.title)).toBeInTheDocument();
+    expect(getByText(blogPostHeroContentProps.description)).toBeInTheDocument();
   });
 });

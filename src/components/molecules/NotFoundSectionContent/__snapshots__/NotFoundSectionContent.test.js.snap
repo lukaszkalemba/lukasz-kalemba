@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NotFoundSectionContent /> renders correctly and matches snapshot 1`] = `
+exports[`<NotFoundSectionContent /> matches snapshot 1`] = `
 <main>
   <div
     class="sc-dlnjPT eEtTnh"
