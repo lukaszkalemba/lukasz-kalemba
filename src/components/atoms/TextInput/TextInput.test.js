@@ -4,37 +4,48 @@ import { render, waitFor } from 'utils/test-utils';
 import user from '@testing-library/user-event';
 import TextInput from './TextInput';
 
+const renderTextInput = props => {
+  const utils = render(
+    <Formik
+      initialValues={{
+        name: '',
+      }}
+    >
+      {() => (
+        <Form>
+          <TextInput name="name" {...props} />
+        </Form>
+      )}
+    </Formik>
+  );
+
+  const textInput = utils.getByRole('textbox');
+
+  return { ...utils, textInput };
+};
+
 describe('<TextInput />', () => {
-  it('renders correctly with given props', async () => {
-    const fakeInputValue = 'input value';
-    const fakeProps = {
-      label: 'label',
-      name: 'name',
-      type: 'text',
+  it('renders with proper label', async () => {
+    const textInputProps = {
+      label: 'Name',
     };
 
-    const { getByText, getByRole } = render(
-      <Formik
-        initialValues={{
-          name: '',
-        }}
-      >
-        {() => (
-          <Form>
-            <TextInput {...fakeProps} />
-          </Form>
-        )}
-      </Formik>
-    );
+    const { getByText } = renderTextInput(textInputProps);
 
-    const textInput = getByRole('textbox');
-    const textInputLabel = getByText(fakeProps.label);
+    const TextInputLabel = getByText(textInputProps.label);
 
-    expect(textInputLabel).toBeInTheDocument();
+    expect(TextInputLabel.tagName).toBe('LABEL');
+  });
+
+  it('set proper value of the input', async () => {
+    const { textInput } = renderTextInput({
+      label: 'Name',
+    });
+
+    const textInputValue = 'Lorem ipsum dolor sit amet.';
+
     expect(textInput).toHaveValue('');
-
-    user.type(textInput, fakeInputValue);
-
-    await waitFor(() => expect(textInput).toHaveValue(fakeInputValue));
+    user.type(textInput, textInputValue);
+    await waitFor(() => expect(textInput).toHaveValue(textInputValue));
   });
 });
