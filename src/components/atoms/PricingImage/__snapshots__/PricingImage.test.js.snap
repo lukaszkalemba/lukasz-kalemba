@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PricingImage /> renders correctly matches snapshot 1`] = `
+exports[`<PricingImage /> matches snapshot 1`] = `
 <div
   class="sc-bdnylx eaZsiE"
   style="opacity: 0;"

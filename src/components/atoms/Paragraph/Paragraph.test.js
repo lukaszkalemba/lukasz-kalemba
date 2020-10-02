@@ -3,11 +3,12 @@ import { render } from 'utils/test-utils';
 import Paragraph from './Paragraph';
 
 describe('<Paragraph />', () => {
-  it('renders correctly with given content', () => {
-    const fakeContent = 'Paragraph test';
-    const { getByText } = render(<Paragraph>{fakeContent}</Paragraph>);
+  it('renders properly with given content', () => {
+    const paragraphContent = 'Lorem ipsum dolor sit amet.';
 
-    const paragraph = getByText(fakeContent);
+    const { getByText } = render(<Paragraph>{paragraphContent}</Paragraph>);
+
+    const paragraph = getByText(paragraphContent);
 
     expect(paragraph).toBeInTheDocument();
   });
