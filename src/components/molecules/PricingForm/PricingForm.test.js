@@ -4,20 +4,19 @@ import user from '@testing-library/user-event';
 import PricingForm from './PricingForm';
 
 describe('<PricingForm />', () => {
-  it('sets values of the inputs correctly', async () => {
-    const fakeProps = {
+  it('sets values of the inputs properly', async () => {
+    const pricingFormProps = {
       setSubmissionStatus: jest.fn(),
-      setOffset: jest.fn(),
     };
 
-    const fakeInputsValues = {
+    const InputsValues = {
       name: 'Adam Smith',
       company: 'Corwin Group',
       email: 'adamsmith@mail.com',
       phoneNumber: '407-807-330',
     };
 
-    const { getByLabelText } = render(<PricingForm {...fakeProps} />);
+    const { getByLabelText } = render(<PricingForm {...pricingFormProps} />);
 
     const nameInput = getByLabelText(/imię/i);
     const companyInput = getByLabelText(/firma/i);
@@ -29,14 +28,14 @@ describe('<PricingForm />', () => {
     expect(emailInput).toHaveValue('');
     expect(phoneNumberInput).toHaveValue('');
 
-    user.type(nameInput, fakeInputsValues.name);
-    user.type(companyInput, fakeInputsValues.company);
-    user.type(emailInput, fakeInputsValues.email);
-    user.type(phoneNumberInput, fakeInputsValues.phoneNumber);
+    user.type(nameInput, InputsValues.name);
+    user.type(companyInput, InputsValues.company);
+    user.type(emailInput, InputsValues.email);
+    user.type(phoneNumberInput, InputsValues.phoneNumber);
 
-    expect(nameInput).toHaveValue(fakeInputsValues.name);
-    expect(companyInput).toHaveValue(fakeInputsValues.company);
-    expect(emailInput).toHaveValue(fakeInputsValues.email);
-    expect(phoneNumberInput).toHaveValue(fakeInputsValues.phoneNumber);
+    expect(nameInput).toHaveValue(InputsValues.name);
+    expect(companyInput).toHaveValue(InputsValues.company);
+    expect(emailInput).toHaveValue(InputsValues.email);
+    expect(phoneNumberInput).toHaveValue(InputsValues.phoneNumber);
   });
 });

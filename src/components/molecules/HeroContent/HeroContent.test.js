@@ -3,19 +3,24 @@ import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
 import HeroContent from './HeroContent';
 
+const renderHeroContent = props => {
+  const utils = render(<HeroContent {...props} />);
+
+  return { ...utils };
+};
+
 describe('<HeroContent />', () => {
-  it('renders correctly and matches snapshot', () => {
-    const { container, getByText } = render(<HeroContent />);
+  it('renders with proper elements inside', () => {
+    const { getByText } = renderHeroContent();
 
-    const heading = getByText(/zaistniej w sieci/i);
-    const paragraph = getByText(/zaistniej w świecie/i);
-    const pricingButton = getByText(/wycena/i);
-    const projectsButton = getByText(/projekty/i);
+    expect(getByText(/zaistniej w sieci/i)).toBeInTheDocument();
+    expect(getByText(/zaistniej w świecie/i)).toBeInTheDocument();
+    expect(getByText(/wycena/i)).toBeInTheDocument();
+    expect(getByText(/projekty/i)).toBeInTheDocument();
+  });
 
-    expect(heading).toBeInTheDocument();
-    expect(paragraph).toBeInTheDocument();
-    expect(pricingButton).toBeInTheDocument();
-    expect(projectsButton).toBeInTheDocument();
+  it('matches snapshot', () => {
+    const { container } = renderHeroContent();
 
     expect(container.firstChild).toMatchSnapshot();
   });

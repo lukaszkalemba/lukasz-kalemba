@@ -4,20 +4,19 @@ import '__mocks__/intersectionObserver';
 import ProjectHeroContent from './ProjectHeroContent';
 
 describe('<ProjectHeroContent />', () => {
-  it('renders correctly with given props', () => {
-    const fakeProps = {
+  it('has proper children content based on props', () => {
+    const projectHeroContentProps = {
       title: 'title',
       description: 'description',
     };
 
     const { getByRole, getByText } = render(
-      <ProjectHeroContent {...fakeProps} />
+      <ProjectHeroContent {...projectHeroContentProps} />
     );
 
-    const heading = getByRole('heading');
-    const description = getByText(fakeProps.description);
-
-    expect(heading).toHaveTextContent(fakeProps.title);
-    expect(description).toBeInTheDocument();
+    expect(getByRole('heading')).toHaveTextContent(
+      projectHeroContentProps.title
+    );
+    expect(getByText(projectHeroContentProps.description)).toBeInTheDocument();
   });
 });
