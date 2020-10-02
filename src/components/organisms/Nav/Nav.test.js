@@ -12,13 +12,13 @@ describe('<Nav />', () => {
 
     const { getByTestId, getByRole } = render(<Nav {...fakeProps} />);
 
-    const logoWrapper = getByTestId('logo-wrapper');
+    const logo = getByTestId('logo');
     const projectsLink = getByRole('link', { name: /projekty/i });
     const blogLink = getByRole('link', { name: /blog/i });
     const pricingLink = getByRole('link', { name: /wycena/i });
     const menuButton = getByRole('button');
 
-    expect(logoWrapper).toHaveStyleRule('pointer-events', 'none');
+    expect(logo).toHaveStyleRule('pointer-events', 'none');
 
     expect(projectsLink).toHaveAttribute('href', '/projekty');
     expect(blogLink).toHaveAttribute('href', '/blog');
@@ -35,8 +35,8 @@ describe('<Nav />', () => {
 
     const { getByTestId } = render(<Nav {...fakeProps} />);
 
-    const logoWrapper = getByTestId('logo-wrapper');
+    const logo = getByTestId('logo');
 
-    expect(logoWrapper).not.toHaveStyleRule('pointer-events', 'none');
+    expect(logo).not.toHaveStyleRule('pointer-events', 'none');
   });
 });
