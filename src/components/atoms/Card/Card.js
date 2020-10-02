@@ -16,15 +16,15 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
     threshold: 0.6,
   });
 
+  const isOffset = index % 2 !== 0 && size.width > 768 && true;
+
   useEffect(() => {
     if (inView) {
       animation.start('animate');
     }
-  }, [animation, inView]);
+  }, [animation, inView, isOffset]);
 
-  const isOffset = index % 2 !== 0 && true;
-
-  const wrapperAnimations = animations.getCard(isOffset, size, animation);
+  const wrapperAnimations = animations.getCard(isOffset, animation);
 
   return (
     <S.Wrapper ref={wrapperRef} {...wrapperAnimations}>
