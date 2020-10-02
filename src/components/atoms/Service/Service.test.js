@@ -3,8 +3,8 @@ import { render } from 'utils/test-utils';
 import Service from './Service';
 
 describe('<Service />', () => {
-  it('renders correctly with proper title', () => {
-    const fakeProps = {
+  it('has proper title', () => {
+    const serviceProps = {
       img: {
         fluid: {
           aspectRatio: 0,
@@ -14,15 +14,12 @@ describe('<Service />', () => {
         },
       },
       animation: {},
+      children: 'Web applications',
     };
 
-    const fakeContent = 'Service test content';
+    const { getByText } = render(<Service {...serviceProps} />);
 
-    const { getByText } = render(
-      <Service {...fakeProps}>{fakeContent}</Service>
-    );
-
-    const serviceTitle = getByText(fakeContent);
+    const serviceTitle = getByText(serviceProps.children);
 
     expect(serviceTitle).toBeInTheDocument();
   });
