@@ -4,37 +4,48 @@ import { render, waitFor } from 'utils/test-utils';
 import user from '@testing-library/user-event';
 import TextareaInput from './TextareaInput';
 
+const renderTextarea = props => {
+  const utils = render(
+    <Formik
+      initialValues={{
+        name: '',
+      }}
+    >
+      {() => (
+        <Form>
+          <TextareaInput name="project-description" rows="5" {...props} />
+        </Form>
+      )}
+    </Formik>
+  );
+
+  const textarea = utils.getByRole('textbox');
+
+  return { ...utils, textarea };
+};
+
 describe('<TextareaInput />', () => {
-  it('renders correctly with given props', async () => {
-    const fakeProps = {
-      label: 'label',
-      name: 'name',
-      rows: '5',
+  it('renders with proper label', async () => {
+    const textareaProps = {
+      label: 'Project Description',
     };
-    const fakeInputValue = 'input value';
 
-    const { getByText, getByRole } = render(
-      <Formik
-        initialValues={{
-          name: '',
-        }}
-      >
-        {() => (
-          <Form>
-            <TextareaInput {...fakeProps} />
-          </Form>
-        )}
-      </Formik>
-    );
+    const { getByText } = renderTextarea(textareaProps);
 
-    const textareaInput = getByRole('textbox');
-    const textareaInputLabel = getByText(fakeProps.label);
+    const textareaInputLabel = getByText(textareaProps.label);
 
-    expect(textareaInputLabel).toBeInTheDocument();
-    expect(textareaInput).toHaveValue('');
+    expect(textareaInputLabel.tagName).toBe('LABEL');
+  });
 
-    user.type(textareaInput, fakeInputValue);
+  it('set proper value of the input', async () => {
+    const { textarea } = renderTextarea({
+      label: 'Project Description',
+    });
 
-    await waitFor(() => expect(textareaInput).toHaveValue(fakeInputValue));
+    const textareaValue = 'Lorem ipsum dolor sit amet.';
+
+    expect(textarea).toHaveValue('');
+    user.type(textarea, textareaValue);
+    await waitFor(() => expect(textarea).toHaveValue(textareaValue));
   });
 });
