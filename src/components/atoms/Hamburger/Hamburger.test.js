@@ -4,18 +4,16 @@ import user from '@testing-library/user-event';
 import 'jest-styled-components';
 import Hamburger from './Hamburger';
 
-const fakeToggleNav = jest.fn();
-
 describe('<Hamburger />', () => {
   it('executes toggling nav function on click', () => {
+    const toggleNav = jest.fn();
+
     const { getByRole } = render(
-      <Hamburger isNavOpen={false} toggleNav={fakeToggleNav} />
+      <Hamburger isNavOpen={false} toggleNav={toggleNav} />
     );
 
-    const button = getByRole('button');
+    user.click(getByRole('button'));
 
-    user.click(button);
-
-    expect(fakeToggleNav).toHaveBeenCalledTimes(1);
+    expect(toggleNav).toHaveBeenCalledTimes(1);
   });
 });
