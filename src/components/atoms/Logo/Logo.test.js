@@ -4,19 +4,41 @@ import user from '@testing-library/user-event';
 import 'jest-styled-components';
 import Logo from './Logo';
 
+const renderLogo = props => {
+  const utils = render(<Logo {...props} />);
+
+  const logo = utils.getByTestId('logo');
+  return { ...utils, logo };
+};
+
 describe('<Logo />', () => {
-  it('renders correctly with proper styles', () => {
-    const setIsNavOpen = jest.fn();
+  it('has proper styles if is home page', () => {
+    const { logo } = renderLogo({
+      path: '/',
+      setIsNavOpen: jest.fn(),
+    });
 
-    const { getByTestId } = render(
-      <Logo path="/" setIsNavOpen={setIsNavOpen} />
-    );
+    expect(logo).toHaveStyleRule('pointer-events', 'none');
+  });
 
-    const logoWrapper = getByTestId('logo-wrapper');
+  it('has proper styles if is not home page', () => {
+    const { logo } = renderLogo({
+      path: '/projects',
+      setIsNavOpen: jest.fn(),
+    });
 
-    expect(logoWrapper).toHaveStyleRule('pointer-events', 'none');
+    expect(logo).toHaveStyleRule('pointer-events', 'auto');
+  });
 
-    user.click(logoWrapper);
-    expect(setIsNavOpen).toHaveBeenCalledTimes(1);
+  it('fires nav state function on click', () => {
+    const logoProps = {
+      path: '/',
+      setIsNavOpen: jest.fn(),
+    };
+
+    const { logo } = renderLogo(logoProps);
+
+    user.click(logo);
+    expect(logoProps.setIsNavOpen).toHaveBeenCalledTimes(1);
   });
 });
