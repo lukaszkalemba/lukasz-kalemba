@@ -1,8 +1,8 @@
-const getCard = (isOffset, size, animate) => ({
+const getCard = (isOffset, animate) => ({
   variants: {
     animate: {
       opacity: 1,
-      y: isOffset && size.width > 768 ? 40 : 0,
+      y: isOffset ? 40 : 0,
       transition: { duration: 0.8 },
     },
     initial: { opacity: 0, y: 80 },
