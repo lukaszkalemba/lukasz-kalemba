@@ -5,7 +5,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `lukaszkalemba`,
+    title: `lukasz.kalemba`,
     description: `Zaprojektujmy i wdróżmy sklep, stronę lub aplikację internetową spersonalizowaną pod Twój biznes.`,
     author: `@lukaszkalemba`,
   },
