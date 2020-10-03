@@ -36,7 +36,6 @@ describe('<PricingContent />', () => {
     );
 
     const heading = getByText(/opowiedz/i);
-
     const notificationButton = queryByTestId('close-notification-button');
 
     const nameInput = getByLabelText(/imię/i);

@@ -4,46 +4,47 @@ import user from '@testing-library/user-event';
 import '__mocks__/intersectionObserver';
 import Notification from './Notification';
 
-window.smoothScroll = {
-  updatePluginOptions: jest.fn(),
+const renderNotification = props => {
+  const utils = render(<Notification {...props} />);
+
+  return { ...utils };
 };
 
 describe('<Notification />', () => {
-  it('closes notification on icon click', () => {
-    const fakeProps = {
+  it('closes notification on close button click', () => {
+    const notificationProps = {
       submissionStatus: 'success',
       setSubmissionStatus: jest.fn(),
-      offset: { x: 0, y: 0 },
     };
-    const { getByTestId } = render(<Notification {...fakeProps} />);
+
+    const { getByTestId } = renderNotification(notificationProps);
 
     const closeButton = getByTestId('close-notification-button');
 
     user.click(closeButton);
 
-    expect(fakeProps.setSubmissionStatus).toHaveBeenCalledTimes(1);
+    expect(notificationProps.setSubmissionStatus).toHaveBeenCalledTimes(1);
   });
 
-  it('renders correctly with success status', () => {
-    const fakeProps = {
+  it('has proper text content of heading if status is success', () => {
+    const notificationProps = {
       submissionStatus: 'success',
       setSubmissionStatus: jest.fn(),
-      offset: { x: 0, y: 0 },
     };
-    const { getByRole } = render(<Notification {...fakeProps} />);
+
+    const { getByRole } = renderNotification(notificationProps);
 
     const heading = getByRole('heading');
 
     expect(heading).toHaveTextContent(/poszło/i);
   });
 
-  it('renders correctly with error status', () => {
-    const fakeProps = {
+  it('has proper text content of heading if status is error', () => {
+    const notificationProps = {
       submissionStatus: 'error',
       setSubmissionStatus: jest.fn(),
-      offset: { x: 0, y: 0 },
     };
-    const { getByRole } = render(<Notification {...fakeProps} />);
+    const { getByRole } = render(<Notification {...notificationProps} />);
 
     const heading = getByRole('heading');
 

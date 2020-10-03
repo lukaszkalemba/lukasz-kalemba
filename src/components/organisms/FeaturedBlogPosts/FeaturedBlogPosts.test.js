@@ -48,7 +48,7 @@ beforeEach(() => {
 });
 
 describe('<FeaturedBlogPosts />', () => {
-  it('renders correctly with all children components', () => {
+  it('has proper heading, cards and link components inside', () => {
     const { getByRole, getAllByRole, getByText } = render(
       <FeaturedBlogPosts />
     );

@@ -4,7 +4,7 @@ import '__mocks__/intersectionObserver';
 import HomePageHero from './HomePageHero';
 
 describe('<HomePageHero />', () => {
-  it('renders correctly with all children', () => {
+  it('has proper heading, paragraph, buttons and scroll arrow components inside', () => {
     const { getByText } = render(<HomePageHero />);
 
     const heading = getByText(/zaistniej w sieci/i);

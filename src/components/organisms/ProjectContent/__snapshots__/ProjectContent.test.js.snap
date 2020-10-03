@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProjectContent /> renders correctly with fake images and matches snapshot 1`] = `
+exports[`<ProjectContent /> renders properly with images and matches snapshot 1`] = `
 <div
   class="sc-bdnylx ggAaCM"
 >

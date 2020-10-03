@@ -8,26 +8,16 @@ import Footer from 'components/organisms/Footer';
 
 const MainPageTemplate = ({ location, children }) => {
   let isFooter = true;
-  let isHomePage = false;
 
-  switch (location.pathname) {
-    case '/':
-      isHomePage = true;
-      break;
-
-    case '/404':
-      isFooter = false;
-      break;
-
-    default:
-      break;
+  if (location.pathname === '/404/') {
+    isFooter = false;
   }
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Nav path={location.pathname} isHomePage={isHomePage} />
+        <Nav path={location.pathname} />
         <main>{children}</main>
         {isFooter && <Footer />}
       </ThemeProvider>
