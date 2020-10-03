@@ -8,11 +8,12 @@ import Container from 'components/particles/Container';
 import animations from './Nav.animations';
 import S from './Nav.styles';
 
-const Nav = ({ path, isHomePage }) => {
+const Nav = ({ path }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const size = useWindowSize();
 
   const isMobile = size.width < 1150;
+  const isHomePage = path === '/';
 
   const toggleNav = () => {
     setIsNavOpen(state => !state);
@@ -41,7 +42,6 @@ const Nav = ({ path, isHomePage }) => {
 
 Nav.propTypes = {
   path: PropTypes.string.isRequired,
-  isHomePage: PropTypes.bool.isRequired,
 };
 
 export default Nav;

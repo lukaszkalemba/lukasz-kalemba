@@ -4,9 +4,9 @@ import '__mocks__/intersectionObserver';
 import BlogPostHero from './BlogPostHero';
 
 describe('<BlogPostHero />', () => {
-  it('renders correctly with given props', () => {
-    const fakeProps = {
-      title: 'fake title',
+  it('has proper heading, paragraph and scroll arrow components inside', () => {
+    const blogPostHeroProps = {
+      title: 'Lorem ipsum.',
       description: 'Lorem ipsum dolor sit amet.',
       image: {
         fluid: {
@@ -18,10 +18,12 @@ describe('<BlogPostHero />', () => {
       },
     };
 
-    const { getByRole, getByText } = render(<BlogPostHero {...fakeProps} />);
+    const { getByRole, getByText } = render(
+      <BlogPostHero {...blogPostHeroProps} />
+    );
 
     const heading = getByRole('heading', { level: 1 });
-    const paragraph = getByText(fakeProps.description);
+    const paragraph = getByText(blogPostHeroProps.description);
     const scrollArrowInfo = getByText(/przesuń/i);
 
     expect(heading).toBeInTheDocument();

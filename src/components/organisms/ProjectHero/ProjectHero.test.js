@@ -3,7 +3,7 @@ import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
 import ProjectHero from './ProjectHero';
 
-const fakeProps = {
+const projectHeroProps = {
   title: 'Fake project hero title',
   description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
   image: {
@@ -15,13 +15,15 @@ const fakeProps = {
 };
 
 describe('<ProjectHero />', () => {
-  it('renders correctly with proper content values', () => {
-    const { getByRole, getByText } = render(<ProjectHero {...fakeProps} />);
+  it('has proper heading and description components inside', () => {
+    const { getByRole, getByText } = render(
+      <ProjectHero {...projectHeroProps} />
+    );
 
     const contentHeading = getByRole('heading');
-    const contentDescription = getByText(fakeProps.description);
+    const contentDescription = getByText(projectHeroProps.description);
 
-    expect(contentHeading).toHaveTextContent(fakeProps.title);
+    expect(contentHeading).toHaveTextContent(projectHeroProps.title);
     expect(contentDescription).toBeInTheDocument();
   });
 });

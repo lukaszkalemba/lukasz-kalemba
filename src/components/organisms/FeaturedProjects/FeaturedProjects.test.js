@@ -46,7 +46,7 @@ beforeEach(() => {
 });
 
 describe('<FeaturedProjects />', () => {
-  it('renders correctly with all children components', () => {
+  it('has proper heading, cards and link components inside', () => {
     const { getByRole, getAllByRole, getByText } = render(<FeaturedProjects />);
 
     const sectionHeading = getByRole('heading', { level: 2 });

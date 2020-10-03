@@ -3,22 +3,23 @@ import { render } from 'utils/test-utils';
 import 'jest-styled-components';
 import Nav from './Nav';
 
+const renderNav = props => {
+  const utils = render(<Nav {...props} />);
+
+  const logo = utils.getByTestId('logo');
+  return { ...utils, logo };
+};
+
 describe('<Nav />', () => {
-  it('renders correctly with home page', () => {
-    const fakeProps = {
+  it('has proper logo, button and links components inside', () => {
+    const { getByRole } = renderNav({
       path: '/',
-      isHomePage: true,
-    };
+    });
 
-    const { getByTestId, getByRole } = render(<Nav {...fakeProps} />);
-
-    const logo = getByTestId('logo');
     const projectsLink = getByRole('link', { name: /projekty/i });
     const blogLink = getByRole('link', { name: /blog/i });
     const pricingLink = getByRole('link', { name: /wycena/i });
     const menuButton = getByRole('button');
-
-    expect(logo).toHaveStyleRule('pointer-events', 'none');
 
     expect(projectsLink).toHaveAttribute('href', '/projekty');
     expect(blogLink).toHaveAttribute('href', '/blog');
@@ -27,16 +28,19 @@ describe('<Nav />', () => {
     expect(menuButton).toBeInTheDocument();
   });
 
-  it('renders correctly with not home page', () => {
-    const fakeProps = {
-      path: '/fake-path',
-      isHomePage: false,
-    };
+  it('renders logo with proper styles if is home page', () => {
+    const { logo } = renderNav({
+      path: '/',
+    });
 
-    const { getByTestId } = render(<Nav {...fakeProps} />);
+    expect(logo).toHaveStyleRule('pointer-events', 'none');
+  });
 
-    const logo = getByTestId('logo');
+  it('renders logo with proper styles if is not home page', () => {
+    const { logo } = renderNav({
+      path: '/projects',
+    });
 
-    expect(logo).not.toHaveStyleRule('pointer-events', 'none');
+    expect(logo).toHaveStyleRule('pointer-events', 'auto');
   });
 });

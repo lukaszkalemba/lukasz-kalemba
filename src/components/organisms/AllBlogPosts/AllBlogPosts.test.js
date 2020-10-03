@@ -48,7 +48,7 @@ beforeEach(() => {
 });
 
 describe('<AllBlogPosts />', () => {
-  it('renders correctly with heading and cards', () => {
+  it('has proper heading and cards components inside', () => {
     const { getByRole, getAllByRole } = render(<AllBlogPosts />);
 
     const pageHeading = getByRole('heading', { level: 1 });

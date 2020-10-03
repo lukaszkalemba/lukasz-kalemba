@@ -42,7 +42,7 @@ beforeEach(() => {
 });
 
 describe('<OfferedServices />', () => {
-  it('renders correctly', () => {
+  it('has heading, subheadings and link components inside', () => {
     const { getByRole, getByText } = render(<OfferedServices />);
 
     const heading = getByRole('heading', { level: 2 });

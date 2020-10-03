@@ -23,8 +23,8 @@ const BlogPostContentItem = ({ content }) => {
   return (
     <S.Wrapper
       ref={wrapperRef}
-      {...wrapperAnimations}
       data-testid="blog-post-content-item"
+      {...wrapperAnimations}
     >
       {content}
     </S.Wrapper>

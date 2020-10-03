@@ -4,7 +4,7 @@ import '__mocks__/intersectionObserver';
 import Footer from './Footer';
 
 describe('<Footer />', () => {
-  it('renders correctly with all children', () => {
+  it('has proper links, logo and copyright components inside', () => {
     const { getByRole, getByText, getByTestId } = render(<Footer />);
 
     const emailLink = getByRole('link', { name: /@/i });
