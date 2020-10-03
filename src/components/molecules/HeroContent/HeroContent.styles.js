@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import HeadingComponent from 'components/atoms/Heading';
 import ParagraphComponent from 'components/atoms/Paragraph';
+import ContainerComponent from 'components/particles/Container';
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 8vh;
+  margin-top: 50px;
   padding: 0 30px;
 
   ${({ theme }) => theme.media.laptop`
     flex-direction: column-reverse;
     padding: 0;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-top: 90px;
+    align-items: flex-end;
   `}
 
   ${({ theme }) => theme.media.desktop`
@@ -25,17 +26,11 @@ const Content = styled.div`
 const Heading = styled(HeadingComponent)`
   ${({ theme }) => theme.media.laptop`
     margin: 0.20em 0;
-    margin-left: calc(3vw);
-  `}
-
-  ${({ theme }) => theme.media.desktop`
-    margin-left: calc(15vw);
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
     font-size: ${theme.font.size.xxxl};
     margin: 0.15em 0;
-    margin-left: calc(13vw);
   `}
 `;
 
@@ -53,16 +48,7 @@ const Paragraph = styled(ParagraphComponent)`
 
   ${({ theme }) => theme.media.laptop`
     flex-direction: row;
-    margin-left: 26vw;
-    width: auto;
-  `}
-
-  ${({ theme }) => theme.media.desktop`
-    margin-left: 33vw;
-  `}
-
-  ${({ theme }) => theme.media.largeDesktop`
-    margin-left: 38vw;
+    margin-right: -130px;
   `}
 `;
 
@@ -81,18 +67,20 @@ const Buttons = styled(motion.div)`
 
   ${({ theme }) => theme.media.laptop`
     flex-direction: row;
-    justify-content: flex-start;
     padding: 0;
-    margin-left: 150px;
-  `}
-
-  ${({ theme }) => theme.media.desktop`
-    margin-left: 15vw;
-  `}
-
-  ${({ theme }) => theme.media.largeDesktop`
-    margin-left: 18vw;
+    justify-content: flex-end;
+    margin-right: 130px;
   `}
 `;
 
-export default { Content, Heading, Paragraph, Buttons };
+const Container = styled(ContainerComponent)`
+  ${({ theme }) => theme.media.laptop`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 21vw;
+  `}
+`;
+
+export default { Content, Heading, Paragraph, Buttons, Container };

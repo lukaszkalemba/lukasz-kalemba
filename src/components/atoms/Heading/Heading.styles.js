@@ -5,7 +5,6 @@ const headingBase = css`
   font-size: ${({ theme }) => theme.font.size.s};
   z-index: ${({ theme }) => theme.zindex.level2};
   position: relative;
-  max-width: 85%;
   margin-left: 15px;
 
   ${({ theme }) => theme.media.tablet`
