@@ -2,27 +2,13 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
-  height: 85vh;
-
-  ::before {
-    content: '404';
-    display: none;
-    font-size: 30vw;
-    position: absolute;
-    left: 10%;
-    font-weight: ${({ theme }) => theme.font.weight.bold};
-    opacity: 0.02;
-
-    ${({ theme }) => theme.media.laptop`
-      display: block;
-    `}
-  }
+  height: 87vh;
 
   ::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
     width: 0;
     height: 0;
     border-style: solid;
@@ -31,13 +17,24 @@ const Wrapper = styled.div`
     border-bottom-color: ${({ theme }) => theme.color.primary};
 
     ${({ theme }) => theme.media.tablet`
-      bottom: -15px;
       border-width: 0 0 400px 400px;
+      bottom: 50px;
+      right: 50px;
     `}
 
     ${({ theme }) => theme.media.laptop`
-      bottom: 15px;
+      bottom: 35px;
+      right: 0;
       border-width: 0 0 500px 500px;
+    `}
+
+    ${({ theme }) => theme.media.desktop`
+      border-width: 0 0 850px 1000px;
+    `}
+
+    ${({ theme }) => theme.media.largeDesktop`
+      bottom: 45px;
+      border-width: 0 0 900px 1150px;
     `}
   }
 `;

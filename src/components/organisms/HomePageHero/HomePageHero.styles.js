@@ -1,20 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-const rotate = keyframes`
-  from {
-    opacity:0;
-    transform: translate(50px, 50px);
-  }
-
-  to {
-    opacity: 0.7;
-    transform: translate(0, 0);
-  }
-`;
-
 const Wrapper = styled(motion.div)`
-  height: 90vh;
+  height: 87vh;
   position: relative;
 
   ::after {
@@ -28,20 +16,17 @@ const Wrapper = styled(motion.div)`
     border-width: 0 0 200px 200px;
     border-color: transparent;
     border-bottom-color: ${({ theme }) => theme.color.primary};
-    opacity: 0;
-    animation: ${rotate} 0.7s ease-out forwards;
 
     ${({ theme }) => theme.media.tablet`
       border-width: 0 0 400px 400px;
       bottom: 50px;
       right: 50px;
-      opacity: 0;
     `}
 
     ${({ theme }) => theme.media.laptop`
-      bottom: 0;
+      bottom: 50px;
       right: 0;
-      border-width: 0 0 600px 600px;
+      border-width: 0 0 500px 500px;
     `}
 
     ${({ theme }) => theme.media.desktop`
@@ -49,6 +34,7 @@ const Wrapper = styled(motion.div)`
     `}
 
     ${({ theme }) => theme.media.largeDesktop`
+      bottom: 45px;
       border-width: 0 0 900px 1150px;
     `}
   }

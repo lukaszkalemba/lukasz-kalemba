@@ -4,11 +4,11 @@ const Section = styled.section`
   padding: 20px 0;
 
   ${({ theme }) => theme.media.laptop`
-    padding: 50px 0;
+    padding: 20px 0 50px;
   `}
 
   ${({ theme }) => theme.media.desktop`
-    padding: 70px 0;
+    padding: 40px 0 70px;
   `}
 `;
 

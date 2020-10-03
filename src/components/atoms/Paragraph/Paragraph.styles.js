@@ -10,7 +10,6 @@ const Paragraph = styled(motion.p)`
 
   ${({ theme }) => theme.media.tablet`
     font-size:  calc(${theme.font.size.s} - 2px);
-    max-width: 90%;
     line-height: 30px;
   `}
 
