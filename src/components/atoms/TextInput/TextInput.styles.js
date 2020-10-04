@@ -31,11 +31,11 @@ const Input = styled.input`
   border: none;
   background-color: transparent;
   color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   transition: all 0.2s ease-in-out;
   max-width: 400px;
   border-bottom-color: ${({ isError }) =>
-    isError ? 'orange' : 'rgba(255, 255, 255, 0.5)'};
+    isError ? 'orange' : 'rgba(255, 255, 255, 0.35)'};
 
   ${({ theme }) => theme.media.tablet`
     font-size: 18px;
