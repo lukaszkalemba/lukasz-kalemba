@@ -6,6 +6,7 @@ import Button from 'components/atoms/Button';
 import TextInput from 'components/atoms/TextInput';
 import TextareaInput from 'components/atoms/TextareaInput';
 import { encodeFormValues } from 'helpers/encodeFormValues';
+import { disableScrolling } from 'helpers/disableScrolling';
 import S from './PricingForm.styles';
 import animations from './PricingForm.animations';
 
@@ -48,8 +49,10 @@ const PricingForm = ({ setSubmissionStatus }) => {
       actions.resetForm();
       actions.setSubmitting(false);
 
+      disableScrolling();
       setSubmissionStatus('success');
     } catch (err) {
+      disableScrolling();
       setSubmissionStatus('error');
     }
   };

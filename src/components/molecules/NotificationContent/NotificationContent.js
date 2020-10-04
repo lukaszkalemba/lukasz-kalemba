@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Heading from 'components/atoms/Heading';
 import { getNotificationContent } from 'helpers/getNotificationContent';
+import { enableScrolling } from 'helpers/enableScrolling';
 import S from './NotificationContent.styles';
 import animations from './NotificationContent.animations';
 
@@ -16,7 +17,12 @@ const NotificationContent = ({ submissionStatus }) => {
         {textContent.paragraph}
       </S.Paragraph>
       <motion.div {...animations.buttonWrapper}>
-        <S.Button type="link" path="/" priority="primary">
+        <S.Button
+          type="link"
+          path="/"
+          priority="primary"
+          onClick={enableScrolling}
+        >
           Strona główna
         </S.Button>
       </motion.div>
