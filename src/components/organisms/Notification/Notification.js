@@ -10,6 +10,10 @@ const Notification = ({ submissionStatus, setSubmissionStatus }) => {
     setSubmissionStatus(null);
   };
 
+  document.body.ontouchend = e => {
+    e.preventDefault();
+  };
+
   return (
     <S.Backdrop {...animations.backdrop}>
       <S.Wrapper>

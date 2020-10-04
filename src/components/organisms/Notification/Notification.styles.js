@@ -17,7 +17,9 @@ const Wrapper = styled(motion.div)`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75vw;
+  max-width: 500px;
   height: 50vh;
+  max-height: 500px;
   display: flex;
   flex-direction: column;
   z-index: ${({ theme }) => theme.zindex.level3};
