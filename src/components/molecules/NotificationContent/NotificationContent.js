@@ -10,7 +10,7 @@ const NotificationContent = ({ submissionStatus }) => {
   const textContent = getNotificationContent(submissionStatus);
 
   return (
-    <S.Wrapper>
+    <div>
       <Heading>{textContent.heading}</Heading>
       <S.Paragraph animation={animations.paragraph}>
         {textContent.paragraph}
@@ -20,7 +20,7 @@ const NotificationContent = ({ submissionStatus }) => {
           Strona główna
         </S.Button>
       </motion.div>
-    </S.Wrapper>
+    </div>
   );
 };
 
