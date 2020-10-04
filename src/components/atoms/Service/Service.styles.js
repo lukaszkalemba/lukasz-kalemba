@@ -12,6 +12,12 @@ const Article = styled.article`
 
   ${({ theme }) => theme.media.laptop`
     justify-content: flex-end;
+
+    :hover {
+      >div {
+        opacity: 0.1 !important;
+      }
+    }
   `}
 `;
 
@@ -24,10 +30,6 @@ const Overlay = styled(GatsbyBackground)`
 
   ${({ theme }) => theme.media.laptop`
     opacity: 0 !important;
-
-    :hover {
-      opacity: 0.1 !important;
-    }
   `}
 `;
 
