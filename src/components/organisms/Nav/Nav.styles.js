@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 const Header = styled(motion.header)`
   position: relative;
   z-index: ${({ theme }) => theme.zindex.level3};
-  height: 13vh;
+  height: 10vh;
+
+  ${({ theme }) => theme.media.tablet`
+    height: 13vh;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     opacity: 0;

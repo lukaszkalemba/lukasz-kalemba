@@ -4,14 +4,10 @@ import BackgroundImage from 'gatsby-background-image';
 
 const Background = styled(BackgroundImage)`
   position: absolute;
-  top: -100px;
+  top: -13vh;
   width: 100vw;
-  height: calc(100vh + 50px);
+  height: 100vh;
   z-index: 0;
-
-  ${({ theme }) => theme.media.tablet`
-    top: -120px;
-  `}
 `;
 
 const Overlay = styled.div`

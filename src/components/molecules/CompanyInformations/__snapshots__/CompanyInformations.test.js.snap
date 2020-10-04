@@ -5,24 +5,24 @@ exports[`<CompanyInformations /> matches snapshot 1`] = `
   class="sc-bdnylx bVpGCt"
 >
   <a
-    class="sc-gtssRu dWkJeQ"
+    class="sc-gtssRu ciPAMe"
     href="tel:+48797709856"
   >
     +48 797 709 856
   </a>
   <a
-    class="sc-gtssRu dWkJeQ"
+    class="sc-gtssRu ciPAMe"
     href="mailto:kontakt@lukaszkalemba.pl"
   >
     kontakt@lukaszkalemba.pl
   </a>
   <p
-    class="sc-dlnjPT ffojLO"
+    class="sc-dlnjPT xcmoR"
   >
     REGON: 000000000
   </p>
   <p
-    class="sc-dlnjPT ffojLO"
+    class="sc-dlnjPT xcmoR"
   >
     KRS: 0000000000
   </p>

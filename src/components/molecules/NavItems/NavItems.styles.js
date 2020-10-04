@@ -1,31 +1,27 @@
 import styled from 'styled-components';
 import slashPattern from 'assets/svgs/pattern_slash.svg';
+import SocialMediaIconsComponent from 'components/molecules/SocialMediaIcons';
+import ContainerComponent from 'components/particles/Container';
 
-const List = styled.ul`
-  margin: 0;
-  padding: 0;
+const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.background.dark};
   position: absolute;
   z-index: ${({ theme }) => theme.zindex.level3};
   top: 0;
   left: 0;
-  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
+  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
   transition: transform 250ms ease-in-out;
   transition-delay: 250ms;
+  display: flex;
+  align-items: center;
 
   ${({ theme }) => theme.media.laptop`
     height: auto;
     position: static;
     background-color: transparent;
     transform: translate(0);
-    flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
   `}
     ::before {
@@ -39,9 +35,7 @@ const List = styled.ul`
     background-size: 100%;
     height: 75%;
     width: 75%;
-    transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
-    transition: transform 250ms ease-in-out;
-    transition-delay: ${({ isNavOpen }) => (isNavOpen ? '300ms' : '0')};
+    max-width: 350px;
 
     ${({ theme }) => theme.media.tablet`
       height: 65%;
@@ -54,4 +48,37 @@ const List = styled.ul`
   }
 `;
 
-export default { List };
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  ${({ theme }) => theme.media.laptop`
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  `}
+`;
+
+const Container = styled(ContainerComponent)`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  ${({ theme }) => theme.media.laptop`
+    display: none;
+  `}
+`;
+
+const SocialMediaIcons = styled(SocialMediaIconsComponent)`
+  opacity: 0.5;
+
+  a {
+    padding: 10px 13px;
+  }
+`;
+
+export default { Wrapper, List, Container, SocialMediaIcons };

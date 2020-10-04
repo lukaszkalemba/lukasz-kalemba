@@ -32,8 +32,10 @@ const Footer = styled(motion.footer)`
 `;
 
 const TopBar = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
   ${({ theme }) => theme.media.laptop`
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 110px 0 75px;
   `}

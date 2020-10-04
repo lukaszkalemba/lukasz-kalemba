@@ -6,22 +6,22 @@ import NavItems from './NavItems';
 const renderNavItems = props => {
   const utils = render(<NavItems {...props} closeNav={jest.fn()} />);
 
-  const navItemsList = utils.getByTestId('nav-items-list');
-  return { ...utils, navItemsList };
+  const navItemsWrapper = utils.getByTestId('nav-items-wrapper');
+  return { ...utils, navItemsWrapper };
 };
 
 describe('<NavItems />', () => {
   it('renders properly with closed nav', () => {
-    const { navItemsList } = renderNavItems({ isNavOpen: false });
+    const { navItemsWrapper } = renderNavItems({ isNavOpen: false });
 
-    expect(navItemsList).toHaveStyleRule('transform', 'translateX(-150%)');
+    expect(navItemsWrapper).toHaveStyleRule('transform', 'translateX(-150%)');
   });
 
   it('renders properly with opened nav', () => {
-    const { navItemsList } = renderNavItems({
+    const { navItemsWrapper } = renderNavItems({
       isNavOpen: true,
     });
 
-    expect(navItemsList).toHaveStyleRule('transform', 'translateX(0)');
+    expect(navItemsWrapper).toHaveStyleRule('transform', 'translateX(0)');
   });
 });
