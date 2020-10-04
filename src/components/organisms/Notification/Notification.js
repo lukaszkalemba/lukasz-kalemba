@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NotificationContent from 'components/molecules/NotificationContent';
 import Container from 'components/particles/Container';
+import { enableScrolling } from 'helpers/enableScrolling';
 import S from './Notification.styles';
 import animations from './Notification.animations';
 
 const Notification = ({ submissionStatus, setSubmissionStatus }) => {
   const closeNotification = () => {
+    enableScrolling();
     setSubmissionStatus(null);
-  };
-
-  document.body.ontouchend = e => {
-    e.preventDefault();
   };
 
   return (

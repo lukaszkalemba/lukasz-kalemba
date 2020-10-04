@@ -5,6 +5,8 @@ import Logo from 'components/atoms/Logo';
 import NavItems from 'components/molecules/NavItems';
 import Hamburger from 'components/atoms/Hamburger';
 import Container from 'components/particles/Container';
+import { disableScrolling } from 'helpers/disableScrolling';
+import { enableScrolling } from 'helpers/enableScrolling';
 import animations from './Nav.animations';
 import S from './Nav.styles';
 
@@ -16,11 +18,18 @@ const Nav = ({ path }) => {
   const isHomePage = path === '/';
 
   const toggleNav = () => {
+    if (isNavOpen) {
+      enableScrolling();
+    } else {
+      disableScrolling();
+    }
+
     setIsNavOpen(state => !state);
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
+    enableScrolling();
   };
 
   const headerAnimations = animations.getHeader(isHomePage, isMobile);
