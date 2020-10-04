@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Wrapper = styled(motion.div)`
-  height: 87vh;
+  height: 90vh;
   position: relative;
 
   ::after {
@@ -18,6 +18,7 @@ const Wrapper = styled(motion.div)`
     border-bottom-color: ${({ theme }) => theme.color.primary};
 
     ${({ theme }) => theme.media.tablet`
+      height: 87vh;
       border-width: 0 0 400px 400px;
       bottom: 50px;
       right: 50px;
@@ -40,26 +41,4 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-const ScrollWrapper = styled(motion.div)`
-  position: absolute;
-  z-index: ${({ theme }) => theme.zindex.level1};
-  right: 25px;
-  bottom: 45px;
-
-  ${({ theme }) => theme.media.tablet`
-    bottom: 90px;
-    right: 60px;
-  `}
-
-  ${({ theme }) => theme.media.laptop`
-    bottom: 100px;
-    right: 50px;
-  `}
-
-  ${({ theme }) => theme.media.desktop`
-    bottom: 120px;
-    right: 70px;
-  `}
-`;
-
-export default { Wrapper, ScrollWrapper };
+export default { Wrapper };

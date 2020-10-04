@@ -6,11 +6,17 @@ import S from './NavItems.styles';
 
 const NavItems = ({ isNavOpen, closeNav }) => {
   return (
-    <S.List isNavOpen={isNavOpen} data-testid="nav-items-list">
-      {links.map(({ id, path, name }) => (
-        <NavItem key={id} path={path} name={name} closeNav={closeNav} />
-      ))}
-    </S.List>
+    <S.Wrapper isNavOpen={isNavOpen} data-testid="nav-items-wrapper">
+      <S.List>
+        {links.map(({ id, path, name }) => (
+          <NavItem key={id} path={path} name={name} closeNav={closeNav} />
+        ))}
+      </S.List>
+
+      <S.Container axis="both">
+        <S.SocialMediaIcons />
+      </S.Container>
+    </S.Wrapper>
   );
 };
 

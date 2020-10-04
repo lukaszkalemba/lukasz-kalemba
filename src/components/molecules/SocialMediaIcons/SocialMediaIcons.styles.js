@@ -5,14 +5,6 @@ const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 20px;
-
-  ${({ theme }) => theme.media.tablet`
-    padding: 35px 55px;
-  `}
 
   ${({ theme }) => theme.media.laptop`
     position: static;

@@ -7,15 +7,18 @@ const Wrapper = styled(motion.div)`
   align-items: flex-start;
 `;
 
-const A = styled.a`
+const Link = styled.a`
   font-size: ${({ theme }) => theme.font.size.xs};
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   transition: opacity 400ms ease-in-out;
-  padding: 12px 0;
+  padding: 13px 0;
   opacity: 0.8;
 
-  :hover {
+  ${({ theme }) => theme.media.laptop`
+    padding: 12px 0;
+  `}
+    :hover {
     opacity: 1;
   }
 `;
@@ -24,8 +27,12 @@ const Paragraph = styled.p`
   font-size: ${({ theme }) => theme.font.size.xs};
   color: ${({ theme }) => theme.color.white};
   opacity: 0.8;
-  padding: 11px 0;
+  padding: 13px 0;
   margin: 0;
+
+  ${({ theme }) => theme.media.laptop`
+    padding: 12px 0;
+  `}
 `;
 
-export default { Wrapper, A, Paragraph };
+export default { Wrapper, Link, Paragraph };
