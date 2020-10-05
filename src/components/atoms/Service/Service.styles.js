@@ -9,10 +9,9 @@ const Article = styled.article`
   align-items: flex-end;
   min-height: 240px;
   position: relative;
+  justify-content: flex-end;
 
   ${({ theme }) => theme.media.laptop`
-    justify-content: flex-end;
-
     :hover {
       >div {
         opacity: 0.1 !important;
@@ -39,6 +38,7 @@ const Title = styled(motion.h3)`
   padding: 40px;
   z-index: ${({ theme }) => theme.zindex.level1};
   line-height: 30px;
+  text-align: right;
 
   ${({ theme }) => theme.media.tablet`
     font-size: ${theme.font.size.m};
