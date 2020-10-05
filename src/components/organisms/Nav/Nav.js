@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useWindowSize from 'hooks/useWindowSize';
 import Logo from 'components/atoms/Logo';
@@ -7,12 +7,17 @@ import Hamburger from 'components/atoms/Hamburger';
 import Container from 'components/particles/Container';
 import { disableScrolling } from 'helpers/disableScrolling';
 import { enableScrolling } from 'helpers/enableScrolling';
+import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import animations from './Nav.animations';
 import S from './Nav.styles';
 
 const Nav = ({ path }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const size = useWindowSize();
+
+  useEffect(() => {
+    setHeightOnMobile();
+  }, [isNavOpen]);
 
   const isMobile = size.width < 1150;
   const isHomePage = path === '/';

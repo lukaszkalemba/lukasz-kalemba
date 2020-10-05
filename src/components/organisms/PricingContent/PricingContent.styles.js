@@ -12,7 +12,9 @@ const Wrapper = styled.div`
 `;
 
 const Heading = styled(H2)`
-  max-width: 500px;
+  ${({ theme }) => theme.media.laptop`
+    max-width: 500px;
+  `}
 `;
 
 export default { Wrapper, Heading };

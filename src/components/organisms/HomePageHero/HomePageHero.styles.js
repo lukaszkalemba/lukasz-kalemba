@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 const Wrapper = styled(motion.div)`
   height: 90vh;
+  height: calc(var(--vh, 1vh) * 100 - 10vh);
   position: relative;
 
   ::after {
@@ -18,13 +19,13 @@ const Wrapper = styled(motion.div)`
     border-bottom-color: ${({ theme }) => theme.color.primary};
 
     ${({ theme }) => theme.media.tablet`
-      height: 87vh;
       border-width: 0 0 400px 400px;
       bottom: 50px;
       right: 50px;
     `}
 
     ${({ theme }) => theme.media.laptop`
+      height: 87vh;
       bottom: 50px;
       right: 0;
       border-width: 0 0 500px 500px;

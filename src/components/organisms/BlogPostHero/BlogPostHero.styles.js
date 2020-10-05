@@ -9,7 +9,7 @@ const Background = styled(BackgroundImage)`
   height: 100vh;
   z-index: 0;
 
-  ${({ theme }) => theme.media.tablet`
+  ${({ theme }) => theme.media.laptop`
     top: -13vh;
   `}
 `;

@@ -28,14 +28,14 @@ const BackgroundWrapper = styled(motion.div)`
   position: relative;
   grid-column: 3 / 6;
   grid-row: 1 / 2;
-  height: 650px;
+  height: 600px;
 `;
 
 const Background = styled(BackgroundImage)`
   position: relative;
   grid-column: 3 / 6;
   grid-row: 1 / 2;
-  height: 650px;
+  height: 600px;
 `;
 
 const Overlay = styled.div`

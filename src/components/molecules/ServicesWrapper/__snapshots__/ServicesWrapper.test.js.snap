@@ -3,7 +3,7 @@
 exports[`<SocialMediaIcons /> matches snapshot 1`] = `
 <div>
   <article
-    class="sc-bdnylx dKNgyJ"
+    class="sc-bdnylx lhFiJk"
   >
     <h3
       class="sc-dlnjPT cKDbIz"
@@ -13,7 +13,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
     </h3>
   </article>
   <article
-    class="sc-bdnylx dKNgyJ"
+    class="sc-bdnylx lhFiJk"
   >
     <h3
       class="sc-dlnjPT cKDbIz"
@@ -23,7 +23,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
     </h3>
   </article>
   <article
-    class="sc-bdnylx dKNgyJ"
+    class="sc-bdnylx lhFiJk"
   >
     <h3
       class="sc-dlnjPT cKDbIz"
