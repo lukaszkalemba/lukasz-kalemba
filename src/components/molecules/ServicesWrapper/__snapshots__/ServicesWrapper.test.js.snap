@@ -3,30 +3,30 @@
 exports[`<SocialMediaIcons /> matches snapshot 1`] = `
 <div>
   <article
-    class="sc-bdnylx lhFiJk"
+    class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT cKDbIz"
+      class="sc-dlnjPT jZZqwV"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Projektowanie interfejsów
     </h3>
   </article>
   <article
-    class="sc-bdnylx lhFiJk"
+    class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT cKDbIz"
+      class="sc-dlnjPT jZZqwV"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Strony i aplikacje internetowe
     </h3>
   </article>
   <article
-    class="sc-bdnylx lhFiJk"
+    class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT cKDbIz"
+      class="sc-dlnjPT jZZqwV"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Sklepy internetowe

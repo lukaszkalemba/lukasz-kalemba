@@ -32,8 +32,32 @@ const handleAxis = (axis, doubling) => {
   }
 };
 
+const handleMobileDoubling = doubling => {
+  let padding;
+
+  switch (doubling) {
+    case 'x':
+      padding = '20px 30px';
+      break;
+
+    case 'y':
+      padding = '30px 20px';
+      break;
+
+    case 'both':
+      padding = '30px';
+      break;
+
+    default:
+      padding = '20px';
+      break;
+  }
+
+  return padding;
+};
+
 const Wrapper = styled.div`
-  padding: 20px;
+  padding: ${({ doubling }) => handleMobileDoubling(doubling)};
 
   ${({ theme }) => theme.media.tablet`
     font-size: 1rem;
