@@ -27,15 +27,13 @@ const AllProjects = () => {
   const { projects } = useStaticQuery(PROJECTS_QUERY);
 
   return (
-    <>
-      <Container axis="both" doubling="x">
-        <Heading tag="h1">Projekty.</Heading>
+    <Container axis="both" doubling="x">
+      <Heading tag="h1">Projekty.</Heading>
 
-        <Container axis="x">
-          <Cards items={projects} pageSlug="projekty" />
-        </Container>
+      <Container axis="x">
+        <Cards items={projects} pageSlug="projekty" />
       </Container>
-    </>
+    </Container>
   );
 };
 

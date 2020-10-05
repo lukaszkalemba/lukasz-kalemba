@@ -6,7 +6,7 @@ const Header = styled(motion.header)`
   z-index: ${({ theme }) => theme.zindex.level3};
   height: 10vh;
 
-  ${({ theme }) => theme.media.tablet`
+  ${({ theme }) => theme.media.laptop`
     height: 13vh;
   `}
 

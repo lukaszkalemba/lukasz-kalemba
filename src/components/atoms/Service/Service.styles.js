@@ -7,7 +7,7 @@ const Article = styled.article`
   border: 1px solid ${({ theme }) => theme.color.primary};
   display: flex;
   align-items: flex-end;
-  min-height: 300px;
+  min-height: 240px;
   position: relative;
 
   ${({ theme }) => theme.media.laptop`

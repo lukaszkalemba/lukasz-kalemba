@@ -10,7 +10,7 @@ const InputWrapper = styled(motion.div)`
   margin: 30px 0;
 
   ${({ theme }) => theme.media.tablet`
-    margin: 37px 0;
+    margin: 35px 0;
   `}
 
   ${({ theme }) => theme.media.laptop`
@@ -25,7 +25,7 @@ const InputWrapper = styled(motion.div)`
 const Input = styled.input`
   font-size: ${({ theme }) => theme.font.size.xxs};
   font-size: 18px;
-  padding: 10px 0 10px 0;
+  padding: 10px 0 8px 0;
   display: block;
   width: 100%;
   border: none;
@@ -39,6 +39,7 @@ const Input = styled.input`
 
   ${({ theme }) => theme.media.tablet`
     font-size: 18px;
+    padding-bottom: 10px;
   `}
 
   ${({ theme }) => theme.media.laptop`
