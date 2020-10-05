@@ -1,11 +1,12 @@
 import React from 'react';
+import jump from 'jump.js';
 import Icon from 'components/atoms/Icon';
 import arrow from 'assets/svgs/icon_scrolldown-arrow.svg';
 import S from './ScrollArrow.styles';
 
 const ScrollArrow = () => {
   const handleClick = () => {
-    // TODO handle scroll arrow click
+    jump(window.innerHeight);
   };
 
   return (
