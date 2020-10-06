@@ -1,21 +1,25 @@
-const heading = {
-  variants: {
-    initial: { opacity: 0, x: -80 },
-    animate: { opacity: 1, x: 0, transition: { duration: 0.75 } },
-  },
+const getHeading = size => {
+  return {
+    variants: {
+      initial: { opacity: 0, x: size.width > 1150 ? 80 : -80 },
+      animate: { opacity: 1, x: 0, transition: { duration: 0.75 } },
+    },
+  };
 };
 
-const paragraph = {
-  variants: {
-    initial: { opacity: 0, x: -80 },
-    animate: { opacity: 0.5, x: 0, transition: { duration: 0.75 } },
-  },
+const getParagraph = size => {
+  return {
+    variants: {
+      initial: { opacity: 0, x: size.width > 1150 ? -80 : 80 },
+      animate: { opacity: 0.5, x: 0, transition: { duration: 0.75 } },
+    },
+  };
 };
 
 const getButtons = size => {
   return {
     variants: {
-      initial: { opacity: 0, x: -80 },
+      initial: { opacity: 0, x: size.width > 1150 ? -80 : 80 },
       animate: {
         opacity: 1,
         x: 0,
@@ -29,7 +33,7 @@ const getButtons = size => {
 };
 
 export default {
-  heading,
-  paragraph,
+  getHeading,
+  getParagraph,
   getButtons,
 };
