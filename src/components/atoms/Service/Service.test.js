@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
+import '__mocks__/intersectionObserver';
 import Service from './Service';
 
 describe('<Service />', () => {
