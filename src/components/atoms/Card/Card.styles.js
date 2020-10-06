@@ -57,18 +57,18 @@ const Overlay = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: ${({ theme }) => theme.font.size.s};
+  font-size: ${({ theme }) => theme.font.size.heading.xxs};
   position: relative;
   z-index: ${({ theme }) => theme.zindex.level1};
   margin: 0;
   text-align: right;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.m};
+    font-size: ${theme.font.size.heading.s};
   `}
 
   ${({ theme }) => theme.media.laptop`
-    font-size: ${theme.font.size.l};
+    font-size: ${theme.font.size.heading.m};
   `}
 `;
 

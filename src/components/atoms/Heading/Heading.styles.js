@@ -2,18 +2,18 @@ import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const headingBase = css`
-  font-size: ${({ theme }) => theme.font.size.s};
+  font-size: ${({ theme }) => theme.font.size.heading.xs};
   z-index: ${({ theme }) => theme.zindex.level2};
   position: relative;
   margin-left: 15px;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.l};
+    font-size: ${theme.font.size.heading.m};
     margin-left: 0;
   `}
 
   ${({ theme }) => theme.media.laptop`
-    font-size: ${theme.font.size.xl};
+    font-size: ${theme.font.size.heading.l};
   `}
 
   ::after {
@@ -33,16 +33,16 @@ const headingBase = css`
 `;
 
 const homePageHeading = css`
-  font-size: ${({ theme }) => theme.font.size.m};
+  font-size: ${({ theme }) => theme.font.size.heading.s};
   margin-left: -5px;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.xl};
+    font-size: ${theme.font.size.heading.l};
     margin-left: 0;
   `}
 
   ${({ theme }) => theme.media.laptop`
-    font-size: ${theme.font.size.xxl};
+    font-size: ${theme.font.size.heading.xl};
     margin: 0.20em 0;
     margin-left: 3vw;
   `}

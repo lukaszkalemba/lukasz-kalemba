@@ -29,7 +29,7 @@ const Heading = styled(HeadingComponent)`
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
-    font-size: ${theme.font.size.xxxl};
+    font-size: ${theme.font.size.heading.xxl};
     margin: 0.15em 0;
   `}
 `;
@@ -43,7 +43,7 @@ const Paragraph = styled(ParagraphComponent)`
   }
 
   ${({ theme }) => theme.media.tablet`
-    font-size:  calc(${theme.font.size.s} - 1px);
+    font-size:  calc(${theme.font.size.body.m});
   `}
 
   ${({ theme }) => theme.media.laptop`

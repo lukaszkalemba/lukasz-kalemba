@@ -13,7 +13,7 @@ const Link = styled(GatsbyLink)`
   text-decoration: none;
   padding: 10px 0;
   color: ${({ theme }) => theme.color.white};
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   font-weight: ${({ theme }) => theme.font.weight.medium};
 
   :hover {

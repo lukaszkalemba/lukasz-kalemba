@@ -8,7 +8,7 @@ const Button = styled(ButtonComponent)`
 `;
 
 const Paragraph = styled(ParagraphComponent)`
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   line-height: 20px;
   margin-left: 25px;
 

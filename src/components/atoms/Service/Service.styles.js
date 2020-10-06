@@ -33,7 +33,7 @@ const Overlay = styled(GatsbyBackground)`
 `;
 
 const Title = styled(motion.h3)`
-  font-size: ${({ theme }) => theme.font.size.s};
+  font-size: ${({ theme }) => theme.font.size.heading.xxs};
   margin: 0;
   padding: 40px;
   z-index: ${({ theme }) => theme.zindex.level1};
@@ -41,7 +41,7 @@ const Title = styled(motion.h3)`
   text-align: right;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.m};
+    font-size: ${theme.font.size.heading.s};
   `}
 `;
 

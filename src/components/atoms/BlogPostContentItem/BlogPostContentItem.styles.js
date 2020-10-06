@@ -3,19 +3,19 @@ import { motion } from 'framer-motion';
 
 const Wrapper = styled(motion.div)`
   h2 {
-    font-size: ${({ theme }) => theme.font.size.s};
+    font-size: ${({ theme }) => theme.font.size.heading.xxs};
     margin-top: 50px;
     margin-bottom: 5px;
 
     ${({ theme }) => theme.media.tablet`
-      font-size: ${theme.font.size.l};
+      font-size: ${theme.font.size.heading.m};
       margin-top: 70px;
       margin-bottom: 10px;
     `}
   }
 
   p {
-    font-size: ${({ theme }) => theme.font.size.xs};
+    font-size: ${({ theme }) => theme.font.size.body.s};
     max-width: 750px;
     line-height: 25px;
     opacity: 0.8;

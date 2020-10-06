@@ -24,7 +24,7 @@ describe('<Heading />', () => {
 
     expect(heading.tagName).toBe('H1');
     expect(heading).toHaveTextContent(headingProps.children);
-    expect(heading).toHaveStyleRule('font-size', theme.font.size.m);
+    expect(heading).toHaveStyleRule('font-size', theme.font.size.heading.s);
   });
 
   it('renders as h2 element', () => {
@@ -33,6 +33,6 @@ describe('<Heading />', () => {
     });
 
     expect(heading.tagName).toBe('H2');
-    expect(heading).toHaveStyleRule('font-size', theme.font.size.s);
+    expect(heading).toHaveStyleRule('font-size', theme.font.size.heading.xs);
   });
 });
