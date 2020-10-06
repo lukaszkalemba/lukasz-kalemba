@@ -1,47 +1,26 @@
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
+import React from 'react';
 import FooterLogo from 'components/atoms/FooterLogo';
+import Container from 'components/particles/Container';
 import CompanyInformations from 'components/molecules/CompanyInformations';
 import FooterLinks from 'components/molecules/FooterLinks';
 import SocialMediaIcons from 'components/molecules/SocialMediaIcons';
-import Container from 'components/particles/Container';
+import Copyright from 'components/atoms/Copyright';
 import S from './Footer.styles';
-import animations from './Footer.animations';
 
 const Footer = () => {
-  const animation = useAnimation();
-
-  const [footerRef, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start('animate');
-    }
-  }, [animation, inView]);
-
-  const footerAnimations = animations.getFooter(animation);
-
   return (
-    <S.Footer ref={footerRef} {...footerAnimations}>
+    <S.Footer>
       <Container axis="both">
         <S.TopBar>
-          <CompanyInformations animation={animations.children} />
+          <CompanyInformations />
           <FooterLogo />
-          <SocialMediaIcons animation={animations.socialMediaIcons} />
+          <SocialMediaIcons />
         </S.TopBar>
       </Container>
 
       <Container axis="x">
-        <S.BottomBar {...animations.children}>
-          <S.Copyright>
-            <span>lukaszkalemba&copy; 2020.&nbsp;</span>
-            <span>Wszelkie prawa zastrzeżone.</span>
-          </S.Copyright>
-
+        <S.BottomBar>
+          <Copyright />
           <FooterLinks />
         </S.BottomBar>
       </Container>

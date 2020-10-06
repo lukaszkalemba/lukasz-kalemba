@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
 import 'jest-styled-components';
+import '__mocks__/intersectionObserver';
 import Nav from './Nav';
 
 const renderNav = props => {

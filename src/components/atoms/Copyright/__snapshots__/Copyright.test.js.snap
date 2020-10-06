@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Copyright /> matches snapshot 1`] = `
+<div>
+  <p
+    class="sc-bdnylx bRlJwW"
+    style="opacity: 0; transform: translateY(20px) translateZ(0);"
+  >
+    <span>
+      lukaszkalemba© 2020. 
+    </span>
+    <span>
+      Wszelkie prawa zastrzeżone.
+    </span>
+  </p>
+</div>
+`;

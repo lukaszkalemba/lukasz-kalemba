@@ -1,6 +1,6 @@
 const getHeader = (isHomePage, isMobile) => {
-  let delay = null;
-  let x = null;
+  let delay;
+  let x;
 
   if (isHomePage) {
     delay = isMobile ? 2 : 1;
