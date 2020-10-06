@@ -46,7 +46,7 @@ const TopBar = styled.div`
 `;
 
 const Copyright = styled.p`
-  font-size: ${({ theme }) => theme.font.size.xxs};
+  font-size: ${({ theme }) => theme.font.size.body.xs};
   opacity: 0.8;
   padding-top: 30px;
   display: flex;

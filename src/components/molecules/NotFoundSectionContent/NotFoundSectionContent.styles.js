@@ -16,12 +16,12 @@ const Heading = styled(HeadingComponent)`
   margin: 1.5em 0 1em;
 
   ${({ theme }) => theme.media.laptop`
-    font-size: ${theme.font.size.xl};
+    font-size: ${theme.font.size.heading.l};
     margin-bottom: 0.55em;
   `}
 
   ${({ theme }) => theme.media.desktop`
-    font-size: ${theme.font.size.xxl};
+    font-size: ${theme.font.size.heading.xl};
   `}
 `;
 

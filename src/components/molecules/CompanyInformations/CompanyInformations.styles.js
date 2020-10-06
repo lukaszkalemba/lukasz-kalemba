@@ -8,7 +8,7 @@ const Wrapper = styled(motion.div)`
 `;
 
 const Link = styled.a`
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   transition: opacity 400ms ease-in-out;
@@ -24,7 +24,7 @@ const Link = styled.a`
 `;
 
 const Paragraph = styled.p`
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   color: ${({ theme }) => theme.color.white};
   opacity: 0.8;
   padding: 13px 0;

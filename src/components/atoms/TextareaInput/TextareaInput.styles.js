@@ -62,7 +62,7 @@ const Textarea = styled.textarea`
 `;
 
 const Label = styled.label`
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   color: ${({ isError }) => (isError ? 'orange' : 'rgba(255, 255, 255, 0.5)')};
   font-weight: normal;
   position: absolute;
@@ -73,7 +73,7 @@ const Label = styled.label`
 `;
 
 const Error = styled.div`
-  font-size: ${({ theme }) => theme.font.size.xxs};
+  font-size: ${({ theme }) => theme.font.size.body.xs};
   margin-top: 7px;
   margin-left: 1px;
   color: orange;

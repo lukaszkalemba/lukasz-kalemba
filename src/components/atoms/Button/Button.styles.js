@@ -7,7 +7,7 @@ const Link = styled(GatsbyLink)`
 `;
 
 const Button = styled.button`
-  font-size: ${({ theme }) => theme.font.size.xxxs};
+  font-size: ${({ theme }) => theme.font.size.body.xxs};
   cursor: pointer;
   position: relative;
   display: block;
@@ -36,7 +36,7 @@ const Button = styled.button`
   }
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.xxs};
+    font-size: ${theme.font.size.body.xs};
     width: 230px;
     margin-bottom: 12px;
   `}

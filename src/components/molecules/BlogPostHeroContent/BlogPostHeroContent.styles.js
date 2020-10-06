@@ -12,13 +12,13 @@ const Wrapper = styled.div`
 `;
 
 const Description = styled(motion.p)`
-  font-size: ${({ theme }) => theme.font.size.xxs};
+  font-size: ${({ theme }) => theme.font.size.body.xs};
   line-height: 25px;
   max-width: 450px;
   margin: 0 20px;
 
   ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.xs};
+    font-size: ${theme.font.size.body.s};
     margin-left: 0 30px;
   `}
 

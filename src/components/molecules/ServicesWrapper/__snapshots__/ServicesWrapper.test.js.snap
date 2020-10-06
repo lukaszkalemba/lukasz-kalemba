@@ -6,7 +6,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
     class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT jZZqwV"
+      class="sc-dlnjPT gpoFRC"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Projektowanie interfejsów
@@ -16,7 +16,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
     class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT jZZqwV"
+      class="sc-dlnjPT gpoFRC"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Strony i aplikacje internetowe
@@ -26,7 +26,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
     class="sc-bdnylx QUUVG"
   >
     <h3
-      class="sc-dlnjPT jZZqwV"
+      class="sc-dlnjPT gpoFRC"
       style="opacity: 0; transform: translateY(20px) translateZ(0);"
     >
       Sklepy internetowe

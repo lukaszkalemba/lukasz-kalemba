@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `;
 
 const Link = styled(GatsbyLink)`
-  font-size: ${({ theme }) => theme.font.size.xs};
+  font-size: ${({ theme }) => theme.font.size.body.s};
   color: ${({ theme }) => theme.color.white};
   text-decoration: none;
   padding: 8px 0;
@@ -24,7 +24,7 @@ const Link = styled(GatsbyLink)`
   ${({ theme }) => theme.media.laptop`
     padding: 0;
     margin-left: 80px;
-    font-size: ${theme.font.size.xxs};
+    font-size: ${theme.font.size.body.xs};
   `}
     :hover {
     opacity: 1;
