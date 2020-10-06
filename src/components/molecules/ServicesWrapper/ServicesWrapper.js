@@ -1,38 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
 import Service from 'components/atoms/Service';
-import animations from './ServicesWrapper.animations';
 
-const ServicesWrapper = ({ images, animation }) => {
-  const wrapperAnimation = animations.getWrapper(animation);
-
+const ServicesWrapper = ({ images }) => {
   return (
-    <motion.div {...wrapperAnimation}>
-      <Service
-        img={images.design.childImageSharp}
-        animation={animations.service}
-      >
+    <div>
+      <Service img={images.design.childImageSharp}>
         Projektowanie interfejsów
       </Service>
-      <Service
-        img={images.webapp.childImageSharp}
-        animation={animations.service}
-      >
+      <Service img={images.webapp.childImageSharp}>
         Strony i aplikacje internetowe
       </Service>
-      <Service
-        img={images.ecommerce.childImageSharp}
-        animation={animations.service}
-      >
+      <Service img={images.ecommerce.childImageSharp}>
         Sklepy internetowe
       </Service>
-    </motion.div>
+    </div>
   );
-};
-
-ServicesWrapper.defaultProps = {
-  animation: {},
 };
 
 ServicesWrapper.propTypes = {
@@ -47,7 +30,6 @@ ServicesWrapper.propTypes = {
       childImageSharp: PropTypes.shape({}),
     }),
   }).isRequired,
-  animation: PropTypes.shape({}),
 };
 
 export default ServicesWrapper;

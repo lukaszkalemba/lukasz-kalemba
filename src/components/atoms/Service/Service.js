@@ -1,12 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import { useAnimation } from 'framer-motion';
+import animations from './Service.animations';
 import S from './Service.styles';
 
-const Service = ({ img, animation, children }) => {
+const Service = ({ img, children }) => {
+  const animation = useAnimation();
+
+  const [titleRef, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('animate');
+    }
+  }, [animation, inView]);
+
+  const titleAnimation = animations.getTitle(animation);
+
   return (
     <S.Article>
       <S.Overlay fluid={img.fluid} />
-      <S.Title {...animation}>{children}</S.Title>
+      <S.Title ref={titleRef} {...titleAnimation}>
+        {children}
+      </S.Title>
     </S.Article>
   );
 };
@@ -14,12 +34,6 @@ const Service = ({ img, animation, children }) => {
 Service.propTypes = {
   img: PropTypes.shape({
     fluid: PropTypes.shape({}),
-  }).isRequired,
-  animation: PropTypes.shape({
-    variants: PropTypes.shape({
-      initial: PropTypes.shape({}),
-      animate: PropTypes.shape({}),
-    }),
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
