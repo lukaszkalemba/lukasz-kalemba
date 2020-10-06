@@ -45,27 +45,7 @@ const TopBar = styled.div`
   `}
 `;
 
-const Copyright = styled.p`
-  font-size: ${({ theme }) => theme.font.size.body.xs};
-  opacity: 0.8;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
-  span {
-    margin: 2px 0;
-  }
-
-  ${({ theme }) => theme.media.phone`
-    flex-direction: row;
-  `}
-
-  ${({ theme }) => theme.media.laptop`
-    padding-top: 0;
-  `}
-`;
-
-const BottomBar = styled(motion.div)`
+const BottomBar = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -75,4 +55,4 @@ const BottomBar = styled(motion.div)`
   `}
 `;
 
-export default { Footer, TopBar, Copyright, BottomBar };
+export default { Footer, TopBar, BottomBar };

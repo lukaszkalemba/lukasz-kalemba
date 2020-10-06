@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
 import links from 'utils/links';
+import '__mocks__/intersectionObserver';
 import FooterLinks from './FooterLinks';
 
 describe('<FooterLinks />', () => {
