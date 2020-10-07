@@ -28,9 +28,12 @@ const Heading = styled(HeadingComponent)`
     margin: 0.20em 0;
   `}
 
+  ${({ theme }) => theme.media.desktop`
+    margin: 0.25em 0;
+  `}
+
   ${({ theme }) => theme.media.largeDesktop`
     font-size: ${theme.font.size.heading.xxl};
-    margin: 0.15em 0;
   `}
 `;
 

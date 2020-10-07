@@ -5,6 +5,10 @@ const Wrapper = styled(motion.div)`
   height: 90vh;
   height: calc(var(--vh, 1vh) * 100 - 10vh);
   position: relative;
+
+  ${({ theme }) => theme.media.desktop`
+    height: 88vh;
+  `}
 `;
 
 const TriangleDecorator = styled(motion.div)`
@@ -32,12 +36,12 @@ const TriangleDecorator = styled(motion.div)`
   `}
 
   ${({ theme }) => theme.media.desktop`
-    border-width: 0 0 850px 1000px;
+    border-width: 0 0 600px 600px;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
-    bottom: 45px;
-    border-width: 0 0 900px 1150px;
+    bottom: 60px;
+    border-width: 0 0 700px 700px;
   `}
 `;
 
