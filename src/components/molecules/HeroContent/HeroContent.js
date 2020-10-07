@@ -7,15 +7,17 @@ import S from './HeroContent.styles';
 const HeroContent = () => {
   const size = useWindowSize();
 
-  const headingAnimation = animations.getHeading(size);
-  const paragraphAnimation = animations.getParagraph(size);
-  const buttonsAnimation = animations.getButtons(size);
+  const isMobile = size.width < 1150;
+
+  const headingAnimation = animations.getHeading(isMobile);
+  const paragraphAnimation = animations.getParagraph(isMobile);
+  const buttonsAnimation = animations.getButtons(isMobile);
 
   return (
     <S.Container axis="both">
       <div>
         <S.Content>
-          <S.Heading tag="h1" homePage {...headingAnimation}>
+          <S.Heading tag="h1" homePage animation={headingAnimation}>
             Zaistniej w sieci
           </S.Heading>
           <S.Paragraph animation={paragraphAnimation}>
