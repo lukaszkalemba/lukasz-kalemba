@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/41954971/93707680-0be8d900-fb31-11ea-97a2-2007efae6cd0.png" alt="" />
+  <img width="600" src="https://user-images.githubusercontent.com/41954971/95354680-fc091d00-08c4-11eb-8c30-4031c3ed330a.png" alt="" />
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 **Development**
 
 ```shell
-  npm run dev
+  npm run develop
 ```
 
 **Running tests**
@@ -45,6 +45,7 @@
 - Styled Components
 - Framer Motion
 - Atomic Design
+- DatoCMS
 - Formik & Yup
 - Eslint & Husky & lint-staged
 
