@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import useWindowSize from 'hooks/useWindowSize';
 import Logo from 'components/atoms/Logo';
@@ -14,10 +14,6 @@ import S from './Nav.styles';
 const Nav = ({ path }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const size = useWindowSize();
-
-  useEffect(() => {
-    setHeightOnMobile();
-  }, [isNavOpen]);
 
   const isMobile = size.width < 1150;
   const isHomePage = path === '/';
@@ -35,6 +31,7 @@ const Nav = ({ path }) => {
   const closeNav = () => {
     setIsNavOpen(false);
     enableScrolling();
+    setHeightOnMobile();
   };
 
   const headerAnimations = animations.getHeader(isHomePage, isMobile);
