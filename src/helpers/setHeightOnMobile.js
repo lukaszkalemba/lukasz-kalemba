@@ -1,10 +1,22 @@
 export const setHeightOnMobile = () => {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  let constantHeight = window.innerHeight;
+
+  document.documentElement.style.setProperty(
+    '--vh',
+    `${constantHeight * 0.01}px`
+  );
 
   window.addEventListener('resize', () => {
-    /* eslint-disable no-shadow */
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    if (
+      window.innerHeight - constantHeight > 80 ||
+      constantHeight - window.innerHeight > 80
+    ) {
+      constantHeight = window.innerHeight;
+
+      document.documentElement.style.setProperty(
+        '--vh',
+        `${constantHeight * 0.01}px`
+      );
+    }
   });
 };

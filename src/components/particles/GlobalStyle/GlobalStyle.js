@@ -41,9 +41,8 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => theme.color.background.light},
       ${({ theme }) => theme.color.background.dark}
     ) no-repeat center center fixed;
-  background-size: auto calc(var(--vh, 1vh) * 100);
-  will-change: transform;
-  height: calc(var(--vh, 1vh) * 100);
+  background-size: cover;
+  height: calc(100vh + 100px);
   overflow-x: hidden;
   }
 
@@ -52,12 +51,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.montserrat}, sans-serif;
     min-height: 100vh;
     color: ${({ theme }) => theme.color.white};
-    background: linear-gradient(
-      to right bottom,
-      ${({ theme }) => theme.color.background.light},
-      ${({ theme }) => theme.color.background.dark}
-    ) no-repeat center center fixed;
-    background-size: cover;
     overflow-x: hidden;
   }
 

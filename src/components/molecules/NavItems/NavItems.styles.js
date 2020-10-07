@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-out;
   transition-delay: 250ms;
   display: flex;
   align-items: center;
