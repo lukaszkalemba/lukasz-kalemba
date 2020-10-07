@@ -18,7 +18,7 @@ const Cards = styled.div`
   `}
 
   ${({ theme }) => theme.media.desktop`
-    grid-gap: 90px;
+    grid-gap: 55px;
     margin: 100px auto 60px;
   `}
 `;
