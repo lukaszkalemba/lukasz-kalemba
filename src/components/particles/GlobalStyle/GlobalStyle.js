@@ -42,7 +42,6 @@ const GlobalStyle = createGlobalStyle`
       ${({ theme }) => theme.color.background.dark}
     ) no-repeat center center fixed;
   background-size: cover;
-  height: calc(100vh + 100px);
   overflow-x: hidden;
   }
 
