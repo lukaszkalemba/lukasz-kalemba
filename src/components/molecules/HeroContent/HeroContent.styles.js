@@ -53,6 +53,10 @@ const Paragraph = styled(ParagraphComponent)`
     flex-direction: row;
     margin-right: -130px;
   `}
+
+  ${({ theme }) => theme.media.largeDesktop`
+    font-size: ${theme.font.size.heading.xs};
+  `}
 `;
 
 const Buttons = styled(motion.div)`

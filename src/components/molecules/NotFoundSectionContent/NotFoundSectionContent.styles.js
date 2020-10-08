@@ -1,14 +1,22 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import HeadingComponent from 'components/atoms/Heading';
 
-const ButtonWrapper = styled.div`
+const ButtonWrapper = styled(motion.div)`
   width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 10px;
 
   ${({ theme }) => theme.media.laptop`
     justify-content: center;
+    margin-left: -25px;
+  `}
+
+  ${({ theme }) => theme.media.desktop`
+    justify-content: center;
+    margin-left: 40px;
   `}
 `;
 
