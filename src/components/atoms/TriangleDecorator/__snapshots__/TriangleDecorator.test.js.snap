@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TriangleDecorator /> matches snapshot 1`] = `
+<div
+  class="sc-bdnylx kOpDmn"
+  style="opacity: 0; transform: translateX(-25px) translateY(-25px) translateZ(0);"
+/>
+`;
