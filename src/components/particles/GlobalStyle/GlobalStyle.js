@@ -36,13 +36,26 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+
+  ::before {
+    content: '';
     background: linear-gradient(
       to right bottom,
       ${({ theme }) => theme.color.background.light},
       ${({ theme }) => theme.color.background.dark}
-    ) no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden;
+    ) no-repeat center center;
+    background-size: cover;
+    height: calc(100% + 80px);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    will-change: transform;
+    z-index: -1;
+    }
   }
 
   body {
