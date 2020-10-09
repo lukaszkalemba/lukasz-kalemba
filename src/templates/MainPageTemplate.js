@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 import theme from 'theme';
@@ -6,12 +6,12 @@ import GlobalStyle from 'components/particles/GlobalStyle';
 import Nav from 'components/organisms/Nav';
 import Footer from 'components/organisms/Footer';
 
-const MainPageTemplate = ({ location, children }) => {
-  let isFooter = true;
+const MainPageTemplate = ({ pageResources, location, children }) => {
+  const [isFooter, setIsFooter] = useState(false);
 
-  if (location.pathname === '/404/') {
-    isFooter = false;
-  }
+  useEffect(() => {
+    setIsFooter(!pageResources.page.path.includes('404'));
+  }, [location.pathname]);
 
   return (
     <>
@@ -19,13 +19,18 @@ const MainPageTemplate = ({ location, children }) => {
         <GlobalStyle />
         <Nav path={location.pathname} />
         <main>{children}</main>
-        {isFooter && <Footer />}
+        <Footer isFooter={isFooter} />
       </ThemeProvider>
     </>
   );
 };
 
 MainPageTemplate.propTypes = {
+  pageResources: PropTypes.shape({
+    page: PropTypes.shape({
+      path: PropTypes.string,
+    }),
+  }).isRequired,
   location: PropTypes.shape({
     pathname: PropTypes.string,
   }).isRequired,

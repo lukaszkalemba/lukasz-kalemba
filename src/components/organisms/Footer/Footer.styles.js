@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import slashPattern from 'assets/svgs/pattern_slash-dark.svg';
 
 const Footer = styled(motion.footer)`
+  display: ${({ isFooter }) => (isFooter ? 'block' : 'none')};
   background-color: ${({ theme }) => theme.color.primary};
   position: relative;
 
