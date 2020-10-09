@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FooterLogo from 'components/atoms/FooterLogo';
 import Container from 'components/particles/Container';
 import CompanyInformations from 'components/molecules/CompanyInformations';
@@ -7,9 +8,9 @@ import SocialMediaIcons from 'components/molecules/SocialMediaIcons';
 import Copyright from 'components/atoms/Copyright';
 import S from './Footer.styles';
 
-const Footer = () => {
+const Footer = ({ isFooter }) => {
   return (
-    <S.Footer>
+    <S.Footer isFooter={isFooter}>
       <Container axis="both">
         <S.TopBar>
           <CompanyInformations />
@@ -26,6 +27,10 @@ const Footer = () => {
       </Container>
     </S.Footer>
   );
+};
+
+Footer.propTypes = {
+  isFooter: PropTypes.bool.isRequired,
 };
 
 export default Footer;

@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 describe('<Footer />', () => {
   it('has proper links, logo and copyright components inside', () => {
-    const { getByRole, getByText, getByTestId } = render(<Footer />);
+    const { getByRole, getByText, getByTestId } = render(<Footer isFooter />);
 
     const emailLink = getByRole('link', { name: /@/i });
     const phoneLink = getByRole('link', { name: /\+48/i });
