@@ -28,7 +28,7 @@ const Wrapper = styled.div`
     content: '';
     position: absolute;
     bottom: 0;
-    right: 10%;
+    right: 15%;
     opacity: 0.2;
     background: url(${slashPattern}) no-repeat;
     background-position-y: bottom;
@@ -53,10 +53,11 @@ const List = styled.ul`
   flex-direction: column;
   justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: -50px 0 0;
 
   ${({ theme }) => theme.media.laptop`
+    margin-top: 0;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
@@ -75,6 +76,7 @@ const Container = styled(ContainerComponent)`
 
 const SocialMediaIcons = styled(SocialMediaIconsComponent)`
   opacity: 0.5;
+  margin-bottom: 50px;
 
   a {
     padding: 10px 13px;
