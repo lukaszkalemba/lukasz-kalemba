@@ -9,7 +9,7 @@ const BlogPostContentItem = ({ content }) => {
   const animation = useAnimation();
 
   const [wrapperRef, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   useEffect(() => {

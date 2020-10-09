@@ -15,7 +15,11 @@ const Content = styled.div`
   }
 
   div:first-child {
-    margin-top: -50px;
+    margin-top: -30px;
+
+    ${({ theme }) => theme.media.laptop`
+      margin-top: -50px;
+    `}
   }
 
   div:last-child {
