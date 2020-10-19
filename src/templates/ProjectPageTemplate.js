@@ -10,16 +10,19 @@ export const PROJECT_QUERY = graphql`
     project: datoCmsProject(slug: { eq: $slug }) {
       title
       description
+      contentTitle
+      contentDescription
       image {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
-      firstViewImage {
+      mainViewImage {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
         }
       }
+
       secondViewImage {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
@@ -38,8 +41,10 @@ const ProjectPageTemplate = ({ data }) => {
   const {
     title,
     description,
+    contentTitle,
+    contentDescription,
     image,
-    firstViewImage,
+    mainViewImage,
     secondViewImage,
     thirdViewImage,
   } = data.project;
@@ -53,7 +58,9 @@ const ProjectPageTemplate = ({ data }) => {
         image={image.fluid}
       />
       <ProjectContent
-        firstViewImage={firstViewImage.fluid}
+        contentTitle={contentTitle}
+        contentDescription={contentDescription}
+        mainViewImage={mainViewImage.fluid}
         secondViewImage={secondViewImage.fluid}
         thirdViewImage={thirdViewImage.fluid}
       />
@@ -66,10 +73,12 @@ ProjectPageTemplate.propTypes = {
     project: PropTypes.shape({
       title: PropTypes.string,
       description: PropTypes.string,
+      contentTitle: PropTypes.string,
+      contentDescription: PropTypes.string,
       image: PropTypes.shape({
         fluid: PropTypes.shape({}),
       }),
-      firstViewImage: PropTypes.shape({
+      mainViewImage: PropTypes.shape({
         fluid: PropTypes.shape({}),
       }),
       secondViewImage: PropTypes.shape({
