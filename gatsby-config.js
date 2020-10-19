@@ -37,7 +37,7 @@ module.exports = {
         assets: path.join(__dirname, 'src/assets'),
         utils: path.join(__dirname, 'src/utils'),
         helpers: path.join(__dirname, 'src/helpers'),
-        theme: path.join(__dirname, 'src/theme'),
+        styles: path.join(__dirname, 'src/styles'),
       },
     },
     {

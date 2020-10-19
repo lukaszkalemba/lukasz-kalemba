@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'styled-components';
-import theme from 'theme';
+import theme from 'styles/theme';
 
 const AllTheProviders = ({ children }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
