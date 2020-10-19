@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
-import theme from 'theme';
+import theme from 'styles/theme';
 import GlobalStyle from 'components/particles/GlobalStyle';
 import Nav from 'components/organisms/Nav';
 import Footer from 'components/organisms/Footer';
+import 'styles/fonts.css';
 
 const MainPageTemplate = ({ pageResources, location, children }) => {
   const [isFooter, setIsFooter] = useState(false);
