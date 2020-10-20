@@ -69,7 +69,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest --modulePaths=src"
+    "test": "jest --modulePaths=src",
+    "test:watch": "jest --watch --modulePaths=src"
   },
   "husky": {
     "hooks": {
