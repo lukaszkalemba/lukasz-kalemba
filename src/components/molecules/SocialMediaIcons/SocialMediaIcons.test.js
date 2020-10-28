@@ -13,7 +13,7 @@ describe('<SocialMediaIcons />', () => {
   it('has proper link elements length', () => {
     const { getAllByRole } = renderSocialMediaIcons();
 
-    expect(getAllByRole('link')).toHaveLength(2);
+    expect(getAllByRole('link')).toHaveLength(3);
   });
 
   it('matches snapshot', () => {

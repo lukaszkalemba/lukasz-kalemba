@@ -32,6 +32,30 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
   <a
     aria-label="linkedin"
     class="sc-dlnjPT caLAjc"
+    href="https://github.com"
+    target="__blank"
+  >
+    <div
+      class="sc-bdnylx levWdn"
+    >
+      <svg
+        fill="none"
+        height="16"
+        viewBox="0 0 65 16"
+        width="65"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 1H61L42.5 14.5"
+          stroke="white"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+  </a>
+  <a
+    aria-label="linkedin"
+    class="sc-dlnjPT caLAjc"
     href="https://linkedin.com"
     target="__blank"
   >
