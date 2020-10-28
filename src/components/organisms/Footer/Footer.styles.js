@@ -37,11 +37,11 @@ const TopBar = styled.div`
 
   ${({ theme }) => theme.media.laptop`
     grid-template-columns: repeat(3, 1fr);
-    padding: 110px 0 75px;
+    padding: 145px 0 105px;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
-    padding: 150px 0 100px;
+    padding: 165px 0 125px;
   `}
 `;
 
