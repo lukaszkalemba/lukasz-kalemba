@@ -7,7 +7,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
 >
   <a
     aria-label="facebook"
-    class="sc-dlnjPT caLAjc"
+    class="sc-dlnjPT bzqrdI"
     href="https://www.facebook.com/profile.php?id=100004677850278"
     target="__blank"
   >
@@ -31,7 +31,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
   </a>
   <a
     aria-label="linkedin"
-    class="sc-dlnjPT caLAjc"
+    class="sc-dlnjPT bzqrdI"
     href="https://github.com/lukaszkalemba"
     target="__blank"
   >
@@ -55,7 +55,7 @@ exports[`<SocialMediaIcons /> matches snapshot 1`] = `
   </a>
   <a
     aria-label="linkedin"
-    class="sc-dlnjPT caLAjc"
+    class="sc-dlnjPT bzqrdI"
     href="https://www.linkedin.com/in/%C5%82ukasz-kalemba-4719b518a"
     target="__blank"
   >

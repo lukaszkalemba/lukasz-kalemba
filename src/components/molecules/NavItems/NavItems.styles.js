@@ -79,7 +79,7 @@ const SocialMediaIcons = styled(SocialMediaIconsComponent)`
   margin-bottom: 50px;
 
   a {
-    padding: 10px 13px;
+    padding: 11px 13px;
   }
 `;
 
