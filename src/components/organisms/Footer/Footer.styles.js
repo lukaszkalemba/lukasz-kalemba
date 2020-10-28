@@ -5,7 +5,6 @@ import slashPattern from 'assets/svgs/pattern_slash-dark.svg';
 const Footer = styled(motion.footer)`
   display: ${({ isFooter }) => (isFooter ? 'block' : 'none')};
   background-color: ${({ theme }) => theme.color.primary};
-  position: relative;
 
   ${({ theme }) => theme.media.tablet`
     padding-bottom: 23px;

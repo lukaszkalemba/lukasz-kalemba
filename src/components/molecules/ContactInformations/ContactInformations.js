@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
-import animations from './CompanyInformations.animations';
-import S from './CompanyInformations.styles';
+import animations from './ContactInformations.animations';
+import S from './ContactInformations.styles';
 
-const CompanyInformations = () => {
+const ContactInformations = () => {
   const animation = useAnimation();
 
   const [wrapperRef, inView] = useInView({
@@ -26,10 +26,8 @@ const CompanyInformations = () => {
       <S.Link href="mailto:kontakt@lukaszkalemba.pl">
         kontakt@lukaszkalemba.pl
       </S.Link>
-      <S.Paragraph>REGON: 000000000</S.Paragraph>
-      <S.Paragraph>KRS: 0000000000</S.Paragraph>
     </S.Wrapper>
   );
 };
 
-export default CompanyInformations;
+export default ContactInformations;

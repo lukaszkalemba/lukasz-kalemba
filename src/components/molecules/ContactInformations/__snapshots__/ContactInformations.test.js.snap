@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CompanyInformations /> matches snapshot 1`] = `
+exports[`<ContactInformations /> matches snapshot 1`] = `
 <div
-  class="sc-bdnylx bVpGCt"
+  class="sc-bdnylx hdrGPR"
   style="opacity: 0; transform: translateY(20px) translateZ(0);"
 >
   <a
@@ -17,15 +17,5 @@ exports[`<CompanyInformations /> matches snapshot 1`] = `
   >
     kontakt@lukaszkalemba.pl
   </a>
-  <p
-    class="sc-dlnjPT xcmoR"
-  >
-    REGON: 000000000
-  </p>
-  <p
-    class="sc-dlnjPT xcmoR"
-  >
-    KRS: 0000000000
-  </p>
 </div>
 `;
