@@ -2,7 +2,7 @@
 
 exports[`<ContactInformations /> matches snapshot 1`] = `
 <div
-  class="sc-bdnylx hdrGPR"
+  class="sc-bdnylx hvmfPr"
   style="opacity: 0; transform: translateY(20px) translateZ(0);"
 >
   <a

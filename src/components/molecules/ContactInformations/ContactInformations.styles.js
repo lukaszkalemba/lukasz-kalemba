@@ -5,6 +5,7 @@ const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   ${({ theme }) => theme.media.laptop`
     justify-content: center;
   `}

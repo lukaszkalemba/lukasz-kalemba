@@ -5,27 +5,31 @@ import slashPattern from 'assets/svgs/pattern_slash-dark.svg';
 const Footer = styled(motion.footer)`
   display: ${({ isFooter }) => (isFooter ? 'block' : 'none')};
   background-color: ${({ theme }) => theme.color.primary};
+  padding: 25px 0;
+  position: relative;
 
   ${({ theme }) => theme.media.tablet`
-    padding-bottom: 23px;
+    margin-top: 110px;
+    padding: 40px 0 30px;
   `}
 
   ${({ theme }) => theme.media.laptop`
+    padding: 0;
+
     ::before {
       content: '';
       position: absolute;
       background: url(${slashPattern}) no-repeat;
       height: 600px;
+      width: 475px;
       right: 16%;
       bottom: 0;
       background-size: 100%;
-      width: 450px;
       background-position-y: bottom;
 
     ${theme.media.largeDesktop`
       height: 800px;
       width: 550px;
-      padding-bottom: 35px;
     `}
     }
 `}
@@ -37,11 +41,11 @@ const TopBar = styled.div`
 
   ${({ theme }) => theme.media.laptop`
     grid-template-columns: repeat(3, 1fr);
-    padding: 145px 0 105px;
+    padding: 130px 0;
   `}
 
   ${({ theme }) => theme.media.largeDesktop`
-    padding: 165px 0 125px;
+    padding: 165px 0;
   `}
 `;
 
