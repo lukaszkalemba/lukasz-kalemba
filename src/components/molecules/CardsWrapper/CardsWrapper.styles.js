@@ -10,11 +10,12 @@ const Cards = styled.div`
   ${({ theme }) => theme.media.tablet`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
-    margin: 65px auto;
+    margin: 50px auto;
   `}
 
   ${({ theme }) => theme.media.laptop`
     grid-gap: 50px;
+    margin: 65px auto;
   `}
 
   ${({ theme }) => theme.media.desktop`

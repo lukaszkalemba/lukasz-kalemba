@@ -14,25 +14,36 @@ const Footer = styled(motion.footer)`
   `}
 
   ${({ theme }) => theme.media.laptop`
+    margin-top: 0;
     padding: 0;
+  `}
 
-    ::before {
-      content: '';
-      position: absolute;
-      background: url(${slashPattern}) no-repeat;
-      height: 600px;
-      width: 475px;
-      right: 16%;
-      bottom: 0;
-      background-size: 100%;
-      background-position-y: bottom;
+  ::before {
+    content: '';
+    position: absolute;
+    background: url(${slashPattern}) no-repeat;
+    height: 100%;
+    width: 300px;
+    opacity: 0.5;
+    right: 16%;
+    bottom: 0;
+    background-size: 100%;
+    background-position-y: bottom;
 
-    ${theme.media.largeDesktop`
-      height: 800px;
+    ${({ theme }) => theme.media.tablet`
+      opacity: 1;
+      width: 495px;
+      height: calc(100% + 75px);
+    `}
+
+    ${({ theme }) => theme.media.laptop`
+      width: 470px;
+    `}
+
+    ${({ theme }) => theme.media.largeDesktop`
       width: 550px;
     `}
-    }
-`}
+  }
 `;
 
 const TopBar = styled.div`
