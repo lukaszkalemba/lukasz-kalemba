@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
-import CompanyInformations from './CompanyInformations';
+import ContactInformations from './ContactInformations';
 
-describe('<CompanyInformations />', () => {
+describe('<ContactInformations />', () => {
   it('matches snapshot', () => {
-    const { container } = render(<CompanyInformations />);
+    const { container } = render(<ContactInformations />);
 
     expect(container.firstChild).toMatchSnapshot();
   });

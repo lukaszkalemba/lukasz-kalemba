@@ -5,6 +5,9 @@ const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  ${({ theme }) => theme.media.laptop`
+    justify-content: center;
+  `}
 `;
 
 const Link = styled.a`
@@ -23,16 +26,4 @@ const Link = styled.a`
   }
 `;
 
-const Paragraph = styled.p`
-  font-size: ${({ theme }) => theme.font.size.body.s};
-  color: ${({ theme }) => theme.color.white};
-  opacity: 0.8;
-  padding: 13px 0;
-  margin: 0;
-
-  ${({ theme }) => theme.media.laptop`
-    padding: 12px 0;
-  `}
-`;
-
-export default { Wrapper, Link, Paragraph };
+export default { Wrapper, Link };
