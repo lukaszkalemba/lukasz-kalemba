@@ -27,13 +27,25 @@ const SocialMediaIcons = ({ className }) => {
 
   return (
     <S.Wrapper ref={wrapperRef} {...wrapperAnimations} className={className}>
-      <S.A href="https://facebook.com" aria-label="facebook" target="__blank">
+      <S.A
+        href="https://www.facebook.com/profile.php?id=100004677850278"
+        aria-label="facebook"
+        target="__blank"
+      >
         <Icon src={facebook} />
       </S.A>
-      <S.A href="https://github.com" aria-label="linkedin" target="__blank">
+      <S.A
+        href="https://github.com/lukaszkalemba"
+        aria-label="linkedin"
+        target="__blank"
+      >
         <Icon src={github} />
       </S.A>
-      <S.A href="https://linkedin.com" aria-label="linkedin" target="__blank">
+      <S.A
+        href="https://www.linkedin.com/in/%C5%82ukasz-kalemba-4719b518a"
+        aria-label="linkedin"
+        target="__blank"
+      >
         <Icon src={linkedin} />
       </S.A>
     </S.Wrapper>
