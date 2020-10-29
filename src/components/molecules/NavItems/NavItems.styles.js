@@ -11,17 +11,18 @@ const Wrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  transform: translateX(${({ isNavOpen }) => (isNavOpen ? '0' : '-150%')});
-  transition: transform 250ms ease-out;
-  transition-delay: 250ms;
+  clip-path: circle(
+    ${({ isNavOpen }) => (isNavOpen ? '100%' : '0 at calc(100% - 40px) 40px')}
+  );
+  transition: clip-path 500ms ease-in-out;
   display: flex;
   align-items: center;
 
   ${({ theme }) => theme.media.laptop`
+    clip-path: none;
     height: auto;
     position: static;
     background-color: transparent;
-    transform: translate(0);
     justify-content: flex-end;
   `}
     ::before {

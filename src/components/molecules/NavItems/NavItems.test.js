@@ -15,7 +15,10 @@ describe('<NavItems />', () => {
   it('renders properly with closed nav', () => {
     const { navItemsWrapper } = renderNavItems({ isNavOpen: false });
 
-    expect(navItemsWrapper).toHaveStyleRule('transform', 'translateX(-150%)');
+    expect(navItemsWrapper).toHaveStyleRule(
+      'clip-path',
+      'circle( 0 at calc(100% - 40px) 40px )'
+    );
   });
 
   it('renders properly with opened nav', () => {
@@ -23,6 +26,6 @@ describe('<NavItems />', () => {
       isNavOpen: true,
     });
 
-    expect(navItemsWrapper).toHaveStyleRule('transform', 'translateX(0)');
+    expect(navItemsWrapper).toHaveStyleRule('clip-path', 'circle( 100% )');
   });
 });
