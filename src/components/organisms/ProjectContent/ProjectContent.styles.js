@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import GatsbyImage from 'gatsby-image';
-import ParagraphComponent from 'components/atoms/Paragraph';
 
 const MainImage = styled(GatsbyImage)`
   margin: 40px 20px;
@@ -38,48 +37,7 @@ const DoubleImageSection = styled.div`
   `}
 `;
 
-const ContentWrapper = styled.div`
-  ${({ theme }) => theme.media.tablet`
-    margin: 70px 15px;
-  `}
-
-  ${({ theme }) => theme.media.laptop`
-    margin: 100px 20px;
-  `}
-`;
-
-const Title = styled.h2`
-  font-size: ${({ theme }) => theme.font.size.heading.xxs};
-
-  ${({ theme }) => theme.media.tablet`
-  font-size: ${theme.font.size.heading.s};
-  margin-top: 40px;
-`}
-`;
-
-const Paragraph = styled(ParagraphComponent)`
-  font-size: ${({ theme }) => theme.font.size.body.xs};
-  margin-bottom: 3.5em;
-
-  ${({ theme }) => theme.media.tablet`
-    font-size: ${theme.font.size.body.s};
-    max-width: 450px;
-  `}
-`;
-
-const ThirdImage = styled(GatsbyImage)`
-  margin-top: 50px;
-
-  ${({ theme }) => theme.media.tablet`
-    margin-top: 0px;
-  `}
-`;
-
 export default {
   MainImage,
-  ContentWrapper,
-  Title,
-  Paragraph,
   DoubleImageSection,
-  ThirdImage,
 };
