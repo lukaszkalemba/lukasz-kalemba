@@ -7,7 +7,15 @@ const Wrapper = styled(motion.div)`
     margin-top: 50px;
     margin-bottom: 5px;
 
+    /* :first-child {
+      margin-top: 0;
+    } */
+
     ${({ theme }) => theme.media.tablet`
+      /* :first-child {
+        margin-top: 0;
+      } */
+
       font-size: ${theme.font.size.heading.m};
       margin-top: 70px;
       margin-bottom: 10px;
@@ -15,11 +23,15 @@ const Wrapper = styled(motion.div)`
   }
 
   p {
-    font-size: ${({ theme }) => theme.font.size.body.s};
+    font-size: ${({ theme }) => theme.font.size.body.xs};
     max-width: 750px;
     line-height: 25px;
     opacity: 0.8;
     margin-bottom: 30px;
+
+    ${({ theme }) => theme.media.tablet`
+      font-size: ${theme.font.size.body.s};
+    `}
 
     ${({ theme }) => theme.media.desktop`
       max-width: 1000px;
