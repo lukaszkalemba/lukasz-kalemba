@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const Button = styled.button`
-  display: none;
   border: none;
   background-color: inherit;
-  width: 50px;
+  width: 40px;
   margin-left: auto;
   margin-top: auto;
   cursor: pointer;
@@ -21,10 +20,9 @@ const Button = styled.button`
     }
   }
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
     width: 75px;
     height: 150px;
-    display: block;
   `}
   svg {
     width: 100%;
@@ -35,13 +33,19 @@ const Button = styled.button`
 `;
 
 const Info = styled.p`
+  font-size: ${({ theme }) => theme.font.size.body.xs};
   position: absolute;
   width: 120px;
   transform: rotate(90deg);
   color: ${({ theme }) => theme.color.white};
-  right: -17px;
+  right: -35px;
   top: -25px;
   opacity: 0.7;
+
+  ${({ theme }) => theme.media.tablet`
+    right: -15px;
+    font-size: ${theme.font.size.body.s};
+  `}
 `;
 
 export default { Button, Info };
