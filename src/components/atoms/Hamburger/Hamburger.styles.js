@@ -21,7 +21,6 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.color.white};
     transform: rotate(${({ isNavOpen }) => (isNavOpen ? '45deg' : '0')});
     transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
-    transition-delay: 150ms;
 
     ::before,
     ::after {
@@ -32,7 +31,6 @@ const Button = styled.button`
       border-radius: 3px;
       background-color: ${({ theme }) => theme.color.white};
       transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
-      transition-delay: 150ms;
     }
 
     ::before {

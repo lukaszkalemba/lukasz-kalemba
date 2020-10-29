@@ -9,12 +9,11 @@ const Footer = styled(motion.footer)`
   position: relative;
 
   ${({ theme }) => theme.media.tablet`
-    margin-top: 110px;
+    margin-top: 100px;
     padding: 40px 0 30px;
   `}
 
   ${({ theme }) => theme.media.laptop`
-    margin-top: 0;
     padding: 0;
   `}
 

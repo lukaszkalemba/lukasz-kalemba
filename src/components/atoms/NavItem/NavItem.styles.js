@@ -33,7 +33,7 @@ const Link = styled(GatsbyLink)`
   ${({ theme }) => theme.media.laptop`
     font-size: ${theme.font.size.body.xs};
     font-weight: ${theme.font.weight.regular};
-    opacity: 0.75;
+    opacity: 0.6;
     padding: 5px 0;
   `}
 
