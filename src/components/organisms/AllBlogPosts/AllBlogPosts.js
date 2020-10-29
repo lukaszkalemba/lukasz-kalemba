@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/particles/Container';
 import Cards from 'components/molecules/CardsWrapper';
 import Heading from 'components/atoms/Heading';
+import S from './AllBlogPosts.styles';
 
 const BLOG_POSTS_QUERY = graphql`
   {
@@ -27,14 +28,16 @@ const BLOG_POSTS_QUERY = graphql`
 const AllBlogPosts = () => {
   const { blogPosts } = useStaticQuery(BLOG_POSTS_QUERY);
 
+  const areCardsEven = blogPosts.edges.length % 2 === 0;
+
   return (
-    <Container axis="both" doubling="x">
+    <S.Container axis="both" doubling="x" areCardsEven={areCardsEven}>
       <Heading tag="h1">Blog.</Heading>
 
       <Container axis="x">
         <Cards items={blogPosts} pageSlug="blog" smallCards />
       </Container>
-    </Container>
+    </S.Container>
   );
 };
 
