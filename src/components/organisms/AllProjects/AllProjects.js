@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/particles/Container';
 import Heading from 'components/atoms/Heading';
 import Cards from 'components/molecules/CardsWrapper';
+import S from './AllProjects.styles';
 
 const PROJECTS_QUERY = graphql`
   {
@@ -26,14 +27,16 @@ const PROJECTS_QUERY = graphql`
 const AllProjects = () => {
   const { projects } = useStaticQuery(PROJECTS_QUERY);
 
+  const areCardsEven = projects.edges.length % 2 === 0;
+
   return (
-    <Container axis="both" doubling="x">
+    <S.Container axis="both" doubling="x" areCardsEven={areCardsEven}>
       <Heading tag="h1">Projekty.</Heading>
 
       <Container axis="x">
         <Cards items={projects} pageSlug="projekty" />
       </Container>
-    </Container>
+    </S.Container>
   );
 };
 
