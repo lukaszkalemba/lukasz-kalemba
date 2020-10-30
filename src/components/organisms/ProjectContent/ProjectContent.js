@@ -9,7 +9,7 @@ const ProjectContent = ({ mainViewImage, secondViewImage, thirdViewImage }) => {
     <Container axis="both">
       <S.MainImage fluid={mainViewImage} />
       <S.DoubleImageSection>
-        <Image fluid={secondViewImage} />
+        <S.SecondImage fluid={secondViewImage} />
         <Image fluid={thirdViewImage} />
       </S.DoubleImageSection>
     </Container>
