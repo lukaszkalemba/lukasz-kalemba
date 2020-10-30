@@ -9,6 +9,7 @@ const buttonWrapper = {
       x: 0,
       transition: {
         duration: 0.75,
+        delay: 0.25,
       },
     },
   },
