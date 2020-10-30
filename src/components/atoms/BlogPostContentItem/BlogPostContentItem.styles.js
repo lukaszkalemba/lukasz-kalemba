@@ -7,15 +7,7 @@ const Wrapper = styled(motion.div)`
     margin-top: 50px;
     margin-bottom: 5px;
 
-    /* :first-child {
-      margin-top: 0;
-    } */
-
     ${({ theme }) => theme.media.tablet`
-      /* :first-child {
-        margin-top: 0;
-      } */
-
       font-size: ${theme.font.size.heading.m};
       margin-top: 70px;
       margin-bottom: 10px;

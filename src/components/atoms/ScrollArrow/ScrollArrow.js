@@ -6,7 +6,7 @@ import S from './ScrollArrow.styles';
 
 const ScrollArrow = () => {
   const handleClick = () => {
-    jump(window.innerHeight);
+    jump(window.innerHeight + 50);
   };
 
   return (
