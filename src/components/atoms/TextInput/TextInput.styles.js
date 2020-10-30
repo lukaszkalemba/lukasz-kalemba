@@ -37,6 +37,14 @@ const Input = styled.input`
   border-bottom-color: ${({ isError }) =>
     isError ? 'orange' : 'rgba(255, 255, 255, 0.35)'};
 
+  :-webkit-autofill,
+  :-webkit-autofill:hover,
+  :-webkit-autofill:focus,
+  :-webkit-autofill:active {
+    box-shadow: 0 0 0 30px ${({ theme }) => theme.color.dark} inset;
+    -webkit-text-fill-color: ${({ theme }) => theme.color.white};
+  }
+
   ${({ theme }) => theme.media.tablet`
     font-size: 18px;
     padding-bottom: 10px;
