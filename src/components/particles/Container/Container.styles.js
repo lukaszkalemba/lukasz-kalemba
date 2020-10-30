@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const handleAxis = (axis, doubling) => {
   switch (axis) {
@@ -56,7 +57,7 @@ const handleMobileDoubling = doubling => {
   return padding;
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled(motion.div)`
   padding: ${({ doubling }) => handleMobileDoubling(doubling)};
 
   ${({ theme }) => theme.media.tablet`

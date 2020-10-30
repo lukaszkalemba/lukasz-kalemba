@@ -44,7 +44,11 @@ const Nav = ({ path }) => {
             <Logo path={path} setIsNavOpen={setIsNavOpen} />
             <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
           </S.TopBar>
-          <NavItems isNavOpen={isNavOpen} closeNav={closeNav} />
+          <NavItems
+            isNavOpen={isNavOpen}
+            isMobile={isMobile}
+            closeNav={closeNav}
+          />
         </S.Nav>
       </Container>
     </S.Header>

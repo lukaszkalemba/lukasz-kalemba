@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import slashPattern from 'assets/svgs/pattern_slash.svg';
 import SocialMediaIconsComponent from 'components/molecules/SocialMediaIcons';
 import ContainerComponent from 'components/particles/Container';
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const List = styled.ul`
+const List = styled(motion.ul)`
   display: flex;
   flex-direction: column;
   justify-content: center;
