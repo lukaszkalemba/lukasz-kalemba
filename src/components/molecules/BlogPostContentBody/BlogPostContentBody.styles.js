@@ -6,7 +6,7 @@ const Content = styled.div`
   margin-top: -40px;
 
   ${({ theme }) => theme.media.laptop`
-    margin-top: -75px;
+    margin-top: -95px;
   `}
 
   div:nth-child(4n) {
