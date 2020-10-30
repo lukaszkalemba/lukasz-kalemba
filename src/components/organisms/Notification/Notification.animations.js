@@ -8,7 +8,7 @@ const backdrop = {
   },
   initial: 'initial',
   animate: 'animate',
-  exit: 'initial',
+  exit: { opacity: 0 },
 };
 
 export default { backdrop };
