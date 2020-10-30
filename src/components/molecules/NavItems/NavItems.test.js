@@ -13,7 +13,10 @@ const renderNavItems = props => {
 
 describe('<NavItems />', () => {
   it('renders properly with closed nav', () => {
-    const { navItemsWrapper } = renderNavItems({ isNavOpen: false });
+    const { navItemsWrapper } = renderNavItems({
+      isNavOpen: false,
+      isMobile: true,
+    });
 
     expect(navItemsWrapper).toHaveStyleRule(
       'clip-path',
@@ -24,6 +27,7 @@ describe('<NavItems />', () => {
   it('renders properly with opened nav', () => {
     const { navItemsWrapper } = renderNavItems({
       isNavOpen: true,
+      isMobile: true,
     });
 
     expect(navItemsWrapper).toHaveStyleRule('clip-path', 'circle( 100% )');
