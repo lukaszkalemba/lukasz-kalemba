@@ -37,7 +37,16 @@ const DoubleImageSection = styled.div`
   `}
 `;
 
+const SecondImage = styled(GatsbyImage)`
+  margin: 40px 0;
+
+  ${({ theme }) => theme.media.tablet`
+    margin: 0;
+  `}
+`;
+
 export default {
   MainImage,
+  SecondImage,
   DoubleImageSection,
 };
