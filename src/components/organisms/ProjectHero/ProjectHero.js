@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import Container from 'components/particles/Container';
 import ProjectHeroContent from 'components/molecules/ProjectHeroContent';
 import S from './ProjectHero.styles';
 import animations from './ProjectHero.animations';
 
 const ProjectHero = ({ title, description, image }) => {
+  useEffect(() => {
+    setHeightOnMobile();
+  }, []);
+
   return (
     <S.Wrapper>
       <S.HeadingWrapper>

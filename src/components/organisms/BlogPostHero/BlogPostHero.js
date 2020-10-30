@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import ScrollArrow from 'components/atoms/ScrollArrow';
 import BlogPostHeroContent from 'components/molecules/BlogPostHeroContent';
 import S from './BlogPostHero.styles';
 import animations from './BlogPostHero.animations';
 
 const BlogPostHero = ({ title, description, image }) => {
+  useEffect(() => {
+    setHeightOnMobile();
+  }, []);
+
   return (
     <S.Background fluid={image.fluid}>
       <S.Overlay>

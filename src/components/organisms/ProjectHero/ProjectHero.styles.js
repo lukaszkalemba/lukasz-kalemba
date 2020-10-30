@@ -6,7 +6,12 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  margin-top: 25px;
+  padding: 10px 0;
+  height: calc(var(--vh, 1vh) * 88);
+
+  ${({ theme }) => theme.media.laptop`
+    height: 85vh;
+  `}
 `;
 
 const HeadingWrapper = styled.div`
@@ -28,14 +33,14 @@ const BackgroundWrapper = styled(motion.div)`
   position: relative;
   grid-column: 3 / 6;
   grid-row: 1 / 2;
-  height: 600px;
+  height: 100%;
 `;
 
 const Background = styled(BackgroundImage)`
   position: relative;
   grid-column: 3 / 6;
   grid-row: 1 / 2;
-  height: 600px;
+  height: 100%;
 `;
 
 const Overlay = styled.div`

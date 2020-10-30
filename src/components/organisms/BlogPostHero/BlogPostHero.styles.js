@@ -6,7 +6,7 @@ const Background = styled(BackgroundImage)`
   position: absolute;
   top: -10vh;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 0;
 
   ${({ theme }) => theme.media.laptop`
