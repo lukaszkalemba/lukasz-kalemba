@@ -1,8 +1,8 @@
-const buttonWrapper = {
+const getButton = isMobile => ({
   variants: {
     initial: {
       opacity: 0,
-      x: -50,
+      x: isMobile ? -30 : -80,
     },
     animate: {
       opacity: 1,
@@ -15,8 +15,8 @@ const buttonWrapper = {
   },
   initial: 'initial',
   animate: 'animate',
-};
+});
 
 export default {
-  buttonWrapper,
+  getButton,
 };

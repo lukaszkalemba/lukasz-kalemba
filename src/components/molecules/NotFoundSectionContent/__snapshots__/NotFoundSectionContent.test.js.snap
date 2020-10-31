@@ -12,7 +12,7 @@ exports[`<NotFoundSectionContent /> matches snapshot 1`] = `
   </h1>
   <div
     class="sc-jSFkmK bClnMO"
-    style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+    style="opacity: 0; transform: translateX(-30px) translateZ(0);"
   >
     <a
       class="sc-bdnylx gzzKVY sc-gtssRu kKYjrL"
