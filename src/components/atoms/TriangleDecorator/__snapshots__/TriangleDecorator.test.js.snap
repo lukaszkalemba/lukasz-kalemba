@@ -3,6 +3,6 @@
 exports[`<TriangleDecorator /> matches snapshot 1`] = `
 <div
   class="sc-bdnylx kOpDmn"
-  style="opacity: 0; transform: translateX(-25px) translateY(-25px) translateZ(0);"
+  style="opacity: 0; transform: translateX(0px) translateY(-27px) translateZ(0);"
 />
 `;
