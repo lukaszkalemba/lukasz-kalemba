@@ -7,7 +7,11 @@ const ButtonWrapper = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 35px;
+
+    ${({ theme }) => theme.media.tablet`
+    margin-left: 75px;
+  `}
 
   ${({ theme }) => theme.media.laptop`
     justify-content: center;
