@@ -11,7 +11,7 @@ exports[`<NotFoundSectionContent /> matches snapshot 1`] = `
     Coś poszło nie tak...
   </h1>
   <div
-    class="sc-jSFkmK bClnMO"
+    class="sc-jSFkmK bDXLlY"
     style="opacity: 0; transform: translateX(-30px) translateZ(0);"
   >
     <a
