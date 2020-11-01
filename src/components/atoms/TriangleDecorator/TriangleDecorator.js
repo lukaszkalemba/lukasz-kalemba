@@ -1,16 +1,22 @@
 import React from 'react';
-import useWindowSize from 'hooks/useWindowSize';
-import animations from './TriangleDecorator.animations';
+import PropTypes from 'prop-types';
 import S from './TriangleDecorator.styles';
 
-const TriangleDecorator = () => {
-  const size = useWindowSize();
+const TriangleDecorator = ({ animation }) => {
+  return <S.TriangleDecorator {...animation} />;
+};
 
-  const isMobile = size.width < 1150;
+TriangleDecorator.defaultProps = {
+  animation: null,
+};
 
-  const triangleAnimations = animations.getTriangle(isMobile);
-
-  return <S.TriangleDecorator {...triangleAnimations} />;
+TriangleDecorator.propTypes = {
+  animation: PropTypes.shape({
+    variants: PropTypes.shape({
+      animate: PropTypes.shape({}),
+      initial: PropTypes.shape({}),
+    }),
+  }),
 };
 
 export default TriangleDecorator;
