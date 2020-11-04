@@ -5,21 +5,31 @@ import Container from 'components/particles/Container';
 import S from './ProjectContent.styles';
 
 const ProjectContent = ({ mainViewImage, secondViewImage, thirdViewImage }) => {
+  const areAllImages = secondViewImage || thirdViewImage;
+
   return (
     <Container axis="both">
       <S.MainImage fluid={mainViewImage} />
-      <S.DoubleImageSection>
-        <S.SecondImage fluid={secondViewImage} />
-        <Image fluid={thirdViewImage} />
-      </S.DoubleImageSection>
+
+      {areAllImages && (
+        <S.DoubleImageSection>
+          <S.SecondImage fluid={secondViewImage} />
+          <Image fluid={thirdViewImage} />
+        </S.DoubleImageSection>
+      )}
     </Container>
   );
 };
 
+ProjectContent.defaultProps = {
+  secondViewImage: null,
+  thirdViewImage: null,
+};
+
 ProjectContent.propTypes = {
   mainViewImage: PropTypes.shape({}).isRequired,
-  secondViewImage: PropTypes.shape({}).isRequired,
-  thirdViewImage: PropTypes.shape({}).isRequired,
+  secondViewImage: PropTypes.shape({}),
+  thirdViewImage: PropTypes.shape({}),
 };
 
 export default ProjectContent;

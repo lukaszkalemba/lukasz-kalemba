@@ -6,8 +6,8 @@ describe('<ProjectContent />', () => {
   it('renders properly with images and matches snapshot', () => {
     const props = {
       mainViewImage: { aspectRatio: 0, sizes: '', src: '', srcSet: '' },
-      secondViewImage: { aspectRatio: 0, sizes: '', src: '', srcSet: '' },
-      thirdViewImage: { aspectRatio: 0, sizes: '', src: '', srcSet: '' },
+      secondViewImage: null,
+      thirdViewImage: null,
     };
 
     const { container } = render(<ProjectContent {...props} />);
