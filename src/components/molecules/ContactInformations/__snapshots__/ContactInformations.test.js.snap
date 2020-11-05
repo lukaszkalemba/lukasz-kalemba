@@ -13,9 +13,9 @@ exports[`<ContactInformations /> matches snapshot 1`] = `
   </a>
   <a
     class="sc-gtssRu ciPAMe"
-    href="mailto:kontakt@lukaszkalemba.pl"
+    href="mailto:lukasz.kalemba1@gmail.com"
   >
-    kontakt@lukaszkalemba.pl
+    lukasz.kalemba1@gmail.com
   </a>
 </div>
 `;
