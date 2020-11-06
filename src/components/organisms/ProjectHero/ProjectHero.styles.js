@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import BackgroundImage from 'gatsby-background-image';
+import Container from 'components/particles/Container';
 
 const Wrapper = styled.div`
   display: grid;
@@ -30,6 +31,14 @@ const HeadingWrapper = styled.div`
   `}
 `;
 
+const ScrollContainer = styled(Container)`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 17px 0;
+  z-index: ${({ theme }) => theme.zindex.level2};
+`;
+
 const BackgroundWrapper = styled(motion.div)`
   position: relative;
   grid-column: 3 / 6;
@@ -57,6 +66,7 @@ const Overlay = styled.div`
 export default {
   Wrapper,
   HeadingWrapper,
+  ScrollContainer,
   BackgroundWrapper,
   Background,
   Overlay,

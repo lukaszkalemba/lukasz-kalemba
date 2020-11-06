@@ -4,6 +4,7 @@ import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import Container from 'components/particles/Container';
 import ProjectHeroContent from 'components/molecules/ProjectHeroContent';
 import ProjectIcons from 'components/molecules/ProjectIcons';
+import ScrollArrow from 'components/atoms/ScrollArrow';
 import S from './ProjectHero.styles';
 import animations from './ProjectHero.animations';
 
@@ -31,6 +32,9 @@ const ProjectHero = ({
       </S.HeadingWrapper>
 
       <ProjectIcons websiteLink={websiteLink} githubLink={githubLink} />
+      <S.ScrollContainer axis="both" doubling="y" animation={animations.scroll}>
+        <ScrollArrow />
+      </S.ScrollContainer>
 
       <S.BackgroundWrapper {...animations.background}>
         <S.Background fluid={image}>
