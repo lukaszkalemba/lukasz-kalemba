@@ -9,6 +9,11 @@
 <br/>
 <br/>
 
+## 🌍 Demo
+<a href="https://lukaszkalemba.pl">www.lukaszkalemba.pl</a>
+
+<br/>
+
 ## 🚀 Quick Start
 
 **Installation**
@@ -23,10 +28,15 @@
   npm run develop
 ```
 
-**Running tests**
 
+**Running one-time tests**
 ```shell
   npm run test
+```
+
+**Running tests in watch mode**
+```shell
+  npm run test:watch
 ```
 
 **Serving build**
