@@ -10,6 +10,8 @@ export const PROJECT_QUERY = graphql`
     project: datoCmsProject(slug: { eq: $slug }) {
       title
       description
+      websiteLink
+      githubLink
       image {
         fluid {
           ...GatsbyDatoCmsFluid_noBase64
@@ -39,6 +41,8 @@ const ProjectPageTemplate = ({ data }) => {
   const {
     title,
     description,
+    websiteLink,
+    githubLink,
     image,
     mainViewImage,
     secondViewImage,
@@ -51,6 +55,8 @@ const ProjectPageTemplate = ({ data }) => {
       <ProjectHero
         title={title}
         description={description}
+        websiteLink={websiteLink}
+        githubLink={githubLink}
         image={image.fluid}
       />
       <ProjectContent
@@ -65,6 +71,7 @@ const ProjectPageTemplate = ({ data }) => {
 ProjectPageTemplate.defaultProps = {
   data: {
     project: {
+      websiteLink: null,
       secondViewImage: {
         fluid: null,
       },
@@ -80,6 +87,8 @@ ProjectPageTemplate.propTypes = {
     project: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      websiteLink: PropTypes.string,
+      githubLink: PropTypes.string.isRequired,
       image: PropTypes.shape({
         fluid: PropTypes.shape({}),
       }).isRequired,

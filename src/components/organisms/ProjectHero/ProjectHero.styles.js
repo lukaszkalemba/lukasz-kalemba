@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   grid-template-rows: repeat(1, 1fr);
   padding: 10px 0;
   height: calc(var(--vh, 1vh) * 88);
+  position: relative;
 
   ${({ theme }) => theme.media.laptop`
     height: 85vh;

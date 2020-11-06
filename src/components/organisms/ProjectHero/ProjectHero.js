@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import Container from 'components/particles/Container';
 import ProjectHeroContent from 'components/molecules/ProjectHeroContent';
+import ProjectIcons from 'components/molecules/ProjectIcons';
 import S from './ProjectHero.styles';
 import animations from './ProjectHero.animations';
 
-const ProjectHero = ({ title, description, image }) => {
+const ProjectHero = ({
+  title,
+  description,
+  websiteLink,
+  githubLink,
+  image,
+}) => {
   useEffect(() => {
     setHeightOnMobile();
   }, []);
@@ -22,6 +29,9 @@ const ProjectHero = ({ title, description, image }) => {
           />
         </Container>
       </S.HeadingWrapper>
+
+      <ProjectIcons websiteLink={websiteLink} githubLink={githubLink} />
+
       <S.BackgroundWrapper {...animations.background}>
         <S.Background fluid={image}>
           <S.Overlay />
@@ -31,9 +41,15 @@ const ProjectHero = ({ title, description, image }) => {
   );
 };
 
+ProjectHero.defaultProps = {
+  websiteLink: null,
+};
+
 ProjectHero.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  websiteLink: PropTypes.string,
+  githubLink: PropTypes.string.isRequired,
   image: PropTypes.shape({
     fluid: PropTypes.shape({}),
   }).isRequired,
