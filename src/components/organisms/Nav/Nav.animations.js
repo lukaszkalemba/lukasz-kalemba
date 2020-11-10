@@ -4,7 +4,7 @@ const getHeader = (isHomePage, isMobile) => {
   let y;
 
   if (isHomePage) {
-    delay = isMobile ? 1.05 : 1;
+    delay = isMobile ? 1.05 : 0.65;
     x = isMobile ? -23 : -80;
     y = isMobile ? -23 : 0;
   } else {
