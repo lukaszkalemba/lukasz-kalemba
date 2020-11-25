@@ -3,20 +3,16 @@ import PropTypes from 'prop-types';
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion';
 import Background from 'gatsby-background-image';
-import useWindowSize from 'hooks/useWindowSize';
 import S from './Card.styles';
 import animations from './Card.animations';
 
-const Card = ({ index, title, image, preSlug, slug, small }) => {
-  const size = useWindowSize();
+const Card = ({ isOffset, title, image, preSlug, slug, small }) => {
   const animation = useAnimation();
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
     threshold: 0.6,
   });
-
-  const isOffset = index % 2 !== 0 && size.width > 768 && true;
 
   useEffect(() => {
     if (inView) {
@@ -41,17 +37,18 @@ const Card = ({ index, title, image, preSlug, slug, small }) => {
 };
 
 Card.defaultProps = {
+  isOffset: false,
   small: false,
 };
 
 Card.propTypes = {
-  index: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.shape({
     fluid: PropTypes.shape({}),
   }).isRequired,
   preSlug: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  isOffset: PropTypes.bool,
   small: PropTypes.bool,
 };
 

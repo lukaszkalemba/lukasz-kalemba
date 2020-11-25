@@ -38,13 +38,12 @@ Default.args = {
   },
   preSlug: 'projects',
   slug: 'company',
-  index: 2,
 };
 
 export const Offset = Template.bind({});
 Offset.args = {
   ...Default.args,
-  index: 1,
+  isOffset: true,
 };
 
 export const Small = Template.bind({});

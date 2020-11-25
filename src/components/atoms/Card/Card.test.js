@@ -11,7 +11,7 @@ const renderCard = props => {
 };
 
 const cardProps = {
-  index: 1,
+  isOffset: false,
   title: 'Amazon',
   image: {
     fluid: {
