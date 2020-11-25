@@ -7,7 +7,7 @@ import GlobalStyle from 'components/particles/GlobalStyle';
 const GlobalWrapper = storyFn => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <div>{storyFn()}</div>
+    <div style={{ padding: '15px 30px' }}>{storyFn()}</div>
   </ThemeProvider>
 );
 
