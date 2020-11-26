@@ -34,14 +34,15 @@ Button.defaultProps = {
 
 Button.propTypes = {
   type: PropTypes.oneOf(['link', 'submit']).isRequired,
-  path: PropTypes.string,
+  path: ({ type, path }) => {
+    if (type === 'link' && !path) {
+      throw new Error('You have to pass path property if button type is link');
+    }
+  },
   priority: PropTypes.oneOf(['primary', 'secondary']).isRequired,
   onClick: PropTypes.func,
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Button;
