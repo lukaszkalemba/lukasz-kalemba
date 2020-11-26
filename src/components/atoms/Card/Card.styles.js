@@ -37,11 +37,15 @@ const Article = styled.article`
   z-index: ${({ theme }) => theme.zindex.level1};
 
   ${({ theme }) => theme.media.tablet`
-    height: ${({ small }) => (small ? '400px' : '550px')};
+    height: ${({ small }) => (small ? '400px' : '640px')};
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    height: ${({ small }) => (small ? '450px' : '640px')};
   `}
 
   ${({ theme }) => theme.media.desktop`
-    height: ${({ small }) => (small ? '500px' : '680px')};
+    height: ${({ small }) => (small ? '510px' : '750px')};
     padding: 40px 50px;
   `}
 `;

@@ -11,7 +11,7 @@ const Card = ({ isOffset, title, image, preSlug, slug, small }) => {
 
   const [wrapperRef, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.3,
   });
 
   useEffect(() => {
