@@ -20,7 +20,7 @@ const getParagraph = isMobile => {
       animate: {
         opacity: 0.5,
         x: 0,
-        transition: { duration: 0.75, delay: isMobile ? 0.4 : 1 },
+        transition: { duration: 0.75, delay: isMobile ? 0.4 : 0.65 },
       },
     },
   };
@@ -38,7 +38,7 @@ const getButtons = isMobile => {
         x: 0,
         transition: {
           duration: 0.75,
-          delay: isMobile ? 0.8 : 1,
+          delay: isMobile ? 0.8 : 0.65,
         },
       },
     },
