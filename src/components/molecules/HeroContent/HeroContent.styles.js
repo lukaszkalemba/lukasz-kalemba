@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import HeadingComponent from 'components/atoms/Heading';
 import ParagraphComponent from 'components/atoms/Paragraph';
+import ButtonComponent from 'components/atoms/Button';
 import ContainerComponent from 'components/particles/Container';
 
 const Content = styled.div`
@@ -80,6 +81,12 @@ const Buttons = styled(motion.div)`
   `}
 `;
 
+const Button = styled(ButtonComponent)`
+  ${({ theme }) => theme.media.desktop`
+    margin: 0 25px;
+`}
+`;
+
 const Container = styled(ContainerComponent)`
   ${({ theme }) => theme.media.laptop`
     display: flex;
@@ -90,4 +97,4 @@ const Container = styled(ContainerComponent)`
   `}
 `;
 
-export default { Content, Heading, Paragraph, Buttons, Container };
+export default { Content, Heading, Paragraph, Buttons, Button, Container };

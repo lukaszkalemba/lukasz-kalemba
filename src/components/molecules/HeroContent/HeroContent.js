@@ -1,6 +1,5 @@
 import React from 'react';
 import useWindowSize from 'hooks/useWindowSize';
-import Button from 'components/atoms/Button';
 import animations from './HeroContent.animations';
 import S from './HeroContent.styles';
 
@@ -27,12 +26,12 @@ const HeroContent = () => {
         </S.Content>
 
         <S.Buttons {...buttonsAnimation}>
-          <Button type="link" path="/wycena" priority="primary">
+          <S.Button type="link" path="/wycena" priority="primary">
             Bezpłatna wycena
-          </Button>
-          <Button type="link" path="/projekty" priority="secondary">
+          </S.Button>
+          <S.Button type="link" path="/projekty" priority="secondary">
             Zrealizowane projekty
-          </Button>
+          </S.Button>
         </S.Buttons>
       </div>
     </S.Container>
