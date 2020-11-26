@@ -42,10 +42,7 @@ Link.defaultProps = {
 Link.propTypes = {
   to: PropTypes.string.isRequired,
   animate: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Link;
