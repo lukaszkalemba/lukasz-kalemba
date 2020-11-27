@@ -14,7 +14,7 @@ addParameters({
 const GlobalWrapper = storyFn => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <div style={{ padding: '15px 30px' }}>{storyFn()}</div>
+    <div>{storyFn()}</div>
   </ThemeProvider>
 );
 
