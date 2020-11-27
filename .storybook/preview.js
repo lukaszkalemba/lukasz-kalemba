@@ -1,8 +1,15 @@
 import React from 'react';
-import { addDecorator } from '@storybook/react';
+import { addParameters, addDecorator } from '@storybook/react';
+import { themes } from '@storybook/theming';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
 import GlobalStyle from 'components/particles/GlobalStyle';
+
+addParameters({
+  docs: {
+    theme: themes.dark,
+  },
+});
 
 const GlobalWrapper = storyFn => (
   <ThemeProvider theme={theme}>

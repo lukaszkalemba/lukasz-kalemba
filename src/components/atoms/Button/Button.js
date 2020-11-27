@@ -28,7 +28,7 @@ const Button = ({ type, path, priority, onClick, className, children }) => {
 
 Button.defaultProps = {
   path: '',
-  onClick: () => {},
+  onClick: undefined,
   className: '',
 };
 
