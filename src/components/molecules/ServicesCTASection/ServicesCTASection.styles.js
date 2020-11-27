@@ -13,7 +13,6 @@ const Heading = styled(motion.h2)`
 
   ${({ theme }) => theme.media.laptop`
     max-width: 600px;
-    margin-top: 200px;
   `}
 
   ${({ theme }) => theme.media.desktop`
