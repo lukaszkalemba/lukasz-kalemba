@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "@lukaszkalemba",
   "dependencies": {
+    "axios": "^0.21.0",
     "babel-plugin-remove-graphql-queries": "^2.11.0",
     "babel-plugin-styled-components": "^1.10.7",
     "body-scroll-lock": "^3.1.5",

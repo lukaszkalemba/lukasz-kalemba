@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import Button from 'components/atoms/Button';
@@ -38,13 +39,15 @@ const validationSchema = Yup.object({
 const PricingForm = ({ setSubmissionStatus }) => {
   const handleSubmission = async (values, actions) => {
     try {
-      await fetch('/', {
-        method: 'POST',
+      const config = {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: encodeFormValues({ 'form-name': 'wycena', ...values }),
-      });
+      };
+
+      const body = encodeFormValues({ 'form-name': 'wycena', ...values });
+
+      await axios.post('/', body, config);
 
       actions.resetForm();
       actions.setSubmitting(false);
