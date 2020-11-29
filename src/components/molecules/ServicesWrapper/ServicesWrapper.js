@@ -5,13 +5,13 @@ import Service from 'components/atoms/Service';
 const ServicesWrapper = ({ images }) => {
   return (
     <div>
-      <Service img={images.design.childImageSharp}>
+      <Service image={images.design.childImageSharp}>
         Projektowanie interfejsów
       </Service>
-      <Service img={images.webapp.childImageSharp}>
+      <Service image={images.webapp.childImageSharp}>
         Strony i aplikacje internetowe
       </Service>
-      <Service img={images.ecommerce.childImageSharp}>
+      <Service image={images.ecommerce.childImageSharp}>
         Sklepy internetowe
       </Service>
     </div>

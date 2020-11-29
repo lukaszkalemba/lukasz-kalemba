@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 import animations from './Service.animations';
 import S from './Service.styles';
 
-const Service = ({ img, children }) => {
+const Service = ({ image, children }) => {
   const animation = useAnimation();
 
   const [titleRef, inView] = useInView({
@@ -23,7 +23,7 @@ const Service = ({ img, children }) => {
 
   return (
     <S.Article>
-      <S.Overlay fluid={img.fluid} />
+      <S.Overlay fluid={image.fluid} />
       <S.Title ref={titleRef} {...titleAnimation}>
         {children}
       </S.Title>
@@ -32,7 +32,7 @@ const Service = ({ img, children }) => {
 };
 
 Service.propTypes = {
-  img: PropTypes.shape({
+  image: PropTypes.shape({
     fluid: PropTypes.shape({}),
   }).isRequired,
   children: PropTypes.oneOfType([

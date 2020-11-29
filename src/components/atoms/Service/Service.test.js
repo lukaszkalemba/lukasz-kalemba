@@ -6,7 +6,7 @@ import Service from './Service';
 describe('<Service />', () => {
   it('has proper title', () => {
     const serviceProps = {
-      img: {
+      image: {
         fluid: {
           aspectRatio: 0,
           sizes: '',
