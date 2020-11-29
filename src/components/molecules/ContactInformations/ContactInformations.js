@@ -22,7 +22,7 @@ const ContactInformations = () => {
 
   return (
     <S.Wrapper ref={wrapperRef} {...wrapperAnimations}>
-      <S.Link href="tel:+48797709856">+48 797 709 856</S.Link>
+      <S.Link href="tel:+48787709856">+48 787 709 856</S.Link>
       <S.Link href="mailto:lukasz.kalemba1@gmail.com">
         lukasz.kalemba1@gmail.com
       </S.Link>
