@@ -18,29 +18,26 @@ const Wrapper = styled(motion.div)`
   transform: translate(-50%, -50%);
   width: 75vw;
   max-width: 500px;
-  height: 50vh;
   max-height: 500px;
   display: flex;
   flex-direction: column;
   z-index: ${({ theme }) => theme.zindex.level3};
   background-color: ${({ theme }) => theme.color.background.light};
-  padding: 30px 15px;
+  padding: 30px 15px 45px;
 
   ${({ theme }) => theme.media.tablet`
     width: 60vw;
-    height: 60vw;
+    min-height: 400px;
     padding: 30px 0;
   `}
 
   ${({ theme }) => theme.media.laptop`
     width: 40vw;
-    height: 60vh;
-    padding: 15px 0;
+    padding: 15px 0 30px;
   `}
 
   ${({ theme }) => theme.media.desktop`
     width: 30vw;
-    height: 45vh;
   `}
 `;
 
