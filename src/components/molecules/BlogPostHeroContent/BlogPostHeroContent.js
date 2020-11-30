@@ -6,7 +6,7 @@ import S from './BlogPostHeroContent.styles';
 const BlogPostHeroContent = ({ title, description, animation }) => {
   return (
     <S.Wrapper>
-      <Heading tag="h1">{title}</Heading>
+      <Heading isH1>{title}</Heading>
       <S.Description {...animation}>{description}</S.Description>
     </S.Wrapper>
   );

@@ -14,7 +14,7 @@ const NotFoundSectionContent = () => {
 
   return (
     <Container axis="both">
-      <S.Heading tag="h1">Coś poszło nie tak...</S.Heading>
+      <S.Heading isH1>Coś poszło nie tak...</S.Heading>
       <S.ButtonWrapper {...buttonAnimation}>
         <Button type="link" path="/" priority="secondary">
           Strona główna

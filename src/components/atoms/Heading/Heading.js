@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 import S from './Heading.styles';
 import animations from './Heading.animations';
 
-const Heading = ({ tag, homePage, animation, className, children }) => {
+const Heading = ({ isH1, animation, className, children }) => {
   const animate = useAnimation();
 
   const [headingRef, inView] = useInView({
@@ -21,37 +21,29 @@ const Heading = ({ tag, homePage, animation, className, children }) => {
 
   const headingAnimations = animations.getHeading(animation, animate);
 
-  const isH1 = tag === 'h1' && true;
   let HeadingTag;
 
   if (isH1) {
-    HeadingTag = S.Heading.H1;
+    HeadingTag = S.H1;
   } else {
-    HeadingTag = S.Heading.H2;
+    HeadingTag = S.H2;
   }
 
   return (
-    <HeadingTag
-      ref={headingRef}
-      homePage={homePage}
-      className={className}
-      {...headingAnimations}
-    >
+    <HeadingTag ref={headingRef} className={className} {...headingAnimations}>
       {children}
     </HeadingTag>
   );
 };
 
 Heading.defaultProps = {
-  tag: 'h2',
-  homePage: false,
+  isH1: false,
   animation: null,
   className: '',
 };
 
 Heading.propTypes = {
-  tag: PropTypes.oneOf(['h1', 'h2']),
-  homePage: PropTypes.bool,
+  isH1: PropTypes.bool,
   animation: PropTypes.shape({
     variants: PropTypes.shape({
       animate: PropTypes.shape({}),
@@ -59,10 +51,7 @@ Heading.propTypes = {
     }),
   }),
   className: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default Heading;

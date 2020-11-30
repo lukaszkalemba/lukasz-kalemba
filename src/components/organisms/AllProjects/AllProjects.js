@@ -31,7 +31,7 @@ const AllProjects = () => {
 
   return (
     <S.Container axis="both" doubling="x" areCardsEven={areCardsEven}>
-      <Heading tag="h1">Projekty.</Heading>
+      <Heading isH1>Projekty.</Heading>
 
       <Container axis="x">
         <Cards items={projects} pageSlug="projekty" />

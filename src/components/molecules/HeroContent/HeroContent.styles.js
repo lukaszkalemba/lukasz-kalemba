@@ -25,8 +25,18 @@ const Content = styled.div`
 `;
 
 const Heading = styled(HeadingComponent)`
+  font-size: ${({ theme }) => theme.font.size.heading.s};
+  margin-left: -5px;
+
+  ${({ theme }) => theme.media.tablet`
+    font-size: ${theme.font.size.heading.l};
+    margin-left: 0;
+  `}
+
   ${({ theme }) => theme.media.laptop`
+    font-size: ${theme.font.size.heading.xl};
     margin: 0.20em 0;
+    margin-left: 3vw;
   `}
 
   ${({ theme }) => theme.media.desktop`

@@ -32,7 +32,7 @@ const AllBlogPosts = () => {
 
   return (
     <S.Container axis="both" doubling="x" areCardsEven={areCardsEven}>
-      <Heading tag="h1">Blog.</Heading>
+      <Heading isH1>Blog.</Heading>
 
       <Container axis="x">
         <Cards items={blogPosts} pageSlug="blog" smallCards />

@@ -13,10 +13,9 @@ const renderHeading = props => {
 };
 
 describe('<Heading />', () => {
-  it('renders as h1 home page element', () => {
+  it('renders as h1 element', () => {
     const headingProps = {
-      tag: 'h1',
-      homePage: true,
+      isH1: true,
       children: 'Home page',
     };
 
@@ -24,7 +23,7 @@ describe('<Heading />', () => {
 
     expect(heading.tagName).toBe('H1');
     expect(heading).toHaveTextContent(headingProps.children);
-    expect(heading).toHaveStyleRule('font-size', theme.font.size.heading.s);
+    expect(heading).toHaveStyleRule('font-size', theme.font.size.heading.xs);
   });
 
   it('renders as h2 element', () => {
@@ -33,6 +32,5 @@ describe('<Heading />', () => {
     });
 
     expect(heading.tagName).toBe('H2');
-    expect(heading).toHaveStyleRule('font-size', theme.font.size.heading.xs);
   });
 });

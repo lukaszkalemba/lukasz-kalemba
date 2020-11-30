@@ -13,7 +13,7 @@ const PricingContent = () => {
     <Container axis="both" doubling="x">
       <S.Wrapper>
         <div>
-          <S.Heading>Opowiedz o swoim pomyśle.</S.Heading>
+          <S.Heading isH1>Opowiedz o swoim pomyśle.</S.Heading>
           <AnimatePresence
             exitBeforeEnter
             onExitComplete={() => setSubmissionStatus(null)}

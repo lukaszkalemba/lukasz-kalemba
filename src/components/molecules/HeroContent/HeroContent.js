@@ -16,7 +16,7 @@ const HeroContent = () => {
     <S.Container axis="both">
       <div>
         <S.Content>
-          <S.Heading tag="h1" homePage animation={headingAnimation}>
+          <S.Heading isH1 animation={headingAnimation}>
             Zaistniej w sieci
           </S.Heading>
           <S.Paragraph animation={paragraphAnimation}>

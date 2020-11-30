@@ -6,7 +6,7 @@ import S from './ProjectHeroContent.styles';
 const ProjectHeroContent = ({ title, description, animation }) => {
   return (
     <>
-      <Heading tag="h1">{title}</Heading>
+      <Heading isH1>{title}</Heading>
       <S.Description {...animation}>{description}</S.Description>
     </>
   );
