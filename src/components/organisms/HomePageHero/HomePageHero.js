@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import useWindowSize from 'hooks/useWindowSize';
-import HeroContent from 'components/molecules/HeroContent';
+import HomePageHeroContent from 'components/molecules/HomePageHeroContent';
 import TriangleDecorator from 'components/atoms/TriangleDecorator';
 import { setHeightOnMobile } from 'helpers/setHeightOnMobile';
 import animations from './HomePageHero.animations';
@@ -19,7 +19,7 @@ const HomePageHero = () => {
 
   return (
     <S.Wrapper {...animations.wrapper}>
-      <HeroContent />
+      <HomePageHeroContent />
       <TriangleDecorator animation={triangleAnimation} />
     </S.Wrapper>
   );

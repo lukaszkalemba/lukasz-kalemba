@@ -1,9 +1,9 @@
 import React from 'react';
 import useWindowSize from 'hooks/useWindowSize';
-import animations from './HeroContent.animations';
-import S from './HeroContent.styles';
+import animations from './HomePageHeroContent.animations';
+import S from './HomePageHeroContent.styles';
 
-const HeroContent = () => {
+const HomePageHeroContent = () => {
   const size = useWindowSize();
 
   const isMobile = size.width < 1150;
@@ -38,4 +38,4 @@ const HeroContent = () => {
   );
 };
 
-export default HeroContent;
+export default HomePageHeroContent;

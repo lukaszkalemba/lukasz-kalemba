@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'utils/test-utils';
 import '__mocks__/intersectionObserver';
-import HeroContent from './HeroContent';
+import HeroContent from './HomePageHeroContent';
 
 describe('<HeroContent />', () => {
   it('renders with proper elements inside', () => {
